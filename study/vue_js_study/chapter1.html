@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Chapter1 Vue.js 프레임워크의 기초</h1>
+</header>
+<section>
+    <h2>
+        Section05 Vue.js의 기본기능
+    </h2>
+    <div id="p20">
+        <h3>텍스트 바인딩</h3>
+        <p>{{message}}</p>
+
+        <h3>반복 렌더링</h3>
+        <ol>
+            <li v-for="value in list">{{value}}</li>
+        </ol>
+        <ul>
+            <li v-for="value in obj">{{value}}</li>
+        </ul>
+
+
+        <h3>이벤트 사용하기</h3>
+        <button v-on:click="handleClick">이벤트 발생시키기</button>
+
+        <h3>입력 양식과 동기화하기</h3>
+        <p><input v-model="model"> {{ model }}</p>
+
+        <h3>조건 분기, 트랜지션과 애니메이션 예시</h3>
+        <button v-on:click="show=!show">show/hide</button>
+        <transition>
+            <p v-if="show">v-if 예시, 조건에 따라서 노출 여부 결정</p>
+        </transition>
+
+
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
+<script src="js/chapter1.js"></script>
+
+
+</body>
+</html>

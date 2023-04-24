@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyclemon Clone Coding | Know More</title>
+    <link rel="icon" type="image/png" href="../assets/images/fav.png"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/handlebars_4.7.7.js"></script>
+</head>
+<body class="shop">
+<script id="poster-template" type="text/x-handlebars-template">
+    <article>
+        <ul class="poster-list">
+            {{#each poster as |item index|}}
+            <li class="list-item">
+                <div class="poster-item">
+                    <a href="{{href}}"
+                       target="_blank">
+                        <div class="img-wrap">
+                            <img src="../assets/images/{{img}}" alt="{{title}}">
+                        </div>
+                        <div class="txt-wrap">
+                            <h4>{{title}}</h4>
+                            <p>From {{price}}</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </article>
+</script>
+<script id="screen-template" type="text/x-handlebars-template">
+    <ul class="screen-list">
+        {{#each screen as |item index|}}
+        <li class="list-item">
+            <a href="../assets/images/shop/{{href}}" target="_blank" title="opens in new tab">
+                <img src="../assets/images/{{img}}" alt="{{name}}">
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script id="entry-template" type="text/x-handlebars-template">
+    <div id="wrapper">
+        <header id="header">
+            {{#> Gnb}}
+                GNB가 정상적으로 로딩되지 않았습니다.
+            {{/Gnb}}
+            {{#> Lnb}}
+                LNB가 정상적으로 로딩되지 않았습니다.
+            {{/Lnb}}
+            <div class="share ty02">
+                <button class="btn-share">
+                    <i class="blind">share</i>
+                </button>
+                {{#> Sns}}
+                    Sns가 정상적으로 로딩되지 않았습니다.
+                {{/Sns}}
+            </div>
+        </header>
+        <div id="container">
+            <div class="content">
+                <section id="part1" class="section section-shop part1">
+                    <div class="section-header">
+                        <ul class="print-list">
+                            <li class="list-item">
+                                <h3>
+                                    <img src="../assets/images/shop/screen.png" alt="Screen Print | Made with our Love">
+                                    <i class="blind">Screen Print | Made with our Love</i>
+                                </h3>
+                            </li>
+                            <li class="list-item">
+                                <p>Take a look at our wonderful 30"x40" numbered<br> and stamped silkscreens. Each
+                                    design is
+                                    printed<br>
+                                    in 5 different handmade colors with a non-toxic technique, on a Fabriano©
+                                    Rosaspina<br>
+                                    white
+                                    paper (285gr), and for only 40 euros!.
+                                </p>
+                            </li>
+                            <li class="list-item">
+                                <a href="mailto:cycle.lemon@gmail.com?Subject=Cyclemon%20Poster"
+                                   title="Move to e-mail send page">
+                                    <img
+                                            alt="order now"
+                                            src="../assets/images/shop/order.jpg">
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <p>You can also check our full collection of digital prints, <a href="#part2"
+                                                                                                class="emp">available
+                                    here</a>.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <article>
+                        {{#> Screen}}
+                        {{/Screen}}
+                    </article>
+                </section>
+                <section id="part2" class="section section-shop part2">
+                    <h3 class="section-header">
+                        <img src="../assets/images/shop/poster.png" alt="POSTERS | Decorate your Loft">
+                        <i class="blind">POSTERS | Decorate your Loft</i>
+                    </h3>
+                    {{#> Poster}}
+                    {{/Poster}}
+                </section>
+            </div>
+        </div>
+        <footer id="footer" class="shop-footer">
+            <div class="copyright">
+                <address>ⓒ CYCLEMON 2013 - All rights reserved</address>
+            </div>
+            {{#> Sns}}
+                Sns가 정상적으로 입력되지 않았습니다.
+            {{/Sns}}
+        </footer>
+    </div>
+</script>
+
+<script src="../assets/js/templates.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

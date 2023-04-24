@@ -1,0 +1,39 @@
+
+//너비
+$width: 100%;
+$max-width: 1920px;
+$contents-width: 1200px;
+$gnb-width: calc(100% - 10%);
+
+
+//색상표
+$beige: #c4b79e;
+$beige-02: #e3ded1;
+$ivory: #f6f3eb;
+$white: #faf3e1;
+$white-02: #faf9f6;
+$yellow: #fbb813;
+$yellow-02: #ffd33a;
+$orange: #f37537;
+$orange-02: #f4811f;
+$red: #ed1c24;
+$brown: #786c60;
+$black:  #18161b;
+$light-black: #333333;
+$charcoal: #595757;
+$gray: #7d7d7d;
+$light-gray: #999999;
+
+//header, gnb 배경값
+$header-bg-color: rgba(3, 3, 2, 0.5);
+$header-bg-color-m: rgba(3, 3, 2, 1);
+$header-bg-color-m2: rgba(3, 3, 2, 0.90);
+
+//header, gnb, 공통 속성
+$gnb-z-index: 100;
+$border-radius: 0.5rem;
+
+
+//반응형 img 축소비율
+$m-size : 0.75;
+

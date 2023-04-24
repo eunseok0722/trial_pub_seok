@@ -1,0 +1,20 @@
+button {
+    width: 150px;
+    background-color: darkseagreen;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    padding: 10px 25px;
+    transition: 0.35s;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    /*cursor: help;*/
+    /*  wait, crosshair, not-allowed, grab, zoom-in, crosshair, help, pointer  */
+}
+
+.table td {
+    vertical-align: middle;
+}

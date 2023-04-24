@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyclemon Clone Coding</title>
+    <link rel="icon" type="image/png" href="./assets/images/fav.png"/>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="./assets/js/handlebars_4.7.7.js"></script>
+</head>
+<body class="main">
+
+<script id="section-template" type="text/x-handlebars-template">
+    {{#each sec as |section index|}}
+        <section id="{{title}}" class="section {{class}} {{title}}">
+            {{#if imgArt}}
+                {{#> ImgArt}}
+                {{/ImgArt}}
+            {{/if}}
+            {{#if trlArt}}
+                {{#> TrlArt}}
+                {{/TrlArt}}
+            {{/if}}
+        </section>
+    {{/each}}
+</script>
+
+<script id="entry-template" type="text/x-handlebars-template">
+    <div id="wrapper" class="main">
+        <header id="header">
+            {{#> Gnb}}
+                GNB가 정상적으로 로딩되지 않았습니다.
+            {{/Gnb}}
+            {{#> Lnb}}
+                LNB가 정상적으로 로딩되지 않았습니다.
+            {{/Lnb}}
+            <div class="share">
+                <button class="btn-share">
+                    <i class="blind">share</i>
+                </button>
+                {{#> Sns}}
+                    Sns가 정상적으로 로딩되지 않았습니다.
+                {{/Sns}}
+            </div>
+            <div class="btn-wrap">
+                <a href="#night-rider" class="btn-next" title="click to go to the next section">
+                    <i class="blind">click to go to the next section</i>
+                </a>
+            </div>
+        </header>
+        <div id="container">
+            <div class="content">
+                {{#> MainSec}}
+                {{/MainSec}}
+            </div>
+        </div>
+        <footer id="footer" class="section main-footer">
+            <article>
+                <ul class="img-list">
+                    <li class="list-item">
+                        <img src="./assets/images/fin1.png" alt="Hey! did you enjoyed it?">
+                    </li>
+                    <li class="list-item">
+                        <a href="https://society6.com/ThomasPomarelle/prints" target="_blank">
+                            <img class="pc-only" src="./assets/images/fin2.png"
+                                 alt="You can now order these designs on our online shop">
+                            <img class="mo-only" src="./assets/images/mo/fin2.png"
+                                 alt="You can now order these designs on our online shop">
+                        </a>
+                    </li>
+                    <li class="list-item pc-only">
+                        <a href="#">
+                            <img src="./assets/images/fin3.png"
+                                 alt="And it's not finished yet! take a look at the rest of our content">
+                        </a>
+                    </li>
+                </ul>
+            </article>
+            <div class="copyright">
+                <address>ⓒ CYCLEMON 2013 - All rights reserved</address>
+            </div>
+            {{#> Sns}}
+                Sns가 정상적으로 로딩되지 않았습니다.
+            {{/Sns}}
+        </footer>
+    </div>
+    <div id="loader">
+        <div class="img-box">
+            <div class="cl"><img alt="logo" src="./assets/images/clog.png"/></div>
+        </div>
+    </div>
+</script>
+
+<script src="./assets/js/templates.js"></script>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>

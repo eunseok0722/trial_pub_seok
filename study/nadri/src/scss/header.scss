@@ -1,0 +1,107 @@
+
+.header {
+  @include width;
+  height: 13.4rem;
+  text-align: center;
+  @include align-center;
+  top: 0;
+  color: $beige;
+  z-index: $gnb-z-index;
+
+  @include tablet {
+    @include rwd-width;
+  }
+
+  .header-wrap {
+    @include contents-width;
+    position: relative;
+    @include tablet {
+      @include rwd-width;
+    }
+  }
+
+  h1 {
+    @include align-center;
+    display: inline-block;
+    top: 3.4rem;
+    width: 17.4rem;
+    height: auto;
+    @include mobile {
+      top: 3rem;
+      width: 17.4rem * $m-size;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .header-nav {
+    position: absolute;
+    right: 1rem;
+    top: 8.1rem;
+    display: flex;
+    @include mobile {
+      width: 10rem;
+      height: 2rem;
+      @include align-center;
+      right: auto;
+      top: 10.25rem;
+      display: flex;
+    }
+
+    a {
+      display: block;
+      width: 7rem;
+      height: auto;
+      border-left: 1px solid $beige;
+      font: 700 1.4rem "NanumMyeongjo";
+      color: $beige;
+      @include tablet {
+        width: 6.5rem;
+      }
+      @include mobile {
+        text-indent: -9999px;
+        width: 2rem;
+        height: 2rem;
+        border-left: none;
+        flex: 1;
+      }
+
+      &:first-child {
+        border-left: none;
+        @include mobile {
+          //home 버튼
+          background: url("../img/header_ico_house.png") no-repeat center center/contain;
+        }
+      }
+
+      //로그인
+      &:nth-child(2) {
+        @include mobile {
+          background: url("../img/header_ico_account.png") no-repeat center center/contain;
+        }
+      }
+
+      //고객센터
+      &:last-child {
+        @include mobile {
+          background: url("../img/header_ico_cs.png") no-repeat center center/contain;
+        }
+      }
+    }
+  }
+}
+
+// 서브페이지 header 상단 백그라운드 컬러 조정
+.header-bg-color {
+  @include width;
+  height: 13.4rem;
+  background: $header-bg-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include tablet {
+    @include rwd-width;
+  }
+}

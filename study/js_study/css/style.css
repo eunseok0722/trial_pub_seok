@@ -1,0 +1,38 @@
+* {
+  /*margin: 0;*/
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #efefef;
+}
+
+h1 {
+  text-align: center;
+}
+.box {
+  background: yellow;
+  width: 200px;
+  height: 200px;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ee6c4d;
+  transform: translate(-50%, -50%);
+}
+
+#d1 {
+  margin-left: 10px;
+  background-color: rgb(173, 216, 230);
+  height: 20px;
+  width: 20px;
+}

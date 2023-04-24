@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practical Exam - localStorage2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="localStorage3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="localStorage3.js"></script>
+</head>
+<body>
+<div class="container">
+    <h3 style="text-align: center; padding: 50px;">
+        Local Data
+        <small class="text-muted">with localStorage data view</small>
+    </h3>
+    <button class="btnCrt">Creat row and column</button>
+    <table class="table table-striped table-dark table-hover " id="myTable">
+        <caption>List of localStorage</caption>
+        <colgroup>
+            <col style="width: 25%;">
+            <col style="width: 25%;">
+            <col style="width: 25%;">
+            <col style="width: 25%;">
+        </colgroup>
+        <thead class="thead-light text-center">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>PastTime</th>
+            </tr>
+        </thead>
+        <tbody class="text-center" id="htmlTbody">
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

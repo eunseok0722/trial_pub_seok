@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'lucida sans unicode';
+  src: local('lucida sans unicode');
+  font-weight: $r;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lucida sans unicode';
+  src: local('lucida sans unicode');
+  font-weight: $b;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lucida Grande';
+  src: local('Lucida Grande'),
+  url('../fonts/LucidaGrande.woff2') format('woff2'),
+  url('../fonts/LucidaGrande.woff') format('woff'),
+  url('../fonts/LucidaGrande.ttf') format('truetype'),
+  url('../fonts/LucidaGrande.otf') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lucida Grande';
+  src: local('Lucida Grande Bold'),
+  url('../fonts/LucidaGrande_Bold.woff2') format('woff2'),
+  url('../fonts/LucidaGrande_Bold.woff') format('woff'),
+  url('../fonts/LucidaGrande_Bold.ttf') format('truetype'),
+  url('../fonts/LucidaGrande_Bold.otf') format('opentype');
+  font-weight: $b;
+  font-style: normal;
+}

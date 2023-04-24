@@ -1,0 +1,17 @@
+body {
+  font-family: $default_font;
+}
+
+#content {
+  @include center-block;
+  padding: $con_pd3;
+}
+
+.section {
+  font-size: $font-14r;
+}
+
+.pop-wrapper {
+  @include posa-tl(45px, 50%);
+  transform: translateX(-50%);
+}

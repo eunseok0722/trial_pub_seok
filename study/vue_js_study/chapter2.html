@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Chapter2 데이터 등록과 변경</h1>
+</header>
+<section>
+    <h2>Section07 기본적인 데이터 바인딩</h2>
+    <div id="p35">
+        <h3>리액티브 데이터 정의하기</h3>
+        <p>{{ex}}</p>
+        <button v-on:click="add()">리액티브데이터 확인</button>
+        <p>{{state.count}}</p>
+    </div>
+</section>
+
+<section>
+    <h2>Section08 텍스트와 속성 데이터 바인딩</h2>
+    <div id="p37">
+        <p>{{ mustache }}</p>
+        <h3>객체와 배열 내부의 요소 출력하기</h3>
+
+        <p>객체 데이터 사용 예시 : {{ message.value}}</p>
+        <p>객체 데이터 길이 : {{ message.value.length }}</p>
+        <p>배열 데이터 사용 예시: {{ list[0]}}</p>
+        <p>배열 데이터 사용에 다른 데이터 사용 예: {{list[num]}}</p>
+
+        <h3>표현식과 문장의 차이에 주의하기</h3>
+        <p>{{ 1 + 1 }}</p>
+        <!--        <p>{{ let foo = message }} </p> 문장이기 때문에 오류 발생 -->
+        <p>{{ message.length >= 10 ? '10 글자 이상' : '10글자 미만'}}</p>
+        <!--        위 상황 같이 길 경우 산출속성 이용하기 -->
+        <p>{{ countLength }}</p>
+        <!--    문자열, 숫자 변환 시 필터 사용    -->
+        <h3>속성 데이터 바인딩하기</h3>
+        <input type="text" v-bind:title="title"
+               v-bind:value="value">
+        <h3>v-bind 생략해서 적기</h3>
+        <input type="text" :title="title"
+               :value="value1">
+        <h3>v-bind 장식자</h3>
+        <!--    DOM의 textContent 속성에 바인딩하기    -->
+        <div v-bind:text-content.prop="message.prop"></div>
+        <!--    DOM의 scrollTop 속성에 바인딩하기    -->
+        <div v-bind:scroll-top.prop="scroll">scroll</div>
+        <h3>현재 데이터 전체 상태가 어떤지 JSON 형식으로 화면에 출력하기</h3>
+        <pre>{{$data}}</pre>
+        <h3>데이터 변경</h3>
+        <p>리액티브 데이터는 모두 변경이 가능하다.</p>
+        <h3>클릭으로 카운터의 수 늘리기</h3>
+        <!--    count 속성 출력하기    -->
+        <p>{{ count }}번 클릭했습니다.
+            <button v-on:click="increment">증가</button>
+            <button v-on:click="decrement">감소</button>
+        </p>
+        <h3>클래스와 스타일 데이터 바인딩</h3>
+        <!--  클래스명에 하이픈 넣고 싶을 경우 ''작은따옴표로 감싸기      -->
+        <p v-bind:class="{child:isChild, 'is-active':isActive}">클래스 바인딩하기</p>
+        <p v-bind:style="{color:textColor, backgroundColor:bgColor, 'font-size': fontSize+'px'}">스타일 바인딩하기</p>
+
+        <h3>플레인 속성과 함께 사용하는 경우</h3>
+        <p class="child" v-bind:class="{'is-active': isActive}">속성이 같지 않으면 바인드 된 속성이 추가됨</p>
+        <p style="color:red" v-bind:style="{color: textColor}">속성이 같을 경우 덮어쓰기 됨</p>
+
+        <h3>클래스 조건에 삼항 연산자 사용하기</h3>
+        <p v-bind:class="[isActive ? 'Active' : 'normal']">삼항연산자 사용 시 배열 리터럴 사용</p>
+
+        <h3>객체 데이터 전달하기</h3>
+        <p v-bind:class="classObject">템플릿에 여러개의 클래스나 스타일 적으면 가독성 하락</p>
+        <p v-bind:class="styleObject">객체 형식으로 data에 정의한 뒤 전달</p>
+
+        <h3>여려 개의 속성 데이터 바인딩하기</h3>
+        <img v-bind="item" v-bind:id="'thumb-'+item.id">
+        <p>매개변수로 전달 된 v-bind와 함께 id와 같은 요소는 따로 지정할 수도 있음</p>
+
+        <h3>SVG 데이터 바인딩하기</h3>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <circle cx="100" cy="75" v-bind:r="radius" fill="lightblue"></circle>
+        </svg>
+        <input v-model="radius" type="range" min="0" max="100">
+    </div>
+
+
+</section>
+<section>
+    <h2>Section09 템플릿에서 조건 분기하기</h2>
+    <div id="p51">
+        <h3>템플릿에서 조건 분기하기</h3>
+        <button v-on:click="ok=!ok">true/false</button>
+        <!--   DOM 삭제 및 주석처리    -->
+        <div v-if="ok">v-if 조건으로 출력하기</div>
+        <!--    display: none   -->
+        <div v-show="ok">v-show 조건으로 출력하기</div>
+
+        <h3>&lt;template&gt;태그를 사용한 v-if 그룹</h3>
+        <template>
+            <header>v-if는 단일 요소에 적용해야함</header>
+            <div>그래서 template 태그로 div와 같이 wrap을 해줌</div>
+        </template>
+
+        <h3>v-else-if와 v-else로 그룹 만들기</h3>
+        <div v-if="type === 'A'">
+            type은 A
+        </div>
+        <div v-else-if="type === 'B'">
+            type은 B
+        </div>
+        <div v-else>
+            모든 조건을 만족하지 않는 경우
+        </div>
+
+        <h3>v-if, v-else-if, v-else의 key 설정하기</h3>
+        <div v-if="select === 'a'" key="select"> v-if 여러개면 key를 설정해서 오류 방지</div>
+        <div v-else-if="select === 'b'" key="select"> 2. v-if 여러개면 key를 설정해서 오류 방지2</div>
+        <div v-else key="select"> 3. v-if 여러개면 key를 설정해서 오류 방지3</div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Section10 리스트 데이터 출력/변경하기</h2>
+    <div id="p54">
+        <h3>요소를 반복해서 렌더링하기</h3>
+        <ul>
+            <li v-for="key in list" v-bind:key="key.id">
+                ID. {{key.id}} 이름 : {{key.name}}, HP : {{key.hp}}
+            </li>
+        </ul>
+        <h3>인덱스와 객체 키 사용하기</h3>
+        <ul>
+            <li v-for="(item, index) in list">item, index 활용 예: {{item.name}} ({{index + 1}})</li>
+        </ul>
+        <ul>
+            <li v-for="(item, key, index) in list" v-bind:key="item.id">item, key, index 활용 예 : {{item.name}} {{ key }},
+                {{ index }}
+            </li>
+        </ul>
+        <h3>반복 렌더링하면서 다양한 조건 적용하기</h3>
+        <p>조건에 따라 클래스 걸기</p>
+        <ul>
+            <li v-for="item in list" v-bind:key="item.id"
+                v-bind:class="{ strong:item.hp>300}">
+                ID. {{item.id}} 이름 : {{item.name}} HP. {{ item.hp }}
+                <span v-if="item.hp > 300">강하다!</span>
+            </li>
+        </ul>
+        <p>출력 조건 걸기</p>
+        <ul>
+            <li v-for="item in list" v-bind:key="item.id"
+                v-if="item.hp < 300">
+                ID. {{item.id}} 이름 : {{item.name}} HP. {{ item.hp }}
+            </li>
+        </ul>
+        <h3>리스트 변경하기</h3>
+        <button v-on:click="rename">피카츄 진화!</button>
+        <ul>
+            <li v-for="item in list" v-bind:key="list.id">{{item.name}}</li>
+        </ul>
+        <p>리스트에 요소 추가하기</p>
+        이름 <input v-model="name">
+        HP <input v-model="hp">
+        <button v-on:click="doAdd">몬스터 추가하기</button>
+        <ul>
+            <li v-for="item in list" v-bind:key="item.id">
+                ID. {{ item.id }} {{ item.name }} HP. {{ item.hp }}
+            </li>
+        </ul>
+        <p>리스트에서 요소 제거하기</p>
+        <ul>
+            <li v-for="(item, index) in list" v-bind:key="item.id">
+                ID. {{ item.id }}} {{ item.name }} HP. {{ item.hp }}
+                <button v-on:click="doRemove(index)">창고보내기</button>
+            </li>
+        </ul>
+        <p>리스트 요소 변경하기</p>
+        <p>Vue.set 메서드 사용 this.$set</p>
+        <button v-on:click="change">피카츄 돌아와!</button>
+        <ul>
+            <li v-for="item in list" v-bind:key="list.id">{{item.name}}</li>
+        </ul>
+        <p>속성 추가하기</p>
+        <pre>
+            {{$data.list}}
+        </pre>
+        <p>리스트 요소 속성 변경하기</p>
+        <ul>
+            <li v-for="(item, index) in list" v-bind:key="list.id" v-if="item.hp">
+                ID. {{ item.id }} {{ item.name }} HP. {{ item.hp }}
+                <span v-if="item.hp < 50 "> 상처가 크다! </span>
+                <button v-on:click="doAttack(index)">공격하기</button>
+            </li>
+        </ul>
+        <p>리스트 자체 변경하기</p>
+        <button v-on:click="filter">hp 100 이상 포켓몬</button>
+        <ul>
+            <li v-for="(item, index) in list" v-bind:key="list.id">
+                ID. {{ item.id }} {{ item.name }} HP. {{ item.hp }}
+            </li>
+        </ul>
+        <h3>유니크 키가 없는 배열</h3>
+        <p>단순 출력용으로만 사용할 것</p>
+        <select>
+            <option v-for="item in list"> {{item.name}}</option>
+        </select>
+        <h3>리터럴에 직접 v-for 적용하기</h3>
+        <ul>
+            <li>
+                <span v-for="item in 15">{{ item }} </span>
+            </li>
+            <li>
+                <span v-for="item in [1, 5, 10, 15]">{{ item }} </span>
+            </li>
+        </ul>
+
+        <h3>문자열에 v-for 적용하기</h3>
+        <p>
+            <span v-for="item in text">{{ item }}</span>
+        </p>
+        <h3>외부에서 데이터 가져와서 출력하기</h3>
+        <ul>
+            <li v-for="(item, index) in list" v-bind:key="list.id">
+                ID. {{ item.id }} {{ item.name }} HP. {{ item.hp }}
+            </li>
+        </ul>
+
+
+    </div>
+</section>
+
+<section>
+    <h2>Section11 DOM을 직접 참조하는 $el과 #refs</h2>
+    <div id="p69">
+        <h3>$el의 사용방법</h3>
+        <p>루트요소에 접근할 때 사용</p>
+        <p>{{el}}</p>
+        <h3>$ref 사용 방법</h3>
+        <p>루트 이외의 요소에 접근할 때 사용</p>
+        <p ref="ref">{{ref}}</p>
+        <h3>$el과 $refs는 일시적인 변경</h3>
+        <div>
+            <button v-on:click="handleClick">Count Up</button>
+            <button v-on:click="show=!show">표시/비표시</button>
+            <span ref="count" v-if="show">0</span>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Section12 템플릿 제어 디렉티브</h2>
+    <div id="p72" v-cloak>
+        <h3>v-pre</h3>
+        <p> html 컴파일 하지 않고 정적 콘텐츠로 다룰 떄 사용
+            <span>
+                <a v-bind:href="url" v-pre>
+                hello {{message}}
+                </a>
+            </span>
+        </p>
+        <h3>v-once</h3>
+        <p>한번 컴파일하고 이후에는 정적 콘텐츠로 다루고 싶을 때</p>
+        <p>
+            <a v-bind:href="url" v-once>
+                Hello {{message}}
+            </a>
+        </p>
+        <h3>v-text</h3>
+        <p v-text="text"></p>
+        <h3>v-html</h3>
+        <p v-html="html"></p>
+        <h3>v-cloak</h3>
+        <p>인스턴스 준비 끝나면 자동 제거, Mustache 등 컴파일 이전 단계 템플릿 화면 출력 방지</p>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
+<script src="js/chapter2.js"></script>
+
+
+</body>
+</html>

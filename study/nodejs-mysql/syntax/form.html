@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- form의 경우 url에 Query String의 방식으로 전송-->
+<!-- 서버 데이터를 수정, 생성, 삭제할 경우에는 반드시 Method 방식에 post 입력하기 -->
+<form action="http://localhost:3000/process_create" method="post">
+  <p><input type="text" name="title"></p>
+  <p>
+    <textarea name="description"></textarea>
+  </p>
+  <p>
+    <input type="submit">
+  </p>
+</form>
+
+</body>
+</html>

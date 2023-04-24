@@ -1,0 +1,364 @@
+// 기본 폰트 정의
+body {
+  font-family: $default_font;
+}
+
+// 웹접근성용 안내 문구 숨김
+.blind {
+  font-size: 0;
+  position: absolute;
+  text-indent: -9999px;
+}
+
+// 1줄 이상 텍스트 말줄임 no-wrap
+.line-1 {
+  display: block;
+  width: 100%;
+  @include ln-1;
+}
+
+// 경계선
+.line {
+  //width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+// border 테두리 속성
+.bd1 {
+  border: 1px solid $border_clr2;
+}
+
+.bd2 {
+  border: 2px solid $point_clr;
+}
+
+// input 기본 모양 설정
+input {
+  box-sizing: border-box;
+  font-size: $font-16r;
+  //@include m-l {
+  //  font-size: $font-12r;
+  //}
+}
+
+// address 기본 모양 설정
+address {
+  font-style: normal;
+  font-size: $font-14r;
+  line-height: 21px;
+}
+
+// font 설정
+.tit-r {
+  font-size: $font-14r;
+  font-weight: $b;
+  //@include p-s {
+  //  font-size: $font-12r;
+  //}
+}
+
+.txt-r {
+  font-size: $font-14r;
+  //@include p-s {
+  //  font-size: $font-12r;
+  //}
+}
+
+.txt-l {
+  font-size: $font-16r;
+  //@include p-s {
+  //  font-size: $font-14r;
+  //}
+}
+
+.tit-l {
+  font-size: $font-16r;
+  font-weight: $b;
+  //@include p-s {
+  //  font-size: $font-14r;
+  //}
+}
+
+.post-sub-tit {
+  font-size: $font-20r;
+  font-weight: $b;
+  //@include m-l {
+  //  font-size: $font-16r;
+  //}
+}
+
+.popular-txt {
+  font-size: $font-24r;
+  font-weight: $b;
+  //@include p-s {
+  //  font-size: $font-18r;
+  //}
+}
+
+.post-tit {
+  font-size: $font-32r;
+  font-weight: $b;
+  //@include t-s {
+  //  font-size: $font-24r;
+  //}
+  //@include m-l {
+  //  font-size: $font-20r;
+  //}
+}
+
+.article-tit {
+  font-size: $font-48r;
+  font-weight: $b;
+  //@include m-l {
+  //  font-size: $font-32r;
+  //}
+}
+
+.author-tit {
+  font-size: $font-72r;
+  font-weight: $b;
+  //@include t-l {
+  //  font-size: $font-60r;
+  //}
+  //@include m-l {
+  //  font-size: $font-32r;
+  //}
+}
+
+.hl-tit-s {
+  font-size: 10rem;
+  font-weight: $b;
+  //@include p-s {
+  //  font-size: 8rem;
+  //}
+  //@include t-l {
+  //  font-size: 5.5rem;
+  //}
+  //@include t-s {
+  //  font-size: 4.2rem;
+  //}
+  //@include m-s {
+  //  font-size: 3.2rem;
+  //}
+}
+
+.section-tit {
+  font-size: $font-104r;
+  font-weight: $b;
+  //@include t-s {
+  //  font-size: $font-84r;
+  //}
+  //@include m-l {
+  //  font-size: $font-48r;
+  //}
+}
+
+
+// buttons
+.btn-area {
+  ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    li {
+      width: 100%;
+      display: table-cell;
+
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.btn-view-more {
+  position: relative;
+  height: 24px;
+  width: fit-content;
+  font-size: $font-16r;
+  font-weight: $b;
+  white-space: nowrap;
+
+  a,
+  button {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/ico_arrow_right.png");
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      padding-left: 8px;
+      background-position: 10px 4px;
+      vertical-align: -40%;
+    }
+  }
+}
+
+// 뒤로가기
+.btn-go-back {
+  position: relative;
+  height: 24px;
+  width: fit-content;
+  font-size: $font-16r;
+  font-weight: $b;
+
+  a,
+  button {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/ico_arrow_right.png");
+      background-position: 10px 4px;
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      padding-left: 8px;
+      vertical-align: -40%;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.btn-s {
+  display: block;
+  width: fit-content;
+  height: 50px;
+  //@include m-l {
+  //  height: 4rem;
+  //}
+
+  a,
+  button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    font-size: $font-14r;
+    line-height: 50px;
+    box-sizing: border-box;
+    background: inherit;
+    color: inherit;
+    border: none;
+    font-weight: $md;
+    //@include m-l {
+    //  line-height: 4rem;
+    //  font-size: $font-12r;
+    //  padding: 0 1rem;
+    //}
+  }
+}
+
+.btn-ty-b {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn-ty-w {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* 트랜지션 정의 */
+.mgzn-enter-active,
+.mgzn-leave-active,
+.mgzn-move {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.mgzn-enter-from,
+.mgzn-leave-to {
+  opacity: 0;
+  transform: translateY(-1rem);
+}
+
+@include p-s {
+  .tit-r {
+    font-size: $font-12r;
+  }
+  .txt-r {
+    font-size: $font-12r;
+  }
+  .tit-l {
+    font-size: $font-14r;
+  }
+  .txt-l {
+    font-size: $font-14r;
+  }
+  .popular-txt {
+    font-size: $font-18r;
+  }
+  .hl-tit-s {
+    font-size: 8rem;
+  }
+}
+
+@include t-l {
+
+  .section-tit {
+    font-size: $font-84r;
+  }
+  .author-tit {
+    font-size: $font-60r;
+  }
+  .hl-tit-s {
+    font-size: 5.5rem;
+  }
+}
+
+@include t-s {
+  .post-tit {
+    font-size: $font-24r;
+  }
+  .hl-tit-s {
+    font-size: 4.2rem;
+  }
+}
+@include m-l {
+  input {
+    font-size: $font-12r;
+  }
+  .post-sub-tit {
+    font-size: $font-16r;
+  }
+  .post-tit {
+    font-size: $font-20r;
+  }
+  .article-tit {
+    font-size: $font-32r;
+  }
+  .author-tit {
+    font-size: $font-32r;
+  }
+  .section-tit {
+    font-size: $font-48r;
+  }
+  .btn-s {
+    height: 4rem;
+
+    a,
+    button {
+      line-height: 4rem;
+      font-size: $font-12r;
+      padding: 0 1rem;
+    }
+  }
+}
+@include m-s {
+  .hl-tit-s {
+    font-size: 3.2rem;
+  }
+}

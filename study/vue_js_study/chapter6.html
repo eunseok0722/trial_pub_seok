@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter6 트랜지션과 애니메이션</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="bd">
+    <h1>Chapter6 트랜지션과 애니메이션</h1>
+</header>
+
+<section>
+    <h2>Section28 트랜지션이란?</h2>
+    <div id="p184">
+        <h3>기본적인 트랜지션 사용 방법</h3>
+        <button v-on:click="show=!show">변경하기</button>
+        <transition>
+            <div v-show="show">트랜지션 하고 싶은 요소</div>
+        </transition>
+
+        <!--   프리픽스 변경      -->
+        <transition name="demo">
+            <div v-if="show">트랜지션하고 싶은 요소</div>
+        </transition>
+
+        <!--   랜더링 시점에 트랜지션 적용하기     -->
+        <transition appear>
+            <div>초기 렌더링에 트랜지션 적용 샘플</div>
+        </transition>
+    </div>
+
+    <div id="p192">
+        <p>서로 다른 스타일 정의하기</p>
+        <button v-on:click="show=!show">변경하기</button>
+        <transition name="w">
+            <div v-if="show">transform을 각각 다르게 주면 됨</div>
+        </transition>
+    </div>
+
+
+    <div id="p193">
+        <p>여러 개의 요소 그룹화하기</p>
+        <button v-on:click="show=!show">변경하기</button>
+        <div style="height: 2rem">
+            <transition name="x">
+                <div v-if="show" key="a">TRUE</div>
+                <div v-else key="b">FALSE</div>
+            </transition>
+        </div>
+
+        <p>Enter와 Leave 시점 변경하기 </p>
+        <button v-on:click="show1=!show1">변경하기</button>
+        <transition mode="out-in">
+            <div v-if="show1" key="a">Out</div>
+            <div v-else key="b">in</div>
+        </transition>
+
+    </div>
+    <div id="p194">
+        <p>enter, leave 시점 변경하기</p>
+        <button v-on:click="show=!show">변경하기</button>
+        <p>out-in 예시</p>
+        <transition mode="out-in">
+            <div v-if="show" key="a">Out</div>
+            <div v-else key="b">in</div>
+        </transition>
+        <p>in-out 예시</p>
+        <transition mode="in-out">
+            <div v-if="show" key="a">Out</div>
+            <div v-else key="b">in</div>
+        </transition>
+
+    </div>
+
+    <div id="p195">
+        <p>키의 변화로 트랜지션 발동하기</p>
+        <button v-on:click="count++">변경하기</button>
+        <transition name="x">
+            <div v-bind:key="count">{{count}}</div>
+        </transition>
+    </div>
+
+    <div id="p196">
+        <h3>리스트 트랜지션 예시</h3>
+        <transition-group class="list" tag="ul">
+            <li v-for="item in sortedList" v-bind:key="item.id">
+                {{item.name}}의 HP는 {{item.hp}}
+            </li>
+        </transition-group>
+        <button v-on:click="order=!order">변경하기</button>
+
+        <h3>Leave와 Move 가 동시에 적용되는 경우</h3>
+        <button v-on:click="deleteList">변경하기</button>
+        <transition-group class="list" tag="ul" name="list">
+            <li v-for="item in list" v-bind:key="item.id">
+                {{item.name}}의 HP는 {{item.hp}}
+            </li>
+        </transition-group>
+    </div>
+
+    <div id="199">
+
+    </div>
+</section>
+
+<section>
+    <h2>Section31 SVG 트랜지션</h2>
+    <div id="p201">
+        <button v-on:click="toggle=!toggle">변경하기</button>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <transition name="s">
+                <!--        v-bind:key 가 fill 로 설정되어있어야 데이터 변경에 따라서 트렌지션이 일어날 수 있다.        -->
+                <my-circle v-bind:fill="fill" v-bind:key="fill"></my-circle>
+            </transition>
+        </svg>
+    </div>
+
+</section>
+
+<section>
+    <h2>Section32 트랜지션 훅</h2>
+    <div id="p203">
+        <h3>트랜지션 훅 예시</h3>
+        <p>
+            <button v-on:click="show=!show">변경하기</button>
+        </p>
+        <transition
+                v-on:before-enter="beforeEnter"
+                v-on:enter="enter"
+                v-on:after-enter="afterEnter"
+                v-on:enter-cancelled="enterCancelled"
+                v-on:before-leave="beforeLeave"
+                v-on:leave="leave"
+                v-on:after-leave="afterLeave"
+                v-on:leave-cancelled="leaveCancelled"
+                name="z">
+            <div v-if="show">example</div>
+        </transition>
+        <!--   v-bind:css="false" 예시     -->
+        <transition v-bind:css="false" v-on:before-enter="beforeEnter" name="z">
+            <div v-if="show">example</div>
+        </transition>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+<script src="js/chapter6.js"></script>
+</body>
+</html>

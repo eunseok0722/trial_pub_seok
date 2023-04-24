@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Class vs Element</title>
+    <style>
+        /*
+        1. 가상 클래스, 가상 요소, 가상 선택자
+        Pseudo-class, Pseudo-element, Pseudo-selector
+        불필요한 태그 작성 또는 수정 없이 css작업에서 디자인적 요소를 추가, 꾸밀 수 있어서 사용하는 css 기법
+
+        2. 가독성이 좋아짐
+        HTML 문서에 태그가 없으면 화면 리더기가 읽어나갈 때 이런 부분을 스캔하지 않으므로 전체적 문서의 가독성 좋게 만든다.
+
+        3. 사용방법 : 또는 ::
+
+        4. 가상클래스
+        실제 클래스를 만들어 사용하는 것이 아닌 선택자 뒤에 가상 클래스를 붙여서 css 디자인 꾸민다.
+        :link
+        :hover
+        :active
+        :visitied
+        :focus
+        :nth-child(n)
+        :first-child
+        :last-child
+        :checked (라디오버튼, 체크박스 체크 시 적용할 스타일 지정)
+        :selected
+
+        5. 가상 요소
+        실제로 문서(HTML)에 없는 요소를 있는 것 처럼 만들어서 아용하게끔 만듦
+        어떠한 요소(Element)도 없는데 마치 있는 것 처럼 가상으로 지정해서 CSS를 수정
+        선택자::가상요소
+        ::before { content: ''; }
+        ::after { content: url('이미지경로')}
+        ::marker {} ul, ol 태그의 설정 지정
+        ::selection {} 마우스 드래그 -> 형광펜 기능
+        ::first-line {} 첫번째 줄에 대해서 스타일 지정
+        ::first-letter {} 첫글자에 대해서 스타일 지정
+        */
+
+
+    </style>
+</head>
+<body>
+<!-- 예제 1 -->
+<style>
+    a:link {
+        color: red;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: yellow;
+    }
+
+    a:visited {
+        color: green;
+    }
+
+    a:focus {
+        background-color: #000;
+        color: yellow;
+    }
+
+    input:focus {
+        background-color: red;
+        color: #fff;
+    }
+
+    input:last-of-type:focus {
+        background-color: green;
+    }
+</style>
+<a href="#none">가상 클래스</a>
+<input type="text">
+<input type="text">
+<input type="text">
+<!-- //예제 1 -->
+
+<!-- 예제2: 가상요소 -->
+<style>
+    .test {
+        border: 1px solid;
+        margin-top: 3rem;
+    }
+
+    .test ul li:first-child {
+        font-weight: bold;
+        color: blue;
+    }
+
+    .test ul li:first-child::first-letter {
+        font-weight: bold; color: red; font-size: 2rem;
+    }
+
+    .test2::first-line {
+        background-color: green;
+        color: #fff;
+        font-weight: bold;
+    }
+    .test2::first-letter {
+        background-color: red;
+        color: #fff;
+        font-weight: bold;
+        font-size: 200%;
+    }
+    .test2::before {
+        content: 'Before Content';
+        display: block;
+    }
+    .test2::after {
+        content: 'after Content';
+        content: url('https://cdn.pixabay.com/photo/2023/01/28/06/57/man-7750139_960_720.png');
+        display: block;
+        width: 300px;
+    }
+    .btnClose::before {content: '❌';}
+</style>
+
+<div class="test">
+    <ul>
+        <li>영화 보니까 기분이 좋다.</li>
+        <li>보는 내내 몰입감과 긴장감 있어서 좋았다.</li>
+        <li>한국 영화가 요즘 흥행하고 있다.</li>
+    </ul>
+    <p class="btnClose">창닫기</p>
+    <p class="test2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque facilisis posuere metus et tincidunt. Donec
+        magna quam, sollicitudin at facilisis non, elementum a justo. Donec rutrum aliquet magna. Nam accumsan laoreet
+        dolor non fermentum. Aenean aliquam nisl vel lectus convallis tincidunt. Nam ac suscipit eros, eu rhoncus dolor.
+        Nullam at sollicitudin neque, sit amet molestie ipsum. Nam luctus at arcu sed varius. Curabitur quis lacus
+        malesuada, malesuada turpis id, mattis neque. Maecenas eleifend erat lectus, at rutrum nibh rutrum pulvinar.
+        Etiam sit amet tortor a dui congue aliquam.
+    </p>
+</div>
+<!-- //예제2: 가상요소 -->
+
+</body>
+</html>

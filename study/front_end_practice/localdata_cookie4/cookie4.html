@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>localData cookie</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cookie4.css">
+
+</head>
+<body>
+    <div class="container">
+        <h3 class="text-center" style="padding: 50px;">
+            JS Cookie
+            <small class="text-muted">with local Data Storage</small>
+        </h3>
+        <table class="table table-bordered table-striped table-dark table-hover">
+            <caption>Cookie List</caption>
+            <colgroup>
+                <col style="width: 70%">
+                <col style="width: 30%">
+            </colgroup>
+            <thead class="thead-light">
+                <tr>
+                    <th>Check List</th>
+                    <th>Click</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <form id="form">
+                    <td>
+                        <input type="text" name="name" placeholder="Cookie Name" id="name" required>
+                    </td>
+                    <td>
+                        <button type="submit">Del Cookie</button>
+                    </td>
+                </form>
+            </tr>
+            <tr>
+                <td>쿠키 전체삭제</td>
+                <td>
+                    <button onclick="allDelCookies()">All Del Cookie</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <button onclick="showCval('userid');">userid 쿠키값은 ?</button>
+        <button onclick="showCval('username');">username 쿠키값은 ?</button>
+        <button onclick="showCval('uid');">uid 쿠키값은 ?</button>
+        <button onclick="clearCval();">Clear</button>
+        <div id="cval"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="cookie4.js"></script>
+</body>
+</html>

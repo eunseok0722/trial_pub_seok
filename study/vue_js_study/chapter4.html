@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js Chapter4</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="bd">
+    <h1>Chapter4 데이터 감시하고 가공하기</h1>
+</header>
+
+<section>
+    <h2 class="bd">Section16 산출 속성으로 처리를 포함한 데이터 만들기</h2>
+    <div id="p106">
+        <h3>산출속성 사용 방법</h3>
+        <p>{{width}}의 절반은 {{halfWidth}} 입니다. </p>
+
+        <h3>산출 속성 조합해서 사용하기</h3>
+        <p>X: {{halfPoint.x}}</p>
+        <p>Y: {{halfPoint.y}}</p>
+
+        <h3>게터와 세터</h3>
+        <div>
+            <input v-model.number="width">{{width}}
+            <input v-model.number="halfWidth">{{halfWidth}}
+        </div>
+
+        <h3>산출 속성 캐시 기능</h3>
+        <div>
+            <p>산출 속성</p>
+            <ol>
+                <li>{{ computedData }}</li>
+                <li>{{ computedData }}</li>
+            </ol>
+            <p>메서드</p>
+            <ol>
+                <li>{{ methodsData() }}</li>
+                <li>{{ methodsData() }}</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <div id="p111">
+        <h3>리스트 필터링</h3>
+        <input v-model.number="budget">원 이하 필터링하기
+        <input v-model.number="limit"> 개의 결과 출력하기
+        <!-- 정렬기능 추가하기-->
+        <button v-on:click="order=!order"> 오름/내림차순 변경하기</button>
+        <p>{{ matched.length }}개 중에 {{ limited.length }}개를 출력하고 있습니다.</p>
+        <ul>
+            <!-- v-for에 최종 결과라고 할 수 있는 산출 속성 limited 사용하기 -->
+            <li v-for="item in filteredList" v-bind:key="item.id">
+                {{ item.name }} {{ item.price }}원
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2 class="bd">Section17 워처로 데이터 감시해서 처리 자동화하기</h2>
+    <h3>입력 양식 감시하고 API로 데이터 가져오기</h3>
+    <div id="p115"></div>
+    <div id="p120">
+
+    </div>
+    <div id="p121">
+        <select v-model="current">
+            <option v-for="topic in topics" v-bind:value="topic.value">
+                {{ topic.name }}
+            </option>
+        </select>
+        <div v-for="item in list">{{ item.full_name }}</div>
+    </div>
+</section>
+<section>
+    <h2 class="bd">Section18 필터로 텍스트 변환 처리하기</h2>
+    <h3>필터 사용 방법</h3>
+    <div id="p122">
+        <div>{{ price | localeNum }}</div>
+        <div>{{ price | localeNumb }}</div>
+        <p>180도는 {{ 180 | radian | round }} 라디안입니다.</p>
+    </div>
+
+</section>
+<section>
+    <h2>Section19 사용자 정의 디렉티브로 데이터를 감시하면서 DOM 조작하기</h2>
+    <div id="p128">
+        <h3>사용자정의 디렉티브 사용 방법</h3>
+
+    </div>
+</section>
+
+<section>
+    <h3>동영상 재생 조작 예</h3>
+    <div id="p129">
+        <!--    동영상1    -->
+        <button v-on:click="video1=true">재생</button>
+        <button v-on:click="video1=false">중지</button>
+        <video src="src/file.mp4" v-video="video1" style="width: 300px; height: auto"></video>
+
+        <!--    동영상2    -->
+        <button v-on:click="video2=true">재생</button>
+        <button v-on:click="video2=false">중지</button>
+        <video src="src/file2.mp4" v-video="video2" style="width: 300px; height: auto"></video>
+    </div>
+</section>
+
+<section>
+    <h2 class="bd">Section20 nextTick으로 변경 후 DOM에 접근하기</h2>
+    <h3>변경 후의 DOM 높이 확인하기</h3>
+    <div id="p133">
+        <button v-on:click="list.push(list.length+1)">추가</button>
+        <ul ref="list">
+            <li v-for="item in list">{{ item }}</li>
+        </ul>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
+<script src="js/chapter4.js"></script>
+
+
+</body>
+</html>

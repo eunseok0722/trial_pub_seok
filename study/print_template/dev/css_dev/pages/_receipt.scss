@@ -1,0 +1,104 @@
+// 영수증/세금계산서 페이지 스타일
+.rcpt {
+  width: 700px;
+  min-height: 500px;
+  height: auto;
+  margin-top: 5%;
+  @include bd(1px, #ccc);
+  @include bdrs(10px);
+
+  .section {
+    margin-top: $con-pd3;
+  }
+}
+
+//세금계산서 스타일
+
+.rcpt-tax {
+  width: 670px;
+  height: 780px;
+  background-color: $white;
+  display: none;
+
+  .pop-section {
+    width: 640px;
+    height: 519px;
+    background: url("../images/bg-receipt-tax.png") no-repeat center center/cover;
+  }
+
+}
+
+.table-tax {
+  margin: 10px 0 0;
+  box-sizing: border-box;
+  width: 640px;
+
+  tr {
+    td {
+      vertical-align: middle;
+      padding: 0 3px;
+      box-sizing: border-box;
+
+      &.dp2 {
+        padding: 0;
+
+        table {
+          tr {
+            td {
+              padding: 0 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tax-notice {
+  font-size: $font-12r;
+  font-family: $default_font;
+  @include lh(1.4);
+  margin-top: $font-24r;
+}
+
+
+//현금영수증 스타일
+.rcpt-cash {
+  width: 381px;
+  height: 840px;
+  background-color: $white;
+  display: none;
+
+  .pop-section {
+    width: 351px;
+    height: 627px;
+    background: url("../images/bg-receipt-cash.png") no-repeat center center/cover;
+  }
+}
+
+.table-cash {
+  margin: $con-pd;
+  box-sizing: border-box;
+  width: 331px;
+
+  tr {
+    td {
+      vertical-align: middle;
+      padding: 10px 3px 0 3px;
+      box-sizing: border-box;
+
+      &.dp2 {
+        padding: 0;
+
+        table {
+          tr {
+            td {
+              padding: 10px 3px 0 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

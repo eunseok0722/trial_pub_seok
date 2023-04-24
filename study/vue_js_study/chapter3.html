@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Chapter3 이벤트와 입력 양식</h1>
+</header>
+
+<section>
+    <h2>Section13 이벤트 핸들링</h2>
+
+    <div id="p81">
+        <h3>Section13 이벤트 핸들링</h3>
+        <p>클릭 이벤트 핸들러 예제</p>
+        <button @click="handleClick">클릭</button>
+
+        <p>인라인 메서드 핸들링 예제</p>
+        <div>
+            <button v-on:click="count++">클릭</button>
+            <span>{{count}}</span>
+        </div>
+
+        <p>이벤트 매개변수 $event</p>
+        <div>
+            <button v-on:click="handleClick($event, item)">클릭</button>
+        </div>
+
+        <p>사용할 수 있는 이벤트</p>
+        <p>load 되면 transition 적용하기</p>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAO_bQ4y9e5BDk-bVpFFJ2j1gtmqgO8gfDeg&usqp=CAU"
+                 v-on:load="show=true"
+                 v-bind:class="{hide:!show}">
+        </div>
+
+        <p>입력양식 추출하기</p>
+        <div>
+            <input v-bind:value="message" v-on:input="handleInput">
+            <span>{{message}}</span>
+        </div>
+
+        <button v-on:click.right="handleCK">.prevent없는 경우</button>
+        <!-- 마우스 오른쪽 버튼을 눌렀을 때 컨텍스트 메뉴가 출력되지 않음 -->
+        <button v-on:click.right.prevent="handleCK">.prevent예시</button>
+
+        <p>.stop 장식자 : 이벤트 버블링 막음</p>
+        <div v-on:click="handler('div1')">
+            div1
+            <a href="#top" v-on:click.stop="handleCK('div2')">div2</a>
+        </div>
+
+        <p>.prevent 장식자: 링크 이동, submit 기본동작 등 막음</p>
+        <div v-on:click="handleCK('div1')">
+            div1
+            <a href="#top" v-on:click.prevent="handleCK('div2')">div2</a>
+        </div>
+
+        <p>.capture 이벤트를 캡처 모드로 발생</p>
+        <div v-on:click.capture="handleCK('div1')">
+            div1
+            <div v-on:click="handleCK('div2')">
+                div2
+                <div v-on:click="handleCK('div3')">
+                    div3
+                </div>
+            </div>
+        </div>
+
+
+        <div class="overlay" v-on:click.self="handleCK">.self 예시</div>
+
+        <p>.native 예시</p>
+        <my-component v-on:click.native="handleCK">hi</my-component>
+        <my-component v-on:click="handleCK">bye</my-component>
+
+        <div>
+            <p>키장식자 예시</p>
+            <input v-on:keydown.13="handleCK">
+            <input v-on:keydown.enter="handleCK">
+        </div>
+
+
+    </div>
+</section>
+
+
+<section>
+    <h2>Section14 입력 양식 핸들링</h2>
+    <div id="p90">
+        <h3>v-model 사용 방법</h3>
+        <p>{{vModel}}</p>
+        <input v-model="vModel">
+
+        <h3>textarea 예시</h3>
+        <textarea v-model="vTextArea"></textarea>
+        <pre>{{vTextArea}}</pre>
+
+
+        <h3>체크 박스 예시</h3>
+        <label>
+            <input type="checkbox" v-model="val" true-value="yes" false-value="no"> {{val}}
+        </label>
+
+        <h3>여러 개 체크 박스 예시</h3>
+        <label>
+            <input type="checkbox" v-model="val1" value="A"> A
+        </label>
+        <label>
+            <input type="checkbox" v-model="val1" value="B"> B
+        </label>
+        <label>
+            <input type="checkbox" v-model="val1" value="C"> C
+        </label>
+        <p>{{val1}}</p>
+
+        <h3>라디오 버튼 예시</h3>
+        <label>
+            <input type="radio" v-model="val2" value="a"> a
+        </label>
+        <label>
+            <input type="radio" v-model="val2" value="b"> b
+        </label>
+        <label>
+            <input type="radio" v-model="val2" value="c"> c
+        </label>
+        <p>{{val2}}</p>
+
+        <p>선택 버튼 예시</p>
+        <select v-model="val3">
+            <option disabled="disabled">선택해 주세요.</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+        </select>
+        <p>{{val3}}</p>
+
+        <p>여러 개 선택</p>
+        <select v-model="val4" multiple>
+            <option disabled="disabled">선택해 주세요.</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+        </select>
+        <p>{{val4}}</p>
+
+        <p>파일 타입 예시</p>
+        <input type="file" v-on:change="handleChange">
+        <div v-if="preview">
+            <img v-bind:src="preview">
+        </div>
+
+        <p>다른 입력 양식 예시</p>
+        <div>
+            <input type="range" v-model.number="val5"> {{val5}}
+        </div>
+
+        <p>장식자 예시</p>
+        <p>.number 예시</p>
+        <div>
+            <input type="text" v-model.number="price"> {{price}}
+        </div>
+        <p>.lazy 예시</p>
+        <div>
+            <input type="text" v-model.lazy="price"> {{price}}
+        </div>
+        <p>.trim 예시</p>
+        <div>
+            <input type="text" v-model.trim="price"> {{price}}
+        </div>
+
+
+
+    </div>
+</section>
+
+<section>
+    <h2>Section15 마운트 요소 외의 이벤트 조작</h2>
+
+    <div id="p100">
+        <header v-bind:class="{compact:scrollY>200}">
+            200px 이상 스크롤 했으면, .compact 클래스 추가하기
+        </header>
+        <div class="content">...</div>
+        <button v-on:click="scrollTop">
+            페이지 상단으로 이동하기
+        </button>
+
+        <p>Vue 사용하지 않고 이벤트 핸들하기</p>
+        <input id="message" v-on:keydown.enter="handleInput">
+        <button data-update="jQuery!">jQuery로 변경하기</button>
+    </div>
+</section>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
+<script src="js/chapter3.js"></script>
+
+
+</body>
+</html>

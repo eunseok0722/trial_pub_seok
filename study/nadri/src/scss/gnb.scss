@@ -1,0 +1,184 @@
+
+.gnb {
+  @include width;
+  @include align-center;
+  height: 5.2rem;
+  font: 2.2rem "BMYEONSUNG";
+  color: $white;
+
+  top: 13.4rem;
+  z-index: $gnb-z-index;
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+
+  @include tablet {
+    @include rwd-width;
+  }
+  @include mobile {
+    height: 100%;
+    //height: 0;
+    transition: left 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    position: absolute;
+    top: 13.4rem;
+    left: -50%;
+  }
+
+  .gnb-wrap {
+    height: 5.2rem;
+    background-color: $header-bg-color;
+    background-size: 100% 5.2rem;
+    @include mobile {
+      height: 100%;
+      background-color: inherit;
+    }
+    > ul {
+      @include contents-width;
+      display: flex;
+      @include tablet {
+        @include gnb-width;
+      }
+      @include mobile {
+        @include rwd-width;
+        flex-direction: column;
+      }
+
+
+      > li {
+        flex: 1 1 auto;
+        @include tablet {
+          flex: 1 1 0;
+          &:nth-of-type(4) {
+            display:none;
+          }
+        }
+        @include mobile {
+          &:nth-of-type(4) {
+            display:block;
+          }
+        }
+
+        .gnb-main {
+          height: 5.2rem;
+          @include mobile {
+            background-color: $header-bg-color;
+
+          }
+
+          a {
+            text-align: center;
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 5.2rem;
+
+            img {
+              width: 4.4rem;
+              margin-right: 5%;
+              vertical-align: -35%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.gnb-sub {
+  //@include width;
+  //@include align-center;
+  height: auto;
+  overflow: hidden;
+  // margin-top: 0.2rem;
+  //background: $header-bg-color;
+  //z-index: $gnb-z-index;
+  @include mobile {
+     height:0;
+    //height: auto;
+    transition: height 0.5s ease;
+
+  }
+
+  ul {
+    width: $width;
+    margin-top: 1.9rem;
+    @include mobile {
+      margin-top: 0;
+      background: $header-bg-color-m;
+    }
+
+    li {
+      margin-left: 50%;
+      height: 2.8rem;
+      @include tablet {
+        margin-left: 0;
+        text-align: center;
+      }
+      @include mobile {
+        height: 4rem;
+      }
+
+      a {
+        font: 700 1.4rem "NanumMyeongjo";
+        color: $beige;
+        width: 100%;
+        height: 100%;
+        line-height: 2.8rem;
+        display: block;
+        @include mobile {
+          line-height: 4rem;
+        }
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+.gnb-sub-bg {
+  width: 100%;
+  height: 24.1rem;
+  margin-top: 0.2rem;
+  background-color: $header-bg-color;
+  @include mobile {
+    display: none;
+  }
+}
+
+.gnb-hamburger-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url("../img/gnb_ico_menu.png") no-repeat center center/contain;
+  position: absolute;
+  top: 5.5rem;
+  left: 10%;
+  display: none;
+  z-index: $gnb-z-index;
+  transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+  @include mobile {
+    display: block;
+  }
+}
+// pc, tablet gnb toggle 클래스
+.gnb-down {
+  height: 29.5rem!important;
+  @include mobile {
+    height: 100%!important;
+  }
+}
+
+
+//mobile gnb activate 클래스
+.gnb-activate {
+  left: 50%;
+}
+
+.gnb-sub-activate {
+  height: auto;
+}
+
+//mobile gnb-hamberger-btn 닫기 버튼으로 전환
+
+.gnb-close-btn {
+  background: url("../img/gnb_ico_close.png") no-repeat center center/contain;
+}

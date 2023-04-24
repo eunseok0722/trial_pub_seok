@@ -1,0 +1,54 @@
+
+
+// PC 레이아웃 설정
+
+@mixin width {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+};
+
+@mixin gnb-width {
+    width: 100% - 10%;
+    max-width: 1920px;
+    margin: 0 auto;
+};
+
+// pc 콘텐츠 최적화 가로 너비 (현재 1200px)
+@mixin contents-width {
+    width: 1200px;
+    max-width: 1920px;
+    margin: 0 auto;
+};
+
+// 중앙정렬
+@mixin align-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+// 영역 검사용 border 1px solid red
+@mixin border {
+    border:1px solid red;
+    box-sizing: border-box;
+}
+
+// 반응형 설정
+
+@mixin rwd-width {
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+@mixin tablet {
+ @media (max-width: 1199px) {
+     @content;
+ }
+}
+
+@mixin mobile {
+    @media (max-width: 640px) {
+        @content;
+    }
+}

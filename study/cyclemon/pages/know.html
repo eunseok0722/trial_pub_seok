@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyclemon Clone Coding | Know More</title>
+    <link rel="icon" type="image/png" href="../assets/images/fav.png"/>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/handlebars_4.7.7.js"></script>
+</head>
+<body class="know">
+
+<script id="profile-template" type="text/x-handlebars-template">
+    <ul class="profile-list">
+    {{#each profile as |item index|}}
+        <li class="list-item">
+            <div class="profile-item">
+                <ul class="spec-list">
+                    <li class="list-item">
+                        <a target="_blank" title="opens in new tab"
+                           href="{{href}}">
+                            <img alt="{{name}}" src="../assets/images/{{img}}"/>
+                        </a>
+                    </li>
+                    <li class="list-item">
+                        <img alt="{{alt}}" src="../assets/images/{{sign}}"/>
+                    </li>
+                    <li class="list-item">
+                        <p>{{sum}}</p>
+                    </li>
+                </ul>
+                <ul class="sns-list">
+                    {{#each sns as |item index|}}
+                    <li class="list-item">
+                        <div class="sns-item {{class}}">
+                            <a href="{{href}}" target="_blank"
+                               title='opens in new tab'>
+                            </a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </li>
+    {{/each}}
+    </ul>
+</script>
+<script id="entry-template" type="text/x-handlebars-template">
+    <div id="wrapper" class="sub">
+        <header id="header">
+            {{#> Gnb}}
+                GNB가 정상적으로 로딩되지 않았습니다.
+            {{/Gnb}}
+            {{#> Lnb}}
+                LNB가 정상적으로 로딩되지 않았습니다.
+            {{/Lnb}}
+            <div class="share">
+                <button class="btn-share">
+                    <i class="blind">share</i>
+                </button>
+                {{#> Sns}}
+                    SNS가 정상적으로 로딩되지 않았습니다.
+                {{/Sns}}
+            </div>
+        </header>
+        <div id="container">
+            <div class="content">
+                <section id="part1" class="section section-know part1">
+                    <h3 class="section-header">
+                        <img src="../assets/images/knowm/teaser.png" alt="Our Teaser - Please take a rest">
+                        <i class="blind">Who We Are | interesting people </i>
+                    </h3>
+                    <article>
+                        <iframe src="https://player.vimeo.com/video/57809383?portrait=0" width="100%" height="100%"
+                                frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    </article>
+                </section>
+                <section id="part2" class="section section-know part2">
+                    <h3 class="section-header">
+                        <img src="../assets/images/knowm/us.jpg" alt="Our Teaser - Please take a rest">
+                        <i class="blind">Our Teaser | Please take a rest</i>
+                    </h3>
+                    <article>
+                        {{#> PrfArt}}
+                            Profile이 정상적으로 로딩되지 않았습니다.
+                        {{/PrfArt}}
+                    </article>
+                </section>
+            </div>
+        </div>
+        <footer id="footer" class="know-footer">
+            <div class="copyright">
+                <address>ⓒ CYCLEMON 2013 - All rights reserved</address>
+            </div>
+            {{#> Sns}}
+                Sns가 정상적으로 로딩되지 않았습니다.
+            {{/Sns}}
+        </footer>
+    </div>
+</script>
+
+<script src="../assets/js/templates.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

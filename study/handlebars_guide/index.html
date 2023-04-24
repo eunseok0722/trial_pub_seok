@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>handlebars_guide</title>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+</head>
+<body>
+
+
+<!-- 핸들바 부분 템플릿 -->
+<script id="partial-template" type="text/x-handlebars-template">
+    {{!-- #unless 헬퍼는 #if의 정반대 기능 --}}
+    <h1>리스트 {{#unless users}}<small>사용자 리스트가 없습니다.</small>{{/unless}}</h1>
+</script>
+
+<!-- 핸들바 전체 템플릿 -->
+<script id="entry-template" type="text/x-handlebars-template">
+    {{!-- 조각 템플릿은 #>를 사용해서 포함시킬 수 있음 --}}
+    {{#> commonHeader}}
+        partial template 로드 실패시 보여지는 내용
+    {{/commonHeader}}
+    <table>
+        <thead>
+        <th>이름</th>
+        <th>아이디</th>
+        <th>메일주소</th>
+        <th>with as 사용</th>
+        <th>lookup 사용</th>
+        </thead>
+        <tbody>
+        {{!-- {{#each users}}는 {{#user}}로도 대체 가능하다 --}}
+        {{#each users as |user userId|}}
+            <tr>
+                {{!-- {{name}}은 {{this.name}}과 같고 {{.}}은 현재 name과 id를 포함하고 있는 오브젝트를 가리킨다 --}}
+                <td>{{name}}</td>
+                <td>{{id}}</td>
+
+                {{!-- 사용자 정의 헬퍼인 email에 id를 인자로 넘긴다 --}}
+                <td><a href="mailto:{{email id}}">{{email id}}</a></td>
+
+                <td>
+                    {{#each hobbies as |hobby hobbyId|}}
+                    {{!--처음이 아닌 경우 쉼표 넣기--}}
+                        {{#unless @first}},{{/unless}}
+                        {{!--상위 이터레이션의 인덱스 넘버를 가져올 떄--}}
+                        {{@ ../index}} ==  {{userId}}
+
+                        {{!-- with helper 사용해서 상대경로를 참조해서 상위 이터레이션의 name값을 가져오기  --}}
+                        {{!-- 상대경로로 참조한 name을 myName이라는 변수로 할당 --}}
+                        {{#with ../this.name as |myName|}}
+                        {{!-- 상대경로를 참조해서 #hobby의 현재값 출력 --}}
+                            {{myName}}의 {{hobbyId}}번 취미 {{hobby}}
+                        {{/with}}
+                    {{/each}}
+                </td>
+                <td>
+                    {{#each hobbies as |hobby hobbyId|}}
+                    {{!-- lookup을 할용한 상대경로 처리 방법 --}}
+                        {{lookup ../this "name"}} 의 {{hobbyId}}번 취미 {{hobby}}
+                    {{/each}}
+                </td>
+
+                {{!-- 요소의 순번은 @index 혹은 @key로 잡을 수 있는데, array와 object 모두 잡는 key가 더 좋음 --}}
+                {{#if @first}}
+                    <td>첫 아이템 ({{@key}} 번째 요소)</td>
+                {{else if @last}}
+                    <td>마지막 아이템 ({{@key}} 번째 요소)</td>
+                {{else}}
+                    <td>중간 아이템 ({{@key}} 번째 요소)</td>
+                {{/if}}
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</script>
+
+<!-- 구현부 -->
+<script>
+    // 핸들바 조각 템플릿 가져오기
+    const partial = document.getElementById('partial-template').innerHTML;
+    // 핸들바 템플릿 가져오기
+    const source = document.getElementById('entry-template').innerHTML;
+    //핸들바 템플릿 컴파일
+    const template = Handlebars.compile(source);
+
+    // 핸들바 템플릿에 바인딩할 데이터
+    const data = {
+        users: [
+            {name: '홍길동', id: 'a001', hobbies: ['배구', '야구', '피구']},
+            {name: '고길동', id: 'a002', hobbies: ['축구', '탁구', '농구']},
+            {name: '이길동', id: 'a003', hobbies: ['수구', '야구', '탁구']},
+            {name: '김길동', id: 'a004', hobbies: ['축구', '피구', '농구']},
+            {name: '장길동', id: 'a005', hobbies: ['축구', '야구', '족구']},
+        ]
+    };
+
+    // 조각 템플릿 'commonHeader' 로 등록하기
+    Handlebars.registerPartial('commonHeader', partial);
+
+    // 커스텀 헬퍼 등록 (id 를 인자로 받아서 전체 이메일 주소를 반환)
+    Handlebars.registerHelper('email', function (id) {
+        return id + "@daum.net";
+    })
+
+    //핸들바 템플릿에 데이터를 바인딩해서 HTML 생성
+    const html = template(data);
+
+    // div로 한번 감싸기
+    const div = document.createElement("div");
+    div.classList.add('user-list');
+    div.innerHTML = html;
+
+    // 생성된 HTML을 DOM에 주입
+    document.querySelector('body').append(div);
+    // div로 감싸지 않을 때
+    // document.querySelector('body').innerHTML = html;
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+
+/* magazine post */
+.post-top {
+  margin-top: 32px;
+}
+
+.mgzn-post-hl {
+  @include d-f-c(32px);
+  margin-top: $con-gap;
+  //@include t-l {
+  //  gap: $sess-gap-tbl;
+  //  margin-top: $con-gap-tbl;
+  //}
+  .hl-tit {
+    text-transform: uppercase;
+    word-break: break-word;
+  }
+}
+
+.headline-wrap {
+  @include d-f-c($con-gap);
+  //@include t-l {
+  //  gap: $sess-gap-tbl;
+  //}
+}
+
+.mgzn-post-hl-img {
+  width: 100%;
+  height: fit-content;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+.btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  .btn-view-more.ty2 {
+    margin-right: auto;
+    margin-left:0;
+
+  }
+  .btn-view-more {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.sec-mgzn-post-cont {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 64px;
+  width: 1000px;
+  margin: $con-gap auto 0;
+  //box-sizing: border-box;
+  //@include t-l {
+  //  width: 100%;
+  //  column-gap: $con-gap-tbl;
+  //  margin-top: $con-gap-tbl;
+  //}
+  //@include t-s {
+  //  grid-template-columns: 1fr;
+  //  grid-template-rows: 1fr;
+  //  column-gap: unset;
+  //  row-gap: $con-gap-tbl;
+  //}
+}
+
+
+.author-info {
+  @include d-f-c(32px);
+}
+
+.profile-img {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: auto;
+  @include bdrs(1000px);
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.ty2 {
+    width: 150px;
+  }
+}
+
+.author-profile {
+  display: grid;
+  column-gap: 16px;
+  grid-template-columns: 80px auto;
+  padding-bottom: 32px;
+  @include bdb();
+  align-items: center;
+
+  .profile-name {
+    width: 100%;
+
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.article-info-list {
+  @include d-f-c(16px);
+
+  .info-item {
+    height: 29px;
+  }
+}
+
+.post-cont {
+  @include d-f-c(24px);
+  white-space: pre-line;
+
+  .post-callout {
+    @include d-f-c(48px);
+    align-items: flex-start;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .callout-cont-wrap {
+      display: flex;
+      gap: 24px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      @include bdt();
+      @include bdb();
+    }
+
+    .ornament {
+      font-size: 96px;
+      font-weight: $b;
+    }
+
+    .callout-text {
+      @include d-f-c(24px);
+    }
+  }
+}
+
+
+/* podcast post */
+
+.post-cover-img {
+  flex-basis: 100%;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.sec-post-cont {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  column-gap: 96px;
+  width: 1200px;
+  margin: 96px auto 0;
+
+}
+
+
+.post-cont-wrap {
+  @include d-f-c(64px);
+
+  .post-hl {
+    @include d-f-c(32px);
+  }
+
+  .post-hl-tit {
+    @include d-f-c(16px);
+  }
+}
+
+.podcast-info {
+  @include d-f-c(32px);
+
+  .post-profile-wrap {
+    @include d-f-c(32px);
+    padding-bottom: 32px;
+    @include bdb();
+  }
+}
+

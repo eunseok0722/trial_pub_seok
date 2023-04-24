@@ -1,0 +1,146 @@
+
+.quick {
+  position: fixed;
+  right: 3rem;
+  top: 60%;
+  z-index: $gnb-z-index - 1;
+
+  @include tablet {
+    display: none;
+  }
+
+  .quick-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .quick-list-item {
+      //width: 18.8rem;
+      margin-bottom: 0.5rem;
+
+      .quick-item-wrap {
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(.51, 0, .53, 1);
+
+          .quick-item {
+            width: 18.8rem;
+            display: flex;
+            //flex-basis: 18.8rem;
+            position:absolute;
+            right: 0;
+
+            li {
+              text-align: center;
+              margin-bottom: 0.5rem;
+              font-size: 1.6rem;
+              font-family: "BMYEONSUNG";
+              line-height: 5rem;
+              color: $white;
+
+              &:first-of-type {
+                font-size: 1.6rem;
+                width: 13rem;
+                height: auto;
+                margin-right: 0.8rem;
+
+              }
+
+              &:last-of-type {
+                width: 5rem;
+                height: 5rem;
+                border-radius: $border-radius;
+
+                img {
+                  width: 2.9rem;
+                  line-height: 5rem;
+                  height: auto;
+                  vertical-align: middle;
+                }
+              }
+            }
+        }
+      }
+    }
+  }
+}
+
+.quick-list-event {
+  li:first-of-type {
+    color: $brown !important;
+    background: url("../img/snb_event_bg.png") no-repeat center center/contain;
+  }
+
+  li:last-of-type {
+    background-color: $white;
+  }
+}
+
+.quick-list-news {
+  li:first-of-type {
+    background: url("../img/snb_news_bg.png") no-repeat center center/contain;
+  }
+
+  li:last-of-type {
+    background-color: $beige;
+  }
+}
+
+.quick-list-cs {
+  li:first-of-type {
+    background: url("../img/snb_cs_bg.png") no-repeat center center/contain;
+  }
+
+  li:last-of-type {
+    background-color: $brown;
+  }
+}
+
+.quick-list-store {
+  li:first-of-type {
+    background: url("../img/snb_location_bg.png") no-repeat center center/contain;
+  }
+
+  li:last-of-type {
+    background-color: $yellow;
+  }
+}
+
+.quick-list-franchise {
+  li:first-of-type {
+    background: url("../img/snb_store_bg.png") no-repeat center center/contain;
+  }
+
+  li:last-of-type {
+    background-color: $orange;
+  }
+}
+
+.quick-top-btn {
+  display: block;
+  text-align: center;
+  width: 5rem;
+  font-size: 0;
+  font-family: 'Lato';
+  color: $charcoal;
+  height: 0;
+  overflow: hidden;
+}
+
+//퀵 메뉴 활성화
+.show-info-btn {
+  width: 18.8rem !important;
+  // display: inline-block;
+}
+
+//탑 버튼 활성화
+.show-top-btn {
+  height: auto;
+  font-size: 1.2rem;
+}
+
+//@media (max-width: 640px) {
+//
+//}

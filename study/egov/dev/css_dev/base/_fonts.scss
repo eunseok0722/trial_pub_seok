@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Light.woff2') format('woff2'),
+  url('../fonts/OpenSans-Light.woff') format('woff'),
+  url('../fonts/OpenSans-Light.otf') format('opentype');
+  font-weight: $l;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('../fonts/OpenSans-Regular.woff') format('woff'),
+  url('../fonts/OpenSans-Regular.otf') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('../fonts/OpenSans-Bold.woff') format('woff'),
+  url('../fonts/OpenSans-Bold.otf') format('opentype');
+  font-weight: $b;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: '맑은 고딕', 'Malgun Gothic';
+  src: url("../fonts/malgun.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: '맑은 고딕', 'Malgun Gothic';
+  src: url("../fonts/malgunbd.ttf") format('truetype');
+  font-weight: $b;
+  font-style: normal;
+}

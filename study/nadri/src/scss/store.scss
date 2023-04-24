@@ -1,0 +1,468 @@
+
+.content-store {
+
+  .content-header-store {
+    h2 {
+      em {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+
+    p {
+      span {
+        @include tablet {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .section-store {
+    @include contents-width;
+    margin-top: 10rem;
+    margin-bottom: 8.7rem;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    .section-header-store {
+      margin-bottom: 6.2rem;
+
+      h3 {
+        em {
+          @include mobile {
+            display: block;
+          }
+        }
+      }
+
+      p {
+        span {
+          color: $yellow-02;
+          font-weight: 700;
+        }
+
+        em {
+          @include mobile {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .section-main-wrap {
+      display: flex;
+      @include tablet {
+        flex-direction: column;
+      }
+    }
+
+    .section-main-search {
+      flex: 1 1 48%;
+      box-sizing: border-box;
+      margin-right: 4%;
+      @include tablet {
+        @include gnb-width;
+        order: 2;
+        margin-top: 2.8rem;
+      }
+
+      .section-main-search-new {
+        width: 100%;
+        border-top: 2px solid $brown;
+
+        h2 {
+          width: 100%;
+          height: 5.9rem;
+          margin-left: 2rem;
+          font: 700 1.8rem "NanumSquare";
+          line-height: 5.9rem;
+
+          img {
+            width: 2.9rem;
+            margin-right: 1.1rem;
+            vertical-align: middle;
+          }
+        }
+
+        table {
+          width: 100%;
+          border-top: 1px solid $beige-02;
+          //border-bottom: 1px solid $brown;
+
+          tr {
+            height: 3.9rem;
+            font: 1.2rem "Dotum";
+
+            &:hover {
+              td {
+                &:nth-of-type(2) {
+                  color: $orange-02;
+                }
+
+                .map-icon-img {
+                  background: url("../img/location_ico_map_enter.png") no-repeat center center/contain;
+                }
+
+              }
+            }
+
+            td:nth-of-type(1), td:nth-of-type(3), th:nth-of-type(1), th:nth-of-type(3) {
+              @include mobile {
+                display: none;
+              }
+            }
+          }
+
+          th {
+            background: $white-02;
+            line-height: 3.9rem;
+          }
+
+          td {
+            text-align: center;
+            font: 1.2rem "Dotum";
+            line-height: 3.9rem;
+
+            &:nth-of-type(2) {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .section-main-search-find {
+        @include width;
+        margin-top: 2.8rem;
+        border-top: 2px solid $brown;
+        border-bottom: 1px solid $brown;
+
+        h2 {
+          font: 700 1.8rem "NanumSquare";
+          color: $charcoal;
+          height: 5.7rem;
+          line-height: 5.7rem;
+          margin-left: 2rem;
+
+          img {
+            width: 2rem;
+            vertical-align: middle;
+            margin-right: 1.1rem;
+          }
+        }
+
+        ul {
+          padding-top: 2.1rem;
+          padding-bottom: 2.6rem;
+          border-top: 1px solid $beige-02;
+
+          li {
+            margin-top: 1rem;
+            font: 1.4rem "Dotum";
+            color: $gray;
+            @include mobile {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 0 1rem;
+            }
+
+            label {
+              display: inline-block;
+              width: 10.8rem;
+              text-align: right;
+              padding-left: 0.9rem;
+              @include mobile {
+                flex: 0 1 6rem;
+                padding-left: 0;
+              }
+            }
+
+            select {
+              width: 20rem;
+              border: 1px solid #ccc;
+              padding: 0.8rem;
+              font: 1.4rem "Dotum";
+              color: $gray;
+              @include mobile {
+                flex: 0 1 auto;
+                width: auto;
+              }
+            }
+
+            input {
+              width: 26.8rem;
+              border: 1px solid #ccc;
+              padding: 0.8rem;
+              display: inline-block;
+              @include mobile {
+                flex: 1 1 13rem;
+                width: 13rem;
+              }
+            }
+
+            button {
+              display: inline-block;
+              vertical-align: middle;
+              padding: 0.8rem;
+              font: 1.4rem "Dotum";
+              width: 10rem;
+              @include mobile {
+                flex-basis: 6rem;
+                flex-basis: 6rem;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+    .section-main-map {
+      flex: 1 1 48%;
+      //float: left;
+      //width: 48%;
+      //height: 46.5rem;
+      border-top: 2px solid $yellow;
+      border-bottom: 1px solid $yellow;
+      padding-bottom: 1.8rem;
+      @include tablet {
+        order: 1;
+        @include gnb-width;
+        //margin-top: 2.8rem;
+        //float: none;
+      }
+
+      .main-map-wrap {
+        width: 100%;
+
+
+        .store-map-img {
+          display: block;
+          width: 25.5rem;
+          margin: 0 auto;
+          margin-top: 1.8rem;
+        }
+
+        .main-map-header {
+          display: flex;
+          align-items: center;
+          height: 5.7rem;
+
+          .icon-map {
+            width: 4rem;
+            height: auto;
+            margin-left: 2rem;
+          }
+
+          h2 {
+            font: 700 1.8rem "NanumSquare";
+            color: $charcoal;
+            margin-left: 2rem;
+
+            span {
+              font: 1.2rem "Dotum";
+              color: #959595;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .section-main-result {
+      @include width;
+      clear: both;
+      padding-top: 5rem;
+      display: block;
+      @include tablet {
+        @include gnb-width;
+      }
+
+      h2 {
+        display: block;
+        @include width;
+        font: 700 1.8rem "NanumSquare";
+        color: $charcoal;
+
+        img {
+          width: 2rem;
+          vertical-align: middle;
+          margin-left: 2rem;
+          margin-right: 1rem;
+        }
+
+        span {
+          color: $red;
+        }
+      }
+
+      .table-design-result {
+        @include width;
+        margin-top: 2rem;
+        border-top: 1px solid $brown;
+        border-bottom: 1px solid $brown;
+      }
+    }
+  }
+}
+
+.main-result-switch {
+  @include width;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.3rem;
+
+  li {
+    width: 4rem;
+    text-align: center;
+    font: 1.2rem "Dotum";
+    color: $charcoal;
+    border-right: 1px solid #ccc;
+    vertical-align: middle;
+
+    &:hover {
+      color: $orange;
+      font-weight: 700;
+    }
+
+    &:visited {
+      color: #ccc;
+    }
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+}
+
+.table-header-design {
+  height: 3.9rem;
+  font-size: 1.2rem;
+  font-family: "Dotum", serif;
+  line-height: 3.9rem;
+  display: flex;
+  background-color: $ivory;
+
+  li {
+    font-weight: 700;
+    text-align: center;
+    flex: 1 1 10%;
+    @include mobile {
+      flex: 1 1 5%;
+    }
+
+  }
+  .store-name-design {
+    font-weight: 700;
+    @include tablet {
+      flex: 1 1 15%;
+    }
+    @include mobile {
+      flex: 1 1 20%;
+    }
+  }
+
+  .store-address-design {
+    flex: 1 1 30%;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    //padding-left: 6%;
+    box-sizing: border-box;
+    @include tablet {
+      flex: 1 1 35%;
+    }
+  }
+
+  .store-map-design {
+    @include tablet {
+      flex: 1 1 5%;
+    }
+    @include mobile {
+      flex: 1 1 10%;
+    }
+  }
+
+  li:nth-of-type(2), li:nth-of-type(4) {
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+
+.table-row-design {
+  height: 3.9rem;
+  font-size: 1.2rem;
+  font-family: "Dotum";
+  line-height: 3.9rem;
+  display: flex;
+  border-top: 1px solid $beige-02;
+
+  li {
+    text-align: center;
+    flex: 1 1 10%;
+    @include mobile {
+      flex: 1 1 5%;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:hover {
+    li:nth-of-type(3) {
+      color: $orange;
+    }
+
+    li:nth-of-type(6) {
+      .map-icon-img {
+        background: url("../img/location_ico_map_enter.png") no-repeat center center/contain;
+      }
+    }
+  }
+
+  li:nth-of-type(2), li:nth-of-type(4) {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .store-name-design {
+    font-weight: 700;
+    @include tablet {
+      flex: 1 1 15%;
+    }
+    @include mobile {
+      flex: 1 1 20%;
+    }
+  }
+
+  .store-address-design {
+    flex: 1 1 30%;
+    text-align: justify;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 6%;
+    box-sizing: border-box;
+    @include tablet {
+      flex: 1 1 35%;
+      padding-left: 0;
+    }
+  }
+  .store-map-design {
+    @include tablet {
+      flex: 1 1 5%;
+    }
+    @include mobile {
+      flex: 1 1 10%;
+    }
+  }
+}
+

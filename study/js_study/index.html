@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Study</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+
+<header>
+    <h1>JS Study</h1>
+</header>
+
+
+<!--
+This script places a badge on your repl's full-browser view back to your repl's cover page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue, blurple, magenta, pink!
+-->
+
+<!--   <button class="banana-btn">🍌</button>
+<button class="grape-btn">🍇</button>
+<button class="apple-btn" onclick="handleApple(this)">🍎</button>
+<button class="apple-btn" onclick="handleApple2.call(this)">🍎</button> -->
+
+<h2>키링 기법 예시</h2>
+    <div>
+        <h3>구구단</h3>
+<!--        <ul>-->
+<!--            <li>-->
+<!--                <button>콘솔에 2단 출력</button>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <button>콘솔에 3단 출력</button>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <button>콘솔에 4단 출력</button>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <button>콘솔에 5단 출력</button>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <button>콘솔에 6단 출력</button>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <button>콘솔에 7단 출력</button>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <button>콘솔에 8단 출력</button>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <button>콘솔에 9단 출력</button>-->
+<!--            </li>-->
+<!--        </ul>-->
+    </div>
+
+<h2>event</h2>
+<div>
+    <h3>버튼 색깔 바꾸기 이벤트</h3>
+    <p>
+        <button>색깔 바꾸기</button>
+    </p>
+    <h3>mousedown, mouseup 예제</h3>
+    <div class="box"></div>
+    <input type="button" value="clear" class="btn_clear">
+    <div class="result"></div>
+
+    <h3>키보드 이벤트</h3>
+    <input type="text" class="input">
+    <input type="button" class="clear" value="clear">
+    <div class="ipresult"></div>
+
+    <h3>포커스 이벤트</h3>
+    <p> 이메일: <input type="email" id="input"></p>
+    <div id="error"></div>
+
+    <h3>이벤트 핸들러 속성</h3>
+    <p onmouseover="handleSize('크게')">onmouseover 이벤트</p>
+    <div class="box" onclick="console.log('클릭'); console.log('했죠?')">onclick 이벤트</div>
+
+    <h3>이벤트 핸들러 프로퍼티 방식</h3>
+    <button class="prop">클릭이벤트 예시</button>
+
+    <h3>addEventListener 메서드 방식</h3>
+    <button class="prop">클릭이벤트 예시</button>
+
+    <h3>removeEventLisener 메서드 수행</h3>
+    <button class="prop">클릭이벤트 예시</button>
+
+    <h3>마우스 체이서 만들기</h3>
+    <div class="circle"></div>
+
+    <h3>이벤트 전파</h3>
+    <ul id="flowers">
+        <li id="rose">Rose</li>
+        <li id="freesia">Freesia</li>
+        <li id="carnation">Carnation</li>
+    </ul>
+
+    <h3>버블링 예시</h3>
+
+    <div class="box1">
+        box1
+        <div class="box2">
+            box2
+            <div class="box3">
+                box3
+            </div>
+        </div>
+    </div>
+
+    <h3>캡처링</h3>
+    <div class="box1">
+        box1
+        <div class="box2">
+            box2
+            <div class="box3">
+                box3
+            </div>
+        </div>
+    </div>
+
+    <h3>이벤트 전파 방지 방법</h3>
+    <a href="https://www.naver.com">naver</a>
+
+    <div id="div">
+        div입니다.
+        <p id="p">
+            p입니다.
+            <a href="https://www.naver.com" id="a">NAVER</a>
+        </p>
+    </div>
+
+    <h3>이벤트 위임</h3>
+
+    <ul id="flowers1">
+        <li id="rose1" class="active">Rose</li>
+        <li id="freesia1">Freesia</li>
+        <li id="carnation1">Carnation</li>
+    </ul>
+    <div>선택한 꽃 : <b class="msg"></b></div>
+</div>
+
+<div>
+    <button id="btnID" class="btnClass">버튼</button>
+    <button id="btnID2" class="btnClass">버튼</button>
+</div>
+
+<!--   <script src="script/script.js"></script>-->
+<!--   <script src="script/var.js"></script>-->
+<!--   <script src="script/class.js"></script>-->
+<!--   <script src="script/this.js"></script>-->
+<!--   <script src="script/async.js"></script>-->
+<!--  <script src="script/destructuring.js"></script>-->
+<!--<script src="script/closure.js"></script>-->
+<script src="script/event.js"></script>
+<script src="script/DOM.js"></script>
+</body>
+
+</html>

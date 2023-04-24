@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<header class="bd">
+    <h1>Chapter5 컴포넌트로 UI 부품 만들기</h1>
+</header>
+
+<section>
+    <h2>Section21 컴포넌트란?</h2>
+</section>
+
+<section>
+    <h2>Section22 컴포넌트 정의 방법</h2>
+    <div id="p140">
+        <my-component-1></my-component-1>
+        <my-component-1></my-component-1>
+        <root-1></root-1>
+    </div>
+</section>
+
+<section>
+    <h2>Section23 컴포넌트끼리의 통신</h2>
+    <div id="p144">
+        <h3>부모 자식 컴포넌트</h3>
+        <parent-comp></parent-comp>
+        <idea-comp></idea-comp>
+
+
+    </div>
+    <div id="p148">
+
+        <h3>컴포넌트에 리액티브 데이터 전달하기</h3>
+        <ul>
+            <chld-for v-for="item in list"
+                      v-bind:key="item.id"
+                      v-bind:no="item.id"
+                      v-bind:name="item.name"
+                      v-bind:hp="item.hp"></chld-for>
+        </ul>
+        <h3>props로 받을 자료형 지정하기</h3>
+        <p>chapter5.js 참조</p>
+
+        <h3>자식에서 부모로</h3>
+        <chld-emit v-on:emit-ex="btnClick"></chld-emit>
+
+        <h3>부모가 가진 데이터 조작하기</h3>
+        <ul>
+            <exemit-child v-for="item in list" v-bind:key="item.id"
+                          v-bind="item" v-on:attack="handleAttack">
+            </exemit-child>
+        </ul>
+        <h3>사용자 정의 태그의 이벤트 핸들링</h3>
+        <my-icon v-on:click.native="handleClick">사용자정의</my-icon>
+
+
+    </div>
+    <div id="p157">
+        <h3>부모 자식 컴포넌트가 아닌 경우</h3>
+        <p>이벤트 버스 사용 예시</p>
+        <comp-a></comp-a>
+        <comp-b></comp-b>
+    </div>
+
+</section>
+<section>
+    <h2>Section24 슬롯을 사용한 사용자 정의 컴포넌트</h2>
+    <div id="p161">
+        <comp-slot>
+            <header slot="header">
+                부모 헤더 슬롯 메시지
+            </header>
+
+            부모 기본 메시지 정의
+        </comp-slot>
+        <props-ex>
+            <!-- 가져올 자식의 scope를 지정하기 위한 이름을 props라고 지음 -->
+            <div slot-scope="props">
+                <!-- scope로 지정한 자식 컴포넌트에서 가져올 속성명을 text라고 지정 -->
+                슬롯으로 받은 텍스트 -> {{ props.text }}
+            </div>
+        </props-ex>
+        <!-- 부모가 템플릿을 정하고 자식이 정보를 전달하는 역할을 하게 만들기       -->
+        <props-ex2>
+            <li slot-scope="props">{{ props.item }}</li>
+        </props-ex2>
+    </div>
+</section>
+<section>
+    <h2>Section25 컴포넌트의 양방향 데이터 바인딩</h2>
+
+
+    <div id="p168">
+        <p>.sync로 양방향 데이터 바인딩하기</p>
+        <sync-ex v-bind:name.sync="name"
+                 v-bind:hp.sync="hp"></sync-ex>
+    </div>
+</section>
+
+<section>
+
+    <h2>Section26 템플릿 정의 방법</h2>
+    <div id="p170">
+        <temp-1></temp-1>
+        <temp-2></temp-2>
+        <temp-3 inline-template>
+            <div>
+                <h3>inline template 정의</h3>
+                <p> inline template 예시</p>
+                <p> 내부에 작성한 html 태그 그대로 템플릿으로 쓸 수 있다. </p>
+                <p> 다만, 자바스크립트와 html이 세트로 묶이지 않으면 이후 코드 가독성이 떨어질 수 있으므로 실제 운용에는 추천하지 않음 </p>
+            </div>
+        </temp-3>
+        <temp-4></temp-4>
+        <script type="text/x-template" id="child-template">
+            <div>
+                <h3>script type으로 정의하기</h3>
+                <p>script 태그의 타입 x-template으로 지정하여 템플릿 정의</p>
+                <p>정의한 컴포넌트 명을 태그로 작성하여 컴포넌트 호출 예)
+                    <컴포넌트명></컴포넌트명>
+                </p>
+                <p>inlne 정의방법과 마찬가지로 html과 javascript가 쌍이 되지 않으면 가독성 떨어지기 때문에 사용 주의</p>
+            </div>
+        </script>
+        <h3>단일 파일 컴포넌트</h3>
+        <p>7장 확인 </p>
+        <h3>렌더링 함수</h3>
+        <p>DOM 구축에 활용할 수 있는 방법 중 하나</p>
+        <p>가상 DOM과 관련된 깊은 지식 필요하기 때문에 생략</p>
+
+        <h3>템플릿이 DOM으로 인식되는 경우</h3>
+        <ul>
+            <li>마운트 요소 #app 내부에 직접 작성한 템플릿</li>
+            <li>inline-template으로 작성한 템플릿</li>
+            <li>이러한 템플릿 내부에서 사용하는 슬롯 콘텐츠</li>
+        </ul>
+
+    </div>
+
+
+</section>
+
+<section>
+    <h2>Section27 이외의 기능과 옵션</h2>
+    <div id="p175">
+        <functional-component></functional-component>
+    </div>
+
+    <div id="p176">
+        <p>동적 컴포넌트 예시</p>
+        <div v-bind:is="component"></div>
+<!--   ^= 는 XOR 연산자로 current가 0 이면 1이 대입되고 1이면 0이 대입됨     -->
+        <button v-on:click="current^=1">컴포넌트 변경하기</button>
+    </div>
+
+    <div id="p177">
+        <p>mixin 예시</p>
+        <mixin-a></mixin-a>
+        <mixin-b></mixin-b>
+    </div>
+
+    <div id="p179">
+        <p>keep-alive 예시</p>
+        <button v-on:click="current='comp-board'">메시지 목록</button>
+        <button v-on:click="current='comp-form'">글쓰기 양식</button>
+        <!--  양식이 변경되면 기존 작성한 내용이 사라지지 않게 keep alive 태그로 감싸기 -->
+        <keep-alive>
+            <div v-bind:is="current"></div>
+        </keep-alive>
+    </div>
+
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
+<script src="js/chapter5.js"></script>
+</body>
+</html>

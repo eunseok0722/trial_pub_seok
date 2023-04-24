@@ -1,0 +1,166 @@
+.bd::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+/* 트랜지션/애니메이션에 페이드인/아웃 작성 예시 */
+.v-enter-active, .v-leave-active {
+    transition: opacity 1.5s;
+}
+
+.v-enter, v-leave-to {
+    opacity: 0;
+}
+
+.item45 {
+    padding: 4px 8px;
+    transition: background-color 0.4s;
+}
+.is-active {
+    background: #ffeaea;
+}
+
+/* v-if 분기 사용 예시 */
+.strong {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkred
+}
+
+/* v-cloak 사용 예시 */
+/*[v-cloak] {*/
+/*    display: none;*/
+/*}*/
+
+@keyframes cloak-in {
+    0% {opacity: 0;}
+}
+#p72 {
+    animation: cloak-in 2s;
+}
+#p72[v-cloak] {
+    opacity: 0;
+}
+
+/* 이미지로드 이벤트 핸들 */
+#p81 img {
+    opacity: 1;
+    transition: opacity 1s;
+}
+#p81 img.hide {
+    opacity: 0;
+}
+
+
+/* Section 28 트랜지션 예제 */
+
+/* 1초 동안 투명도 변화 */
+.v-enter-active, .v-leave-active {
+    transition: opacity 1s;
+}
+/* 더 이상 보이게 되지 않을 때의 투명도 */
+.v-enter, .v-leave-to {
+    opacity: 0;
+}
+
+.demo-enter-active, .demo-leave-active {
+    transition: opacity 1.5s;
+}
+
+.demo-enter, .demo-leave-to {
+    opacity: 0;
+}
+
+/* 트랜지션과 관련된 CSS transition 속성 */
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 1s;
+}
+
+/* 출력할 때는 0에서 1로 */
+.v-enter {
+    opacity: 0;
+}
+.v-enter-to {
+    opacity: 1;
+}
+
+/* 사라질 때는 1에서 0으로 */
+.v-leave {
+    opacity: 1;
+}
+.v-leave-to {
+    opacity: 0;
+}
+.v-move {
+    transition: transform 1s;
+}
+
+.w-enter-active, .w-leave-active {
+    transition: opacity 1s, transform 1s;
+}
+
+/* 출력할 때 왼쪽에서 오른쪽 */
+.w-enter {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+.w-leave-to {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* 여러 개의 요소 */
+
+.x-enter-active, .x-leave-active {
+    transition: opacity 0.75s;
+    position: absolute;
+}
+
+.x-enter, .x-leave-to {
+    opacity: 0;
+}
+
+/* :not 사용하기 */
+
+/* list 트랜지션 */
+/* 스타일을 한번에 정의하기 */
+.list-enter-active, .list-leave-active, .list-move {
+    transition: opacity 0.75s, transform 1s;
+}
+/* :not() 사용하기 */
+/*.list-move:not(.v-leave-active) {*/
+/*    transition: transform 1s*/
+/*}*/
+
+.list-leave-active {
+    position: absolute;
+}
+.list-enter, .list-leave-to {
+    opacity: 0;
+}
+
+
+/* SVG 채우기 */
+
+.s-enter-active, .s-leave-active {
+    transition: all 1s;
+}
+.s-leave-active {
+    position: absolute;
+}
+.s-enter, .s-leave-to {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+
+.z-enter-active, .z-leave-active {
+    transition: all 1s;
+}
+.z-enter, .z-leave-to {
+    opacity: 0;
+    transform: translateX(-20px);
+}
