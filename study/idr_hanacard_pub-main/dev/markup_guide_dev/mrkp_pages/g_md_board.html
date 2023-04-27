@@ -1,0 +1,2148 @@
+<!-- @@master ../../layout_mrkp_template.html -->
+
+<!-- @@block root_mrkp_content -->
+
+<!-- wrap -->
+<div id="wrap" class="biz">
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_header.html -->
+
+	<!-- @@include ../mrkp_pages_include/g_inc_breadcrumb.html -->
+	
+	<!-- container -->
+	<section id="container">
+		<h2 class="blind">하나카드 가이드</h2><!-- Gnb 1depth Menu -->
+		<!-- cont_area -->
+		<div class="cont_area">
+			
+			<h3 class="title"><em>하나카드</em>Board</h3>
+			
+			<!-- cont_box -->
+			<div class="cont_box">
+				<!-- cont_box_area -->
+				<div class="cont_box_area">
+					
+					<!-- @@include ../mrkp_pages_include/g_inc_md_tab.html -->
+
+					<!-- Board Guide : Write -->
+					<article class="cont">
+						<h4 class="t_tit">Board Guide : Write (Horizon) <span>board_ty</span></h4>
+						<!-- board_ty -->
+						<div class="board_ty">
+						<form>
+							<fieldset>
+							<legend>게시판 제목</legend>
+							<table>
+								<caption>게시판 제목 들어갑니다.</caption>
+								<colgroup>
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:77%;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="left">영문성명</th>
+										<td class="left">
+											<input type="text" class="input_ty" placeholder="영문으로 여권과 동일하게 기재해주세요. (예: KIM HA NA)" title="영문성명 입력">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">휴대폰번호</th>
+										<td class="left">
+											<select class="select_ty w180" title="휴대폰번호 통신사 선택">
+												<option value="">선택</option>
+												<option value="">SKT</option>
+												<option value="">KT</option>
+												<option value="">LG U+</option>
+												<option value="">SKT 알뜰폰</option>
+												<option value="">KT 알뜰폰</option>
+												<option value="">LG U+ 알뜰폰</option>
+											</select>
+											<select class="select_ty w90" title="휴대폰번호 첫번째 자리 선택">
+												<option value="">선택</option>
+												<option value="">010</option>
+												<option value="">011</option>
+												<option value="">016</option>
+												<option value="">017</option>
+												<option value="">018</option>
+												<option value="">019</option>
+											</select>
+											<div class="btn_key_box">
+												<input type="password" class="input_ty w180" placeholder="‘-’ 없이 입력하세요." title="휴대폰번호 나머지 입력">
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">이메일주소</th>
+										<td class="left">
+											<input type="text" class="input_ty w180" title="이메일 아이디 입력">
+											<span class="b_br">@</span>
+											<input type="text" class="input_ty w180" title="이메일 도메인 입력">
+											<select class="w180" title="이메일 도메인 선택">
+												<option value="">선택</option>
+												<option value="">naver.com</option>
+												<option value="">hanmail.net</option>
+												<option value="">nate.com</option>
+												<option value="">empal.com</option>
+												<option value="">dreamwiz.com</option>
+												<option value="">gmail.com</option>
+												<option value="">hotmail.com</option>
+												<option value="">yahoo.co.kr</option>
+												<option value="">직접입력</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">자택 주소</th>
+										<td class="left">
+											<div class="b_list">
+												<input type="text" class="input_ty w90" title="자택 주소 우편번호 입력" disabled>
+												<a href="#" class="btn_m btn_ty">우편번호 찾기</a>
+											</div>
+											<div class="b_list">
+												<input type="text" class="input_ty w320" placeholder="기본주소" title="자택 주소 기본주소 입력" disabled>
+												<input type="text" class="input_ty w320" placeholder="상세주소" title="자택 주소 상세주소 입력" disabled>
+											</div>
+											<div class="b_list txt">
+												<input type="checkbox" id="chk01_1"> 
+												<label for="chk01_1">아파트(주거종류가 아파트 인 경우 체크해주세요.)</label> 
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">자택 전화번호</th>
+										<td class="left">
+											<select class="select_ty w90" title="자택 전화번호 첫번째 자리 선택">
+												<option value="">선택</option>
+												<option value="">02</option>
+												<option value="">031</option>
+												<option value="">032</option>
+												<option value="">033</option>
+												<option value="">041</option>
+												<option value="">042</option>
+												<option value="">043</option>
+												<option value="">051</option>
+												<option value="">052</option>
+												<option value="">053</option>
+												<option value="">054</option>
+												<option value="">055</option>
+												<option value="">061</option>
+												<option value="">062</option>
+												<option value="">063</option>
+												<option value="">064</option>
+											</select>
+											<input type="text" class="input_ty w180" placeholder="‘-’ 없이 입력하세요." title="자택 전화번호 나머지 번호 입력">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">소득구분</th>
+										<td class="left">
+											<ul class="radio_box">
+												<li><input type="radio" id="income_ty" name="income_ty" checked><label for="income_ty">본인직장</label></li>
+												<li><input type="radio" id="income_ty02" name="income_ty"><label for="income_ty02">본인재산세</label></li>
+												<li><input type="radio" id="income_ty03" name="income_ty"><label for="income_ty03">사업등록증소지자</label></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">부서명/직위명</th>
+										<td class="left">
+											<input type="text" class="input_ty w180" placeholder="" title="부서명 입력">
+											<input type="text" class="input_ty w140" placeholder="" title="직위명 입력">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">결제일</th>
+										<td class="left">
+											<select class="select_ty w90" title="결제일 선택">
+												<option value="">선택</option>
+												<option value="">1</option>
+												<option value="">2</option>
+												<option value="">3</option>
+												<option value="">4</option>
+												<option value="">5</option>
+												<option value="">6</option>
+												<option value="">7</option>
+												<option value="">8</option>
+												<option value="">9</option>
+												<option value="">10</option>
+												<option value="">11</option>
+												<option value="">12</option>
+												<option value="">13</option>
+												<option value="">14</option>
+												<option value="">15</option>
+												<option value="">16</option>
+												<option value="">17</option>
+												<option value="">18</option>
+												<option value="">19</option>
+												<option value="">20</option>
+												<option value="">21</option>
+												<option value="">22</option>
+												<option value="">23</option>
+												<option value="">24</option>
+												<option value="">25</option>
+												<option value="">26</option>
+												<option value="">27</option>
+												<option value="">28</option>
+												<option value="">29</option>
+												<option value="">30</option>
+												<option value="">31</option>
+											</select>
+											<a href="#" class="btn_s btn_ty04">결제일별 이용기간 안내</a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">자동이체 결제은행</th>
+										<td class="left">
+											<select class="select_ty w180" title="자동이체 결제은행 선택">
+												<option value="">선택</option>
+												<option value="">하나은행</option>
+												<option value="">국민은행</option>
+												<option value="">신한은행</option>
+												<option value="">우리은행</option>
+												<option value="">농협은행</option>
+												<option value="">기업은행</option>
+											</select>
+											<div class="btn_key_box">
+												<input type="text" class="input_ty w200" placeholder="'-' 제외하고 번호만 입력" title="자동이체 계좌번호 입력">
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+											<div class="b_list txt">
+												<input type="checkbox" id="chk02_1"> 
+												<label for="chk02_1">자동이체 출금처리 동의</label>
+												<p class="lable_txt">하나카드에서 본인의 계좌를 통하여 카드결제금액을 자동이체 출금 처리하는 것에 동의합니다.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">이용대금명세서</th>
+										<td class="left">
+											<ul class="radio_box">
+												<li><input type="radio" id="statement_ty" name="statement_ty" checked><label for="statement_ty">E-mail</label></li>
+												<li><input type="radio" id="statement_ty02" name="statement_ty"><label for="statement_ty02">모바일스마트 APP</label></li>
+												<li><input type="radio" id="statement_ty03" name="statement_ty"><label for="statement_ty03">미수령</label></li>
+											</ul>
+											<div class="b_list txt">tag1 신청고객은 온라인(E-mail 및 모바일스마트 APP)으로 이용대금명세서 수령 가능합니다.</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">희망한도</th>
+										<td class="left">
+											<div class="b_list">
+												<input type="text" class="input_ty w140" value="1000" title="결제정보 희망한도 입력">
+												<span class="b_txt">만원</span>
+											</div>
+
+											<div class="b_list txt">
+												<input type="checkbox" id="chk03_1"> 
+												<label for="chk03_1">한도증액에 대한 안내를 받는데 동의합니다.</label> 
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							</fieldset>
+						</form>
+						</div>
+						<!-- //board_ty -->
+					</article>
+					<!-- //Board Guide : Write -->
+					
+					<article class="cont">
+						<div class="card_aco on">
+							<!-- card_aco_title -->
+							<div class="card_aco_title">
+								<!-- 16.06.20 수정 : str -->
+								<div class="ess_box">
+									<h5 class="t_tit">카드페이지 전용</h5>
+									<p class="essential">필수</p>
+								</div>
+								<!-- 16.06.20 수정 : end -->
+								<div class="tit_st">
+									<p class="num"><span>3</span>/<em>6</em></p>
+									<div class="btn">
+										<span>완료</span>
+										<a href="#card_app" onClick="return cardStMod2(3);" class="btn_ty04 btn_xs">수정</a>
+									</div>
+								</div>
+							</div>
+							<!-- //card_aco_title -->
+		
+							<!-- card_aco_view -->
+							<div class="card_aco_view">
+								<!-- board_ty -->
+								<div class="board_ty03">
+								<form>
+									<fieldset>
+									<legend>결제/수령정보</legend>
+									<table>
+										<caption>결제/수령정보</caption>
+										<colgroup>
+											<col span="1" style="width:16%;">
+											<col span="1" style="width:84%;">
+										</colgroup>
+										<tbody>
+											<tr>
+												<!-- 16.06.20 수정 : str -->
+												<th scope="row" class="left">
+													<div class="ess_box">
+														결제일<span class="essential">필수</span>
+													</div>
+												</th>
+												<!-- 16.06.20 수정 : end -->
+												<td class="left">
+													<select class="select_ty w90" title="결제일 선택">
+														<option value="">선택</option>
+														<option value="">1</option>
+														<option value="">5</option>
+														<option value="">7</option>
+														<option value="">8</option>
+														<option value="">10</option>
+														<option value="">12</option>
+														<option value="">13</option>
+														<option value="">14</option>
+														<option value="">15</option>
+														<option value="">17</option>
+														<option value="">18</option>
+														<option value="">20</option>
+														<option value="">21</option>
+														<option value="">23</option>
+														<option value="">25</option>
+														<option value="">27</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="left">결제계좌</th>
+												<td class="left">
+													<select class="select_ty w180" title="결제계좌 선택">
+														<option value="">선택</option>
+														<option value="">하나은행</option>
+														<option value="">국민은행</option>
+														<option value="">신한은행</option>
+														<option value="">우리은행</option>
+														<option value="">농협은행</option>
+														<option value="">기업은행</option>
+													</select>
+													<input type="text" class="input_ty w200" placeholder="‘-’ 없이 입력하세요. (본인계좌)" title="자동이체 계좌번호 입력">
+													<div class="b_list txt">
+														<input type="checkbox" id="chk03_1" class="hint_chk"> 
+														<!-- 오류시 input chk class="hint_chk" -->
+														<!-- 16.06.20 수정 -->
+														<label for="chk03_1">자동이체 출금처리 동의</label>
+														<p class="lable_txt">하나카드에서 본인의 계좌를 통하여 카드결제금액을 자동이체 출금 처리하는 것에 동의합니다.</p>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</fieldset>
+								</form>
+								</div>
+								<!-- //board_ty -->
+							</div>
+							<!-- //card_aco_view -->
+						</div>
+						<!-- //결제/수령정보 : card_aco -->
+					</article>
+							
+
+					<!-- 상품권 선택 -->
+					<article class="cont">
+						<h4 class="t_tit">Board Guide : Vertical <span>board_ty02</span></h4>
+						<!-- table_ty -->
+						<div class="board_ty02">
+						<form>
+							<fieldset>
+							<legend>상품권 선택</legend>
+							<table>
+								<caption>상품권 선택</caption>
+								<colgroup>
+									<col span="1" style="width:18%;">
+									<col span="1" style="width:13%;">
+									<col span="1" style="width:23%;">
+									<col span="2" style="width:23%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col" rowspan="2">서비스 내용</th>
+										<th scope="col" rowspan="2">선택</th>
+										<th scope="col" rowspan="2">상품권 종류</th>
+										<th scope="col" colspan="2" class="btml">신청내용</th>
+									</tr>
+									<tr>
+										<th scope="col">신청수량</th>
+										<th scope="col">사용포인트</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>국민관광상품권</th>
+										<td><input type="checkbox" class="chk_point" id="chk00_1" name="point_prd"></td>
+										<td class="left"><label for="chk00_1">국민관광 100,000원권</label></td>
+										<td><input type="text" class="input_ty w140" placeholder="" title="신청수량 입력" disabled><span class="b_txt">장</span></td>
+										<td class="right">100,000포인트</td>
+									</tr>
+								</tbody>
+							</table>
+							</fieldset>
+						</form>
+						</div>
+						<!-- //table_ty -->
+					</article>
+					<!-- //상품권 선택 -->
+					
+					<!-- 기본정보 -->
+					<article class="cont">
+						<h4 class="t_tit">기본정보</h4>
+						<!-- table_ty -->
+						<div class="table_ty">
+							<table>
+								<caption>기본정보</caption>
+								<colgroup>
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:27%;">
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:27%;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="left">성명</th>
+										<td class="left" colspan="3">
+											손*원
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">영문성명</th>
+										<td class="left" colspan="3">
+											SON JI WON
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">휴대폰번호</th>
+										<td class="left">
+											010-9920-**** 
+										</td>
+										<th scope="row" class="left">이메일</th>
+										<td class="left">
+											chinas**@naver.com
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">전화번호</th>
+										<td class="left">
+											02-0000-****
+										</td>
+										<th scope="row" class="left">주소</th>
+										<td class="left">
+											<strong class="t_point">처리중</strong>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table_ty -->
+						<!-- btn_area -->
+						<ul class="btn_area">
+							<li>
+								<a href="#" class="btn_b btn_ty">이벤트 당첨확인</a>
+								<a href="#" class="btn_b btn_ty02">목록</a>
+							</li>
+						</ul>
+						<!-- //btn_area -->
+					</article>
+					<!-- //기본정보 -->
+					
+					<!-- 기본정보 -->
+					<article class="cont">
+						<h4 class="t_tit">기본정보</h4>
+						<!-- table_ty -->
+						<div class="table_ty">
+							<table>
+								<caption>기본정보</caption>
+								<colgroup>
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:27%;">
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:27%;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="left">전화번호</th>
+										<td class="left">
+											02-0000-****
+										</td>
+										<th scope="row" class="left">주소</th>
+										<td class="left">
+											<strong class="t_point">처리중</strong>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table_ty -->
+					</article>
+					<!-- //기본정보 -->
+					<!-- 기본정보 -->
+					<article class="cont">
+						<h4 class="t_tit">기본정보</h4>
+						<!-- table_ty -->
+						<div class="table_ty">
+							<table>
+								<caption>기본정보</caption>
+								<colgroup>
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:27%;">
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:27%;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="left">휴대폰번호</th>
+										<td class="left">
+											010-9920-**** 
+										</td>
+										<th scope="row" class="left">이메일</th>
+										<td class="left">
+											chinas**@naver.com
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">전화번호</th>
+										<td class="left">
+											02-0000-****
+										</td>
+										<th scope="row" class="left">주소</th>
+										<td class="left">
+											<strong class="t_point">처리중</strong>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //table_ty -->
+					</article>
+					<!-- //기본정보 -->
+						
+					<!-- btn_area -->
+					<ul class="btn_area btn_cont">
+						<li>
+							<a href="#" class="btn_b btn_ty">버튼이 article class="cont" 밖에 있을 경우</a>
+							<a href="#" class="btn_b btn_ty02">class="btn_area btn_cont"</a>
+						</li>
+					</ul>
+					<!-- //btn_area -->
+
+
+
+					<!-- Board Guide : List -->
+					<article class="cont hr">
+						<h4 class="t_tit">Board Guide : List</h4>
+						<!-- board_header -->
+						<div class="board_header">
+							<ul class="right">
+								<li><a href="#" class="btn_s btn_ty06">구.하나SK카드 종료이벤트</a></li>
+								<li><a href="#" class="btn_s btn_ty06">구.외환카드 종료이벤트</a></li>
+							</ul>
+						</div>
+						<!-- //board_header -->
+						<!-- board_ty -->
+						<div class="board_ty list"><!-- list형일 경우 class="list" -->
+							<table>
+								<caption>게시판 제목 들어갑니다.</caption>
+								<colgroup>
+									<col span="1" style="width:10%;">
+									<col span="1" style="width:55%;">
+									<col span="1" style="width:25%;">
+									<col span="1" style="width:10%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">번호</th>
+										<th scope="col">제목</th>
+										<th scope="col">기간</th>
+										<th scope="col">조회</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="t_txt02">789</td>
+										<td class="left"><a href="#">롯데슈퍼 온라인을 청구할인 이벤트<span class="new">신규</span></a></td>
+										<td>2017.01.01 ~ 2017.12.31</td>
+										<td class="t_txt02">257</td>
+									</tr>
+									<tr>
+										<td class="t_txt02">788</td>
+										<td class="left"><a href="#">롯데슈퍼 온라인을 청구할인 이벤트</a></td>
+										<td>2017.01.01 ~ 2017.12.31</td>
+										<td class="t_txt02">257</td>
+									</tr>
+									<tr>
+										<td class="t_txt02">787</td>
+										<td class="left"><a href="#">롯데슈퍼 온라인을 청구할인 이벤트</a></td>
+										<td>2017.01.01 ~ 2017.12.31</td>
+										<td class="t_txt02">257</td>
+									</tr>
+									<tr>
+										<td colspan="4" class="emp">등록된 항목이 없습니다.</td><!-- 등록된 화면이 없을 경우 : class="emp" -->
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //board_ty -->
+						
+						<!-- @@include ../mrkp_pages_include/g_inc_div_pagenation.html -->
+						
+
+						<!-- board_footer -->
+						<div class="board_footer">
+							<!-- board_info -->
+							<ul class="board_info">
+								<li class="total">Total / <strong>1902</strong></li>
+								<li><strong>1</strong> / 168</li>
+							</ul>
+							<!-- //board_info -->
+							<!-- board_search -->
+							<div class="board_search">
+							<form>
+								<fieldset>
+								<legend>게시판 내용의 분류조건</legend>
+									<select class="select_ty w140" title="분류조건">
+										<option value="">전체</option>
+										<option value="">기간</option>
+										<option value="">조회</option>
+									</select>
+									<input type="text" class="input_ty w450" title="검색내용입력">
+									<a href="#" class="btn">검색</a>
+								</fieldset>
+							</form>
+							</div>
+							<!-- //board_search --> 
+						</div>
+						<!-- //board_footer -->
+					</article>
+					<!-- //Board Guide : List -->
+					
+					<!-- Board Guide : Thumb List -->
+					<article class="cont hr">
+						<h4 class="t_tit">Board Guide : Thumb List</h4>
+						<!-- board_header -->
+						<div class="board_header">
+							<ul class="right">
+								<li><a href="#" class="btn_s btn_ty06">종료된 이벤트</a></li>
+								<li><a href="#" class="btn_s btn_ty06">이벤트 당첨확인</a></li>
+							</ul>
+						</div>
+						<!-- //board_header -->
+						<!-- tab_ty02 -->
+						<nav class="tab_ty">
+							<ul>
+								<li class="on"><a href="#none">전체</a></li><!-- 활성화 class="on" -->
+								<li><a href="#none">쇼핑/무이자</a></li>
+								<li><a href="#none">해외</a></li>
+								<li><a href="#none">모바일</a></li>
+								<li><a href="#none">문화/여행</a></li>
+								<li><a href="#none">할인/캐쉬백</a></li>
+								<li><a href="#none">카드</a></li>
+							</ul>
+						</nav>
+						<!-- //tab_ty02 -->
+						<!-- thumb_ty -->
+						<ul class="thumb_ty mtm20">
+							<li class="list">
+								<a href="#">
+									<p class="img"><img src="../../assets/images/data/img01.jpg" alt=""></p><!-- 17.08.08 접근성 수정 --><!-- image size 140*96px -->
+									<div class="txt">
+										<dl class="s1">
+											<dt>놀라운 ‘1’이 벌어질 것이다.</dt>
+											<dd>3월 하나머니 적립 이벤트</dd>
+										</dl>
+										<p class="s2">2017.01.01 ~ 2017.12.31</p>
+									</div>	
+								</a>
+							</li>
+							<li class="list">
+								<a href="#">
+									<p class="img"><img src="../../assets/images/data/img01.jpg" alt=""></p><!-- 17.08.08 접근성 수정 -->
+									<div class="txt">
+										<dl class="s1">
+											<dt>하나카드쇼핑 쇼핑몰</dt>
+											<dd>10% 청구할인 &amp;반값할인 도전</dd>
+										</dl>
+										<p class="s2">2017.01.01 ~ 2017.12.31</p>
+									</div>	
+								</a>
+							</li>
+							<li class="list">
+								<a href="#">
+									<p class="img"><img src="../../assets/images/data/img01.jpg" alt=""></p><!-- 17.08.08 접근성 수정 -->
+									<div class="txt">
+										<dl class="s1">
+											<dt>Galaxy S7 하나카드폰 출시 Galaxy S7 하나카드폰 출시 Galaxy S7 하나카드폰</dt>
+											<dd>Hana 1Q pay 오픈기념! Hana 1Q pay 오픈기념! Hana 1Q pay 오픈기념! Hana 1Q pay 오픈기념!</dd>
+										</dl>
+										<p class="s2">2017.01.01 ~ 2017.12.31</p>
+									</div>	
+								</a>
+							</li>
+							<li class="emp">등록된 항목이 없습니다.</li><!-- 등록된 화면이 없을 경우 : class="emp" -->
+						</ul>
+						<!-- //thumb_ty -->
+						
+						<!-- @@include ../mrkp_pages_include/g_inc_div_pagenation.html -->
+												
+						<!-- board_footer -->
+						<div class="board_footer">
+							<!-- board_info -->
+							<ul class="board_info">
+								<li class="total">Total / <strong>1902</strong></li>
+								<li><strong>1</strong> / 168</li>
+							</ul>
+							<!-- //board_info -->
+							<!-- board_search -->
+							<div class="board_search">
+							<form>
+								<fieldset>
+								<legend>게시판 내용의 분류조건</legend>
+									<select class="select_ty w140" title="분류조건">
+										<option value="">전체</option>
+										<option value="">기간</option>
+										<option value="">조회</option>
+									</select>
+									<input type="text" class="input_ty w450" title="검색내용입력">
+									<a href="#" class="btn">검색</a>
+								</fieldset>
+							</form>
+							</div>
+							<!-- //board_search --> 
+						</div>
+						<!-- //board_footer -->
+					</article>
+					<!-- //Board Guide : Thumb List -->
+					
+					<!-- Board Guide : List -->
+					<article class="cont hr">
+						<h4 class="t_tit">Board Guide : View</h4>
+						<!-- board_ty -->
+						<div class="board_ty">
+							<ul class="board_list">
+								<li class="tit">[하나카드쇼핑 쇼핑몰] 10% 청구할인 &amp;인기상품 6종 반값할인 도전!  10% 청구할인 &amp;인기상품 6종 반값할인 도전!  10% 청구할인 &amp;인기상품 6종 반값할인 도전!</li>
+								<li class="info">
+									<span><em class="blind">등록일</em>2017.01.01 ~ 2017.12.31</span>
+									<span>조회<em>458</em></span>
+								</li>
+							</ul>
+							<div class="board_cont">
+								<img src="../../assets/images/data/img01.jpg" alt=""><br><br><br>
+								<strong>아워홈 호스피탈리티 신규제휴 기념이벤트</strong><br><br>
+								아워홈 호스피탈리티 신규제휴 기념이벤트 아워홈 호스피탈리티 신규제휴 기념이벤트 아워홈 호스피탈리티 신규제휴 기념이벤트<br>
+								많은 관심과 사랑 부탁드립니다.
+							</div>
+						</div>
+						<!-- //board_ty -->
+						
+						<!-- paginate_nav -->
+						<nav class="paginate_nav">
+							<ul class="paginate_list">
+								<li>
+									<strong class="tit">이전글</strong>
+									이전글이 없습니다.
+								</li>
+								<li>
+									<strong class="tit">이전글</strong>
+									<a href="#">아워홈 호스피탈리티 신규제휴 기념이벤트</a>
+									<span class="date">2017.01.01 ~ 2017.12.31</span>
+								</li>
+								<li>
+									<strong class="tit">다음글</strong>
+									<a href="#">아워홈 호스피탈리티 신규제휴 기념이벤트 아워홈 호스피탈리티 신규제휴 기념이벤트  아워홈 호스피탈리티 신규제휴 기념이벤트</a>
+									<span class="date">2017.01.01 ~ 2017.12.31</span>
+								</li>
+								<li>
+									<strong class="tit">다음글</strong>
+									다음글이 없습니다.
+								</li>
+							</ul>
+						</nav>
+						<!-- //paginate_nav -->
+						
+						<!-- btn_area -->
+						<ul class="btn_area">
+							<li>
+								<a href="#" class="btn_b btn_ty">이벤트 당첨확인</a>
+								<a href="#" class="btn_b btn_ty02">목록</a>
+							</li>
+						</ul>
+						<!-- //btn_area -->
+					</article>
+					<!-- //Board Guide : View -->
+
+					<!-- old -->
+
+					<!-- Board Guide : List -->
+						<article class="cont hr">
+							<h4 class="t_tit">Board Guide : View : <span style="color:red">핍업이 있는 이벤트 : design.js</span>
+							</h4>
+							<!-- board_ty -->
+							<div class="board_ty">
+								<ul class="board_list">
+									<li class="tit">제휴가맹점 서비스명칭 변경 안내</li>
+									<li class="info">
+										<span><em class="blind">등록일</em>2017.01.01 ~ 2017.12.31</span>
+										<span>조회<em>458</em></span>
+									</li>
+								</ul>
+								<div class="board_cont">
+									<!-- eventContDetail -->
+									<div class="eventContDetail">
+										<div class="newsPaper">
+											<dl>
+												<dt><img src="../../assets/images/data/news_3001.jpg" alt="제휴가맹점 서비스명칭 변경 안내">
+												</dt>
+												<dd>
+													<!-- 상단내용 -->
+													<div class="newsTop">
+														<p>하나카드를 이용해주시는 고객님께 깊은 감사를 드립니다.<br>
+															제휴서비스 업체 34개에 대한 서비스 명칭 변경을 안내 드리오니, 손님의 카드 이용에 <br>참고하시기
+															바랍니다.</p>
+													</div>
+													<!-- //상단내용 -->
+
+													<!-- 상세내용 -->
+													<div class="newsCont">
+														<ul class="newsTit">
+															<li><strong>시행일 : </strong>2016년 10월 18일</li>
+															<li>
+																<strong>변경 내용</strong>
+																<div class="tbl_news" style="margin-top:5px;">
+																	<table summary="제휴가맹점 서비스명칭 변경 안내입니다.">
+																		<caption></caption>
+																		<colgroup>
+																			<col style="width:12%">
+																			<col style="width:26%">
+																			<col style="width:26%">
+																			<col style="width:26%">
+																		</colgroup>
+																		<thead>
+																			<tr>
+																				<th scope="col">순번</th>
+																				<th scope="col">변경 전</th>
+																				<th scope="col">변경 후</th>
+																				<th class="last" scope="col">상품명</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr>
+																				<td>1</td>
+																				<td>CJ홈쇼핑</td>
+																				<td>CJ O SHOPPING</td>
+																				<td class="txtL pL10 last">2X 알파 카드 외 5종
+																				</td>
+																			</tr>
+
+																			<tr>
+																				<td>10</td>
+																				<td>동해메트로마트</td>
+																				<td>A마트</td>
+																				<td class="txtL pL10 last">SHOW포유(YES4U)
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>11</td>
+																				<td>대전동물원</td>
+																				<td>대전오월드</td>
+																				<td class="txtL pL10 last">대전시티즌 THE ONE
+																				</td>
+																			</tr>
+																			<tr>
+																				<td>12</td>
+																				<td>삼성홈플러스</td>
+																				<td>홈플러스</td>
+																				<td class="txtL pL10 last">S-OIL보너스카드 외
+																					3종</td>
+																			</tr>
+
+																			<tr>
+																				<td>34</td>
+																				<td>훼미리마트</td>
+																				<td>CU</td>
+																				<td class="txtL pL10 last">Touch B
+																					PLUS(터치비플러스)카드 외 2종</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+															</li>
+														</ul>
+														<div class="btnWrapBT"><a href="#"
+																onclick="layPop('x-window-cardView');return false;"
+																class="btn01 btnPop01"><span>대상카드 전체보기레이어팝업]</span></a>
+														</div>
+													</div>
+													<!-- //상세내용 -->
+												</dd>
+											</dl>
+										</div>
+
+										<!-- 레이어 팝업 -->
+										<div class="layerPop01" id="x-window-cardView" style="width:630px;">
+											<div class="pTopLogo"><img src="../../assets/images/data/logoPop.png" alt="하나카드">
+											</div>
+											<div class="layerPopWrap">
+												<div class="popCont">
+													<h2 class="pTitle01">제휴가맹점 서비스명칭 변경 대상카드</h2>
+													<!-- tblType -->
+													<div class="tblType02 tblAlignC">
+														<table summary="제휴가맹점 서비스명칭 변경 대상카드 전체보기 안내입니다.">
+															<caption>제휴가맹점 서비스명칭 변경 대상카드 안내</caption>
+															<colgroup>
+																<col style="width:10%;">
+																<col style="width:30%;">
+																<col style="width:60%;">
+															</colgroup>
+															<thead>
+																<tr>
+																	<th scope="col">순번</th>
+																	<th scope="col">변경전</th>
+																	<th scope="col">상품명</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>CJ홈쇼핑</td>
+																	<td class="txtL pL10">2X 알파 카드<br>2X 알파 ITIC국제교사증
+																		체크<br>2X 알파 체크<br>2X 감마 카드<br>2X 베타 카드<br>행복노하우
+																		투엑스감마 카드</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>샵N</td>
+																	<td class="txtL pL10">2X 알파 카드<br>2X 알파 ITIC국제교사증
+																		체크<br>2X 알파 체크<br>2X 감마 카드<br>2X 베타 카드<br>행복노하우
+																		투엑스감마 카드</td>
+																</tr>
+																<tr>
+																	<td>3</td>
+																	<td>LIG손해보험</td>
+																	<td class="txtL pL10">하나BC 다이아몬드클럽<br>LIG 손해보험
+																		카드<br>하나BC 플래티늄카드<br>농수산TV쉬즈카드<br>우리홈쇼핑쉬즈카드</td>
+																</tr>
+																<tr>
+																	<td>4</td>
+																	<td>계양 그랜드마트</td>
+																	<td class="txtL pL10">뉴 메디노블스(YP)</td>
+																</tr>
+																<tr>
+																	<td>5</td>
+																	<td>그랜드마트(계양점)</td>
+																	<td class="txtL pL10">NEW GS 칼텍스스마트카드<br>New
+																		Medinobles Pro카드<br>OK
+																		Premium카드<br>SHOW포유(YES4U)<br>S-OIL보너스카드<br>YESOKSaver카드<br>대전시티즌
+																		THE ONE<br>유비케어 메디노블스</td>
+																</tr>
+																<tr>
+																	<td>6</td>
+																	<td>금호패밀리랜드</td>
+																	<td class="txtL pL10">매직카드<br>아이미즈<br>예스뱅크플러스</td>
+																</tr>
+																<tr>
+																	<td>7</td>
+																	<td>패밀리랜드</td>
+																	<td class="txtL pL10">H&amp;B<br>KFA-하나은행장컵
+																		직장인축구대회<br>거제지역카드<br>농수산TV쉬즈카드<br>대한민국
+																		SAVE카드<br>대한민국
+																		일반(건곤감리)<br>BIGPOT(빅팟e-PT)<br>우리홈쇼핑쉬즈카드<br>프리마돈나카드<br>휴엔조이레포츠카드
+																	</td>
+																</tr>
+																<tr>
+																	<td>8</td>
+																	<td>농수산TV</td>
+																	<td class="txtL pL10">농수산TV ADD4카드 </td>
+																</tr>
+																<tr>
+																	<td>9</td>
+																	<td>메트로마트(동해)</td>
+																	<td class="txtL pL10">유비케어 메디노블스<br>New Medinobles
+																		Pro카드<br>OK
+																		Premium카드<br>S-OIL보너스카드<br>YESOKSaver카드<br>대전시티즌
+																		THE ONE<br>NEW GS 칼텍스스마트카드</td>
+																</tr>
+																<tr>
+																	<td>10</td>
+																	<td>동해메트로마트</td>
+																	<td class="txtL pL10">SHOW포유(YES4U)</td>
+																</tr>
+																<tr>
+																	<td>11</td>
+																	<td>대전동물원</td>
+																	<td class="txtL pL10">대전시티즌 THE ONE</td>
+																</tr>
+																<tr>
+																	<td>12</td>
+																	<td>삼성홈플러스</td>
+																	<td class="txtL pL10">S-OIL보너스카드<br>대전시티즌 THE
+																		ONE<br>SHOW포유(YES4U)<br>YESOKSaver카드</td>
+																</tr>
+																<tr>
+																	<td>13</td>
+																	<td>세이디에스(대전)</td>
+																	<td class="txtL pL10">NEW홈플러스카드<br>NEW GS
+																		칼텍스스마트카드<br>New Medinobles Pro카드<br>OK
+																		Premium카드<br>SHOW포유(YES4U)<br>S-OIL보너스카드<br>YESOKSaver카드<br>대전시티즌
+																		THE ONE<br>예스오일백<br>유비케어
+																		메디노블스<br>코웨이페이프리카드<br>홈플러스
+																		카드(줄리엣)<br>홈플러스카드(OIL)</td>
+																</tr>
+																<tr>
+																	<td>14</td>
+																	<td>세이백화점(대전)</td>
+																	<td class="txtL pL10">뉴 메디노블스(YP)<br>오렌지팩토리</td>
+																</tr>
+																<tr>
+																	<td>15</td>
+																	<td>씨앤앰</td>
+																	<td class="txtL pL10">Smart Way카드</td>
+																</tr>
+																<tr>
+																	<td>16</td>
+																	<td>오션백화점거제점(송화인베스트먼트)</td>
+																	<td class="txtL pL10">거제지역카드</td>
+																</tr>
+																<tr>
+																	<td>17</td>
+																	<td>우리홈쇼핑</td>
+																	<td class="txtL pL10">
+																		우리홈쇼핑ADD4카드<br>우리홈쇼핑레포츠카드<br>우리홈쇼핑쉬즈카드</td>
+																</tr>
+																<tr>
+																	<td>18</td>
+																	<td>우방랜드</td>
+																	<td class="txtL pL10">BC Nobles카드 스카이패스<br>BC
+																		Nobles카드 스카이패스(셀디)<br>BC Nobles카드 아시아나<br>골프존 복지
+																		신용카드(블랙)<br>골프존 복지
+																		신용카드(화이트)<br>농수산TV쉬즈카드<br>다올자산운용 복지카드<br>대전시립예술단
+																		복지카드<br>대전테크노파크 복지카드<br>비알코리아
+																		임직원카드<br>우리홈쇼핑쉬즈카드<br>청강문화산업대학<br>티센크루프머티리얼코리아
+																		임직원 복지<br>하나다올신탁 복지카드<br>한국문화정보센터복지카드<br>프리마돈나카드
+																	</td>
+																</tr>
+																<tr>
+																	<td>19</td>
+																	<td>이랜드</td>
+																	<td class="txtL pL10">대한민국 일반(건곤감리) </td>
+																</tr>
+																<tr>
+																	<td>20</td>
+																	<td>웅진코웨이</td>
+																	<td class="txtL pL10">생활의 달인
+																		카드<br>ReNK넘버엔카드<br>코웨이페이프리카드</td>
+																</tr>
+																<tr>
+																	<td>21</td>
+																	<td>웨스트파인</td>
+																	<td class="txtL pL10">넘버엔 더 골프 (YP)<br>넘버엔 더 골프
+																		스카이패스</td>
+																</tr>
+																<tr>
+																	<td>22</td>
+																	<td>위니아만도</td>
+																	<td class="txtL pL10">SmartPraud카드</td>
+																</tr>
+																<tr>
+																	<td>23</td>
+																	<td>전주시동물원</td>
+																	<td class="txtL pL10">BC Nobles카드 아시아나<br>BC
+																		Nobles카드 스카이패스(셀디)<br>BC Nobles카드
+																		스카이패스<br>SK비타민멤버스<br>대전사랑일반카드<br>대한민국
+																		일반(건곤감리)<br>프리마돈나카드<br>휴엔조이레포츠카드</td>
+																</tr>
+																<tr>
+																	<td>24</td>
+																	<td>전주코아</td>
+																	<td class="txtL pL10">코웨이페이프리카드<br>NEW GS
+																		칼텍스스마트카드<br>New Medinobles Pro카드<br>OK
+																		Premium카드<br>유비케어
+																		메디노블스<br>S-OIL보너스카드<br>SHOW포유(YES4U)<br>YESOKSaver카드<br>대전시티즌
+																		THE ONE<br>예스오일백<br>NEW홈플러스카드<br>홈플러스
+																		카드(줄리엣)<br>홈플러스카드(OIL)</td>
+																</tr>
+																<tr>
+																	<td>25</td>
+																	<td>제주 그랜드 호텔</td>
+																	<td class="txtL pL10">비씨플래티늄카드</td>
+																</tr>
+																<tr>
+																	<td>26</td>
+																	<td>하나대투증권</td>
+																	<td class="txtL pL10">
+																		CLUB1_100(개인)<br>CLUB1_200(개인)<br>하나대투 CMA체크
+																		매일더블캐쉬백<br>H CMA 대투 체크카드</td>
+																</tr>
+																<tr>
+																	<td>27</td>
+																	<td>하얏트리젠시인천호텔</td>
+																	<td class="txtL pL10">시그니처카드 PT1500<br>시그니처카드 PT1500
+																		아시아나<br>시그니처카드 PT1500
+																		스카이패스<br>CLUB1_100(개인)<br>CLUB1_200(개인)<br>스카이패스
+																		모바일카드<br>하나BC 플래티늄카드</td>
+																</tr>
+																<tr>
+																	<td>28</td>
+																	<td>한겨레초록마을</td>
+																	<td class="txtL pL10">넘버엔 FAMILY카드<br>넘버엔
+																		WOMEN카드<br>넘버엔 MEN카드<br>웅진플레이도시 넘버엔카드</td>
+																</tr>
+																<tr>
+																	<td>29</td>
+																	<td>한국까르푸</td>
+																	<td class="txtL pL10">
+																		SK엔크린보너스카드<br>라데팡스아이미즈<br>메가마트아이미즈<br>아이미즈<br>휠라아이미즈
+																	</td>
+																</tr>
+																<tr>
+																	<td>30</td>
+																	<td>한솔CSN</td>
+																	<td class="txtL pL10">한솔CSN매직윈</td>
+																</tr>
+																<tr>
+																	<td>31</td>
+																	<td>현대정유</td>
+																	<td class="txtL pL10">아이미즈</td>
+																</tr>
+																<tr>
+																	<td>32</td>
+																	<td>현대하이카</td>
+																	<td class="txtL pL10">현대하이카 Smart Direct 카드</td>
+																</tr>
+																<tr>
+																	<td>33</td>
+																	<td>하이카</td>
+																	<td class="txtL pL10">넘버엔 WOMEN카드<br>넘버엔
+																		FAMILY카드<br>넘버엔 MEN카드</td>
+																</tr>
+																<tr>
+																	<td>34</td>
+																	<td>훼미리마트</td>
+																	<td class="txtL pL10">Touch B
+																		PLUS(터치비플러스)카드<br>교직원복지 Smart Style
+																		카드<br>회원카드_부천사랑 서포터즈 체크카드</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<!-- // tblType -->
+												</div>
+												<div class="copyRight">
+													<img src="../../assets/images/data/pCopyright.gif"
+														alt="copyright 2014 keb hana card all rights reserved">
+												</div>
+											</div>
+											<a href="#" onclick="layPopClose('x-window-cardView');return false;"
+												class="btnClose"><img src="../../assets/images/data/btnClose.gif"
+													alt="레이어팝업 닫기"></a>
+										</div>
+										<!-- // 레이어팝업 -->
+									</div>
+									<!-- //eventContDetail -->
+								</div>
+								<!-- //board_cont -->
+							</div>
+							<!-- //board_ty -->
+						</article>
+
+
+
+
+						<article class="cont hr">
+							<h4 class="t_tit">Board Guide : View : <span style="color:red">이벤트</span></h4>
+							<!-- board_ty -->
+							<div class="board_ty">
+								<ul class="board_list">
+									<li class="tit">현대 프리미엄 아울렛 상품권 증정 이벤트</li>
+									<li class="info">
+										<span><em class="blind">등록일</em>2017.01.01 ~ 2017.12.31</span>
+										<span>조회<em>458</em></span>
+									</li>
+								</ul>
+								<div class="board_cont">
+									<div class="newsPaper">
+										<dl>
+											<dt><img src="https://dwww.hanacard.co.kr:3443/ATTACH/WWW/images/news-corperation/news_3219.jpg"
+													alt="BC기업포인트 신청 품목 변경 안내" /></dt>
+											<dd>
+												<!-- 상단내용 -->
+												<!--
+			<div class="newsTop">
+				<p></p>
+			</div>
+		-->
+												<!-- //상단내용 -->
+												<!-- 상세내용 -->
+												<div class="newsCont" style="padding-bottom:40px;">
+													<ul class="newsTit">
+														<li><strong>BC GIFT카드 신청 중단 일시 : </strong>2017년 8월 1일(화)</li>
+														<li><strong>신규 품목 신청 가능 일시 : </strong>2017년 6월 1일(목)</li>
+														<li><strong>변경 품목</strong>
+															<div class="tbl_news">
+																<table summary="BC기업포인트 신청 품목 변경 안내">
+																	<caption>BC기업포인트 신청 품목 변경 안내</caption>
+																	<colgroup>
+																		<col style="width:14%" />
+																		<col style="width:34%" />
+																		<col style="width:52%" />
+																	</colgroup>
+																	<thead>
+																		<tr>
+																			<th scope="col">구분</th>
+																			<th scope="col">변경 전</th>
+																			<th scope="col" class="last">변경 후</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>신청 품목</td>
+																			<td class="left pl10">캐쉬백, BC GIFT카드,
+																				마일리지,<br />신세계상품권, 온누리전자상품권</td>
+																			<td class="last left pl10">캐쉬백, 신세계상품권,
+																				마일리지, 온누리상품권,<br />여행상품권, 호텔뷔페식사권,
+																				현대백화점상품권</td>
+																		</tr>
+																		<tr>
+																			<td>변경 사항</td>
+																			<td>-</td>
+																			<td class="last left pl10">
+																				- 신규 품목 3종 추가<br /><span
+																					class="pl10">(여행상품권, 호텔뷔페식사권,
+																					현대백화점상품권)</span><br />
+																				- 신청 중단 품목 (BC GIFT카드)
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</li>
+														<li><strong>신규 품목 상세</strong>
+															<div class="tbl_news">
+																<table summary="BC기업포인트 신청 품목 변경 안내">
+																	<caption>BC기업포인트 신청 품목 변경 안내</caption>
+																	<colgroup>
+																		<col style="width:30%" />
+																		<col style="width:30%" />
+																		<col style="width:20%" />
+																		<col style="width:20%" />
+																	</colgroup>
+																	<thead>
+																		<tr>
+																			<th scope="col">신규 품목</th>
+																			<th scope="col">권종</th>
+																			<th scope="col">신청 Point</th>
+																			<th scope="col" class="last">비고</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>여행 상품권<br /><a href="#"
+																					onclick="layPop('news_pop1');return false;"><img
+																						src="https://dwww.hanacard.co.kr:3443/img/btn/btn_detailveiw_01.gif"></a>
+																			</td>
+																			<td>5만, 10만, 20만, 30만, 50만</td>
+																			<td>5만점 이상</td>
+																			<td class="last">-</td>
+																		</tr>
+																		<tr>
+																			<td>호텔뷔페식사권<br /><a href="#"
+																					onclick="layPop('news_pop2');return false;"><img
+																						src="https://dwww.hanacard.co.kr:3443/img/btn/btn_detailveiw_01.gif"></a>
+																			</td>
+																			<td>16.6만</td>
+																			<td>16.6만점 이상</td>
+																			<td class="last">2인권 기준</td>
+																		</tr>
+																		<tr>
+																			<td>현대백화점상품권</td>
+																			<td>1만, 5만, 10만, 50만</td>
+																			<td>3만점 이상</td>
+																			<td class="last">-</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+
+															<!-- layer Popup 01 -->
+															<div id="news_pop1" class="layPop" style="width:600px;">
+																<div class="wtop">
+																	<div class="wbtm">
+																		<dl>
+																			<dt class="layTit"><strong>여행상품권 상세
+																					안내</strong></dt>
+																			<dd class="layCon">
+																				<div class="wcont">
+																					<dl class="tbox">
+																						<dt>이용상품 : 비씨투어(비씨카드 여행서비스)에서
+																							취급하는 여행상품</dt>
+																						<dd>
+																							<ul class="dep_list">
+																								<li
+																									style="padding-bottom:0px;">
+																									항공 : 국내항공, 해외항공
+																									<div class="note">
+																										해외항공 예약시 인터넷 예약
+																										필수(bctour.bccard.com
+																										> 해외항공)</div>
+																								</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									해외패키지 : 하나투어, 모두투어,
+																									한진관광, 롯데관광</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									국내여행 : 제주도 여행, 제주지역
+																									렌터카, 호텔, 콘도, 펜션 등
+																								</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									비씨카드 여행서비스 대표번호
+																									1566-7977</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									비씨투어 영업시간 : 평일 09:00
+																									~ 18:00 공휴일/주말 휴무
+																								</li>
+																							</ul>
+																						</dd>
+																					</dl>
+																					<dl class="tbox">
+																						<dt>유효기한 : 발행일로부터 5년(유효기간 연장 불가)
+																						</dt>
+																						<dd>
+																							<ul class="dep_list">
+																								<li
+																									style="padding-bottom:0px;">
+																									여행상품권 잔액 재발행시 최초 발행된
+																									여행상품권 유효기한과 동일</li>
+																							</ul>
+																						</dd>
+																					</dl>
+																					<dl class="tbox">
+																						<dt>유의사항</dt>
+																						<dd>
+																							<ul class="dep_list">
+																								<li
+																									style="padding-bottom:0px;">
+																									최초 발행된 여행상품권 사용 후 잔액
+																									1회 재발행 </li>
+																								<li
+																									style="padding-bottom:0px;">
+																									유효기한이 만료된 여행상품권 사용
+																									불가</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									여행상품권은 현금으로 반환 불가
+																								</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									여행상품권 도난, 분실 , 멸실시
+																									여행상품권 재발행 불가</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									여행상품권 금액 초과 이용시 초과
+																									비용은 여행자 부담
+																									<div class="note">초과
+																										비용 결제 수단 :
+																										비씨카드(개인/법인의
+																										신용/체크, 기프트카드
+																										제외), 현금</div>
+																								</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									상품 예약 및 결제시 여행상품권 실물
+																									필요</li>
+																							</ul>
+																						</dd>
+																					</dl>
+																					<div class="note">여행상품권 관련 문의 : 비씨카드
+																						종합상담 1566-2379</div>
+																					<div class="close btn_c">
+																						<a href="#"
+																							onclick="layPopClose('news_pop1');return false;"><img
+																								src="https://dwww.hanacard.co.kr:3443/img/individual/btn_confirm.gif"
+																								alt="확인" /></a>
+																					</div>
+																				</div>
+																			</dd>
+																		</dl>
+																		<span class="close"><a href="#"
+																				onclick="layPopClose('news_pop1');return false;"><img
+																					src="https://dwww.hanacard.co.kr:3443/img/popup/btn_layClose.gif"
+																					alt="팝업창닫기" /></a></span>
+																	</div>
+																</div>
+															</div>
+															<!-- //layer Popup 01 -->
+															<!-- layer Popup 02 -->
+															<div id="news_pop2" class="layPop" style="width:650px;">
+																<div class="wtop">
+																	<div class="wbtm">
+																		<dl>
+																			<dt class="layTit"><strong>호텔뷔페식사권 상세 안내 (국내
+																					특1급호텔 2인 뷔페 이용권)</strong></dt>
+																			<dd class="layCon">
+																				<div class="wcont">
+																					<dl class="tbox">
+																						<dt>유의사항</dt>
+																						<dd>
+																							<ul class="dep_list">
+																								<li
+																									style="padding-bottom:0px;">
+																									식사권 이용시 반드시 식사권 실물
+																									제출 필수</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									각 호텔 지정예약처로 사전에 예약
+																									필수</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									중식뷔페 또는 석식뷔페 이용가능
+																								</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									유효기한 : 발행일로부터
+																									1년(유효기한 연장 불가)</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									유효기한이 만료된 식사권 사용 불가
+																								</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									타 할인 서비스와 중복 적용되지
+																									않음(호텔멤버십 서비스 중복
+																									적용불가)</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									식사권 분실 및 파손시 재발행 불가
+																								</li>
+																								<li
+																									style="padding-bottom:0px;">
+																									제휴 호텔과의 계약 등 호텔 사정에
+																									따라 사전 고지없이 변경될 수 있으며
+																									이외의 내용은 각 호텔의 규정을
+																									준수합니다.</li>
+																							</ul>
+																						</dd>
+																					</dl>
+																					<dl class="tbox">
+																						<dt>사용처 및 문의</dt>
+																						<dd>
+																							<div class="tbl_news"
+																								style="padding:0px 10px 0px 20px;">
+																								<table
+																									summary="BC기업포인트 신청 품목 변경 안내">
+																									<caption>BC기업포인트 신청
+																										품목 변경 안내
+																									</caption>
+																									<colgroup>
+																										<col
+																											style="width:15%" />
+																										<col
+																											style="width:55%" />
+																										<col
+																											style="width:30%" />
+																									</colgroup>
+																									<thead>
+																										<tr>
+																											<th
+																												scope="col">
+																												지역</th>
+																											<th
+																												scope="col">
+																												호텔</th>
+																											<th scope="col"
+																												class="last">
+																												문의</th>
+																										</tr>
+																									</thead>
+																									<tbody>
+																										<tr>
+																											<td>서울</td>
+																											<td>노보텔 앰배서더
+																												강남 더 스퀘어
+																											</td>
+																											<td
+																												class="last">
+																												02-531-6618~9
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>서울</td>
+																											<td>인터컨티넨탈
+																												코엑스 브래서리
+																											</td>
+																											<td
+																												class="last">
+																												02-3430-8610~2
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>제주</td>
+																											<td>호텔신라 제주
+																												더 파크뷰
+																											</td>
+																											<td
+																												class="last">
+																												064-735-5334
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>대구</td>
+																											<td>호텔 인터불고
+																												대구 그라나다
+																												뷔페</td>
+																											<td
+																												class="last">
+																												053-602-7233~4
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>부산</td>
+																											<td>롯데호텔 부산
+																												라세느</td>
+																											<td
+																												class="last">
+																												051-810-6390
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>부산</td>
+																											<td>해운대
+																												그랜드호텔
+																											</td>
+																											<td
+																												class="last">
+																												051-740-0611
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>광주</td>
+																											<td>라마다프라자
+																												광주 호텔
+																												파라뷰</td>
+																											<td
+																												class="last">
+																												062-717-8888,7755
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>대전</td>
+																											<td>롯데 시티호텔
+																												씨카페</td>
+																											<td
+																												class="last">
+																												042-333-1077~8
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>강원</td>
+																											<td>하이원 리조트
+																												운암정</td>
+																											<td
+																												class="last">
+																												033-590-7631
+																											</td>
+																										</tr>
+																										<tr>
+																											<td>창원</td>
+																											<td>풀만 앰배서더
+																											</td>
+																											<td
+																												class="last">
+																												055-600-0803~4
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</div>
+																						</dd>
+																					</dl>
+																					<div class="note">호텔뷔페식사권 관련 문의 :
+																						비씨카드 종합상담 1566-2379</div>
+																					<div class="close btn_c">
+																						<a href="#"
+																							onclick="layPopClose('news_pop2');return false;"><img
+																								src="https://dwww.hanacard.co.kr:3443/img/individual/btn_confirm.gif"
+																								alt="확인" /></a>
+																					</div>
+																				</div>
+																			</dd>
+																		</dl>
+																		<span class="close"><a href="#"
+																				onclick="layPopClose('news_pop2');return false;"><img
+																					src="https://dwww.hanacard.co.kr:3443/img/popup/btn_layClose.gif"
+																					alt="팝업창닫기" /></a></span>
+																	</div>
+																</div>
+															</div>
+															<!-- //layer Popup 02 -->
+														</li>
+													</ul>
+												</div>
+											</dd>
+										</dl>
+									</div>
+
+								</div>
+
+
+
+
+
+
+								<!--  as-is 이벤트 영역 :  div.eventContDetail 하위에 요소를 가져옴 -->
+								<div class="eventContDetail">
+									<div class="txtC">
+										<img src="../../assets/images/data/event_3040.jpg" alt="">
+
+										<div class="hide">
+											<dl>
+												<dt>현대 프리미엄 아울렛<br />상품권 증정 이벤트</dt>
+												<dd>
+													<ul>
+														<li>기 간 : 2017. 4. 28 ~ 5. 9</li>
+														<li>대 상 : 하나 신용/체크카드 회원<br />
+															(하나BC/법인/선불카드 제외)</li>
+														<li>혜 택 : 현대백화점 상품권 증정<br />
+															30만원/60만원 이상 구매 시 1만원/2만원 상품권 증정
+														</li>
+														<li>대 상 점 : 프리미엄아울렛 김포점 / 송도점</li>
+													</ul>
+												</dd>
+											</dl>
+											<p><strong>유의사항</strong><br />
+												- 1일 1인 1회에 한하여 증정하며 구매 취소 시 수령한 상품권은 반납하셔야 합니다.<br />
+												- 당일 영수증 합산은 가능하나 상품권 분할 증정은 불가합니다.<br />
+												- 한 개의 영수증으로 다른 사은행사와 중복 증정하지 않습니다.<br />
+												- 안내데스크에서 상품권 수령 및 상품권 증정 제외 내용의 문의가 가능합니다.<br />
+												- 일부 브랜드 영수증은 상품권 증정 대상에서 제외되며 자세한 내용은 매장에서 획인 가능합니다.<br />
+												- 행사 내용은 하나카드 및 제휴사 사정에 의해 사전고지 없이 변경되거나 중단될 수 있습니다.<br />
+											</p>
+										</div>
+									</div>
+									<div class="lawAbiding">
+										<p class="warningUse"><img src="../../assets/images/data/warningUse.gif"
+												alt="신용카드 남용은 가계경제에 위협이 됩니다."></p>
+										<p class="lawNum">[준법심의 17-0000(2017.04.00~2017.04.00)]</p>
+									</div>
+								</div>
+								<!-- // as-is 이벤트  영역 -->
+
+							</div>
+							<!-- board_cont -->
+
+					</div>
+					<!-- //board_ty -->
+
+					<!-- paginate_nav -->
+					<nav class="paginate_nav">
+						<ul class="paginate_list">
+							<li>
+								<strong class="tit">이전글</strong>
+								이전글이 없습니다.
+							</li>
+							<li>
+								<strong class="tit">이전글</strong>
+								<a href="#">아워홈 호스피탈리티 신규제휴 기념이벤트</a>
+								<span class="date">2017.01.01 ~ 2017.12.31</span>
+							</li>
+						</ul>
+					</nav>
+					<!-- //paginate_nav -->
+
+					<!-- btn_area -->
+					<ul class="btn_area">
+						<li>
+							<a href="#" class="btn_b btn_ty">이벤트 당첨확인</a>
+							<a href="#" class="btn_b btn_ty02">목록</a>
+						</li>
+					</ul>
+					<!-- //btn_area -->
+					</article>
+					<!-- //Board Guide : View -->
+
+					<!-- Board Guide : List -->
+					<article class="cont hr">
+						<h4 class="t_tit">Board Guide : View <span style="color:red">뉴스 : 테이블 있는 서식</span></h4>
+						<!-- board_ty -->
+						<div class="board_ty">
+							<ul class="board_list">
+								<li class="tit">Touch 1 부가서비스 변경 안내</li>
+								<li class="info">
+									<span><em class="blind">등록일</em>2017.01.01 ~ 2017.12.31</span>
+									<span>조회<em>458</em></span>
+								</li>
+							</ul>
+							<div class="board_cont">
+
+								<!--  as-is 이벤트 영역 :  div.eventContDetail 하위에 요소를 가져옴 -->
+								<div class="eventContDetail">
+									<!-- newsPaper -->
+									<div class="newsPaper">
+										<dl>
+											<dt><img alt="Touch 1 부가서비스 변경 안내" src="../../assets/images/data/news_3011.jpg">
+											</dt>
+											<dd>
+												<!-- 상단내용 -->
+												<div class="newsTop">
+													<p>하나카드를 이용해주시는 고객께 진심으로 감사 드립니다.<br>
+														Touch1 부가서비스가 제휴사의 요청으로 2016년 12월 29일부터 변경되오니,<br>
+														이용에 참고해주시기 바랍니다.</p>
+												</div>
+												<!-- //상단내용 -->
+
+												<!-- 상세내용 -->
+												<div class="newsCont">
+													<ul class="newsTit">
+														<li><strong>대상상품 : </strong>Touch 1, 에버리치 Touch 1, 경기도사회복지공제회
+															Touch 1,<br>
+															<span style="margin-left: 60px;">팬택임직원 Touch 1, Touch 1
+																Members(SK telecom members)</span> </li>
+														<li><strong>시행일자 : </strong>2016년 12월 29일</li>
+														<li> <strong>변경 내용</strong>
+															<div class="tbl_news" style="margin-top: 5px;">
+																<table summary="Touch1 부가서비스 변경 안내 입니다.">
+																	<caption>
+																	</caption>
+																	<colgroup>
+																		<col style="width: 17%;">
+																		<col style="width: 13%;">
+																		<col style="width: 35%;">
+																		<col>
+																	</colgroup>
+																	<thead>
+																		<tr>
+																			<th scope="col">대상상품</th>
+																			<th scope="col">구분</th>
+																			<th scope="col">변경 전</th>
+																			<th class="last" scope="col">변경 후</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td class="txtL pL10"
+																				style="vertical-align: middle;"
+																				rowspan="4">- Touch 1<br>
+																				- 에버리치<br>
+																				<span style="margin-left: 10px;">Touch 1
+																				</span><br>
+																				- 경기도사회<br>
+																				<span style="margin-left: 10px;">
+																					복지공제회</span><br>
+																				<span style="margin-left: 10px;">Touch 1
+																				</span><br>
+																				- 팬택임직원<br>
+																				<span style="margin-left: 10px;">Touch
+																					1</span><br>
+																				- Touch 1<br>
+																				<span
+																					style="margin-left: 10px;">members</span><br>
+																				<span style="margin-left: 10px;">(SK
+																					telecom</span><br>
+																				<span
+																					style="margin-left: 10px;">members)<br></span>
+																			</td>
+																			<td>T.G.I Friday</td>
+																			<td class="txtL pL10"
+																				style="vertical-align: top;"><b>[T멤버십
+																					전체등급]</b><br>
+																				<span
+																					style="margin-left: 5px;">T멤버십(20%)+Touch1(20%)</span><br>
+																				<span style="margin-left: 5px;"> =
+																					40%할인</span>
+																			</td>
+																			<td class="txtL pL10 last"><b>[T멤버십
+																					VIP/골드등급]</b><br>
+																				<span
+																					style="margin-left: 5px;">T멤버십(20%)+Touch1(20%)</span><br>
+																				<span style="margin-left: 5px;">=
+																					40%할인</span><br>
+																				<p style="margin-top: 10px;"><b>[T멤버십
+																						실버/일반등급]</b><br>
+																					<span
+																						style="margin-left: 5px;">T멤버십(15%)+Touch1(25%)<br>
+																						= 40%할인 </span></p>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>미스터피자</td>
+																			<td class="txtL pL10"
+																				style="vertical-align: top;"><b>[T멤버십
+																					전체등급]</b><br>
+																				T멤버십(15%)+Touch1(13%)<br>
+																				= 28%할인
+																			</td>
+																			<td class="txtL pL10 last"><b>[T멤버십
+																					VIP등급]</b><br>
+																				<span
+																					style="margin-left: 5px;">T멤버십(30%)+Touch1(13%)</span><br>
+																				<span style="margin-left: 5px;">=
+																					43%할인</span><br>
+																				<p style="margin-top: 10px;"><b>[T멤버십
+																						골드/실버/일반등급]</b><br>
+																					<span
+																						style="margin-left: 5px;">T멤버십(15%)+Touch1(13%)</span><br>
+																					<span style="margin-left: 5px;">=
+																						28%할인</span><br>
+																				</p>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>도미노피자</td>
+																			<td class="txtL pL10"><b>[T멤버십
+																					VIP등급]</b><br>
+																				<span
+																					style="margin-left: 5px;">T멤버십(30%)+Touch1(20%)</span><br>
+																				<span style="margin-left: 5px;"> =
+																					50%할인</span><br>
+																				<p style="margin-top: 10px;"><b>[T멤버십
+																						골드/실버/일반등급]</b><br>
+																					T멤버십(15%)+Touch1(15%)<br>
+																					= 30%할인 </p>
+																			</td>
+																			<td class="txtL pL10 last"><b>[T멤버십
+																					VIP등급]</b><br>
+																				<span
+																					style="margin-left: 5px;">T멤버십(30%)+Touch1(20%)<br>
+																					= 50%할인</span><br>
+																				<p style="margin-top: 10px;"><b>[T멤버십
+																						골드/실버/일반등급]</b><br>
+																					<span
+																						style="margin-left: 5px;">T멤버십(20%)+Touch1(15%)<br>
+																						= 35%할인 </span></p>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>롯데리아</td>
+																			<td class="txtL pL10"
+																				style="vertical-align: top;"><b>[T멤버십
+																					전체등급]</b><br>
+																				<span
+																					style="margin-left: 5px;">T멤버십(100원)+Touch1(100원)</span><br>
+																				<span style="margin-left: 5px;">= 1천원당
+																					200원 할인</span></td>
+																			<td class="txtL pL10 last"><b>[T멤버십
+																					VIP/골드등급]</b><br>
+																				<span
+																					style="margin-left: 5px;">T멤버십(100원)+Touch1(100원)</span><br>
+																				<span style="margin-left: 5px;">= 1천원당
+																					200원 할인</span><br>
+																				<p style="margin-top: 10px;"><b>[T멤버십
+																						실버/일반등급]</b><br>
+																					<span
+																						style="margin-left: 5px;">T멤버십(50원)+Touch1(150원)</span><br>
+																					<span style="margin-left: 5px;">=
+																						1천원당 200원 할인</span> </p>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="txtL pL10">Touch 1<br>
+																				members<br>
+																				(SK telecom<br>
+																				members)</td>
+																			<td>OK캐쉬백 <br>
+																				추가<br>적립문의</td>
+																			<td class="txtL pL10">02-6390-6010</td>
+																			<td class="txtL pL10 last">1599-0512</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</li>
+													</ul>
+													<p>* Touch 1 Members(SK telecom members)카드의 OK캐쉬백 적립률은 기존과 동일합니다.
+													</p>
+												</div>
+												<!-- //상세내용 -->
+
+											</dd>
+										</dl>
+									</div>
+									<!-- //newsPaper -->
+								</div>
+								<!-- // as-is 이벤트  영역 -->
+
+							</div>
+
+						</div>
+						<!-- //board_ty -->
+
+						<!-- paginate_nav -->
+						<nav class="paginate_nav">
+							<ul class="paginate_list">
+								<li>
+									<strong class="tit">이전글</strong>
+									이전글이 없습니다.
+								</li>
+								<li>
+									<strong class="tit">이전글</strong>
+									<a href="#">아워홈 호스피탈리티 신규제휴 기념이벤트</a>
+									<span class="date">2017.01.01 ~ 2017.12.31</span>
+								</li>
+							</ul>
+						</nav>
+						<!-- //paginate_nav -->
+
+						<!-- btn_area -->
+						<ul class="btn_area">
+							<li>
+								<a href="#" class="btn_b btn_ty">이벤트 당첨확인</a>
+								<a href="#" class="btn_b btn_ty02">목록</a>
+							</li>
+						</ul>
+						<!-- //btn_area -->
+					</article>
+					<!-- //Board Guide : View -->
+
+
+					<!-- Board Guide : List -->
+					<article class="cont hr">
+						<h4 class="t_tit">Board Guide : View <span style="color:red">뉴스/공지사항 기본</span></h4>
+						<!-- board_ty -->
+						<div class="board_ty">
+							<ul class="board_list">
+								<li class="tit">여신거래기본약관 개정 안내</li>
+								<li class="info">
+									<span><em class="blind">등록일</em>2017.01.01 ~ 2017.12.31</span>
+									<span>조회<em>458</em></span>
+								</li>
+							</ul>
+							<div class="board_cont">
+
+								<!--  as-is 이벤트 영역 :  div.eventContDetail 하위에 요소를 가져옴 -->
+								<div class="eventContDetail">
+									<div class="newsPaper">
+										<dl>
+											<dt><img alt="여신거래기본약관 개정 안내" src="../../assets/images/data/new_2984.gif"></dt>
+											<dd>
+												<!-- 상단내용 -->
+												<div class="newsTop">
+													<p>항상 저희 하나카드를 이용해 주시는 고객께 진심으로 감사의 말씀을 드립니다.<br>
+														금융감독원 승인 여신금융회사 표준 여신거래기본약관을 반영하여<br>하나카드 '여신거래기본약관'을 개정함에 따라
+														2016.12.19일부터 적용됨을 알려드립니다.
+													</p>
+												</div>
+												<!-- //상단내용 -->
+												<!-- 상세내용 -->
+												<div class="newsCont">
+													<ul class="newsTit">
+														<li><strong>주요 개정 내용(적용일 : 2016.12.19일부터 시행)</strong>
+															<div class="tbl_news" style="margin-top: 5px;">
+																<table summary="표준 여신거래기본약관 개정 안내 내용입니다.">
+																	<caption></caption>
+																	<colgroup>
+																		<col style="width: 50%;">
+																		<col style="width: 50%;">
+																	</colgroup>
+																	<thead>
+																		<tr>
+																			<th scope="col">항목</th>
+																			<th class="last" scope="col">개정 내용</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>제4조의2(대출계약 철회)</td>
+																			<td class="last left pl10">조 신설<br> - 대출계약
+																				철회권 반영</td>
+																		</tr>
+																		<tr>
+																			<td>제8조(기한전의 채무변제의무)</td>
+																			<td class="last left pl10">오기 정정</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</li>
+														<li>
+															<p>* 본 약관 개정 안내 후 1개월 이내에 서면 등에 의한 별도의 이의가 없으시면 약관 변경을
+																승인한것으로<br>간주하여 적용할 예정이오니 양지하여 주시기 바랍니다.</p><br>
+															<p>* 개정된 약관 전문 및 개정 전·후 세부내용을 참고하시기 바랍니다.<br>
+																<span style="margin-left: 10px;"> - 여신거래기본약관 개정 대비표 <a
+																		href="http://www.hanacard.co.kr/ATTACH/WWW/pdf/provision/credit_transactions_terms_contrast_2061219.pdf"
+																		target="_blank" alt="대비표 보기"><img
+																			style="vertical-align: middle;"
+																			src="../../assets/images/data/btn_terms01.jpg"
+																			border="0"></a></span><br>
+																<span style="margin-left: 10px;"> - 여신거래기본약관 전문 <a
+																		href="http://www.hanacard.co.kr/ATTACH/WWW/pdf/provision/credit_transactions_terms_doc_2061219.pdf"
+																		target="_blank" alt="전문 보기"><img
+																			style="vertical-align: middle;"
+																			src="../../assets/images/data/btn_terms02.jpg"
+																			border="0"></a></span>
+															</p>
+														</li>
+													</ul>
+												</div>
+												<!-- //상세내용 -->
+
+											</dd>
+										</dl>
+									</div>
+								</div>
+								<!-- // as-is 이벤트  영역 -->
+
+							</div>
+						</div>
+						<!-- //board_ty -->
+
+						<!-- paginate_nav -->
+						<nav class="paginate_nav">
+							<ul class="paginate_list">
+								<li>
+									<strong class="tit">다음글</strong>
+									<a href="#">아워홈 호스피탈리티 신규제휴 기념이벤트 아워홈 호스피탈리티 신규제휴 기념이벤트 아워홈 호스피탈리티 신규제휴 기념이벤트</a>
+									<span class="date">2017.01.01 ~ 2017.12.31</span>
+								</li>
+								<li>
+									<strong class="tit">다음글</strong>
+									다음글이 없습니다.
+								</li>
+							</ul>
+						</nav>
+						<!-- //paginate_nav -->
+
+						<!-- btn_area -->
+						<ul class="btn_area">
+							<li>
+								<a href="#" class="btn_b btn_ty">이벤트 당첨확인</a>
+								<a href="#" class="btn_b btn_ty02">목록</a>
+							</li>
+						</ul>
+						<!-- //btn_area -->
+					</article>
+					<!-- //Board Guide : View -->
+
+
+
+					<!-- Board Guide : List -->
+					<article class="cont hr">
+						<h4 class="t_tit">Board Guide : View <span style="color:red">보도자료</span></h4>
+						<!-- board_ty -->
+						<div class="board_ty">
+							<ul class="board_list">
+								<li class="tit">출시 7개월 만에 100만명이 선택한 베스트셀러 1Q 시리즈 !</li>
+								<li class="info">
+									<span><em class="blind">등록일</em>2017.01.01 ~ 2017.12.31</span>
+									<span>조회<em>458</em></span>
+								</li>
+							</ul>
+							<div class="board_cont">
+
+								<!--  as-is 이벤트 영역 : 보도자료는  div.brdCont 하위에 요소를 가져옴 -->
+								<div class="eventContDetail">
+									<img src="../../assets/images/data/170420_1q_all_in.jpg"
+										alt="170420_1q_all_in.jpg" /><br />
+									<div class="press_rap">
+										<span class="press_tit">출시 7개월 만에 100만명이 선택한 베스트셀러 1Q 시리즈 !</span><br />
+										<span class="press">하나카드, 모든 혜택을 단 한장에 담은 ‘1Q카드 All in’출시!</span><br />
+										<strong>- 손님의 모든 Lifestyle 영역의 혜택을 누릴 수 있는 1Q시리즈의 완결판!<br />
+											- 전월 실적 이용금액에 따라 월 최대 12만 하나머니 적립가능<br />
+											- 마스터 플래티늄 프로모션으로 연 2회 공항 라운지 무료 이용 혜택까지!<br />
+										</strong><br /><br />
+										하나카드는 지난 10월에 첫 출시한 ‘1Q(원큐)카드’의 100만좌 돌파 기념과 함께 1Q 시리즈 중 가장 파격적이고 최고의 혜택을 자랑하는
+										‘1Q(원큐)카드 All in(올인)’을 출시한다고 10일 밝혔다.
+										<br /><br />
+										‘1Q(원큐)카드 All in(올인)’은 기존의 1Q시리즈처럼 업종별 합산 이용금액에 따른 하나머니 적립과 더불어 카드 전월 실적 이용금액별로
+										하나머니를 추가로 적립하여 더 많이 이용하는 고객에게 더욱큰 혜택이 돌아갈 수 있도록 한 카드이다.
+										<br /><br />
+										또한, ‘1Q(원큐)카드 All in(올인)’은 손님의 모든 Lifestyle을 담고 있다. 먼저, 오프라인 쇼핑의 대명사인 3대 마트(이마트,
+										홈플러스, 롯데마트)와 3대 백화점(신세계, 현대, 롯데)에서 각각 업종별로 월 최대2만 하나머니를 적립할 수 있다. 온라인 쇼핑을 대표하는
+										6대 홈쇼핑(GS홈쇼핑, CJ오쇼핑, 롯데홈쇼핑,현대홈쇼핑, NS홈쇼핑, 홈앤쇼핑) 업종에서도 월 최대 2만 하나머니를 적립하여 온·오프라인
+										쇼핑 시 부담 없이 사용할 수 있다.
+										<br /><br />
+										‘1Q(원큐)카드 All in(올인)’은 가족을 위한 혜택도 담고 있다. 가족 나들이를 위한 주유(SK에너지, GS칼텍스, S-Oil,
+										현대오일뱅크)업종에서 월 최대 2만 하나머니 적립혜택을 제공하며, 아이들의 교육을 위한 학원업종, 애완견을 포함한 온 가족의 건강을 챙기는
+										종합병원·일반병원·한의원·동물병원업종에서월 최대 2만 하나머니를 적립할 수 있다.
+										<br /><br />
+										하나머니의 적립혜택은 생활부문까지 이어진다. 통신요금(SKT, SKB, KT, LGU+), 렌탈요금(청호나이스, 교원 웰스, 코웨이),
+										대중교통(버스, 지하철), 케이블TV(CJ헬로비전, 티브로드, HCN, 딜라이브), 전기요금(한국전력) 총 5개 영역에서 월 최대 1만
+										하나머니가 적립된다.<br /><br />
+										아울러 기존 1Q시리즈처럼 해외 모든 가맹점에서 이용 시 적립되던 월 최대 1만 하나머니와 KEB하나은행을 결제계좌로 지정할 경우 스타벅스 또는
+										커피빈에서 4천원 이상 결제 시 4천원 할인혜택(월 1회)도 변함 없이 제공된다.
+										<br /><br />
+										마지막으로 ‘1Q(원큐)카드 All in(올인)’ 출시와 더불어 하나카드는 MasterCard와 함께 매우 특별한 프로모션도 진행한다고 한다.
+										올 말 까지 아시아나라운지 및 스카이허브라운지를 2회 무료로 이용할 수 있는 파격적인 혜택이다. 손님은 오직 라운지 안내 데스크에서
+										보딩패스와‘1Q(원큐)카드 All in(올인) MasterCard’를 제시하기만 하면 부담 없이 라운지를 이용할 수 있다. 이 외에도 국내호텔
+										식음료 및 객실 할인, 국내 면세점 할인, 해외호텔 예약 할인 등의 이벤트도 함께 진행된다.
+										<br /><br />
+										홍장의 하나카드 마케팅본부장은 “하나멤버스 1Q(원큐)카드 시리즈는 하나머니를 쉽게 적립할 수 있는 상품이다. 최근 하나멤버스도 333만명회원을
+										돌파한데 이어, 1Q(원큐)카드도 100만좌를 돌파하는 등 반응이 굉장히 뜨거운데, 앞으로도 하나금융그룹 손님의 만족을 위하여 더 좋은 상품 및
+										이벤트로 보답하겠다.” 라고 밝혔다.
+										<br /><br />
+										‘1Q(원큐)카드 All In(올인)’의 연회비는 국내전용 2만8천원, 해외겸용 3만원이다. 올해 6월말까지 ‘1Q(원큐)카드 시리즈’ 관련
+										다양하게 추가혜택을 제공하는 이벤트도 진행하고 있다. 카드신청 및 이벤트에 대한 자세한 내용은 하나카드
+										홈페이지(www.hanacard.co.kr) 또는 고객센터(1800-1111)에서 확인할 수 있다.
+										<br /><br />
+									</div>
+
+								</div>
+								<!-- // as-is 이벤트  영역 -->
+
+							</div>
+						</div>
+						<!-- //board_ty -->
+
+						<!-- paginate_nav -->
+						<nav class="paginate_nav">
+							<ul class="paginate_list">
+								<li>
+									<strong class="tit">다음글</strong>
+									<a href="#">아워홈 호스피탈리티 신규제휴 기념이벤트 아워홈 호스피탈리티 신규제휴 기념이벤트 아워홈 호스피탈리티 신규제휴 기념이벤트</a>
+									<span class="date">2017.01.01 ~ 2017.12.31</span>
+								</li>
+								<li>
+									<strong class="tit">다음글</strong>
+									다음글이 없습니다.
+								</li>
+							</ul>
+						</nav>
+						<!-- //paginate_nav -->
+
+						<!-- btn_area -->
+						<ul class="btn_area">
+							<li>
+								<a href="#" class="btn_b btn_ty">이벤트 당첨확인</a>
+								<a href="#" class="btn_b btn_ty02">목록</a>
+							</li>
+						</ul>
+						<!-- //btn_area -->
+					</article>
+					<!-- //Board Guide : View -->
+
+
+					<!-- //old -->
+
+				</div>
+				<!-- //cont_box_area -->
+			</div>
+			<!-- //cont_box -->
+
+		</div>
+		<!-- //cont_area -->
+		
+		<!-- @@include ../mrkp_pages_include/g_inc_btn_top.html -->
+
+	</section>
+	<!-- //container -->
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_footer.html -->
+
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+	jQuery(function ($) {
+		//탭 활성화
+		activeTabTy('.g_md_tabs', 3);
+	});
+</script>
+
+<!-- @@close-->

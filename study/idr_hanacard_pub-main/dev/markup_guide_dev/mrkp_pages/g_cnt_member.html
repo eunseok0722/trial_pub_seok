@@ -1,0 +1,159 @@
+<!-- @@master ../../layout_mrkp_template.html -->
+
+<!-- @@block root_mrkp_content -->
+
+<!-- wrap -->
+<div id="wrap" class="biz">
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_header.html -->
+
+	<!-- @@include ../mrkp_pages_include/g_inc_breadcrumb.html -->
+	
+	<!-- container -->
+	<section id="container">
+		<h2 class="blind">하나카드 가이드</h2><!-- Gnb 1depth Menu -->
+		<!-- cont_area -->
+		<div class="cont_area">
+			
+			<h3 class="title"><em>개인</em>정보입력 및 약관동의</h3><!-- em : 상위 메뉴 -->
+			
+			<!-- cont_box -->
+			<div class="cont_box">
+				<!-- cont_box_area -->
+				<div class="cont_box_area">
+					
+					<!-- @@include ../mrkp_pages_include/g_inc_cnt_tab.html -->
+										
+					<!-- 정보입력 및 약관동의 -->
+					<article class="cont">
+						<h4 class="t_tit">정보입력 및 약관동의</h4>
+						<!-- board_ty -->
+						<div class="board_ty">
+						<form>
+							<fieldset>
+							<legend>정보입력 및 약관동의</legend>
+							<table>
+								<caption>정보입력 및 약관동의</caption>
+								<colgroup>
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:77%;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="left">가입신청</th>
+										<td class="left">
+											하나카드 온라인회원 가입
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">성명</th>
+										<td class="left">
+											홍길동
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">아이디</th>
+										<td class="left">
+											<input type="text" class="input_ty w280 hint_txt" title="아이디 입력" data-text="아이디 중복확인을 해주세요.">
+											<a href="#" class="btn_ty btn_m">중복 확인</a>
+											
+											
+											<div style="width:100%;clear:both;padding-top:10px;">
+<xmp>
+<script type="text/javascript">
+jQuery(function($){
+	$('#test01').hintTxt();    // 에러메세지 노출
+	$('#test01').hintTxtOut();    // 에러메세지 삭제
+});
+</script>
+</xmp>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">비밀번호</th>
+										<td class="left">
+											<input type="password" class="input_ty w280 hint_txt" title="비밀번호 입력" data-text="비밀번호는 영문/숫자/특수문자조합 8~15자리 입력해주세요.">
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">비밀번호 확인</th>
+										<td class="left">
+											<input type="password" class="input_ty w280 hint_txt" title="비밀번호 확인 입력" data-text="비밀번호와 일치하지 않습니다.">
+											<!-- tooltip_ty -->
+											<div class="tooltip_ty">
+												<a href="#tooltip" class="btn_tip">비밀번호 설정기준</a>
+												<!-- tooltip_area -->
+												<div class="tooltip_area">
+													<!-- tooltip_cont -->
+													<div class="tooltip_cont">
+														<p>하나카드에 등록되어 있는 개인회원 본인명의
+														의 KT 이동통신 휴대폰만 신청 가능합니다.<br>
+														(집전화, 인터넷 전화, 결합상품 신청 불가)하나카드에 등록되어 있는 개인회원 본인명의
+														의 KT 이동통신 휴대폰만 신청 가능합니다.</p>
+													</div>
+													<!-- //tooltip_cont -->
+													<a href="#" class="btn_tooltip_close">Tooltip 내용 닫기</a>
+												</div>
+												<!-- //tooltip_area -->
+											</div>
+											<!-- //tooltip_ty -->
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">이메일</th>
+										<td class="left">
+											<input type="text" class="input_ty w180 hint_txt" title="이메일 아이디 입력" data-text="이메일 주소를 입력해주세요.">
+											<span class="b_br">@</span>
+											<input type="text" class="input_ty w180" title="이메일 도메인 입력">
+											<select class="w140" title="이메일 도메인 선택">
+												<option value="">선택</option>
+												<option value="">naver.com</option>
+												<option value="">hanmail.net</option>
+												<option value="">nate.com</option>
+												<option value="">empal.com</option>
+												<option value="">dreamwiz.com</option>
+												<option value="">gmail.com</option>
+												<option value="">hotmail.com</option>
+												<option value="">yahoo.co.kr</option>
+												<option value="">직접입력</option>
+											</select>
+											<div class="b_list txt">‘이메일명세’ 등을 받으시는 카드회원정보의 이메일 주소가 업데이트됩니다.</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							</fieldset>
+						</form>
+						</div>
+						<!-- //board_ty -->
+					</article>
+					<!-- //정보입력 및 약관동의 -->
+					
+
+				</div>
+				<!-- //cont_box_area -->
+			</div>
+			<!-- //cont_box -->
+
+		</div>
+		<!-- //cont_area -->
+		
+		<!-- @@include ../mrkp_pages_include/g_inc_btn_top.html -->
+
+	</section>
+	<!-- //container -->
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_footer.html -->
+
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+	jQuery(function ($) {
+		//탭 활성화
+		activeTabTy('.g_cnt_tabs', 3);
+	});
+</script>
+
+<!-- @@close-->

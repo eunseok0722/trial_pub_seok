@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: plugin                                       	  */
+// date		: 20220303
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* plugin s ================================================= */
+
+/* ezMark jQuery Plugin */
+label {vertical-align:top;}
+.radio_ty {width:20px;height:20px;line-height:20px;vertical-align:middle;}
+.chk_ty {width:20px;height:20px;line-height:20px;vertical-align:middle;}
+.ez-hide {width:20px;height:20px;line-height:20px;vertical-align:top;opacity:0;filter:alpha(opacity=0);}
+.chk_b_ty {width:24px;height:24px;line-height:24px;}
+.ez-checkbox {display:inline-block;width:20px;margin-right:6px;background:url(../images/template/bg_checkbox.png) no-repeat;transition:all 0.4s;}
+.ez-checkbox.hint_chk{background-image:url(../images/template/bg_checkbox_hint.png);}
+.ez-checked.hint_chk{background-image:url(../images/template/bg_checkbox_hint_on.png);}
+.ez-radio {display:inline-block;width:20px;margin-right:6px;background:url(../images/template/bg_radio.png) no-repeat center;transition:all 0.4s;}
+.ez-checkbox, .ez-radio {zoom:1;*display:inline;line-height:20px;transition:all 0.3s;}
+.ez-checked {background:url(../images/template/bg_checkbox_on.png) no-repeat;}
+.ez-selected {background:url(../images/template/bg_radio_on.png) no-repeat center;}
+.ez-disabled label {color:#666;}
+.ez-disabled .ez-checkbox {background:url(../images/template/bg_checkbox_disa.png) no-repeat;}
+.ez-disabled .ez-radio {background:url(../images/template/bg_radio_disa.png) no-repeat;}
+.ez-disabled .ez-checked {background:url(../images/template/bg_checkbox_disa_on.png) no-repeat;}
+.ez-disabled .ez-selected {background:url(../images/template/bg_radio_disa_on.png) no-repeat;}
+.ez_focus {outline:1px solid #e1e1e1;}
+.ez-radio.ez_focus {outline:1px dashed #e1e1e1;}
+.ez-chk-big.ez-checkbox {width:24px;height:24px;background:url(../images/template/bg_checkbox_big.png) no-repeat;line-height:24px;}
+.ez-chk-big.ez-checked {background:url(../images/template/bg_checkbox_big_on.png) no-repeat;}
+.ez-chk-big.ez-checkbox.hint_chk{background-image:url(../images/template/bg_checkbox_big_hint.png);}
+.ez-chk-big.ez-checked.hint_chk{background-image:url(../images/template/bg_checkbox_big_hint_on.png);}
+.ez-disabled .ez-chk-big.ez-checkbox {background:url(../images/template/bg_checkbox_big_disa.png) no-repeat;}
+.ez-disabled .ez-chk-big.ez-checked {background:url(../images/template/bg_checkbox_big_disa_on.png) no-repeat;}
+.ez-chk-onoff.ez-checkbox {width:42px;height:24px;background:url(../images/template/bg_chk_off.png) no-repeat;line-height:24px;} /* 2018-08-06 */
+.ez-chk-onoff.ez-checked {background:url(../images/template/bg_chk_on.png) no-repeat;}
+.ez-chk-onoff.ez-checkbox .ez-hide {width:42px;height:24px;}
+
+
+/* plugin e ================================================= */
+/* ---------------------------------------------------------- */

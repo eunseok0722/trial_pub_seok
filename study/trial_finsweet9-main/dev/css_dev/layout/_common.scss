@@ -1,0 +1,254 @@
+// body 공통사항 정의
+body {
+  font-family: $default_font;
+}
+// background 가상클래스로 생성되는 가로스크롤 해제
+#wrapper {
+  overflow: hidden;
+}
+
+// 웹접근성용 안내 문구 숨김
+.blind {
+  font-size: 0;
+  position: absolute;
+  text-indent: -9999px;
+}
+// input 기본 모양 설정
+input {
+  box-sizing: border-box;
+  font-size: $font-16r;
+}
+// address 기본 모양 설정
+address {
+  font-style: normal;
+  font-size: $font-16r;
+}
+html {
+  font-family: $default-font;
+}
+// title text
+.tit-h1 {
+  font-size: $font-54r;
+  font-weight: $b;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+.tit-h2 {
+  font-size: $font-48r;
+  font-weight: $b;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+.tit-h3 {
+  font-size: $font-38r;
+  font-weight: $b;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+.tit-h4 {
+  font-size: $font-36r;
+  font-weight: $md;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+.tit-h5 {
+  font-size: $font-32r;
+  font-weight: $md;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+.tit-h6 {
+  font-size: $font-24r;
+  font-weight: $md;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+
+// text
+.txt-r {
+  font-size: $font-16r;
+  font-weight: $r;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+.txt-md {
+  font-size: $font-16r;
+  font-weight: $md;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+// label text
+.lb-txt-1 {
+  font-size: $font-18r;
+  font-weight: $md;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+.lb-txt-2 {
+  font-size: $font-16r;
+  font-weight: $md;
+  line-height: $ln-h-r;
+  color: $dark-blue;
+}
+
+// font 반응형
+@include t-l {
+  .tit-h1 {
+    font-size: $font-48r;
+  }
+  .tit-h2 {
+    font-size: $font-38r;
+  }
+  .tit-h3 {
+    font-size: $font-36r;
+  }
+  .tit-h4 {
+    font-size: $font-32r;
+  }
+  .tit-h5 {
+    font-size: $font-24r;
+  }
+  .tit-h6 {
+    font-size: $font-20r;
+  }
+  .txt-r {
+    font-size: $font-14r;
+    line-height: $ln-h-n;
+  }
+  .txt-md {
+    font-size: $font-14r;
+    line-height: $ln-h-n;
+  }
+  .lb-txt-1 {
+    font-size: $font-16r;
+  }
+  .lb-txt-2 {
+    font-size: $font-14r;
+  }
+}
+@include m-l {
+  .tit-h1 {
+    font-size: $font-38r;
+  }
+  .tit-h2 {
+    font-size: $font-36r;
+  }
+  .tit-h3 {
+    font-size: $font-32r;
+  }
+  .tit-h4 {
+    font-size: $font-24r;
+  }
+  .tit-h5 {
+    font-size: $font-20r;
+  }
+  .tit-h6 {
+    font-size: $font-18r;
+  }
+  .txt-r {
+    font-size: $font-12r;
+  }
+  .txt-md {
+    font-size: $font-12r;
+  }
+  .lb-txt-1 {
+    font-size: $font-14r;
+  }
+  .lb-txt-2 {
+    font-size: $font-12r;
+  }
+}
+
+.btn-ty03 {
+  @include bd(2px, #F4F6FC33);
+  @include bdrs(4rem);
+  color: $white;
+  transition: border 0.3s;
+
+  &:hover {
+    border-color: $white;
+  }
+}
+// color
+.royal-blue {
+  background-color: $royal-blue;
+}
+.dark-blue {
+  background-color: $dark-blue;
+}
+.grey {
+  background-color: $grey;
+}
+.yellow {
+  background-color: $yellow;
+}
+.tint-blue {
+  background-color: $tint-blue;
+}
+.accent {
+  background-color: $accent;
+}
+.light-yellow {
+  background-color: $light-yellow;
+}
+
+// button
+button {
+  cursor: pointer;
+}
+
+.btn-ty01 {
+  background-color: $yellow;
+  transition: background-color 0.3s;
+  color: #1b1c2b;
+  border-radius: 40px;
+  font-size: $font-18r;
+  font-weight: $md;
+  line-height: $ln-h-r;
+}
+
+.btn-ty01:hover {
+  background-color: $yellow-hover;
+}
+
+.btn-ty02 {
+  background-color: $dark-blue;
+  transition: background-color 0.3s;
+  color: $white;
+  border-radius: 40px;
+  font-size: $font-18r;
+  font-weight: $md;
+  line-height: $ln-h-r;
+}
+
+.btn-ty02:hover {
+  background-color: $dark-blue-hover;
+}
+
+.dark-mode{
+  background-color: rgb(32, 31, 31);
+  color: #fff;
+  .tit-h1,
+  .tit-h2,
+  .tit-h3,
+  .tit-h4,
+  .tit-h5,
+  .tit-h6,
+  .lb-txt-1,
+  .lb-txt-2,
+  p,
+  a,
+  address,
+  button {
+    color: #fff;
+  }
+  .grey {
+    background-color: $tint-blue;
+  }
+  .accent {
+    background-color: $tint-blue;
+  }
+  .btn-ty01{
+    color: #1b1c2b;
+  }
+}

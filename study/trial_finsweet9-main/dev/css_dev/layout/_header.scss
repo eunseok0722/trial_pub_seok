@@ -1,0 +1,174 @@
+.header-wrap {
+  width: 100%;
+  height: fit-content;
+  background-color: $tint_blue;
+  z-index: $z-gnb;
+
+  #header {
+    max-width: $pc-cont;
+    width: 90%;
+    height: 92px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .hd-gnb {
+      display: flex;
+      justify-content: flex-end;
+      gap: 4.8rem;
+      align-items: center;
+
+      .btn-ty03 {
+        display: block;
+        padding: 1.6rem 4.8rem;
+        font-size: $font-16r;
+        box-sizing: border-box;
+        background-color: $tint-blue;
+      }
+    }
+  }
+}
+
+.nav-btn-wrap {
+  display: none;
+}
+
+.gnb-list {
+  display: flex;
+
+  a {
+    display: block;
+    padding: 1rem 1.6rem;
+    color: #BBBBCB;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+@include t-l {
+
+  .hd-gnb {
+    .btn-wrap {
+      display: none;
+    }
+  }
+
+  .gnb-list {
+    a {
+      padding: 0.5rem 0.8rem;
+    }
+  }
+}
+
+@include m-l {
+  .header-wrap {
+    position: fixed;
+    margin-bottom: 5rem;
+    transform: translateY(0);
+    transition: all 0.3s;
+
+    &.inactive {
+      transform: translateY(-50px);
+
+      #header .hd-gnb.active {
+        max-height: 0;
+      }
+    }
+
+    #header {
+      height: 50px;
+
+
+      .hd-gnb {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        display: block;
+        background-color: $tint-blue;
+        max-height: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: max-height 0.3s ease-in-out;
+
+        .gnb-list-wrap {
+          max-width: 90%;
+          margin: 0 auto;
+
+          .gnb-list {
+            flex-wrap: wrap;
+
+            .gnb-item {
+              flex-basis: 15rem;
+
+              a {
+                padding: 1rem 1rem;
+              }
+            }
+          }
+        }
+
+        &.active {
+          max-height: 50vh;
+        }
+      }
+    }
+  }
+
+  .nav-btn-wrap {
+    display: block;
+
+    .nav-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 2rem;
+      height: 2rem;
+      background: none;
+      border: none;
+      padding: 0;
+      margin-right: 0.5rem;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $white;
+        transition: all 0.6s;
+        transition-delay: unset;
+
+        &.btn-ln-2 {
+          transition-delay: 0.3s;
+        }
+      }
+
+      &.active {
+        span {
+          transition-delay: 0.3s;
+        }
+
+        .btn-ln-1 {
+          transform-origin: 100% 0;
+          transform: rotate(-45deg) translate(0, 2px);
+        }
+
+        .btn-ln-2 {
+          transform-origin: left;
+          width: 0;
+          transition-delay: unset;
+        }
+
+        .btn-ln-3 {
+          transform-origin: 100% 0;
+          transform: rotate(45deg) translate(0, -3px);
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,725 @@
+<!-- @@master ../../layout_mrkp_template.html -->
+
+<!-- @@block root_mrkp_content -->
+
+<!-- wrap -->
+<div id="wrap" class="biz">
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_header.html -->
+
+	<!-- @@include ../mrkp_pages_include/g_inc_breadcrumb.html -->
+	
+	<!-- container -->
+	<section id="container">
+		<h2 class="blind">하나카드 가이드</h2><!-- Gnb 1depth Menu -->
+		<!-- cont_area -->
+		<div class="cont_area">
+			
+			<h3 class="title"><em>회원가입</em>본인인증</h3><!-- em : 상위 메뉴 -->
+			
+			<!-- cont_box -->
+			<div class="cont_box">
+				<!-- cont_box_area -->
+				<div class="cont_box_area">
+					
+					<!-- @@include ../mrkp_pages_include/g_inc_cnt_tab.html -->
+										
+					<!-- 본인인증 -->
+					<article class="cont hr">
+						<h4 class="t_tit">본인인증</h4>
+						<!-- board_box -->
+						<div class="board_box">
+							<!-- tab_ty03 -->
+							<nav class="tab_ty03 tab_nav">
+								<a href="#tabA01">카드인증</a>
+								<a href="#tabA01_2" class="on">카드인증</a><!-- 선택 -->
+								<a href="#tabA02">휴대폰 인증</a>
+								<a href="#tabA02_2">휴대폰 인증</a><!-- 로그인 후 -->
+								<a href="#tabA03">카드&amp;휴대폰 인증</a>
+								<a href="#tabA04">공인인증서 인증</a>
+								<a href="#tabA06">공인인증서 인증</a>
+								<a href="#tabA07">공인인증서 인증(카드)</a>
+								<a href="#tabA05">아이핀 인증</a>
+							</nav>
+							<!-- //tab_ty03 -->
+							
+							<!-- 카드인증 -->
+							<div class="tab_cont" id="tabA01"><!-- 활성화 class="on" -->
+								<h5 class="blind">카드 인증</h5>
+								<form>
+									<fieldset>
+									<legend>카드 인증</legend>							
+									<div class="board_ty">								
+										<table>
+											<caption>카드 인증</caption>
+											<colgroup>
+												<col span="1" style="width:23%;">
+												<col span="1" style="width:77%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row" class="left">카드번호</th>
+													<td class="left">
+														<div class="btn_security_box">
+															<input type="password" class="input_ty w420" placeholder="'-' 제외하고 입력" title="카드번호 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">유효기간</th>
+													<td class="left">
+														<input type="text" class="input_ty w140" placeholder="MM" title="유효기간 월 입력">
+														<span class="b_txt02">월</span>
+														<input type="text" class="input_ty w140" placeholder="YY" title="유효기간 년도 입력">
+														<span class="b_txt02">년</span>
+														<div class="b_list txt">카드앞면에 02/13일 경우, 02월 13년으로 입력</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">CVV번호</th>
+													<td class="left">
+														<div class="btn_key_box">
+															<input type="password" class="input_ty w140" placeholder="뒷면 3자리" title="CVV번호 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+														<a href="#" class="btn_s btn_ty04 btn_pop">CVV 안내</a><!-- 17.08.08 접근성 수정 -->
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">카드비밀번호</th>
+													<td class="left">
+														<div class="btn_key_box">
+															<input type="password" class="input_ty w140" placeholder="앞 2자리" title="카드 비밀번호 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+														<span class="b_br">* *</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--// board_ty -->
+									</fieldset>
+								</form>
+							</div>
+							<!-- //카드인증 -->
+							
+							<!-- 카드인증 (선택) -->
+							<div class="tab_cont on" id="tabA01_2">
+								<h5 class="blind">카드 인증</h5>
+								<form>
+									<fieldset>
+									<legend>카드 인증</legend>							
+									<div class="board_ty">								
+										<table>
+											<caption>카드 인증</caption>
+											<colgroup>
+												<col span="1" style="width:23%;">
+												<col span="1" style="width:77%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row" class="left">카드번호 (선택형)</th>
+													<td class="left">
+														<select class="select_ty w100b2" title="카드번호 선택"><!-- 17.07.01 수정 -->
+															<option value="">선택</option>
+															<option value="">1234-1234-1234-1234</option>
+															<option value="">5678-5678-5678-5678</option>
+															<option value="">9012-9012-9012-9012</option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">유효기간</th>
+													<td class="left">
+														<input type="text" class="input_ty w140" placeholder="MM" title="유효기간 월 입력">
+														<span class="b_txt02">월</span>
+														<input type="text" class="input_ty w140" placeholder="YY" title="유효기간 년도 입력">
+														<span class="b_txt02">년</span>
+														<div class="b_list txt">카드앞면에 02/13일 경우, 02월 13년으로 입력</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">CVV번호</th>
+													<td class="left">
+														<div class="btn_key_box">
+															<input type="password" class="input_ty w140" placeholder="뒷면 3자리" title="CVV번호 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+														<a href="#" class="btn_s btn_ty04 btn_pop">CVV 안내</a><!-- 17.08.08 접근성 수정 -->
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">카드비밀번호</th>
+													<td class="left">
+														<div class="btn_key_box">
+															<input type="password" class="input_ty w180" placeholder="" title="휴대폰번호 나머지 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+														<span class="b_br">* *</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--// board_ty -->
+									</fieldset>
+								</form>
+							</div>
+							<!-- //카드인증 (선택) -->
+
+							<!-- 휴대폰 인증 -->
+							<div class="tab_cont" id="tabA02">
+								<h5 class="blind">휴대폰 인증</h5>
+								<form>
+									<fieldset>
+									<legend>휴대폰 인증</legend>
+									<!-- board_ty -->
+									<div class="board_ty">
+										<table>
+											<caption>휴대폰 인증</caption>
+											<colgroup>
+												<col span="1" style="width:23%;">
+												<col span="1" style="width:77%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row" class="left">성명</th>
+													<td class="left">
+														<input type="text" class="input_ty w180" placeholder="" title="성명 입력">
+														<div class="b_list txt">
+															외국인인 경우, 휴대폰 명의 성명을 입력해 주세요(영문 대소문자, 띄어쓰기 동일)
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">생년월일</th>
+													<td class="left">
+														<input type="text" class="input_ty w180" placeholder="" title="생년월일 입력">
+														<span class="b_txt">예시) 1980/02/13인 경우 → 19800213</span>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">성별</th>
+													<td class="left">
+														<ul class="radio_box">
+															<li><input type="radio" id="male" name="male_ty" checked><label for="male">남자</label></li>
+															<li><input type="radio" id="female" name="male_ty"><label for="female">여자</label></li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">내/외국인</th>
+													<td class="left">
+														<ul class="radio_box">
+															<li><input type="radio" id="native" name="native_ty" checked><label for="native">내국인</label></li>
+															<li><input type="radio" id="foreigner" name="native_ty"><label for="foreigner">외국인</label></li>
+														</ul>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">휴대폰번호</th>
+													<td class="left">
+														<select class="select_ty w180" title="휴대폰번호 통신사 선택">
+															<option value="">선택</option>
+															<option value="">SKT</option>
+															<option value="">KT</option>
+															<option value="">LG U+</option>
+															<option value="">SKT 알뜰폰</option>
+															<option value="">KT 알뜰폰</option>
+															<option value="">LG U+ 알뜰폰</option>
+														</select>
+														<select class="select_ty w90" title="휴대폰번호 첫번째 자리 선택">
+															<option value="">선택</option>
+															<option value="">010</option>
+															<option value="">011</option>
+															<option value="">016</option>
+															<option value="">017</option>
+															<option value="">018</option>
+															<option value="">019</option>
+														</select>
+														<div class="btn_key_box">
+															<input type="password" class="input_ty w180" placeholder="" title="휴대폰번호 나머지 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+
+														<!-- agree_chk -->
+														<div class="agree_chk">
+															<div class="b_list all_chk pt">
+																<div class="b_txt">
+																	<input type="checkbox" class="chk_b_ty" id="chk01_1"><!-- Big Size : class="chk_b_ty" -->
+																	<label for="chk01_1">개인(신용)정보 필수적 수집 전체 동의</label> 
+																</div>
+															</div>
+															<div class="b_list">
+																<div class="b_txt">
+																	<input type="checkbox" id="chk01_2"> 
+																	<label for="chk01_2">개인정보 제공 및 이용</label> 
+																</div>
+																<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+																<div class="b_txt">
+																	<input type="checkbox" id="chk01_3"> 
+																	<label for="chk01_3">고유식별 정보처리</label> 
+																</div>
+																<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+															</div>
+															<div class="b_list">
+																<div class="b_txt">
+																	<input type="checkbox" id="chk01_4"> 
+																	<label for="chk01_4">통신사 이용약관</label> 
+																</div>
+																<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+															</div>
+															<div class="b_list">
+																<a href="#" class="btn_m btn_ty btn_pop">인증번호 발송</a><!-- 17.08.08 접근성 수정 -->
+																<input type="text" class="input_ty w180" placeholder="인증번호 6자리 입력" title="인증번호 6자리 입력">
+															</div>
+															<div class="b_list txt">
+																본인 명의의 휴대전화로만 인증이 가능합니다.
+															</div>
+														</div>
+														<!--// agree_chk -->
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--// board_ty -->
+									</fieldset>
+								</form>
+							</div>
+							<!-- //휴대폰 인증  -->
+							
+							<!-- 휴대폰 인증 로그인 -->
+							<div class="tab_cont" id="tabA02_2">
+								<h5 class="blind">휴대폰 인증</h5>
+								<form>
+									<fieldset>
+									<legend>휴대폰 인증</legend>
+									<!-- board_ty -->
+									<div class="board_ty">
+										<table>
+											<caption>휴대폰 인증</caption>
+											<colgroup>
+												<col span="1" style="width:23%;">
+												<col span="1" style="width:77%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row" class="left">휴대폰번호</th>
+													<td class="left">
+														<select class="select_ty w180" title="휴대폰번호 통신사 선택">
+															<option value="">선택</option>
+															<option value="">SKT</option>
+															<option value="">KT</option>
+															<option value="">LG U+</option>
+															<option value="">SKT 알뜰폰</option>
+															<option value="">KT 알뜰폰</option>
+															<option value="">LG U+ 알뜰폰</option>
+														</select>
+														<select class="select_ty w90" title="휴대폰번호 첫번째 자리 선택">
+															<option value="">선택</option>
+															<option value="">010</option>
+															<option value="">011</option>
+															<option value="">016</option>
+															<option value="">017</option>
+															<option value="">018</option>
+															<option value="">019</option>
+														</select>
+														<div class="btn_key_box">
+															<input type="password" class="input_ty w180" placeholder="" title="휴대폰번호 나머지 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+
+														<!-- agree_chk -->
+														<div class="agree_chk">
+															<div class="b_list all_chk pt">
+																<div class="b_txt">
+																	<input type="checkbox" class="chk_b_ty" id="chk02_1"><!-- Big Size : class="chk_b_ty" -->
+																	<label for="chk02_1">개인(신용)정보 필수적 수집 전체 동의</label> 
+																</div>
+															</div>
+															<div class="b_list">
+																<div class="b_txt">
+																	<input type="checkbox" id="chk02_2"> 
+																	<label for="chk02_2">개인정보 제공 및 이용</label> 
+																</div>
+																<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+																<div class="b_txt">
+																	<input type="checkbox" id="chk02_3"> 
+																	<label for="chk02_3">고유식별 정보처리</label> 
+																</div>
+																<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+															</div>
+															<div class="b_list">
+																<div class="b_txt">
+																	<input type="checkbox" id="chk02_4"> 
+																	<label for="chk02_4">통신사 이용약관</label> 
+																</div>
+																<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+															</div>
+															<div class="b_list">
+																<a href="#" class="btn_m btn_ty btn_pop">인증번호 발송</a><!-- 17.08.08 접근성 수정 -->
+																<input type="text" class="input_ty w180" placeholder="인증번호 6자리 입력" title="인증번호 6자리 입력">
+															</div>
+															<div class="b_list txt">
+																본인 명의의 휴대전화로만 인증이 가능합니다.
+															</div>
+														</div>
+														<!--// agree_chk -->
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--// board_ty -->
+									</fieldset>
+								</form>
+							</div>
+							<!-- 휴대폰 인증 : 로그인 후 -->
+							
+							<!-- 카드&휴대폰 인증 -->
+							<div class="tab_cont" id="tabA03">
+								<h5 class="blind">카드&amp;휴대폰 인증</h5>
+								<form>
+									<fieldset>
+									<legend>카드&amp;휴대폰 인증</legend>				
+									<!-- board_ty -->
+									<div class="board_ty">								
+										<table>
+											<caption>카드&amp;휴대폰 인증</caption>
+											<colgroup>
+												<col span="1" style="width:23%;">
+												<col span="1" style="width:77%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row" class="left">카드번호</th>
+													<td class="left">
+														<div class="btn_security_box">
+															<input type="password" class="input_ty w420" placeholder="'-' 제외하고 입력" title="카드번호 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">유효기간</th>
+													<td class="left">
+														<input type="text" class="input_ty w140" placeholder="MM" title="유효기간 월 입력">
+														<span class="b_txt02">월</span>
+														<input type="text" class="input_ty w140" placeholder="YY" title="유효기간 년도 입력">
+														<span class="b_txt02">년</span>
+														<div class="b_list txt">카드앞면에 02/13일 경우, 02월 13년으로 입력</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">CVV번호</th>
+													<td class="left">
+														<div class="btn_key_box">
+															<input type="password" class="input_ty w140" placeholder="뒷면 3자리" title="CVV번호 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+														<a href="#" class="btn_s btn_ty04 btn_pop">CVV 안내</a><!-- 17.08.08 접근성 수정 -->
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">카드비밀번호</th>
+													<td class="left">
+														<div class="btn_key_box">
+															<input type="password" class="input_ty w140" placeholder="앞 2자리" title="카드 비밀번호 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+														<span class="b_br">* *</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--// board_ty -->
+									
+									<!-- 카드인증 완료 / 휴대폰인증 -->
+									<div class="chk_area on"><!-- class="on" 시 노출 -->
+										<div class="t_tit03"><em>카드인증이 완료되었습니다.</em>휴대폰인증을 실행해 주세요.</div>
+										<!-- 휴대폰 인증 -->									
+										<div class="board_ty">
+											<table>
+												<caption>휴대폰 인증</caption>
+												<colgroup>
+													<col span="1" style="width:23%;">
+													<col span="1" style="width:77%;">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row" class="left">휴대폰번호</th>
+														<td class="left">
+															<select class="select_ty w180" title="휴대폰번호 통신사 선택">
+																<option value="">선택</option>
+																<option value="">SKT</option>
+																<option value="">KT</option>
+																<option value="">LG U+</option>
+																<option value="">SKT 알뜰폰</option>
+																<option value="">KT 알뜰폰</option>
+																<option value="">LG U+ 알뜰폰</option>
+															</select>
+															<select class="select_ty w90" title="휴대폰번호 첫번째 자리 선택">
+																<option value="">선택</option>
+																<option value="">010</option>
+																<option value="">011</option>
+																<option value="">016</option>
+																<option value="">017</option>
+																<option value="">018</option>
+																<option value="">019</option>
+															</select>
+															<div class="btn_key_box">
+																<input type="password" class="input_ty w180" placeholder="" title="휴대폰번호 나머지 입력">
+																<a href="#" class="btn_key">가상 키보드</a>
+															</div>
+
+															<!-- agree_chk -->
+															<div class="agree_chk">
+																<div class="b_list all_chk pt">
+																	<div class="b_txt">
+																		<input type="checkbox" class="chk_b_ty" id="chk03_1"><!-- Big Size : class="chk_b_ty" -->
+																		<label for="chk03_1">전체동의</label> 
+																	</div>
+																</div>
+																<div class="b_list">
+																	<div class="b_txt">
+																		<input type="checkbox" id="chk03_2"> 
+																		<label for="chk03_2">개인정보 제공 및 이용</label> 
+																	</div>
+																	<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+																	<div class="b_txt">
+																		<input type="checkbox" id="chk03_3"> 
+																		<label for="chk03_3">고유식별 정보처리</label> 
+																	</div>
+																	<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+																</div>
+																<div class="b_list">
+																	<div class="b_txt">
+																		<input type="checkbox" id="chk03_4"> 
+																		<label for="chk03_4">통신사 이용약관</label> 
+																	</div>
+																	<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+																</div>
+																<div class="b_list">
+																	<a href="#" class="btn_m btn_ty btn_pop">인증번호 발송</a><!-- 17.08.08 접근성 수정 -->
+																	<input type="text" class="input_ty w180" placeholder="인증번호 6자리 입력" title="인증번호 6자리 입력">
+																</div>
+																<div class="b_list txt">
+																	본인 명의의 휴대전화로만 인증이 가능합니다.
+																</div>
+															</div>
+															<!--// agree_chk -->
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<!-- //휴대폰 인증 -->
+									</div>
+									<!-- //카드인증 완료 / 휴대폰인증 -->
+									</fieldset>
+								</form>
+							</div>
+							<!-- //카드&휴대폰 -->
+							
+							<!-- 공인인증서 인증 -->
+							<div class="tab_cont" id="tabA04">
+								<h5 class="blind">공인인증서 인증</h5>
+								<form>
+									<fieldset>
+									<legend>공인인증서 인증</legend>
+									<!-- board_ty -->
+									<div class="board_ty">								
+										<table>
+											<!-- <caption>공인인증서 인증</caption> --><!-- 17.07.25 접근성 수정 -->
+											<colgroup>
+												<col span="1" style="width:100%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>
+														<div class="cent_txt">
+															보유하신 공인인증서를 통해 인증이 가능합니다.
+															<a href="#" class=" btn_info btn_s btn_ty04">공인인증서 안내</a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--// board_ty -->
+									</fieldset>
+								</form>
+							</div>
+							<!-- //공인인증서 인증 -->
+							
+							<!-- 공인인증서 인증 -->
+							<div class="tab_cont" id="tabA06">
+								<h5 class="blind">공인인증서 인증</h5>
+								<form>
+									<fieldset>
+									<legend>공인인증서 인증</legend>							
+									<div class="board_ty">								
+										<table>
+											<caption>공인인증서 인증</caption>
+											<colgroup>
+												<col span="1" style="width:23%;">
+												<col span="1" style="width:77%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row" class="left">성명</th>
+													<td class="left">
+														<input type="text" class="input_ty w180" title="성명 입력">
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">주민등록번호</th>
+													<td class="left">
+														<input type="text" class="input_ty w180" title="주민등록번호 앞자리 입력">
+														<span class="b_br">-</span>
+														<div class="btn_key_box">
+															<input type="text" class="input_ty w180" title="주민등록번호 뒷자리 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+														<div class="accept_terms">
+															<input type="checkbox" id="chk_tab06_1"> 
+															<label for="chk_tab06_1">고객의 실명 확인 및 당사 회원여부 조회에 동의합니다.</label>
+														</div>
+														<div>
+															<a href="#" class="btn_m btn_ty" style="margin-top:20px;">확인</a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--// board_ty -->
+									</fieldset>
+								</form>
+							</div>
+							<!-- //공인인증서 인증 -->
+							
+							<!-- 공인인증서 인증 -->
+							<div class="tab_cont" id="tabA07">
+								<h5 class="blind">공인인증서 인증</h5>
+								<form>
+									<fieldset>
+									<legend>공인인증서 인증</legend>							
+									<div class="board_ty">								
+										<table>
+											<caption>공인인증서 인증</caption>
+											<colgroup>
+												<col span="1" style="width:23%;">
+												<col span="1" style="width:77%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row" class="left">카드번호</th>
+													<td class="left">
+														<select class="select_ty w100b" title="카드번호 선택">
+															<option value="">선택</option>
+															<option value="">1234-1234-1234-1234</option>
+															<option value="">5678-5678-5678-5678</option>
+															<option value="">9012-9012-9012-9012</option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row" class="left">카드비밀번호</th>
+													<td class="left">
+														<div class="btn_key_box">
+															<input type="password" class="input_ty w180" placeholder="" title="휴대폰번호 나머지 입력">
+															<a href="#" class="btn_key">가상 키보드</a>
+														</div>
+														<span class="b_br">* *</span>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!--// board_ty -->
+									</fieldset>
+								</form>
+							</div>
+							<!-- //공인인증서 인증 -->
+
+							<!-- 아이핀 인증 -->
+							<div class="tab_cont" id="tabA05">
+								<h5 class="blind">아이핀 인증</h5>
+								<form>
+									<fieldset>
+									<legend>아이핀 인증</legend>
+									<!-- board_ty -->
+									<div class="board_ty">								
+										<table>
+											<!-- <caption>아이핀 인증</caption> --><!-- 17.07.25 접근성 수정 -->
+											<colgroup>
+												<col span="1" style="width:100%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>
+														<div class="cent_txt">
+															보유하신 아이핀을 통해 인증이 가능합니다.
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- // board_ty -->
+									</fieldset>
+								</form>
+							</div>
+							<!-- //아이핀 인증 -->
+							
+						</div>
+						<!-- //board_box -->
+						
+						<!-- btn_area -->
+						<ul class="btn_area">
+							<li>
+								<a href="#" class="btn_b btn_ty">페이지 내 버튼</a>
+								<!--<a href="#" class="btn_b btn_ty">취소</a>
+								<a href="#" class="btn_b btn_ty02">다음</a>
+								<a href="#" class="btn_b btn_ty02">확인</a>
+								<a href="#" class="btn_b btn_ty02">신청</a>
+								<a href="#" class="btn_b btn_ty02">공인인증서 등록</a>
+								<a href="#" class="btn_b btn_ty02">공인인증서 인증</a>
+								<a href="#" class="btn_b btn_ty02">아이핀 인증</a>-->
+							</li>
+						</ul>
+						<!-- //btn_area -->
+					</article>
+					<!-- //본인확인 -->					
+
+				</div>
+				<!-- //cont_box_area -->
+			</div>
+			<!-- //cont_box -->
+
+		</div>
+		<!-- //cont_area -->
+		
+		<!-- @@include ../mrkp_pages_include/g_inc_btn_top.html -->
+
+	</section>
+	<!-- //container -->
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_footer.html -->
+
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+	jQuery(function ($) {
+		//탭 활성화
+		activeTabTy('.g_cnt_tabs', 1);
+	});
+</script>
+
+<!-- @@close-->

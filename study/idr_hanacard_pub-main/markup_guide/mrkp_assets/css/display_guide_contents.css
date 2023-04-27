@@ -1,0 +1,123 @@
+/* g_common */
+.guide_box_area:after { display: block; clear: both; content: ""; height: 0; }
+
+.cont_half { float: left; width: calc(50%); }
+
+.cont_half3 { float: left; width: calc(100% / 3); }
+
+.color_tyg.fir { margin-top: -20px; }
+
+.color_tyg .color_area { float: left; width: 80px; margin: 20px 20px 20px 10px; }
+
+.color_tyg .color_area span { display: block; width: 80px; height: 80px; border-radius: 100%; }
+
+.color_tyg dl { margin: 25px 0 0 110px; }
+
+.color_tyg dt { margin-bottom: 5px; padding-left: 8px; color: #000; }
+
+.color_tyg dd { position: relative; margin-bottom: 5px; padding-left: 110px; font-size: 14px; }
+
+.color_tyg dd span { display: block; position: absolute; left: 8px; top: 0; }
+
+.color_tyg:after { display: block; clear: both; content: ""; height: 0; }
+
+.font_tyg { margin-top: 100px; }
+
+.font_tyg:first-child { margin-top: 0; }
+
+.font_tyg dt { margin-bottom: 15px; color: #000; font-size: 30px; line-height: 32px; }
+
+.font_tyg dt span { display: block; margin-bottom: 5px; font-size: 15px; }
+
+.font_tyg dd { position: relative; margin-bottom: 8px; padding-left: 90px; font-size: 14px; }
+
+.font_tyg dd span.tit { position: absolute; left: 8px; top: 0; color: #000; }
+
+.font_tyg dd:last-child { margin-bottom: 0; }
+
+.title_tyg02 { padding-top: 15px; }
+
+.title_tyg02 li p { position: relative; margin-bottom: 15px; padding-left: 110px; font-size: 14px; }
+
+.title_tyg02 li p .tit { position: absolute; left: 0; top: 0; color: #000; font-weight: 100; }
+
+.title_tyg02 li p .txt { color: #999; }
+
+.title_tyg02 li p strong { font-weight: 100; }
+
+.title_tyg02:after { display: block; clear: both; content: ""; height: 0; }
+
+ol.num { margin: 15px 0; }
+
+/* g_form */
+.input_guide_area::after { content: ""; display: block; clear: both; }
+
+.input_guide_area .input_list { float: left; }
+
+.input_guide_area .input_list li { margin-bottom: 10px; overflow: hidden; }
+
+.input_guide_area .size_list { float: left; margin-left: 50px; }
+
+.input_guide_area .size_list li { margin-bottom: 10px; overflow: hidden; }
+
+.input_guide_area .chk_box::after { content: ""; display: block; clear: both; }
+
+.input_guide_area .chk_box li { float: left; margin-right: 20px; }
+
+/* g_button */
+.btn_guide_area { margin-bottom: 60px; }
+
+.btn_guide_area:after { content: ""; display: block; clear: both; }
+
+.btn_guide_area .guide_half3 { float: left; width: calc(100%/3); }
+
+.btn_guide_area dt { margin-bottom: 15px; line-height: 50px; }
+
+.btn_guide_area dd span { font-weight: 600; color: #00907f; }
+
+.btn_guide_area.ty02 dt { line-height: 20px; }
+
+.btn_guide_area.ty03 { margin-bottom: 10px; }
+
+.btn_guide_area.ty03 dl:after { content: ""; display: block; clear: both; }
+
+.btn_guide_area.ty03 dt { float: left; width: 150px; padding-right: 40px; text-align: right; line-height: 40px; }
+
+.btn_guide_area.ty03 dd { float: left; }
+
+.btn_guide_area.ty03 dd > a { margin-left: 5px; }
+
+.btn_guide_area.ty03 dd > a:first-child { margin-left: 0; }
+
+/* g_subpage */
+.layout_guide { position: relative; height: 300px; background: #efefef; margin-bottom: 25px; }
+
+.layout_guide p { position: absolute; left: 0; top: 50%; width: 100%; height: 1px; background: #d12c57; }
+
+.layout_guide p span { display: block; position: absolute; left: 50%; top: -28px; width: 400px; margin-left: -200px; color: #d12c57; font-size: 17px; text-align: center; }
+
+.layout_guide p span em { font-style: normal; font-size: 21px; }
+
+.layout_guide p::before { position: absolute; left: 0; top: -8px; width: 1px; height: 17px; background: #d12c57; content: ""; }
+
+.layout_guide p::after { position: absolute; right: 0; top: -8px; width: 1px; height: 17px; background: #d12c57; content: ""; }
+
+.layout_guide a { color: #d12c57; }
+
+.layout_guide02 { position: relative; height: 150px; margin-bottom: 40px; background: #efefef; }
+
+.layout_guide02 a { color: #d12c57; font-size: 17px; line-height: 150px; text-align: center; }
+
+.layout_guide02 a :hover { text-decoration: underline; }
+
+.layout_guide02 strong { display: block; color: #d12c57; font-size: 17px; font-weight: 100; line-height: 150px; text-align: center; }
+
+/* g_step */
+.cont_box { padding: 0 95px 20px; min-height: auto; }
+
+.title small { font-weight: normal; font-size: 14px; letter-spacing: 0; color: #666; }
+
+/* g_contents_top*/
+.t_tit em { color: #888; font-weight: 600; font-size: 14px; padding-right: 10px; display: inline-block; vertical-align: bottom; }
+
+/*# sourceMappingURL=display_guide_contents.css.map */

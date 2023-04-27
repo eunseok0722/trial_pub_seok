@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: etc                                       	  */
+// date		: 20220303
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* etc s ==================================================== */
+
+/* 기타 */
+.tab_cont {position:relative;display:none;animation:fade both 0.4s;}
+.tab_cont.on {display:block;z-index:10;}
+.chk_area {display:none;animation:fade both 0.4s;}
+.chk_area.on {display:block;}
+.next_step_cont {display:none;animation:fade both 0.4s;}
+.next_step_cont.on {display:block;}
+.next_step_cont + article.cont {margin-top:50px;}
+
+/* down_li */
+.down_li {position: relative;/*margin:-38px 0 -40px 0;*/}
+.down_li .li02 {position:relative;padding:10px 10px 4px 10px;border-top:1px solid #e1e1e1;}
+.down_li .li02:before {position: absolute;left:1px;top:20px;width:3px;height:3px;background:#333;content:"";}
+.down_li .li02:first-child {border-top:0;}
+.down_li .li02 .info {font-size:0;}
+.down_li .li02 .info li {position:relative;display:inline-block;padding-left:15px;color:#333;font-size:15px;}
+.down_li .li02 .info li:before {position:absolute;left:7px;top:7px;width:1px;height:10px;background:#999;content:"";}
+.down_li .li02 .info li:first-child {padding-left:0;}
+.down_li .li02 .info li:first-child:before {display:none;}
+.down_li .li02 .btn_all {display:block;position:absolute;right:30px;top:7px;width:60px;;height:auto;}
+
+/* box_cont */
+.box_cont {margin-top:30px;padding:20px 60px;background:#fafafa;border:1px solid #e1e1e1;text-align:center;}
+.box_cont .txt {display:inline-block;vertical-align:middle;}
+.box_cont .btn {display:inline-block;padding-left:80px;vertical-align:middle;}
+
+/* t_tit_area */
+.t_tit_area {position:relative;border-bottom:2px solid #333;z-index:1;}
+.t_tit_area .btn {position:absolute;right:0;top:-1px;}
+.t_tit_area .btn li {float:left;margin-left:6px;}
+.t_tit_area .btn:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+.t_tit_area + .txt_li{margin-top:20px;}
+.t_tit_area02 .data{color:#333;}
+
+/* top_bg : 상단 배경라인 */
+.top_bg {position:relative;padding-top:60px;}
+.top_bg:before{display:inline-block;position:absolute;top:0;left:-95px;width:1300px;height:10px;background:#f4f4f4;content:"";}
+
+/* Scroll */
+.box_scroll {position: relative;border:1px solid #ccc;}
+.box_scroll.bn {border:1px;}
+.box_scroll > .content {/*padding:8px 0;*/}
+.box_scroll .scrollbar-outer > .scroll-element.scroll-y {right:8px;top:0;height:100%;}
+.table_scroll {position: relative;border-top:2px solid #333;border-bottom:1px solid #e1e1e1;}
+.table_scroll > .content {padding:0;}
+.table_scroll .state_ty {margin:-2px 0 0 0;}
+.table_scroll .state_ty li:last-child, .table_scroll .board_ty02 tr:last-child td, .table_scroll .board_ty02 tr:last-child th{border-bottom:0;}
+.table_scroll .scrollbar-outer > .scroll-element.scroll-y {right:8px;top:0;height:100%;/*right:8px;top:8px;height:calc(100% - 16px);*/}
+.table_scroll .table_ty {border-top:0;}
+.table_scroll .table_ty thead, .table_scroll .table_ty02 thead, .table_scroll .table_ty tfoot, .table_scroll .table_ty02 tfoot ,.table_scroll .board_ty02 thead{position: absolute;left:-9999px;top:-9999px;}
+.table_scroll.ts02 .table_ty thead, .table_scroll.ts02 .table_ty02 thead{position:relative;}
+.table_scroll.ts03 .table_ty thead, .table_scroll.ts03 .table_ty02 thead,.table_scroll.ts03 .table_ty tfoot, .table_scroll.ts03 .table_ty02 tfoot{position:relative;}
+.table_scroll.ts03{margin:0;border-top:0;}
+
+.table_scroll_area .table_scroll, .table_scroll_area .table_scroll .table_ty02, .table_scroll.ts02 , .table_scroll_area .table_scroll .board_ty02 {margin:0;border-top:0;}
+.cont_scroll .scrollbar-outer > .scroll-element.scroll-y {right:0;top:0;height:100%;}
+
+.h160 > .content > .box > div{max-height:160px;}
+.h190 > .content > .box > div{max-height:190px;}
+.h200 > .content > .box > div{max-height:200px;}
+.h300 > .content > .box > div {max-height:300px;}
+.h330 > .content > .box > div {max-height:330px;}
+.h460 > .content > .box > div {max-height:460px;}
+.h630 > .content > .box > div {max-height:630px;}
+.h815 > .content > .box > div {max-height:815px;}
+.h1680 > .content > .box > div {max-height:1680px;}
+.h2520 > .content > .box > div {max-height:2520px;}
+
+.w1200 > .content > .box > div .table_ty02{width:1300px;}
+.w1500 > .content > .box > div .table_ty02{width:1600px;}
+.w1700 > .content > .box > div .table_ty02{width:1800px;}
+.w2000 > .content > .box > div .table_ty02{width:2100px;}
+
+/* 가로 스크롤 테이블 */
+.w1200 > .content > .box > div .table_ty02 thead,
+.w1500 > .content > .box > div .table_ty02 thead,
+.w1700 > .content > .box > div .table_ty02 thead,
+.w2000 > .content > .box > div .table_ty02 thead{position:relative;left:0;top:0;z-index:-1}/*firefox 대응*/
+
+/* emp */
+h4 + .emp{padding:56px 0;border-top:2px solid #333;border-bottom:1px solid #e1e1e1;font-size:17px;text-align:center;}
+.emp02{padding:56px 0;border-bottom:1px solid #e1e1e1;font-size:17px;text-align:center;}
+.state_foot + .state_area .emp02{padding:29px 0;}
+
+/* arrow */
+.arrow{display:inline-block;width:13px;height:16px;background:url(../images/contents/ico_arrow_benefit.png) no-repeat 0 7px;vertical-align:top;margin:0 10px;text-indent:-9999px;font-size:0;}
+
+/* 수량선택 */
+.amount_wrap{position:relative;width:287px !important;display:inline-block;}
+.amount_wrap .input_ty {position:relative;width:115px;margin:0 86px;background-color:#fff;text-align:center;font-size:15px;color:#000;}
+.amount_wrap .input_ty:focus{z-index:1}
+.amount_wrap button{position:absolute;top:0;display:block;width:44px;height:40px;border:1px solid #ccc;background-color:#fff;color:#666;font-family:'Aktiv Grotesk','Noto Sans KR','Malgun Gothic','맑은 고딕';font-weight:100;vertical-align:top;line-height:40px;text-indent:-9999px;font-size:0;cursor:pointer;transition:border 0.2s;}
+.amount_wrap button:focus{border-color:#000;outline:none;z-index:1}
+.amount_wrap .minus{left:43px;background:url(../images/contents/ico_point_minus.gif) no-repeat center center;line-height:40px;}
+.amount_wrap .minus_ten{left:0;background:url(../images/contents/ico_point_minus.gif) no-repeat 8px center;background-size:8px 2px;line-height:40px;}
+.amount_wrap .minus_ten, .amount_wrap .plus_ten{text-indent:13px;font-size:13px;line-height:35px;}
+.amount_wrap .plus{right:43px;background:url(../images/contents/ico_point_plus.gif) no-repeat center center;line-height:40px;}
+.amount_wrap .plus_ten{right:0;background:url(../images/contents/ico_point_plus.gif) no-repeat 8px center;background-size:8px 8px;}
+
+/*** 화면처리중 ***/
+.processing .bg {position:fixed;left:0%;top:0%;width:100%;height:100%;background:#000;content:"";opacity:0.25;filter:alpha(opacity=25);z-index:5000;}
+.processing_area {position:fixed;left:50%;top:50%;width:324px;height:136px;margin:-70px 0 0 -164px;border:2px solid #00907f;background:#fff;text-align:center;z-index:5001;}
+.processing .tit {height:30px;padding-top:31px;color:#333;font-size:24px;}
+.processing .tit span {color:#000;font-weight:600;}
+.processing .info {padding-bottom:40px;font-size:12px;background:url(../images/template/img_processing.gif) no-repeat center;}
+
+/* 로딩중 */
+.loading .bg {position:fixed;left:0%;top:0%;width:100%;height:100%;background:url(../images/template/bg_hit.png) repeat;content:"";opacity:0.25;z-index:5000;}
+.loading_area {position:fixed;left:50%;top:50%;width:248px;height:248px;margin:-124px 0 0 -124px;text-align:center;z-index:5001;background:url(../images/template/bg_loading.png) no-repeat center;}
+.loading .info {width:240px;background:url(../images/template/img_loading.gif) no-repeat center 0;margin:96px auto 0;padding-top:61px;box-sizing:border-box;}
+
+/* 로딩중 2020-05-04 */
+.progress_area {width:100%; height:70px;}
+.progress_area .line {width:100%;height:15px;background:linear-gradient(to right,#7698e6,#19bcaa);border:none;border-radius:15px;animation: progress_line 60s linear;}
+.progress_area .bg {width:700px;height:15px;margin:0px auto 15px;background:#ededed;border:none;border-radius:15px;}
+@keyframes progress_line {
+  0% {width:15px;}
+  100% {width:100%;}
+}
+
+/* etc e ==================================================== */
+/* ---------------------------------------------------------- */

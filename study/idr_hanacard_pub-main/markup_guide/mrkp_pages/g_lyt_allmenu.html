@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="EUC-KR">
+	<meta name="viewport" content="width=1450">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>하나카드</title>
+	<link rel="shortcut icon" href="../../assets/images/layout/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="../../assets/images/layout/apple-touch-icon.png">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/display_pcard.css">
+	<link rel="stylesheet" type="text/css" href="../mrkp_assets/css/display_guide_contents.css">
+	<script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui.js"></script>
+	<script type="text/javascript" src="../../assets/js/template.js"></script>
+	<script type="text/javascript" src="../../assets/js/assist.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="../../js/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+
+<!-- wrap -->
+<div id="wrap" class="biz">
+	
+    <!-- header -->
+	<header>
+		<!-- header_cont -->
+		<div class="header_cont">
+			<h1 class="logo"><a href="main.html">하나카드</a></h1>
+			<!-- util_nav -->
+			<nav class="util_nav">
+				
+				<!-- info_summaryty -->
+				<ul class="info_summary_ty">
+					<li class="buy">구매요청 <a href="#none"><span>11</span>건</a></li>
+					<li class="return">반려 <a href="#none"><span>0</span>건</a></li>
+				</ul>
+				<!-- //info_summaryty -->
+
+				<!-- util_list -->
+				<ul class="util_list">
+					<li class="name">한국외국어대학교</li>
+					<li class="name02"><a href="#none">김하나</a></li>
+					<li class="box"><a href="#none"><img src="../../assets/images/layout/btn_util_login.png" alt="로그인" /></a></li>
+					<li><a href="#none">쪽지함</a></li>
+					<li><a href="#none">Q&A</a></li>
+					<li><a href="#none" target="_blank" title=" 새창 열림">공지사항</a></li>
+				</ul>
+				<!-- //util_list -->
+			</nav>
+			<!-- //util_nav -->
+			
+			<script type="text/javascript">
+			$(function(){
+				
+				//로그인 후 타임아웃, 로그인 후 피싱방지
+				$('.util_list li.name > a, .util_list li.info > a').click(function(){
+					var t = $(this).parent('li').find('.tooltip');
+					if(t.hasClass('on')){
+						t.removeClass('on');
+						$(this).closest('header').css('overflow', 'hidden');
+					}else{
+						t.append('<span class=\"tolltip_hit hit_b\"></span>');
+						$(t).attr('tabindex', 0);
+						$('.hit_b').attr('tabindex', 0);
+						
+						$(this).parent('li').siblings().find('.tooltip').removeClass('on');
+						$(this).parent('li').find('.tooltip').addClass('on');
+						$(this).closest('header').css('overflow', 'visible');
+						
+						$('.hit_b').bind('focusin',function(){
+							t.focus();
+						});
+						
+					}
+					return false;
+				});
+				
+				$('.util_list .btn_close').click(function(){
+					$(this).closest('header').css('overflow', 'hidden');
+					$(this).closest('.tooltip').removeClass('on').siblings('a').focus();
+					return false;
+				});
+			});
+			</script>
+
+			<!-- gnb -->
+			<nav id="gnb">
+				<!-- gnb_nav -->
+				<ul class="gnb_nav">
+
+					<!-- 사이트관리 -->
+					<li>
+						<a href="#" class="dep_m">사이트관리</a>
+						<!-- 하위메뉴 -->
+						<ul class="dep2 len_max act">
+							<li class="li">
+								<div class="li_s">
+									<p class="li_t">사이트관리</p>
+									<ul>
+										<li><a href="#none">사이트 등록요청</a></li>
+										<li><a href="#none">사이트 일시정지</a></li>
+										<li><a href="#none">담당자정보</a></li>
+										<li><a href="#none">공지사항</a></li>
+										<li><a href="#none">예산현황조회</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- //하위메뉴 -->
+					</li>
+					<!-- //사이트관리 -->
+
+					<!-- 요청업무관리 -->
+					<li>
+						<a href="#" class="dep_m">요청업무관리</a>
+						<!-- 하위메뉴 -->
+						<ul class="dep2 len">
+							<li class="li">
+								<div class="li_s">
+									<p class="li_t">요청업무관리</p>
+									<ul>
+										<li><a href="#none">공급사정보처리</a></li>
+										<li><a href="#none">카드신청정보조회/처리</a></li>
+										<li><a href="#none">카드해지정보조회/처리</a></li>
+										<li><a href="#none">한도증액정보조회/처리</a></li>
+										<li><a href="#none">관리자조회/등록</a></li>
+										<li><a href="#none">요청업무처리내ㅐ역</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- //하위메뉴 -->
+					</li>
+					<!-- //요청업무관리 -->
+
+					<!-- 승인/매입관리 -->
+					<li>
+						<a href="#" class="dep_m">승인/매입관리</a>
+						<!-- 하위메뉴 -->
+						<ul class="dep2">
+							<li class="li">
+								<div class="li_s">
+									<p class="li_t">승인/매입관리</p>
+									<ul>
+										<li><a href="#none">승인/매입관리</a></li>
+										<li><a href="#none">취소/환급내역조회</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- //하위메뉴 -->
+					</li>
+					<!-- //승인/매입관리 -->
+
+					<!-- KEB 관리자관리 -->
+					<li>
+						<a href="#" class="dep_m">KEB 관리자관리</a>
+						<!-- 하위메뉴 -->
+						<ul class="dep2 len_max">
+							<li class="li">
+								<div class="li_s">
+									<p class="li_t"><a href="#">KEB 관리자관리</a></p>
+									<ul>
+										<li><a href="#none">법인관리자관리</a></li>
+										<li><a href="#none">지점관리자관리</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- //하위메뉴 -->
+					</li>
+					<!-- //KEB 관리자관리 -->
+
+					<!-- 통계자료 -->
+					<li>
+						<a href="#" class="dep_m">통계자료</a>
+						<!-- 하위메뉴 -->
+						<ul class="dep2">
+							<li class="li">
+								<div class="li_s">
+									<p class="li_t">통계자료</p>
+									<ul>
+										<li><a href="#none">월별 전체사용실적</a></li>
+										<li><a href="#none">연별 전체사용실적</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- //하위메뉴 -->
+					</li>
+					<!-- //통계자료 -->
+
+					<!-- 개인정보관리 -->
+					<li>
+						<a href="#" class="dep_m">개인정보관리</a>
+						<!-- 하위메뉴 -->
+						<ul class="dep2">
+							<li class="li">
+								<div class="li_s">
+									<p class="li_t">개인정보관리</p>
+									<ul>
+										<li><a href="#none">개인정보조회/변경</a></li>
+										<li><a href="#none">비밀번호변경</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- //하위메뉴 -->
+					</li>
+					<!-- //개인정보관리 -->
+
+					<!-- 시스템관리 -->
+					<li>
+						<a href="#" class="dep_m">시스템관리</a>
+						<!-- 하위메뉴 -->
+						<ul class="dep2">
+							<li class="li">
+								<div class="li_s">
+									<p class="li_t">시스템관리</p>
+									<ul>
+										<li><a href="#none">예산관리(배치)</a></li>
+										<li><a href="#none">사이트관리등록</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- //하위메뉴 -->
+					</li>
+					<!-- //시스템관리 -->
+
+					<!-- ERP연동관리 -->
+					<li>
+						<a href="#" class="dep_m">ERP연동관리</a>
+						<!-- 하위메뉴 -->
+						<ul class="dep2">
+							<li class="li">
+								<div class="li_s">
+									<p class="li_t">ERP연동관리</p>
+									<ul>
+										<li><a href="#none">ERP스케쥴러(배치)</a></li>
+										<li><a href="#none">출하정보</a></li>
+										<li><a href="#none">공급사정보</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<!-- //하위메뉴 -->
+					</li>
+					<!-- //ERP연동관리 -->
+
+				</ul>
+				<!-- //gnb_nav -->
+				<!-- gnb_right_nav -->
+				<ul class="gnb_right_nav">
+					<!-- <li><a href="#" title="새창 열림">간편서비스</a></li> -->
+					<li><a href="#all_menu" class="btn_gnb_op btn_pop all_menu_open"><span>전체메뉴<em>열기</em></span></a></li>
+				</ul>
+				<!-- //gnb_right_nav -->
+				<!-- <a href="#" class="gnb_search">통합검색</a> -->
+			</nav>
+			<!-- //gnb -->
+		</div>
+	</header>
+	<!-- //header -->
+
+    <!-- breadcrumb -->
+	<nav class="breadcrumb">
+		<div class="cont">
+			<ul class="breadcrumb_area">
+				<li class="li home"><a href="#">HOME</a></li>
+				<li class="li"><a href="#">마이페이지</a></li>
+				<li class="li">
+					<a href="#" class="link">이용금액결제<em>메뉴열기</em></a>
+					<div class="dep">
+						<ul>
+							<li><a href="#">이용내역</a></li>
+							<li><a href="#">이용한도</a></li>
+							<li class="on">이용금액결제</li><!-- 현재위치 a tag 없음 -->
+							<li><a href="#">이용안심 서비스</a></li>
+							<li><a href="#">선불카드</a></li>
+							<li><a href="#">개인/카드정보</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="li">
+					<a href="#" class="link">SMS서비스<em>메뉴열기</em></a>
+					<div class="dep">
+						<ul>
+							<li class="on">SMS서비스</li><!-- 현재위치 a tag 없음 -->
+							<li><a href="#">해외결제차단</a></li>
+							<li><a href="#">출입국정보제공 동의/거절</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- //breadcrumb -->
+	
+	<!-- container -->
+	<section id="container">
+		<h2 class="blind">하나카드 가이드</h2><!-- Gnb 1depth Menu -->
+		<!-- cont_area -->
+		<div class="cont_area">
+			
+			<h3 class="title"><em>상위메뉴명</em>현재메뉴명</h3><!-- em : 상위 메뉴 -->
+			
+			<!-- cont_box -->
+			<div class="cont_box">
+				<!-- cont_box_area -->
+				<div class="cont_box_area">
+					
+					<!-- cont -->
+					<article class="cont">
+						<h4></h4>
+						<div class="layout_guide">
+							<p><span>1010px<br><br><em>컨텐츠 영역</em></span></p>
+						</div>
+					</article>
+					<!-- //cont -->
+
+				</div>
+				<!-- //cont_box_area -->
+			</div>
+			<!-- //cont_box -->
+
+		</div>
+		<!-- //cont_area -->
+		
+    <a href="#container" class="btn_top">상단으로 이동</a>
+
+	</section>
+	<!-- //container -->
+	
+    <!-- footer -->
+	<footer>
+		<!-- footer_cont -->
+		<div class="footer_cont">
+			
+			<!-- address -->
+			<address>
+				<span>COPYRIGHTⓒ 2022 KEB Hana Card. All RIGHTS RESERVED</span>
+			</address>
+			<!-- //address -->
+
+			<!-- footer_nav -->
+			<nav class="footer_nav">
+				<ul>
+					<li class="act"><a href="#none">개인정보처리방침</a></li>
+					<li><a href="#none">저작권</a></li>
+				</ul>
+			</nav>
+			<!-- //footer_nav -->
+			
+		</div>
+		<!-- //footer_cont -->
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!-- //wrap -->
+
+<!-- all_menu -->
+<section class="modal all_menu" id="all_menu">
+	<div class="modal_wrap">
+		<!-- modal_header -->
+		<div class="modal_header">
+			<h2>전체메뉴</h2>
+		</div>
+		<!-- //modal_header -->
+
+		<!-- modal_body -->
+		<div class="modal_body all_menu">
+		<!-- 전체메뉴 -->
+		
+			<!-- all_menu_list -->
+			<div class="all_menu_list">
+				
+				<!-- tab1 -->
+				<div class="dep1 on">
+					<h3 class="blind"></h3>
+					<ul>
+						<li class="li">
+							<div class="li_s">
+								<p class="li_t">사이트관리</p>
+								<ul class="dep2">
+									<li><a href="#none">사이트 등록요청</a></li>
+									<li><a href="#none">사이트 일시정지</a></li>
+									<li><a href="#none">담당자정보(팝업)관리</a></li>
+									<li><a href="#none">연체내역</a></li>
+									<li><a href="#none">공지사항</a></li>
+									<li><a href="#none">예산현화조회</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="li">
+							<div class="li_s">
+								<p class="li_t">요청업무관리</p>
+								<ul class="dep2">
+									<li><a href="#none">공급사정보처리</a></li>
+									<li><a href="#none">카드신청정보조회/처리</a></li>
+									<li><a href="#none">카드해지정보조회/처리</a></li>
+									<li><a href="#none">한도증액정보조회/처리</a></li>
+									<li><a href="#none">관리자조회/등록</a></li>
+									<li><a href="#none">요청업무처리내역</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="li">
+							<div class="li_s">
+								<p class="li_t">승인/매입관리</p>
+								<ul class="dep2">
+									<li><a href="#none">승인/매입관리</a></li>
+									<li><a href="#none">취소/환급내역조회</a></li>
+								</ul>
+							</div>
+							<div class="li_s">
+								<p class="li_t">개인정보관리</p>
+								<ul class="dep2">
+									<li><a href="#none">개인정보조회/변경</a></li>
+									<li><a href="#none">비밀번호변경</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="li">
+							<div class="li_s">
+								<p class="li_t">KEB관리자관리</p>
+								<ul class="dep2">
+									<li><a href="#none">법인관리자관리</a></li>
+									<li><a href="#none">지점관리자관리</a></li>
+								</ul>
+							</div>
+							<div class="li_s">
+								<p class="li_t">시스템관리</p>
+								<ul class="dep2">
+									<li><a href="#none">예산관리(배치)</a></li>
+									<li><a href="#none">사이트관리/등록</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="li">
+							<div class="li_s">
+								<p class="li_t">통계자료</p>
+								<ul class="dep2">
+									<li><a href="#none">월별 전체사용실적</a></li>
+									<li><a href="#none">연별 전체사용실적</a></li>
+								</ul>
+							</div>
+							<div class="li_s">
+								<p class="li_t">ERP연동관리</p>
+								<ul class="dep2">
+									<li><a href="#none">ERP스케줄러(배치)</a></li>
+									<li><a href="#none">출하정보</a></li>
+									<li><a href="#none">공급사정보</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //tab1 -->
+
+			</div>
+			<!-- //all_menu_list -->
+					
+		<!-- //전체메뉴 -->
+		</div>
+		<!-- //modal_body -->
+		<button class="all_menu_close btn_pop_close">전체메뉴 닫기</button>
+	</div>
+</section>
+<!-- all_menu -->
+
+<script type="text/javascript">
+	jQuery(function ($) {
+		
+	});
+</script>
+
+
+
+</body>
+</html>

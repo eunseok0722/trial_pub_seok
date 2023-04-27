@@ -1,0 +1,48 @@
+<!-- @@master ../layout_template.html -->
+
+<!-- @@block root_content -->
+
+
+<!--start Contents-->
+
+<div id="app">
+
+    <!-- wrapper -->
+    <div id="wrapper" :class="{'dark-mode':darkMode}">
+
+        <!-- header -->
+        <header-main></header-main>
+        <!-- //header -->
+
+        <!-- container -->
+        <div class="container">
+
+            <!-- contents | 컨텐츠영역 -->
+            <router-view></router-view>
+            <!-- //contents | 컨텐츠영역 -->
+
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer-main></footer-main>
+        <!-- //footer -->
+
+    </div>
+    <!-- //wrapper -->
+
+</div>
+
+<!--end Contents-->
+
+<script>
+    var appData = {
+        computed: {
+            darkMode() {
+                return this.$store.getters["darkMode"];
+            },
+        },
+    };
+</script>
+
+<!-- @@close -->

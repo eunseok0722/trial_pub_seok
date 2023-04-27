@@ -1,0 +1,143 @@
+.style-guide{
+  .style-header-wrap{
+    border-bottom: 0.1rem solid rgba(35, 37, 54, 0.12);
+    padding: 4rem 0;
+    .style-header{
+      max-width: 128rem;
+      width: 90%;
+      margin: 0 auto;
+      .tit-h4{
+        font-weight: $r;
+      }
+    }
+  }
+  .style-container{
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 9rem 0;
+    .style-content{
+      margin-top: 12rem;
+      position: relative;
+      &:first-child{
+        margin-top: 0;
+      }
+      .content{
+        margin-top: 3rem;
+      }
+      .style-title{
+        width: fit-content;
+        padding: 1rem 3rem 1rem 2rem;
+        background-color: rgb(87, 74, 74);
+        border-radius: 0 100rem 100rem 0;
+        &::before{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 0.5rem;
+          background-color: rgb(87, 74, 74);
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .tit-h5{
+          font-weight: $r;
+          color: #fff;
+        }
+        .txt-md{
+          color: #fff;
+          margin-top: 0.5rem;
+        }
+      }
+      .style-section{
+        margin-top: 9rem;
+        li{
+          button{
+            width: 22.2rem;
+            height: 6.4rem;
+          }
+        }
+      }
+      .font-area{
+        display: flex;
+        gap: 90px;
+        .text-list{
+          width: 50%;
+          .text-item{
+            margin-top: 32px;
+            &:first-child{
+              margin-top: 0;
+            }
+            &:last-child{
+              display: flex;
+              gap: 38px;
+            }
+            .tit-h6{
+              font-weight: $b;
+            }
+            p{
+              margin-top: 8px;
+            }
+          }
+        }
+      }
+      .color-list{
+        display: flex;
+        flex-grow: 1;
+        .color-item{
+          width: calc(100% / 7);
+          height: 100px;
+          p{
+            text-align: center;
+            line-height: 100px;
+            &.point{
+              color: #fff;
+            }
+          }
+        }
+      }
+      .button-list{
+        display: flex;
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@include t-l{
+  .style-guide{
+    .style-container{
+      .style-content{
+        .font-area{
+          display: block;
+          .text-list{
+            width: 100%;
+            margin-top: 3.2rem;
+          }
+        }
+        .color-list{
+          flex-wrap: wrap;
+          .color-item{
+            width: 50%;
+            height: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include m-l{
+  .style-guide{
+    .style-container{
+      .style-content{
+        .button-list{
+          display: block;
+          .button-item{
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

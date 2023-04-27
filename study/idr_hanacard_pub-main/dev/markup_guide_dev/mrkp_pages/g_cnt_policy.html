@@ -1,0 +1,482 @@
+<!-- @@master ../../layout_mrkp_template.html -->
+
+<!-- @@block root_mrkp_content -->
+
+<!-- wrap -->
+<div id="wrap" class="biz">
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_header.html -->
+
+	<!-- @@include ../mrkp_pages_include/g_inc_breadcrumb.html -->
+	
+	<!-- container -->
+	<section id="container">
+		<h2 class="blind">하나카드 가이드</h2><!-- Gnb 1depth Menu -->
+		<!-- cont_area -->
+		<div class="cont_area">
+			
+			<h3 class="title"><em>이용한도</em>이용한도상향</h3><!-- em : 상위 메뉴 -->
+			
+			<!-- cont_box -->
+			<div class="cont_box">
+				<!-- cont_box_area -->
+				<div class="cont_box_area">
+					
+					<!-- @@include ../mrkp_pages_include/g_inc_cnt_tab.html -->
+					
+					<!-- 결제정보 -->
+					<article class="cont">
+						<h4 class="t_tit">[약관] Table Type <span>약관동의가 2개 이상일 경우 전체동의 넣어 주기 (테이블 내 동의가 들어갈시 th에 약관동의로 정의)</span></h4>
+						<!-- board_ty -->
+						<div class="board_ty">
+						<form>
+							<fieldset>
+							<legend>결제정보</legend>
+							<table>
+								<caption>결제정보</caption>
+								<colgroup>
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:77%;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="left">계좌번호</th>
+										<td class="left">
+											<div class="btn_key_box">
+												<input type="text" class="input_ty w200" placeholder="'-' 제외하고 번호만 입력" title="계좌번호 입력">
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+											<a href="#" class="btn_s btn_ty">계좌확인</a>
+											<div class="accept_terms">
+												<label for="acc_agree">본인의 계좌를 통하여 카드결제금액을 자동이체 출금 처리하는 것에 동의합니다.</label>
+												<a href="#" class="btn_xs btn_ty04 btn_pop">출금동의안내</a>
+												<input type="checkbox" id="acc_agree"> 
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">휴대폰번호</th>
+										<td class="left">
+											<div class="b_list">
+												<select class="select_ty w180" title="휴대폰번호 통신사 선택">
+													<option value="">선택</option>
+													<option value="">SKT</option>
+													<option value="">KT</option>
+													<option value="">LG U+</option>
+													<option value="">SKT 알뜰폰</option>
+													<option value="">KT 알뜰폰</option>
+													<option value="">LG U+ 알뜰폰</option>
+												</select>
+												<select class="select_ty w90" title="휴대폰번호 첫번째 자리 선택">
+													<option value="">선택</option>
+													<option value="">010</option>
+													<option value="">011</option>
+													<option value="">016</option>
+													<option value="">017</option>
+													<option value="">018</option>
+													<option value="">019</option>
+												</select>
+												<div class="btn_key_box">
+													<input type="password" class="input_ty w180" placeholder="" title="휴대폰번호 나머지 입력">
+													<a href="#" class="btn_key">가상 키보드</a>
+												</div>
+												<a href="#" class="btn_m btn_ty">인증번호 받기</a>
+											</div>
+											<!-- agree_chk -->
+											<div class="agree_chk">
+												<div class="b_list all_chk pt">
+													<div class="b_txt">
+														<input type="checkbox" name="allChk06" id="chk06_all" class="chk_b_ty"><!-- Big Size : class="chk_b_ty" -->
+														<label for="chk06_all">전체동의</label> 
+													</div>
+												</div>
+												<div class="b_list">
+													<div class="b_txt">
+														<input type="checkbox" name="allChk06" id="chk01_1"> 
+														<label for="chk01_1">개인정보 이용 및 제공에 동의</label> 
+													</div>
+													<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+													<div class="b_txt">
+														<input type="checkbox" name="allChk06" id="chk01_2"> 
+														<label for="chk01_2">고유식별 정보 처리에 동의</label> 
+													</div>
+													<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+												</div>
+												<div class="b_list">
+													<div class="b_txt">
+														<input type="checkbox" name="allChk06" id="chk01_3"> 
+														<label for="chk01_3">통신사 이용약관에 동의</label> 
+													</div>
+													<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+												</div>
+											</div>
+											<!--//agree_chk -->
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">약관 동의</th>
+										<td class="left">
+											<!-- agree_chk -->
+											<div class="agree_chk">
+												<div class="b_list all_chk">
+													<div class="b_txt">
+														<input type="checkbox" name="allChk07" id="chk07_all" class="chk_b_ty"><!-- Big Size : class="chk_b_ty" -->
+														<label for="chk07_all">전체동의</label> 
+													</div>
+												</div>
+												<div class="b_list">
+													<div class="b_txt">
+														<input type="checkbox" name="allChk07" id="chk02_1"> 
+														<label for="chk02_1">가족 신용안심 약관에 동의</label> 
+													</div>
+													<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+													<div class="b_txt">
+														<input type="checkbox" name="allChk07" id="chk02_2"> 
+														<label for="chk02_2">개인정보 제공 및 이용에 동의</label> 
+													</div>
+													<a href="#" class="btn_pop btn_xs btn_ty04">상세보기</a>
+												</div>
+											</div>
+											<!--//agree_chk -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							</fieldset>
+						</form>
+						</div>
+						<!-- //board_ty -->
+					</article>
+					<!-- //결제정보 -->
+
+					<script type="text/javascript">
+
+jQuery(function($){
+
+	//chk01_all
+	$('#chk01_all').click(function(){
+		if($('#chk01_all').is(':checked')){
+			$('input[name=allChk]').prop('checked', true).change();  // 체크시
+		}else{
+			$('input[name=allChk]').prop('checked', false).change();  // 해제시
+		}
+	});
+
+	//chk02_all
+	$('#chk02_all').click(function(){
+		if($('#chk02_all').is(':checked')){
+			$('input[name=allChk02]').prop('checked', true).change();  // 체크시
+		}else{
+			$('input[name=allChk02]').prop('checked', false).change();  // 해제시
+		}
+	});
+
+	//chk03_all
+	$('#chk03_all').click(function(){
+		if($('#chk03_all').is(':checked')){
+			$('input[name=allChk03]').prop('checked', true).change();  // 체크시
+		}else{
+			$('input[name=allChk03]').prop('checked', false).change();  // 해제시
+		}
+	});
+
+	//chk04_all
+	$('#chk04_all').click(function(){
+		if($('#chk04_all').is(':checked')){
+			$('input[name=allChk04]').prop('checked', true).change();  // 체크시
+		}else{
+			$('input[name=allChk04]').prop('checked', false).change();  // 해제시
+		}
+	});
+
+	//chk05_all
+	$('#chk05_all').click(function(){
+		if($('#chk05_all').is(':checked')){
+			$('input[name=allChk05]').prop('checked', true).change();  // 체크시
+		}else{
+			$('input[name=allChk05]').prop('checked', false).change();  // 해제시
+		}
+	});
+
+	//chk06_all
+	$('#chk06_all').click(function(){
+		if($('#chk06_all').is(':checked')){
+			$('input[name=allChk06]').prop('checked', true).change();  // 체크시
+		}else{
+			$('input[name=allChk06]').prop('checked', false).change();  // 해제시
+		}
+	});
+
+	//chk06_all
+	$('#chk07_all').click(function(){
+		if($('#chk07_all').is(':checked')){
+			$('input[name=allChk07]').prop('checked', true).change();  // 체크시
+		}else{
+			$('input[name=allChk07]').prop('checked', false).change();  // 해제시
+		}
+	});
+
+});
+
+					</script>
+
+					<!-- 동의 -->
+					<article class="cont">
+						<form>
+							<fieldset>
+							<legend>동의</legend>
+							<h4 class="t_tit"><input type="checkbox" name="allChk"  id="chk01_all" class="chk_b_ty"><label for="chk01_all">약관 및 주요 안내사항 전체동의</label></h4>
+							<!-- terms_area -->
+							<div class="terms_area">
+								<ul class="list">
+									<li class="half">
+										<div class="cnt">
+											<label for="chk_agree">개인회원 표준약관</label>
+											<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+											<input type="checkbox" name="allChk" id="chk_agree">
+										</div>
+										<div class="cnt">
+											<label for="chk_agree02">주요거래조건 및 고객정보취급방침 안내</label>
+											<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+											<input type="checkbox"  name="allChk" id="chk_agree02">
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //terms_area -->
+							</fieldset>
+						</form>
+					</article>
+					<!-- //동의 -->
+
+					<!-- 신용카드 핵심설명서 -->
+					<article class="cont">
+					<form>
+						<fieldset>
+						<legend>동의</legend>
+						<h4 class="t_tit"><input type="checkbox" name="allChk02"  id="chk02_all" class="chk_b_ty"><label for="chk02_all">신용카드 핵심설명서 전체동의</label></h4>
+						<!-- terms_area -->
+						<div class="terms_area">
+							<ul class="list">
+								<li class="half">
+									<div class="cnt">
+										<label for="chk02_agree01">계약체결 시 확인사항</label>
+										<input type="checkbox" name="allChk02" id="chk02_agree01">
+									</div>
+									<div class="cnt">
+										<label for="chk02_agree02">신용카드 약관의 주요 내용</label>
+										<input type="checkbox" name="allChk02" id="chk02_agree02">
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //terms_area -->
+						</fieldset>
+					</form>
+					</article>
+					<!-- //신용카드 핵심설명서 -->
+
+					<!-- 동의 -->
+					<article class="cont">
+						<form>
+							<fieldset>
+							<legend>동의</legend>
+							<h4 class="t_tit"><input type="checkbox" name="allChk03"  id="chk03_all" class="chk_b_ty"><label for="chk03_all">서비스 약관 전체동의</label></h4>
+							<!-- terms_area -->
+							<div class="terms_area">
+								<ul class="list">
+									<li class="half">
+										<div class="cnt">
+											<label for="chk03_agree">Enclean Bonus Card 서비스</label>
+											<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+											<input type="checkbox" name="allChk03" id="chk03_agree">
+										</div>
+										<div class="cnt">
+											<label for="chk03_agree02">Happy Auto Members 서비스</label>
+											<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+											<input type="checkbox"  name="allChk03" id="chk03_agree02">
+										</div>
+									</li>
+									<li class="half">
+										<div class="cnt">
+											<label for="chk03_agree03">해피포인트카드 이용약관</label>
+											<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+											<input type="checkbox" name="allChk03" id="chk03_agree03">
+										</div>
+										<div class="cnt">
+											<label for="chk03_agree04">해피포인트카드 개인정보 수집 및 활용 동의</label>
+											<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+											<input type="checkbox"  name="allChk03" id="chk03_agree04">
+										</div>
+									</li>
+									<li>
+										<label for="chk03_agree05">GS리테일 멤버십(GS&POINT) 회원 약관</label>
+										<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+										<input type="checkbox" name="allChk03" id="chk03_agree05">
+									</li>
+									<li>
+										<label for="chk03_agree06">OK캐쉬백 서비스 가입 신청 및 개인신용정보의 제공 활용 동의서</label>
+										<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+										<input type="checkbox" name="allChk03" id="chk03_agree06">
+									</li>
+								</ul>
+							</div>
+							<!-- //terms_area -->
+						</fieldset>
+						</form>
+					</article>
+					<!-- //동의 -->
+
+					<!-- 동의 -->
+					<article class="cont">
+						<form>
+							<fieldset>
+							<legend>동의</legend>
+							<h4 class="t_tit"><input type="checkbox" name="allChk04" id="chk04_all" class="chk_b_ty"><label for="chk04_all">개인(신용)정보 필수적 동의서 전체동의</label></h4>
+							<!-- terms_area -->
+							<div class="terms_area">
+								<ul class="list">
+									<li>
+										<label for="chk04_agree">개인(신용)정보 필수적 수집, 이용에 관한 사항</label>
+										<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+										<input type="checkbox" name="allChk04" id="chk04_agree">
+										<div class="sub">
+											<ul class="s_list">
+												<li>
+													<label for="chk04_agree_s">본인은 귀사가 상기 조회 목적으로 다음과 같은 본인의 고유식별정보를 조회하는 것에 동의합니다. <br>(고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호)</label>
+													<input type="checkbox" name="allChk04" id="chk04_agree_s">
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<label for="chk04_agree02">개인(신용)정보 조회에 관한 사항</label>
+										<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+										<input type="checkbox" name="allChk04" id="chk04_agree02">
+										<div class="sub">
+											<ul class="s_list">
+												<li>
+													<label for="chk04_agree02_s">본인은 귀사가 상기 조회 목적으로 다음과 같은 본인의 고유식별정보를 조회하는 것에 동의합니다. <br>(고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호)</label>
+													<input type="checkbox" name="allChk04" id="chk04_agree02_s">
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //terms_area -->
+							</fieldset>
+						</form>
+					</article>
+					<!-- //동의 -->
+
+					<!-- 동의 -->
+					<article class="cont">
+						<form>
+							<fieldset>
+							<legend>동의</legend>
+							<!-- tooltip_ty -->
+							<div class="tooltip_ty right">
+								<h4 class="t_tit"><input type="checkbox" name="allChk05"  id="chk05_all" class="chk_b_ty"><label for="chk05_all">개인(신용)정보 선택적 동의서 전체동의<span><a href="#tooltip" class="btn_tip">(선택)</a></span></label></h4>
+								<!-- tooltip_area -->
+								<div class="tooltip_area">
+									<!-- tooltip_cont -->
+									<div class="tooltip_cont">
+										<p>귀하는 개인(신용)정보의 선택적인 수집이용, 제공에 대한 동의를 거부할 수 있습니다. 다만, 동의하지 않을 경우에는 편의제공(사은품, 할인쿠폰 등), 신상품(서비스)소개, 사은행사(할인, 포인트적립, 무이자할부 등)안내, 보험상품 안내 등 이용목적에 따른 혜택의 제한이 있을 수 있습니다. 그 밖의 금융거래와 관련된 불이익은 없습니다.</p>
+									</div>
+									<!-- //tooltip_cont -->
+									<a href="#" class="btn_tooltip_close">Tooltip 내용 닫기</a>
+								</div>
+								<!-- //tooltip_area -->
+							</div>
+							<!-- //tooltip_ty -->
+							<!-- terms_area -->
+							<div class="terms_area">
+								<ul class="list">
+									<li>
+										개인(신용)정보 선택적 수집, 이용에 관한 사항
+										<div class="sub">
+											<ul class="s_list">
+												<li>
+													<label for="chk04_agree_s">카드상품 안내 및 이용권유를 위한 수집, 이용</label>
+													<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+													<input type="checkbox" name="allChk05" id="chk05_agree_s">
+												</li>
+												<li>
+													<label for="chk04_agree_s2">카드상품 이외의 부수서비스 안내 등을 위한 수집, 이용</label>
+													<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+													<input type="checkbox" name="allChk05" id="chk04_agree_s2">
+												</li>
+												<li class="agree_ty02">
+													<label for="chk05_agree_s3">이용권유 및 서비스 안내 </label>
+													<input type="checkbox" name="allChk05" id="chk05_agree_s3">
+													<span class="chk_serv_area">
+														<label for="chk_ser_s1"><input type="checkbox" name="allChk05" id="chk_ser_s1">전화</label>
+														<label for="chk_ser_s2"><input type="checkbox" name="allChk05" id="chk_ser_s2">SMS</label>
+														<label for="chk_ser_s3"><input type="checkbox" name="allChk05" id="chk_ser_s3">서면</label>
+														<label for="chk_ser_s4"><input type="checkbox" name="allChk05" id="chk_ser_s4">이메일</label>
+													</span>
+													<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+												</li>
+												<li>
+													<label for="chk05_agree_s4">본인은 귀사가 상기 조회 목적으로 다음과 같은 본인의 고유식별정보를 조회하는 것에 동의합니다. <br>(고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호)</label>
+													<input type="checkbox" name="allChk05" id="chk05_agree_s4">
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										선택적 개인(신용)정보 제공/이동 동의서
+										<div class="sub">
+											<ul class="s_list">
+												<li>
+													<label for="chk05_agree_s">하나금융그룹 내 자회사에 제공</label>
+													<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+													<input type="checkbox" name="allChk05" id="chk05_agree_s">
+												</li>
+												<li>
+													<label for="chk05_agree_s2">부정사용 방지 등의 목적달성을 위해 개인(신용)정보 제공</label>
+													<a href="#" class="btn_xs btn_ty04 btn_pop">상세보기</a>
+													<input type="checkbox" name="allChk05" id="chk05_agree_s2">
+												</li>
+												<li>
+													<label for="chk05_agree_s3">본인은 귀사가 상기 조회 목적으로 다음과 같은 본인의 고유식별정보를 조회하는 것에 동의합니다. <br>(고유식별정보 : 주민등록번호, 운전면허번호, 여권번호, 외국인등록번호)</label>
+													<input type="checkbox" name="allChk05" id="chk05_agree_s3">
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!-- //terms_area -->
+						</fieldset>
+						</form>
+					</article>
+					<!-- //동의 -->
+
+				</div>
+				<!-- //cont_box_area -->
+			</div>
+			<!-- //cont_box -->
+
+		</div>
+		<!-- //cont_area -->
+		
+		<!-- @@include ../mrkp_pages_include/g_inc_btn_top.html -->
+
+	</section>
+	<!-- //container -->
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_footer.html -->
+
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+	jQuery(function ($) {
+		//탭 활성화
+		activeTabTy('.g_cnt_tabs', 2);
+	});
+</script>
+
+<!-- @@close-->

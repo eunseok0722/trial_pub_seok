@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: main                                       	  */
+// date		: 20220303
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* main s =================================================== */
+
+/* icons */
+.blt_line {
+    &::before {
+        content: '';
+        display: inline-block;
+        padding-right:10px;
+        width: 1px;
+        height: 12px;
+        background: #ccc;
+    }
+}
+
+/* contents */
+.number_summary_box {
+    position:relative;
+    width:$full_w;
+    margin:49px auto 15px auto;
+    font-size:0;
+    li {
+        display:inline-block;
+        width:33.33%;
+        border-bottom:2px solid #ccc;
+        .bx {
+            padding:30px 0;
+            font-size:15px;
+            text-align:center;
+            background:#fff;
+            border-right:1px solid #ccc;
+            border-bottom:1px solid #ccc;
+            .tit {
+                padding-bottom:10px;
+                font-size:16px;
+                font-weight:600;
+            }
+            .data {
+                b {
+                    padding-right:5px;
+                    font-size:28px;
+                }
+            }
+        }
+        &:first-child {
+            .bx {
+                border-left:1px solid #ccc;
+            }
+        }
+        &:nth-child(1) {
+            .bx {
+                &:first-child {
+                    border-top:6px solid $point_clr2_bg;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .bx {
+                &:first-child {
+                    border-top:6px solid $point_clr4;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .bx {
+                &:first-child {
+                    border-top:6px solid $point_clr1;
+                }
+            }
+        }
+    }
+}
+
+/* main e =================================================== */
+/* ---------------------------------------------------------- */

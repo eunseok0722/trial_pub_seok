@@ -1,0 +1,195 @@
+@charset "UTF-8";
+// ========================================================== */
+// file		: mixin
+// writer	: IDR
+// date		: 20180525
+// ========================================================== */
+@mixin bdrs($z: 5px) {
+	-webkit-border-radius: $z;
+	-moz-border-radius: $z;
+	border-radius: $z;
+}
+@mixin posa-tl($t: 0, $l:0) {
+	position: absolute;
+	top: $t;
+	left: $l;
+}
+@mixin posa-tr($t: 0, $r:0) {
+	position: absolute;
+	top: $t;
+	right: $r;
+}
+@mixin posa-bl($b: 0, $l:0) {
+	position: absolute;
+	bottom: $b;
+	left: $l;
+}
+@mixin posa-br($b: 0, $r:0) {
+	position: absolute;
+	bottom: $b;
+	right: $r;
+}
+@mixin posf-t($t: 0, $l:0) {
+	position: fixed;
+	top: $t;
+	left: $l;
+}
+@mixin posf-b($b: 0, $l:0) {
+	position: fixed;
+	bottom: $b;
+	left: $l;
+}
+@mixin bg-spr-layout($l:0,$t:0) {
+	background: url('../../images/common/layout.png') $l $t no-repeat;
+	background-size: 250px auto;
+}
+@mixin clear-fix() {
+	display: block;
+	clear: both;
+	content: '';
+}
+@mixin clear-fix-after() {
+	&:after,
+	&:before {
+		content: ""; // 1
+		display: table; // 2
+	}
+	&:after {
+		clear: both;
+	}
+}
+@mixin center-block() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+@mixin bxzb {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+@mixin opa($non_ie:0, $ie:0) {
+	opacity: $non_ie;
+	filter: alpha(opacity=$ie);
+}
+@mixin ct {
+	content: '';
+	display: block;
+}
+@mixin trs($p:all, $t:0.5s) {
+	-webkit-transition: $p ease-in-out $t;
+	-moz-transition: $p ease-in-out $t;
+	-ms-transition: $p ease-in-out $t;
+	-o-transition: $p ease-in-out $t;
+	transition: $p ease-in-out $t;
+}
+@mixin scale($ratio...) {
+	-webkit-transform: scale($ratio);
+	-ms-transform: scale($ratio); // IE9 only
+	-o-transform: scale($ratio);
+	transform: scale($ratio);
+}
+@mixin rotate($deg...) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+}
+@mixin phc($c:#000) {
+	&:-ms-input-placeholder {
+		color: $c;
+	}
+	&:-moz-placeholder {
+		color: $c;
+	}
+	&::-webkit-input-placeholder {
+		color: $c;
+	}
+}
+@mixin full {
+	@media (max-width: #{$full_w}){
+		@content;
+	}
+}
+@mixin middle {
+	@media screen and (max-width: #{$middle_w - 1px}){
+		@content;
+	}
+}
+@mixin narrow {
+	@media (max-width: #{$narrow_w}){
+		@content;
+	}
+}
+@mixin t-idt() {
+	text-indent:-5000px;
+	font-size:0;
+}
+@mixin ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+@mixin line-clamp($l: 2){
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: $l;
+	-webkit-box-orient: vertical;
+}
+@mixin set-ellipsis($lineNum:1){
+	text-overflow:ellipsis;
+	overflow:hidden;
+	@if $lineNum == 1 {
+		white-space:nowrap;
+	}@else {
+		display:-webkit-box;
+		-webkit-line-clamp:$lineNum;
+		-webkit-box-orient:vertical;
+	}
+}
+@mixin background-position( $f1, $f2 ){
+	@include css3-prefix('background-position', $f1 $f2);
+}
+@mixin set-df-padding(){
+	padding-right:$con_pd;
+	padding-left:$con_pd;
+}
+@mixin set-full-box(){
+	margin-right:-$con_pd;
+	margin-left:-$con_pd;
+}
+@mixin link-cursor(){
+	cursor:pointer;
+}
+@mixin s-vh($property, $value) {
+	#{$property}:calc((var(--vh, 1vh) * 100) + #{$value});
+}
+@mixin notch-top($property, $value) {
+	#{$property}:calc(constant(safe-area-inset-top) + #{$value});
+	#{$property}:calc(env(safe-area-inset-top) + #{$value});
+}
+@mixin notch-btm($property, $value) {
+	#{$property}:calc(constant(safe-area-inset-bottom) + #{$value});
+	#{$property}:calc(env(safe-area-inset-bottom) + #{$value});
+}
+@mixin notch-lft($property, $value) {
+	#{$property}:calc(constant(safe-area-inset-left) + #{$value});
+	#{$property}:calc(env(safe-area-inset-left) + #{$value});
+}
+@mixin notch-rgt($property, $value) {
+	#{$property}:calc(constant(safe-area-inset-right) + #{$value});
+	#{$property}:calc(env(safe-area-inset-right) + #{$value});
+}
+@mixin mdq-mo {
+	@media only screen and (max-width:#{$mini-mo-w}){
+		@content;
+	}
+}
+@mixin mdq-pc {
+	@media only screen and (min-width:#{$mini-pc-w}){
+		@content;
+		.fixed-action-sheet.seet-fixed{border-left: 1px solid #e8e8e8;border-right: 1px solid #e8e8e8;}
+		.fixed-action-sheet.expand-right{right:50% !important;margin-right:-320px;transform: translateX(0) !important;}
+	}
+}

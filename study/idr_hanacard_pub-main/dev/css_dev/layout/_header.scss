@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: header                                       	  */
+// date		: 20220303
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* header s ================================================= */
+header{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:110px;
+  background:#00907f;
+  transition:height 0.4s, background 0.4s;
+  z-index:103;
+  overflow:hidden;
+  &::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 36px;
+    background: #fff;
+    content: "";
+  }
+  .header_cont {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  h1.logo {
+    position: absolute;
+    left: -5px;
+    top: 50px;
+    z-index: 1;
+    a {
+      display: block;
+      width: 135px;
+      height: 45px;
+      background: url(../images/layout/logo_w.png) center no-repeat;
+      background-size: 125px 35px;
+      text-indent: -9999px;
+      overflow: hidden;
+      transition: all 0.4s;
+    }
+  }
+}
+
+.header_bg {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 110px;
+  width: 100%;
+  background: #fff;
+  border: solid #eaeaea;
+  border-width: 1px 0;
+  box-sizing: border-box;
+  content: "";
+  transition: height 0.4s;
+  overflow: hidden;
+}
+
+.nav_dims {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  content: "";
+  z-index: 101;
+  display: none;
+  animation: dimd both 0.4s;
+  &.on {
+    display: block;
+    opacity: 0.25;
+    filter: alpha(opacity=25);
+  }
+}
+
+.blind{
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+.guide{
+  height: 138px;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 15px;
+  line-height: 138px;
+  text-align: center;
+}
+
+/* header e ================================================= */
+/* ---------------------------------------------------------- */

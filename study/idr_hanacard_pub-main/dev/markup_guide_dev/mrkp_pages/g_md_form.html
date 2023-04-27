@@ -1,0 +1,627 @@
+<!-- @@master ../../layout_mrkp_template.html -->
+
+<!-- @@block root_mrkp_content -->
+
+<!-- wrap -->
+<div id="wrap" class="biz">
+
+	<!-- @@include ../mrkp_pages_include/g_inc_header.html -->
+
+	<!-- @@include ../mrkp_pages_include/g_inc_breadcrumb.html -->
+
+	<!-- container -->
+	<section id="container">
+		<h2 class="blind">하나카드 가이드</h2><!-- Gnb 1depth Menu -->
+		<!-- cont_area -->
+		<div class="cont_area">
+
+			<h3 class="title"><em>하나카드</em>Form</h3>
+
+			<!-- cont_box -->
+			<div class="cont_box">
+				<!-- cont_box_area -->
+				<div class="cont_box_area">
+
+					<!-- @@include ../mrkp_pages_include/g_inc_md_tab.html -->
+
+					<!-- Input Guide -->
+					<article class="cont hr">
+						<h4 class="t_tit">Input Guide<span>class="input_ty"</span></h4>
+						<!-- input_guide_area -->
+						<div class="input_guide_area">
+							<ul class="input_list">
+								<li><input type="text" class="input_ty" placeholder="힌트 텍스트 - 13px, #999"
+										title="힌트 텍스트"></li>
+								<li><input type="text" class="input_ty" value="기본 입력값 출력 - 15px, #000"
+										title="기본 입력값 출력"></li>
+								<li><input type="text" class="input_ty" placeholder="비활성화 힌트 텍스트 - 13px, #999"
+										title="비활성화 힌트 텍스트" disabled></li>
+								<li><input type="text" class="input_ty" value="비활성화 데이터 출력 - 15px, #000"
+										title="비활성화 데이터 출력" disabled></li>
+								<li><input type="text" class="input_ty w180 hint_txt" value="781526"
+										data-text="주민등록번호를 정확히 입력해주세요."></li>
+								<li><input type="text" class="input_ty w180 hint_txt" value="class='hint_txt'"
+										data-text="성명을 정확히 입력해주세요."></li>
+
+								<li><input type="text" class="input_ty right" placeholder="우측정렬 : class='right'"></li>
+								<li><input type="text" class="input_ty center" placeholder="가운데정렬 : class='center'">
+								</li>
+								<!-- class="hint_txt" / data-text = 문구 -->
+
+								<li>
+									<div class="btn_key_box">
+										<input type="password" class="input_ty w180" placeholder="뒷면 3자리"
+											title="CVV번호 입력">
+										<a href="#" class="btn_key">가상 키보드</a>
+									</div>
+								</li>
+							</ul>
+							<ul class="size_list">
+								<li><input type="text" class="input_ty w90" placeholder="class: w90" title="기본"
+										disabled></li>
+								<!--<li><input type="text" class="input_ty w110" placeholder="class: w110" title="기본" disabled></li>-->
+								<li><input type="text" class="input_ty w140" placeholder="class: w140" title="기본"
+										disabled></li>
+								<li><input type="text" class="input_ty w180" placeholder="class: w180" title="기본"
+										disabled></li>
+								<li><input type="text" class="input_ty w200" placeholder="class: w200" title="기본"
+										disabled></li>
+								<!--<li><input type="text" class="input_ty w280" placeholder="class: w280" title="기본" disabled></li>-->
+								<li><input type="text" class="input_ty w320" placeholder="class: w320" title="기본"
+										disabled></li>
+								<li><input type="text" class="input_ty w390" placeholder="class: w390 / 검색" title="기본"
+										disabled></li>
+								<li><input type="text" class="input_ty w420" placeholder="class: w420 / 검색" title="기본"
+										disabled></li>
+								<li><input type="text" class="input_ty w450" placeholder="class: w450" title="기본"
+										disabled></li>
+								<li><input type="text" class="input_ty w100p" placeholder="class: w100p 100%" title="기본"
+										disabled></li>
+							</ul>
+						</div>
+						<!--// input_guide_area -->
+					</article>
+					<!--// Input Guide -->
+
+					<!-- Input Guide [type='radio'] -->
+					<article class="cont hr">
+						<h4 class="t_tit">Input Guide [type='radio']</h4>
+						<div class="chk_guide_area">
+							<ul class="chk_box" style="margin-bottom:30px;">
+								<li>
+									<input type="radio" id="radio01_1" name="radid01" checked>
+									<label for="radio01_1">항목01</label>
+								</li>
+								<li>
+									<input type="radio" id="radio01_2" name="radid01">
+									<label for="radio01_2">항목02</label>
+								</li>
+								<li>
+									<input type="radio" id="radio01_3" name="radid01">
+									<label for="radio01_3">항목03</label>
+								</li>
+								<li>
+									<input type="radio" id="radio01_4" name="radid02" checked disabled>
+									<label for="radio01_4">checked disabled</label>
+								</li>
+								<li>
+									<input type="radio" id="radio01_5" name="radid02" disabled>
+									<label for="radio01_5">disabled</label>
+								</li>
+							</ul>
+						</div>
+						<!--// chk_guide_area -->
+
+						<ul class="radio_box">
+							<li><input type="radio" onClick="alert('항목01');" id="radio_ty" name="radio_ty"
+									checked><label for="radio_ty">항목01<em></em></label></li>
+							<li><input type="radio" onClick="alert('항목02');" id="radio_ty02" name="radio_ty"><label
+									for="radio_ty02">항목02</label></li>
+							<li><input type="radio" onClick="alert('항목03');" id="radio_ty03" name="radio_ty"><label
+									for="radio_ty03">항목 항목 항목 항목 항목03</label></li>
+							<li><input type="radio" onClick="alert('항목04');" id="radio_ty04" name="radio_ty"
+									disabled><label for="radio_ty04">선택불가</label></li>
+						</ul>
+						<a href="#" class="q1">click</a>
+
+						<script type="text/javascript">
+							jQuery(function ($) {
+								$('.q1').click(function () {
+									formTemp();
+									return false;
+								});
+							});
+						</script>
+
+					</article>
+					<!--// Input Guide [type='radio'] -->
+
+					<!-- Input Guide [type='checkbox'] -->
+					<article class="cont hr">
+						<h4 class="t_tit">Input Guide [type='checkbox']</h4>
+						<div class="chk_guide_area">
+							<ul class="chk_box">
+								<li>
+									<input type="checkbox" id="chk01_1" checked>
+									<label for="chk01_1">항목01</label>
+								</li>
+								<li>
+									<input type="checkbox" id="chk01_2">
+									<label for="chk01_2">항목02</label>
+								</li>
+								<li>
+									<input type="checkbox" id="chk01_3">
+									<label for="chk01_3">항목03</label>
+								</li>
+								<li>
+									<input type="checkbox" id="chk01_4" checked disabled>
+									<label for="chk01_4">checked disabled</label>
+								</li>
+								<li>
+									<input type="checkbox" id="chk01_5" disabled>
+									<label for="chk01_5">disabled</label>
+								</li>
+								<li>
+									<input type="checkbox" id="chk01_5" class="hint_chk">
+									<label for="chk01_5">오류성검사</label>
+								</li>
+							</ul>
+
+							<ul class="chk_box" style="margin-top:20px;">
+								<li>
+									<input type="checkbox" class="chk_b_ty" id="chk02_1" checked>
+									<label for="chk02_1">항목01</label>
+								</li>
+								<li>
+									<input type="checkbox" class="chk_b_ty" id="chk02_2">
+									<label for="chk02_2">항목02</label>
+								</li>
+								<li>
+									<input type="checkbox" class="chk_b_ty" id="chk02_3">
+									<label for="chk02_3">항목03</label>
+								</li>
+								<li>
+									<input type="checkbox" class="chk_b_ty" id="chk02_4" checked disabled>
+									<label for="chk02_4">checked disabled</label>
+								</li>
+								<li>
+									<input type="checkbox" class="chk_b_ty" id="chk02_5" disabled>
+									<label for="chk02_5">disabled</label>
+								</li>
+							</ul>
+							<script type="text/javascript">
+								jQuery(function ($) {
+									$('#chkAll').click(function () {
+										if ($('#chkAll').is(':checked')) {
+											$('input[name=allChk]').prop('checked', true).change();
+
+										} else {
+											$('input[name=allChk]').prop('checked', false).change();
+										}
+									});
+								});
+							</script>
+							<ul class="chk_box" style="margin-top:60px;">
+								<li>
+									<input type="checkbox" class="chk_b_ty" id="chkAll">
+									<label for="chkAll">전체선택</label>
+								</li>
+								<li>
+									<input type="checkbox" name="allChk" class="chk_b_ty" id="chkAll_1">
+									<label for="chkAll_1">선택1</label>
+								</li>
+								<li>
+									<input type="checkbox" name="allChk" class="chk_b_ty" id="chkAll_2">
+									<label for="chkAll_2">선택2</label>
+								</li>
+								<li>
+									<input type="checkbox" name="allChk" class="chk_b_ty" id="chkAll_3">
+									<label for="chkAll_3">선택3</label>
+								</li>
+
+							</ul>
+
+							<div style="margin-top:20px;padding:20px;background:#eee;">
+								<pre>
+	$('#chkAll').click(function(){
+		if($('#chkAll').is(':checked')){
+			$('input[name=allChk]')<strong class="t_point02">.prop('checked', true).change();</strong>  // 체크시
+			
+		}else{
+			$('input[name=allChk]')<strong class="t_point02">.prop('checked', false).change();</strong>  // 해제시
+		}
+	});
+</pre>
+							</div>
+
+							<script type="text/javascript">
+								jQuery(function ($) {
+									$('#chkDisa').click(function () {
+										if ($('#chkDisa').is(':checked')) {
+											$('input[name=allDisa]').prop('disabled', true).change();
+
+										} else {
+											$('input[name=allDisa]').prop('disabled', false).change();
+										}
+									});
+								});
+							</script>
+							<ul class="chk_box" style="margin-top:60px;">
+								<li>
+									<input type="checkbox" class="chk_b_ty" id="chkDisa">
+									<label for="chkDisa">전체선택</label>
+								</li>
+								<li>
+									<input type="checkbox" name="allDisa" class="chk_b_ty" id="chkDisa_1">
+									<label for="chkDisa_1">선택1</label>
+								</li>
+								<li>
+									<input type="checkbox" name="allDisa" class="chk_b_ty" id="chkDisa_2">
+									<label for="chkDisa_2">선택2</label>
+								</li>
+								<li>
+									<input type="checkbox" name="allDisa" class="chk_b_ty" id="chkDisa_3">
+									<label for="chkDisa_3">선택3</label>
+								</li>
+
+							</ul>
+
+						</div>
+						<!--// chk_guide_area -->
+					</article>
+					<!--// Input Guide [type='checkbox'] -->
+
+					<!-- Select Guide -->
+					<article class="cont">
+						<h4 class="t_tit">Select Guide<span>class="select_ty"</span></h4>
+						<select class="select_ty w200" id="t0001" title="항목 선택">
+							<option value="">선택</option>
+							<option value="1">항목01</option>
+							<option value="2">항목02</option>
+							<option value="3">항목03</option>
+							<option value="4">항목04</option>
+						</select>
+
+						<select class="select_ty w200" title="항목 선택" disabled>
+							<option value="">선택</option>
+							<option value="">항목01</option>
+							<option value="">항목02</option>
+							<option value="">항목03</option>
+							<option value="">항목04</option>
+						</select>
+
+						<a href="#" class="btn_me">나 클릭</a>
+					</article>
+					<!--// Select Guide-->
+
+					<!-- Select Guide -->
+					<article class="cont">
+						<h4 class="t_tit">Select Guide Option</h4>
+						<select class="select_ty w200" title="항목 선택" id="test01">
+							<option value="">선택</option>
+							<option value="전화">항목01</option>
+							<option value="2">항목02</option>
+							<option value="3">항목03</option>
+							<option value="4">항목04</option>
+						</select>
+
+						<p style="margin-top:10px;">
+							<a href="#;" class="btn_ty btn_s" id="destroy">Hide (Destroy)</a>
+							<a href="#;" class="btn_ty btn_s" id="create">Show (Create)</a>
+							<a href="#;" class="btn_ty btn_s" id="enable">Enable</a>
+							<a href="#;" class="btn_ty btn_s" id="disable">Disable</a>
+							<a href="#;" class="btn_ty btn_s" id="refresh">Refresh</a>
+						</p>
+						<p style="margin-top:10px;">
+							<a href="#;" class="btn_ty btn_s" id="value-1">value=1</a>
+							<a href="#;" class="btn_ty btn_s" id="value-2">value=2</a>
+							<a href="#;" class="btn_ty btn_s" id="options">Set New Options</a>
+
+							<a href="#;" class="btn_ty btn_s" id="append">append</a>
+							<a href="#;" class="btn_ty btn_s" id="remove">remove</a>
+						</p>
+						<a href="#" class="a1">TEST</a>
+
+
+						<script type="text/javascript">
+							jQuery(function ($) {
+								$('.a1').click(function () {
+									$('#test01').val('항목01').selectBox('refresh');
+									return false;
+								});
+
+
+								$('.btn_me').click(function () {
+									alert('ddd');
+									$('#t0001').addClass('w320');
+									$('#t0001').selectBox('refresh');
+									$('#t0001').selectBox('destroy');
+
+									return false;
+								});
+
+								//$('#test01').selectBox('destroy');
+
+								$('#create').click(function () {
+									$('#test01').selectBox();
+								});
+								$('#destroy').click(function () {
+									$('#test01').selectBox('destroy');
+								});
+
+								$('#enable').click(function () {
+									$('#test01').selectBox('enable');
+								});
+								$('#disable').click(function () {
+									$('#test01').selectBox('disable');
+								});
+								$('#refresh').click(function () {
+									$('#test01').selectBox('refresh');
+								})
+
+								$('#value-1').click(function () {
+									$('#test01').selectBox('value', '전화');
+								});
+								$('#value-2').click(function () {
+									$('#test01').selectBox('value', 2);
+								});
+								$('#options').click(function () {
+									$('#test01').selectBox('options', {
+										'1': 'Value 1',
+										'2': 'Value 2',
+										'3': 'Value 3',
+										'4': 'Value 4',
+										'5': 'Value 5',
+										'6': 'Value 3',
+										'7': 'Value 4',
+										'8': 'Value 5'
+									});
+								});
+
+								$('#append').click(function () {
+									$('#test01').append("<option value='10'>추가</option>").selectBox('refresh');
+								});
+
+								$('#remove').click(function () {
+									$("#test01 option[value='10']").remove()
+									$('#test01').selectBox('refresh');
+								});
+
+
+
+
+							});
+						</script>
+
+						<div style="margin-top:20px;padding:20px;background:#eee;">
+							<pre>
+http://marcj.github.io/jquery-selectBox     참조
+http://marcj.github.io/jquery-selectBox/blob/master/readme.md     참조
+
+$('#test01')<strong class="t_point02">.selectBox();</strong>                   // Show
+$('#test01')<strong class="t_point02">.selectBox('destroy');</strong>          // Hide
+
+$('#test01')<strong class="t_point02">.selectBox('enable');</strong>           // Enable
+$('#test01')<strong class="t_point02">.selectBox('disable');</strong>          // Disable
+
+$('#test01')<strong class="t_point02">.selectBox('refresh');</strong>          // 새로고침
+
+$('#test01')<strong class="t_point02">.selectBox('value',1);</strong>          // value 체크
+$('#test01')<strong class="t_point02">.selectBox('value',2);</strong>
+
+$('#test01').selectBox('options',{          // options 변경
+    '1' : 'Value 1',
+    '2' : 'Value 2',
+    '3' : 'Value 3',
+    '4' : 'Value 4',
+    '5' : 'Value 5'
+});
+
+$('#append').click(function(){
+    $('#test01')<strong class="t_point">.append("&lt;option value='10'&gt;추가&lt;/option&gt;")</strong><strong class="t_point02">.selectBox('refresh');</strong>   // option 추가 시
+});
+
+$('#remove').click(function(){
+    $("#test01 option[value='10']")<strong class="t_point02">.remove();</strong>
+    $('#test01')<strong class="t_point">.selectBox('refresh');</strong>   // option 제거 시
+});
+</pre>
+						</div>
+
+
+					</article>
+					<!--// Select Guide-->
+
+					<!-- Select Guide -->
+					<article class="cont">
+						<h4 class="t_tit">Textarea</h4>
+						<textarea style="height:170px;" placeholder="내용을 입력해주세요." title="내용 입력"></textarea>
+					</article>
+					<!--// Select Guide-->
+
+					<!-- Calendar Guide -->
+					<article class="cont">
+						<h4 class="t_tit">Calendar Guide<span class="t_point02">[ 임시입니다. ]</span></h4>
+						<input type="text" class="input_ty w180 select_date" id="select_date"
+							title="날짜입력 (예:0000-00-00)"><br><br>
+						<input type="text" class="input_ty w180 select_date" id="select_date02_1"
+							title="시작일 입력 (예:0000-00-00)">
+						<input type="text" class="input_ty w180 select_date" id="select_date02_2"
+							title="종료일 입력 (예:0000-00-00)">
+					</article>
+					<!-- //Calendar Guide -->
+
+					<!-- Keyboard Guide -->
+					<article class="cont">
+						<h4 class="t_tit">보안키보드 적용항목 <span>가상 키보드 아이콘 노출</span></h4>
+						<!-- board_ty -->
+						<div class="board_ty">
+							<table>
+								<caption>카드&amp;휴대폰 인증</caption>
+								<colgroup>
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:77%;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="left">카드비밀번호</th>
+										<td class="left">
+											<div class="btn_key_box">
+												<input type="password" class="input_ty w140" placeholder="앞 2자리"
+													title="카드비밀번호 입력">
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+											<span class="b_br">* *</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">CVV번호</th>
+										<td class="left">
+											<div class="btn_key_box">
+												<input type="password" class="input_ty w140" placeholder="뒷면 3자리"
+													title="CVV번호 입력">
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">휴대폰번호</th>
+										<td class="left">
+											<select class="select_ty w180" title="휴대폰번호 통신사 선택">
+												<option value="">선택</option>
+												<option value="">SKT</option>
+												<option value="">KT</option>
+												<option value="">LG U+</option>
+												<option value="">SKT 알뜰폰</option>
+												<option value="">KT 알뜰폰</option>
+												<option value="">LG U+ 알뜰폰</option>
+											</select>
+											<select class="select_ty w90" title="휴대폰번호 첫번째 자리 선택">
+												<option value="">선택</option>
+												<option value="">010</option>
+												<option value="">011</option>
+												<option value="">016</option>
+												<option value="">017</option>
+												<option value="">018</option>
+												<option value="">019</option>
+											</select>
+											<div class="btn_key_box">
+												<input type="password" class="input_ty w180" placeholder=""
+													title="휴대폰번호 나머지 입력">
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+											<a href="#" class="btn_m btn_ty">인증번호 받기</a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">계좌번호</th>
+										<td class="left">
+											<div class="btn_key_box">
+												<input type="text" class="input_ty w200" placeholder="'-' 제외하고 번호만 입력"
+													title="계좌번호 입력">
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// board_ty -->
+					</article>
+					<!-- //Keyboard Guide -->
+
+					<!-- Keyboard Guide -->
+					<article class="cont">
+						<h4 class="t_tit">보안키보드 적용항목 <span>가상 키보드 아이콘 &amp; 해제 아이콘 노출</span></h4>
+						<!-- board_ty -->
+						<div class="board_ty">
+							<table>
+								<caption>카드&amp;휴대폰 인증</caption>
+								<colgroup>
+									<col span="1" style="width:23%;">
+									<col span="1" style="width:77%;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="left">카드번호</th>
+										<td class="left">
+											<div class="btn_security_box">
+												<input type="password" class="input_ty w420" title="카드번호 입력">
+												<!--a href="#" class="btn_masking">마스킹 해지</a-->
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">웹로그인 비밀번호</th>
+										<td class="left">
+											<div class="btn_security_box">
+												<input type="password" class="input_ty w200" title="웹로그인 비밀번호 입력">
+												<!--a href="#" class="btn_masking">마스킹 해지</a-->
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">기존비밀번호</th>
+										<td class="left">
+											<div class="btn_security_box">
+												<input type="password" class="input_ty w200" title="기존비밀번호 입력">
+												<!--a href="#" class="btn_masking">마스킹 해지</a-->
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">비밀번호 변경</th>
+										<td class="left">
+											<div class="btn_security_box">
+												<input type="password" class="input_ty w200" title="비밀번호 변경 입력">
+												<!--a href="#" class="btn_masking">마스킹 해지</a-->
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="left">비밀번호 재입력</th>
+										<td class="left">
+											<div class="btn_security_box">
+												<input type="password" class="input_ty w200" title="비밀번호 재입력">
+												<!--a href="#" class="btn_masking">마스킹 해지</a-->
+												<a href="#" class="btn_key">가상 키보드</a>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--// board_ty -->
+					</article>
+					<!-- //Keyboard Guide -->
+
+				</div>
+				<!-- //cont_box_area -->
+			</div>
+			<!-- //cont_box -->
+
+		</div>
+		<!-- //cont_area -->
+
+		<!-- @@include ../mrkp_pages_include/g_inc_btn_top.html -->
+
+	</section>
+	<!-- //container -->
+
+	<!-- @@include ../mrkp_pages_include/g_inc_footer.html -->
+
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+	jQuery(function ($) {
+		//탭 활성화
+		activeTabTy('.g_md_tabs', 2);
+	});
+</script>
+
+<!-- @@close-->

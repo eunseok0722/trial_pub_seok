@@ -1,0 +1,204 @@
+<!-- @@master ../../layout_mrkp_template.html -->
+
+<!-- @@block root_mrkp_content -->
+
+<!-- wrap -->
+<div id="wrap" class="biz">
+
+	<!-- @@include ../mrkp_pages_include/g_inc_header.html -->
+
+	<!-- @@include ../mrkp_pages_include/g_inc_breadcrumb.html -->
+
+	<!-- container -->
+	<section id="container">
+		<h2 class="blind">하나카드 가이드</h2><!-- Gnb 1depth Menu -->
+		<!-- cont_area -->
+		<div class="cont_area">
+
+			<h3 class="title"><em>이용안내</em>결제안내</h3><!-- em : 상위 메뉴 -->
+
+			<!-- cont_box -->
+			<div class="cont_box">
+				<!-- cont_box_area -->
+				<div class="cont_box_area">
+					<script type="text/javascript">
+						jQuery(function ($) {
+							/* 다른 페이지 탭 열림 : 버튼 class / 탭 nav id 확인 */
+							if (location.href.indexOf("?ns1") > -1) {
+								setTimeout(function () {
+									$('.btn_ns1').trigger('click');
+								}, 10);
+							}
+							/* 같은 페이지 탭 열림 : 버튼 class / 탭 nav id 확인 */
+							$('.btn_ns1').click(function () {
+								$('#ns1 > a').trigger('click');
+								return false;
+							});
+
+							/* 다른 페이지 아코디언 열림 : 버튼 class / 아코디언 타겟 id 확인 */
+							if (location.href.indexOf("?ts1") > -1) {
+								setTimeout(function () {
+									$('.btn_ts1').trigger('click');
+								}, 10);
+							}
+							/* 같은 페이지 아코디언 열림 : 버튼 class / 아코디언 타겟 id 확인 */
+							$('.btn_ts1').click(function () {
+								var tgt = $('#ts1');
+								var tgtFocus = $('#ts1 > a')
+								tgt.addClass('on');
+								tgt.css('height', tgt.find('.view').innerHeight() + 68);
+								$('html, body').stop().animate({
+									scrollTop: tgt.offset().top - 190
+								}, 600);
+								tgtFocus.focus();
+								return false;
+							});
+						});
+					</script>
+					<!-- tab -->
+					<article class="cont">
+						<!-- tab_ty02 -->
+						<nav class="tab_ty tab_nav02">
+							<ul>
+								<li class="on"><a href="#tab01">일시불</a></li>
+								<li><a href="#tab02">일부결제금액이월약정 일시불</a></li>
+								<li id="ns1"><a href="#tab03">할부</a></li><!-- 탭 타겟 id="ns1" -->
+							</ul>
+						</nav>
+						<!--// tab_ty02 -->
+
+						<!-- 일시불 -->
+						<div class="tab_cont on" id="tab01">
+							<!-- 활성화 class="on" -->
+							<h2 class="blind">일시불</h2>
+							To-Be Guide 로 <span class="t_point">tab_nav02 / tab_cont 으로 들어간 경우</span>만 가능합니다.<br>
+							<strong class="t_point02">class name 및 id 명은 경우에 따라 맞춰서 변경합니다.</strong><br>
+							그래서 <span class="t_point">스크립트는 공통으로 빼지 않고</span> <strong class="t_point02">경우에 따라 페이지에
+								삽입</strong>합니다.<br><br>
+
+							주소 탭이동 : https://dwww.hanacard.co.kr:3443/hana_ing/html/guide/temp16.html?ns1<br>
+
+							주소 아코디언 이동 : https://dwww.hanacard.co.kr:3443/hana_ing/html/guide/temp16.html?ts1
+						</div>
+						<!-- //일시불 -->
+
+						<!-- 일부결제금액이월약정 일시불 -->
+						<div class="tab_cont" id="tab02">
+							<h2 class="blind">일부결제금액이월약정 일시불</h2>
+							일부결제금액이월약정 일시불
+						</div>
+						<!-- //일부결제금액이월약정 일시불 -->
+
+						<!-- 할부 -->
+						<div class="tab_cont" id="tab03">
+							<h2 class="blind">할부</h2>
+							할부
+						</div>
+						<!-- //할부 -->
+					</article>
+					<!-- //tab -->
+
+
+					<!-- 아코디언 -->
+					<article class="cont">
+						<h4 class="blind">결제안내</h4>
+						<!-- accordian _ty -->
+						<ul class="accordian_ty ty02">
+							<!-- 결제일 -->
+							<li class="list on">
+								<a href="#"><span>결제일</span></a>
+								<div class="view">
+									<a href="#" class="btn_s btn_ty04 btn_ts1">아코디언 열림 버튼 .btn_ts1</a>
+									<!-- 버튼 명 class="btn_ts1" -->
+
+									<a href="#" class="btn_s btn_ty04 btn_ns1">탭 열림 버튼 .btn_ns1</a>
+									<!-- 버튼 명 class="btn_ns1" -->
+								</div>
+							</li>
+							<!-- //결제일 -->
+
+							<!-- 선결제 방법 -->
+							<li class="list" id="ts1">
+								<!-- 아코디언 타겟 id="ts1" -->
+								<a href="#"><span>아코디언 타겟 id="ts1"</span></a>
+								<div class="view">
+									내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용
+								</div>
+							</li>
+							<!-- //선결제 방법 -->
+
+							<!-- 자동결제 방법 -->
+							<li class="list">
+								<a href="#"><span>자동결제 방법</span></a>
+								<div class="view">
+									내용
+								</div>
+							</li>
+							<!-- //자동결제 방법 -->
+						</ul>
+						<!-- //accordian _ty -->
+					</article>
+					<!-- 아코디언 -->
+
+					<div style="margin-bottom:60px;padding:20px;background:#eee;">
+						<pre>
+&lt;script type="text/javascript"&gt;
+jQuery(function($){
+	/* 다른 페이지 탭 열림 : 버튼 class / 탭 nav id 확인 */
+	if(location.href.indexOf("?<strong class="t_point02">ns1</strong>") > -1){
+		setTimeout(function() {
+			$('.btn_<strong class="t_point02">ns1</strong>').trigger('click');
+		}, 10);	
+	}	
+	/* 같은 페이지 탭 열림 : 버튼 class / 탭 nav id 확인 */
+	$('.btn_<strong class="t_point02">ns1</strong>').click(function(){
+		$('#<strong class="t_point02">ns1</strong> > a').trigger('click');
+		return false;
+	});
+
+	/* 다른 페이지 아코디언 열림 : 버튼 class / 아코디언 타겟 id 확인 */
+	if(location.href.indexOf("?<strong class="t_point02">ts</strong>1") > -1){
+		setTimeout(function() {
+			$('.btn_<strong class="t_point02">ts1</strong>').trigger('click');
+		}, 10);	
+	}
+	/* 같은 페이지 아코디언 열림 : 버튼 class / 아코디언 타겟 id 확인 */
+	$('.btn_<strong class="t_point02">ts1</strong>').click(function(){
+		var tgt = $('#<strong class="t_point02">ts1</strong>');
+		var tgtFocus = $('#<strong class="t_point02">ts1</strong> > a')
+		tgt.addClass('on');
+		tgt.css('height', tgt.find('.view').innerHeight() + 68);
+		$('html, body').stop().animate({scrollTop:tgt.offset().top - 190}, 600);
+		tgtFocus.focus();
+		return false;
+	});
+});
+&lt;/script&gt;
+</pre>
+					</div>
+
+				</div>
+				<!-- //cont_box_area -->
+			</div>
+			<!-- //cont_box -->
+
+		</div>
+		<!-- //cont_area -->
+
+		<!-- @@include ../mrkp_pages_include/g_inc_btn_top.html -->
+
+	</section>
+	<!-- //container -->
+
+	<!-- @@include ../mrkp_pages_include/g_inc_footer.html -->
+
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+	jQuery(function ($) {
+
+	});
+</script>
+
+<!-- @@close-->

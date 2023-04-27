@@ -1,0 +1,259 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: table                                       	  */
+// date		: 20220303
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* table s ================================================== */
+
+/** table_ty : Horizon type **/
+.table_ty {border-top:2px solid #333;border-bottom:1px solid #e1e1e1;}
+.table_ty + .table_ty{margin-top:20px;}
+.txt_li03 + .table_ty {margin-top:14px;}
+.table_ty table {width:100%;}
+.table_ty th, .table_ty td {padding:18px 20px 17px 20px;border:solid #e1e1e1;border-width:1px 0 0 0;color:#333;font-size:15px;font-weight:100;line-height:20px;vertical-align:middle;word-wrap:break-word;word-break:break-all;}
+.table_ty thead th {background:#dae6eb;padding:18px 20px 17px 20px;border-right:1px solid #bccdd4;color:#000;font-weight:600;}
+.table_ty tbody th {background:#dae6eb;border-color:#bccdd4;color:#000;font-weight:600;vertical-align:top;}
+.table_ty tbody th.bgn {background:#fff;}
+
+/* [210617-001]기업카드 비대면 신규신청 프로세스 구축 추가 */
+.table_ty tbody th.bg_light {background-color:#ddefec;}
+/* //[210617-001]기업카드 비대면 신규신청 프로세스 구축 추가 */
+
+.table_ty tbody td {height:18px;background:#fff;}
+.table_ty tbody tr:first-child th, .table_ty tbody tr:first-child td {border-top:0;}
+.table_ty tfoot th, .table_ty tfoot td, .table_ty02 tfoot th, .table_ty02 tfoot td {padding:25px 20px;background:#fafafa;color:#000;font-size:15px;font-weight:600;}
+.table_ty02 tr.tfoot th, .table_ty02 tr.tfoot td {padding:25px 20px;background:#fafafa;color:#000;font-size:15px;font-weight:600;}
+.table_ty tfoot td {color:#ee245a;font-size:19px;}
+.table_ty tfoot td em{font-size:21px;}
+.table_ty tfoot td.data_info{color:#000;font-size:14px;font-weight:100;}
+.table_ty tfoot td.data_info em{padding-left:5px;font-size:14px;font-weight:600;}
+.table_ty .b_txt {float:left;padding-right:12px;line-height:40px;}
+.table_ty th:last-child, .table_ty td:last-child {border-right:none;}
+.table_ty .rtl th:last-child, .table_ty .rtl td:last-child {border-right:solid 1px #e1e1e1;}
+.table_ty .left {text-align:left;padding-left:60px;padding-right:10px;}
+.table_ty .right {text-align:right;padding-right:60px;padding-left:10px;}
+.table_ty .first {padding-left:40px !important;}.table_ty .last {padding-right:40px !important;}
+.table_ty .btn {margin:-7px 12px;vertical-align:top;}
+.table_ty .btn_ty04 {color:#333;}
+
+/* table_ty : 텍스트 가로 나열 */
+.table_ty .detail_list:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+.table_ty .detail_list li {float:left;position:relative;padding-left:9px;margin-left:12px;}
+.table_ty .detail_list li:first-child {margin-left:0;padding-left:0;}
+.table_ty .detail_list li:before {display:inline-blcok;position:absolute;left:0px;top:5px;width:1px;height:10px;background:#999;content:"";}
+.table_ty .detail_list li:first-child:before {display:none;}
+.table_ty .detail_list li em {display:inline-block;padding-left:5px;}
+
+/* table_ty : 텍스트 세로 나열 */
+.table_ty .table_txt li {padding-top:8px;font-size:15px;color:#000;}
+.table_ty .table_txt li:first-child {padding-top:0;}
+
+/* table_ty : 간격이 좁은 경우 */
+.table_ty.pd tbody td {padding:18px 7px 17px 7px;}
+.table_ty.pd .right {padding-right:20px;}
+.table_ty.pd .left {padding-left:20px;}
+.table_ty.pd .first {padding-left:60px;}
+.table_ty.pd .last {padding-right:60px;}
+
+/* table_ty : text style */
+.table_ty .t_txt,
+.table_ty02 .t_txt {font-weight:600;}
+.table_ty .txt_li02,
+.table_ty02 .txt_li02 {margin-top:4px;color:#333;}
+.table_ty .t_big {font-size:17px;color:#000;}
+.table_ty .tbl_point{font-size:17px;color:#00907f;}
+.table_ty .emp {padding:68px 20px 67px 20px !important;text-align:center;}
+.table_ty .right {text-align:right;padding-right:60px;padding-left:10px;}
+.table_ty .t_list + .t_list{margin-top:7px;}
+.table_ty tbody td.vt {vertical-align:top;}
+
+.table_ty .blt1:before {top:8px;}
+
+/* table_ty02 : td 세로 탑 정렬인 경우 */
+.table_ty.vat tbody td{vertical-align:top;}
+
+/** table_ty02 : Vertical type **/
+.table_ty02 {border-top:2px solid #333;}
+.table_ty02 table {width:100%;}
+.table_ty02 table {margin-top:40px;}
+.table_ty02 table:first-child {margin:0;}
+.table_scroll + .table_ty02{border-top:none;}
+.table_ty02 th, .table_ty02 td {padding:18px 10px 17px 10px;border:solid #e1e1e1;border-width:0 1px 1px 0;color:#333;font-size:15px;font-weight:100;line-height:20px;vertical-align:middle;word-wrap:break-word;word-break:break-all;}
+.table_ty02 th:last-child, .table_ty02 td:last-child {border-right:none;}
+
+.table_scroll .table_ty02 tr:last-child th, .table_scroll .table_ty02 tr:last-child td {border-bottom:none;}
+.table_ty02 .rtl th:last-child, .table_ty02 .rtl td:last-child {border-right:solid 1px #e1e1e1;}
+.table_ty02 thead th {background:#dae6eb;border-color:#bccdd4;border-width:0 1px 0 0;color:#000;font-weight:600;}
+.table_ty02 thead th.line_rn {border-right:0;}
+.table_ty02 thead th.line_l {border-width:0 1px;}
+.table_ty02 tbody th {color:#000;vertical-align:top;font-weight:600;background:#fff;}
+.table_ty02 tbody th.vm {vertical-align:middle;}
+.table_ty02 tbody td {height:18px;background-color:#fff;}
+.table_ty02 tfoot th {background:#fafafa;color:#000;}
+.table_ty02 tfoot td {background:#fafafa;}
+.table_ty02 tfoot .bg th, .table_ty02 tfoot .bg td {background:#404b57;color:#fff;}
+.table_ty02 tfoot .bg.ty02 th {background:#404b57;color:#fff;} /* 2017-12-21 */
+.table_ty02 tfoot .bg.ty02 td {background:#fafafa;color:#000;border:1px solid #e1e1e1;}
+.table_ty02 .left {padding-left:40px;text-align:left;}
+.table_ty02 .right {padding-right:40px;text-align:right;}
+.table_ty02 .bg {background:#fafafa;color:#000;}
+.table_ty02 .btn_ty04 {color:#666;}
+.table_ty02 .btn_ty04.btn_xs {color:#666; margin-top:-2px; line-height:12px;} /* 2017-10-27 */
+.table_ty02 .emp {padding:68px 20px 67px 20px !important;border-top:1px solid #bccdd4;}
+.table_ty02 .emp .txt{font-size:17px;color:000;}
+.table_ty02 tfoot.total th,
+.table_ty02 tfoot.total td {
+  // padding: 25px 40px !important;
+  background: #fafafa;
+  // border-right: 0;
+  color: #000;
+  font-size: 17px;
+}
+.table_ty02 tfoot.total td {
+  // color: #ee245a;
+  // font-size: 19px;
+  font-weight: 100;
+}
+.table_ty02 tfoot.total td em{font-size:21px;font-weight:600;}
+.table_ty02 tfoot.total td.data_info {color:#000;font-size:14px;}
+.table_ty02 tfoot.total td.data_info em {padding-left:5px;font-size:14px;font-weight:600;}
+.table_ty02 + .btn_more {margin:25px auto 0 auto;}
+.table_ty02 tbody td .btn_s{margin-left:6px;}
+.table_ty02 tbody td .b_txt {display:inline-block;line-height:40px;padding-right:20px;}
+.table_ty02 tbody td .btn_s:first-child{margin-left:0;}
+.table_ty02 tbody td .btn_s.btn_block{margin-left:0;}
+.table_ty02 tbody td .btn_s.btn_ib{margin:-6px 0 0 10px;}
+.table_ty02 tbody td .text_box{margin-top:5px;}
+.table_ty02 tbody td .text_box a{vertical-align:middle;margin:0 0 0 10px;}
+
+.table_ty02 thead th.topl {border-top:solid 1px #bccdd4;}
+.table_ty02 thead th.btml {border-bottom:solid 1px #bccdd4;}
+.table_ty02 thead th.rl {border-right:solid 1px #bccdd4;}
+.table_ty02 thead th.rr{border-left:solid 1px #bccdd4;}
+.table_ty02 thead th.br0{border-right:none;}
+.table_ty02 tbody th.topl, .table_ty tbody th.topl{border-top:solid 1px #e1e1e1;}
+.table_ty02 tbody th.btml, .table_ty tbody th.btml{border-bottom:solid 1px #e1e1e1;}
+.table_ty02 tbody th.rl, .table_ty tbody th.rl{border-right:solid 1px #e1e1e1;}
+.table_ty02 tbody th.rr, .table_ty tbody th.rr{border-left:solid 1px #e1e1e1;}
+.table_ty02 tbody td.topl, .table_ty tbody td.topl{border-top:solid 1px #e1e1e1;}
+.table_ty02 tbody td.btml, .table_ty tbody td.btml{border-bottom:solid 1px #e1e1e1;}
+.table_ty02 tbody td.rl, .table_ty tbody td.rl{border-right:solid 1px #e1e1e1;}
+.table_ty02 tbody td.rr, .table_ty tbody td.rr{border-left:solid 1px #e1e1e1;}
+
+.table_ty02 tbody td.okey{color:#8b6641;}
+.table_ty02 tbody th.th_bg{padding-left:30px !important;background:#fafafa;font-weight:100;}
+.table_ty02 tbody td.vt {vertical-align:top;}
+.table_ty02 tbody td.bg {background:#fafafa;}
+.table_ty02 tbody .brn {border-right:none !important;}
+.table_ty02 .blt1:before {top:8px;}
+
+/* table_ty02 : 간격이 좁은 경우 */
+.table_ty02.pd .right {padding-right:15px;}
+.table_ty02.pd .left {padding-left:15px;}
+.table_ty02.pd .first {padding-left:60px;}
+.table_ty02.pd .last {padding-right:60px;}
+.table_ty02.pd tbody td {padding:18px 10px 17px 10px;}
+
+/* table_ty02 : 간격이 좁은 경우 */
+.table_ty02.pd02 .right {padding-right:15px;}
+.table_ty02.pd02 .left {padding-left:15px;}
+.table_ty02.pd02 .first {padding-left:60px;}
+.table_ty02.pd02 .last {padding-right:60px;}
+.table_ty02.pd02 th, .table_ty02.pd02 td {padding:8px 10px 7px 10px;}
+
+
+/* table_ty02 : th 세로 중앙 정렬인 경우 */
+.table_ty02.vm tbody th{font-weight:100;vertical-align:middle;}
+.table_ty02.vm tbody th .img{margin-bottom:5px;}
+
+/* table_ty02 : td 세로 탑 정렬인 경우 */
+.table_ty02.vat tbody td{vertical-align:top;}
+
+/* table_ty02 : 텍스트 세로 나열 */
+.table_list li {padding-top:8px;font-size:15px;color:#000;}
+.table_list li:first-child {padding-top:0;}
+
+
+/* table_ty02 : 셀이 많고 좁은 경우 */
+.table_ty02.pd03 thead th {background:#dae6eb;border-color:#bccdd4;border-width:0 1px 0 0;color:#000;font-weight:600;}
+.table_ty02.pd03 th, .table_ty02.pd03 td {padding:18px 5px 17px 5px;border:solid #e1e1e1;border-width:0 1px 1px 0;color:#333;font-size:15px;font-weight:100;line-height:20px;vertical-align:middle;word-wrap:break-word;word-break:break-all;}
+.table_ty02.pd03 th:last-child, .table_ty02.pd03 td:last-child {border-right:none;}
+
+
+/** table_ty03 : Vertical type **/
+.table_ty03 table {width:100%;}
+.table_ty03 th, .table_ty03 td {padding:18px 10px 17px 10px;color:#333;font-size:15px;font-weight:100;line-height:20px;vertical-align:middle;word-wrap:break-word;word-break:break-all;}
+.table_ty03 thead th {vertical-align:top;color:#000;font-weight:600;background:#e1e2e6;border-right:solid 1px #cfcfcf;}
+.table_ty03 thead th:last-child {border-right:1px solid #e1e2e6;}
+.table_ty03 tbody td {height:18px;background-color:#fff;border:solid #cfcfcf;border-width:0 1px 1px;}
+
+
+/** table_head : 테이블 상단 영역 **/
+.table_head {position:relative;display:table;width:100%;margin-bottom:22px;}
+.t_tit_area02 {display:table;width:100%;margin-bottom:22px;}
+.table_head.mt {position:relative;margin-bottom:-24px;z-index:1;}
+
+.table_head .left, .t_tit_area02 .t_tit{display:table-cell;text-align:left;vertical-align:middle;}
+.table_head  ul.left li {float:left;margin-left:30px;font-size:15px;line-height:17px;}
+.table_head  ul.left li:first-child {margin-left:0;}
+.table_head  ul.left:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+.table_head .right, .t_tit_area02 .right{float:right;text-align:right;vertical-align:middle;margin:0 0 -3px 0;}
+.table_head .right li{display:table-cell;padding-left:12px;text-align:right;vertical-align:middle;}
+.table_head .right .btn_s{margin-bottom:-4px;}
+.table_head .right.ty02{position:absolute;right:0;bottom:0;}
+.table_head .data, .t_tit_area02 .data{font-size:14px;color:#666;padding-top:4px;}
+.table_head p{line-height:18px;}
+.t_tit_area02 .t_tit.ico_card{padding-left:33px;background:url(../images/contents/ico_card_limit.png) no-repeat 0 6px;}
+.t_tit_area02 .t_tit.ico_card02{padding-left:33px;background:url(../images/contents/ico_card_limit.png) no-repeat 0 3px;}/** 포인트조회 > 복지포인트 **/
+.table_head .blt1{margin-top:5px;}
+.table_head .blt1:first-child{margin-top:0;}
+.table_head .blt1 .btn_s {margin-left:8px;}
+.table_head .t_tit.ty02{font-weight:100;font-size:19px;}
+.table_head .btn_s{min-width:inherit;}
+.table_head .data_benefit{font-size:21px;color:#000;padding-bottom:3px;}
+.table_head .data_benefit strong{font-weight:900;}
+
+/* table_head : icon btn 인 경우 */
+.table_head .btn {float:right;margin:5px 0 -3px 0;}
+.table_head .btn li {color:#000;margin-left:12px;padding:0;}
+.table_head .btn li:before {display:none;}
+.table_head .btn li a {display:block;padding:0 20px 0 4px;font-size:14px;transition:all 0.4s}
+.table_head .btn li a:hover, .state_info .btn li a:focus {color:#000;}
+.table_head .btn li .btn_print{margin-right:12px;}
+.table_head .btn li .btn_email{margin-left:10px;} /* 21.08.13 */
+
+/** table_info : 테이블 하단 영역 **/
+.table_info {margin-top:15px;color:#666;font-size:14px;}
+.table_info:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+.table_info.right {text-align:right;}
+.table_info .blt1:before{top:10px;}
+.table_info .btn_ty04 {margin-left:10px;color: #666;}
+.table_info .blt2{font-size:14px;}
+.table_info .blt2:before{background:#666;top:12px;}
+/* [210617-001]기업카드 비대면 신규신청 프로세스 구축 추가*/
+.table_info .blt2.clear{overflow:hidden;}
+/* //[210617-001]기업카드 비대면 신규신청 프로세스 구축 추가*/
+p.table_info {position:relative;padding-left:10px;}
+p.table_info:before {position:absolute;left:0;top:12px;width:4px;height:1px;background:#666;content:"";}
+.table_info02 {margin-top:25px;padding-top:10px;color:#333;}
+.table_info02 a {margin-left:8px;}
+p.table_info02 {position:relative;padding-left:10px;border-top: 1px solid #e1e1e1;}
+p.table_info02:before {position:absolute;left:0;top:22px;width:4px;height:1px;background:#666;content:"";}
+p.table_info02.ty02{border-top:none;margin-top:0;}
+p.table_info02.ty03{margin-top:-1px;}
+.btn_more.off02 {margin-bottom:26px;}
+
+/** tbl_header **/
+.tbl_header {position:relative;margin-bottom:20px;}
+.tbl_header .left {float:left;}
+.tbl_header .right {float:right;}
+.tbl_header .btn a {display:block;padding-right:14px;background:url(../images/template/ico_arrow_color.png) right center no-repeat;transition:color 0.4s;}
+.tbl_header .btn a:hover, .tbl_header .btn a:focus {color:#00907f;}
+.tbl_header:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+
+
+/* table e ================================================== */
+/* ---------------------------------------------------------- */

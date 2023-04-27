@@ -1,0 +1,80 @@
+/*
+Name: markup-list-guide-css
+Version: 1.0
+*/
+table { border-spacing: 0; border-collapse: collapse; }
+
+td, th { padding: 0; }
+
+/* guide-wrap */
+.guide-wrap { font-size: 1.2rem; }
+
+.gw-grid { margin: 0 auto 40px; max-width: 1000px; padding: 20px; }
+
+.gw-grid h1 { display: block; margin-bottom: 20px; padding: 5px 10px; font-weight: 700; font-size: 2rem; color: #fff; background: #333; }
+
+.gw-grid h3 { margin-top: 40px; margin-bottom: 10px; font-weight: 700; font-size: 1.6rem; }
+
+.gw-grid h3:first-child { margin-top: 0; }
+
+.gw-grid h3 + .txt-desc { margin-bottom: 10px; }
+
+.guide-wrap hr { display: block; margin: 40px 0; height: 0px; border-top: 0; border-bottom: 1px solid #ccc; }
+
+.txt-desc { font-size: 1.2rem; color: #666; }
+
+/* syntax highligher */
+.sh-wrap { border: 1px solid #000; }
+
+.gw-code-wrap h5 { position: relative; margin-top: 20px; padding-left: 10px; font-size: 1.4rem; color: #444; }
+
+.gw-code-wrap h5:before { content: ''; display: inline-block; top: 50%; left: 0; margin-top: -6px; width: 3px; height: 12px; margin-right: 5px; position: absolute; vertical-align: middle; background: #666; }
+
+.gw-code-wrap h5 + .ul-dot-gray, .gw-code-wrap h5 + .gw-view-table { margin-top: 10px; }
+
+.syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption, .syntaxhighlighter textarea { font-size: 1.3rem !important; }
+
+.syntaxhighlighter .line.alt1 { background-color: #0f192a !important; }
+
+.syntaxhighlighter .line.alt1 { background-color: #111E31 !important; }
+
+/* font */
+.font-exam-box { padding: 100px 50px; }
+
+.font-exam-box hr { display: block; margin: 20px 0; }
+
+.font-exam-box h1, .font-exam-box h2, .font-exam-box h3, .font-exam-box h4, .font-exam-box h5, .font-exam-box h6 { font-size: 1.6rem; }
+
+.font-exam-box ul > li { margin: 10px 0; }
+
+.feb-NotoSansKR { font-family: 'Noto Sans KR', sans-serif; }
+
+.feb-NotoSerifKR { font-family: 'Noto Serif KR', serif; }
+
+.feb-AppleSDGothicNeo { font-family: 'Apple SD Gothic Neo', sans-serif; }
+
+.feb-MalgunGothic { font-family: 'Malgun Gothic', sans-serif; }
+
+.feb-NanumGothic { font-family: 'Nanum Gothic', sans-serif; }
+
+.feb-NanumMyeongjo { font-family: 'Nanum Myeongjo', serif; }
+
+.feb-Roboto { font-family: 'Roboto', sans-serif; }
+
+/* table */
+.gw-view-table { border-top: 1px solid #999; border-bottom: 1px solid #999; }
+
+.gw-view-table th, .gw-view-table td { padding: 5px 15px; line-height: 1.6rem; text-align: left; border-bottom: 1px solid #eee; }
+
+.gw-view-table th { background: #f8f8f8; }
+
+/* list */
+.ul-dot-gray > li { position: relative; padding-left: 15px; font-size: 1.2rem; color: #666; line-height: 18px; }
+
+.ul-dot-gray > li:before { content: ''; position: absolute; top: 5px; left: 5px; width: 2px; height: 2px; background: #666; }
+
+.code-copy { float: right; display: inline-block; margin-bottom: 10px; padding: 2px 6px; background: #fff; border: 1px solid #000; border-radius: 4px; cursor: pointer; }
+
+.code-copy:hover { background: #000; color: #fff; }
+
+/*# sourceMappingURL=markup_guide_inside.css.map */

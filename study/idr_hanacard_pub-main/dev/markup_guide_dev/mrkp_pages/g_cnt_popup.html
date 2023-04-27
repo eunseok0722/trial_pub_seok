@@ -1,0 +1,386 @@
+<!-- @@master ../../layout_mrkp_template.html -->
+
+<!-- @@block root_mrkp_content -->
+
+<!-- wrap -->
+<div id="wrap" class="biz">
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_header.html -->
+
+	<!-- @@include ../mrkp_pages_include/g_inc_breadcrumb.html -->
+	
+	<!-- container -->
+	<section id="container">
+		<h2 class="blind">하나카드 가이드</h2><!-- Gnb 1depth Menu -->
+		<!-- cont_area -->
+		<div class="cont_area">
+			
+			<h3 class="title"><em>하나카드</em>Popup</h3><!-- em : 상위 메뉴 -->
+			
+			<!-- cont_box -->
+			<div class="cont_box">
+				<!-- cont_box_area -->
+				<div class="cont_box_area">
+					
+					<!-- @@include ../mrkp_pages_include/g_inc_cnt_tab.html -->
+					
+					<!----->
+					<article class="cont">
+						<h4 class="t_tit">레이어 팝업 (Basic)</h4>
+<div style="margin-bottom:60px;padding:20px;background:#eee;">
+<pre>
+- <strong class="t_point02">pop01 : 팝업 ID Name</strong>
+- 팝업오픈시 class="btn_pop <strong class="t_point"><strong class="t_point02">ID Name</strong>_open</strong>
+- 팝업닫기시 class="btn_pop_close <strong class="t_point"><strong class="t_point02">ID Name</strong>_close</strong>
+
+&lt;a href="<strong class="t_point02">#pop01</strong>" class="btn_ty btn_m <strong class="t_point">btn_pop</strong> <strong class="t_point"><strong class="t_point02">pop01</strong>_open</strong>"&gt;팝업 버튼&lt;/a&gt;
+&lt;!-- popup --&gt;
+&lt;section class="modal" <strong class="t_point02">id="pop01"</strong>&gt;
+    &lt;div class="modal_wrap"&gt;
+        &lt;!-- modal_header --&gt;
+        &lt;div class="modal_header"&gt;
+            &lt;h2&gt;팝업타이틀&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;!-- //modal_header --&gt;
+        &lt;!-- modal_body --&gt;
+        &lt;div class="modal_body pop_ty"&gt;
+            &lt;article class="cont"&gt;
+                팝업내용
+            &lt;/article&gt;
+        &lt;/div&gt;
+        &lt;!-- //modal_body --&gt;
+        &lt;button class="<strong class="t_point"><strong class="t_point02">pop01</strong>_close</strong> btn_pop_close"&gt;팝업 닫기&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- //popup --&gt;
+</pre>
+</div>
+
+<div style="margin-bottom:60px;padding:20px;background:#eee;">
+<pre>
+<strong>- 팝업 자동 오픈</strong>
+&lt;script type="text/javascript"&gt;
+jQuery(function($){
+    $('<strong class="t_point02">#pop01</strong>').popup({
+        <strong class="t_point">autoopen: true,</strong>
+    });
+});
+
+<strong>- 팝업 함수</strong>
+&lt;script type="text/javascript"&gt;
+jQuery(function($){
+    $('<strong class="t_point02">#pop01</strong>').popup('<strong class="t_point">show</strong>');   // <strong class="t_point">열림</strong>
+    $('<strong class="t_point02">#pop01</strong>').popup('<strong class="t_point">hide</strong>');   // <strong class="t_point">닫음</strong>
+	$('<strong class="t_point02">#pop01</strong>').popup({
+       <strong class="t_point"> onopen:function(){
+            alert('open 함수');
+        }
+        onclose:function(){
+            alert('close 함수');
+        }</strong>
+    });
+});
+&lt;/script&gt;
+</pre>
+</div>
+
+<a href="#pop01" class="btn_ty btn_m btn_pop pops01_open">로그인 오류</a>
+					</article>
+					<!----->
+					
+					
+					<!-- Popup Guide -->
+					<article class="cont hr">
+						<h4 class="t_tit">Tooltip Guide</h4>
+						<!-- tooltip_ty -->
+						<div class="tooltip_ty left" style="margin-right:200px;">
+							<a href="#tooltip" class="btn_tip">Tooltip : Left</a>
+							<!-- tooltip_area -->
+							<div class="tooltip_area">
+								<!-- tooltip_cont -->
+								<div class="tooltip_cont">
+									<p>하나카드에 등록되어 있는 개인회원 본인명의
+									의 KT 이동통신 휴대폰만 신청 가능합니다.<br>
+									(집전화, 인터넷 전화, 결합상품 신청 불가)하나카드에 등록되어 있는 개인회원 본인명의
+									의 KT 이동통신 휴대폰만 신청 가능합니다.</p>
+								</div>
+								<!-- //tooltip_cont -->
+								<a href="#" class="btn_tooltip_close">Tooltip 내용 닫기</a>
+							</div>
+							<!-- //tooltip_area -->
+						</div>
+						<!-- //tooltip_ty -->
+						
+						<!-- tooltip_ty -->
+						<div class="tooltip_ty" style="margin-right:200px;">
+							<a href="#tooltip" class="btn_tip">Tooltip Basic : Cennter</a>
+							<!-- tooltip_area -->
+							<div class="tooltip_area">
+								<!-- tooltip_cont -->
+								<div class="tooltip_cont">
+									<p>하나카드에 등록되어 있는 개인회원 본인명의
+									의 KT 이동통신 휴대폰만 신청 가능합니다.<br>
+									(집전화, 인터넷 전화, 결합상품 신청 불가)하나카드에 등록되어 있는 개인회원 본인명의
+									의 KT 이동통신 휴대폰만 신청 가능합니다.</p>
+								</div>
+								<!-- //tooltip_cont -->
+								<a href="#" class="btn_tooltip_close">Tooltip 내용 닫기</a>
+							</div>
+							<!-- //tooltip_area -->
+						</div>
+						<!-- //tooltip_ty -->
+						
+						<!-- tooltip_ty -->
+						<div class="tooltip_ty right">
+							<a href="#tooltip" class="btn_tip">Tooltip : Right</a>
+							<!-- tooltip_area -->
+							<div class="tooltip_area">
+								<!-- tooltip_cont -->
+								<div class="tooltip_cont">
+									<p>하나카드에 등록되어 있는 개인회원 본인명의
+									의 KT 이동통신 휴대폰만 신청 가능합니다.<br>
+									(집전화, 인터넷 전화, 결합상품 신청 불가)하나카드에 등록되어 있는 개인회원 본인명의
+									의 KT 이동통신 휴대폰만 신청 가능합니다.</p>
+								</div>
+								<!-- //tooltip_cont -->
+								<a href="#" class="btn_tooltip_close">Tooltip 내용 닫기</a>
+							</div>
+							<!-- //tooltip_area -->
+						</div>
+						<!-- //tooltip_ty -->
+					</article>
+					<!-- //Popup Guide -->
+					
+					<!-- Popup Guide -->
+					<article class="cont hr">
+						<h4 class="t_tit">Popup Guide : Popup Size</h4>
+						<a href="#pop01" class="btn_ty btn_b btn_pop pop01_open">pop_ty</a>
+						<a href="#pop02" class="btn_ty btn_b btn_pop pop02_open">pop_ty02</a>
+						<a href="#pop03" class="btn_ty btn_b btn_pop pop03_open">pop_ty03</a>
+					</article>
+					<!-- //Popup Guide -->
+					
+					<!-- Popup Guide -->
+					<article class="cont hr">
+						<h4 class="t_tit">Popup Guide : Header Type</h4>
+						<a href="#pop04" class="btn_ty btn_b btn_pop pop04_open">header</a>
+						<a href="#pop05" class="btn_ty btn_b btn_pop pop05_open">header02</a>
+					</article>
+					<!-- //Popup Guide -->
+					
+					<!-- Popup Guide -->
+					<article class="cont hr">
+						<h4 class="t_tit">Popup Guide : Window Popup</h4>
+						<a href="./pop_win.html" class="btn_ty02 btn_b" target="_blank" title="asdasd 새창열림" onclick="window.open(this.href,'타이틀영역','width=800,height=500'); return false;">Window</a>
+					</article>
+					<!-- //Popup Guide -->					
+
+				</div>
+				<!-- //cont_box_area -->
+			</div>
+			<!-- //cont_box -->
+
+		</div>
+		<!-- //cont_area -->
+		
+		<!-- @@include ../mrkp_pages_include/g_inc_btn_top.html -->
+
+	</section>
+	<!-- //container -->
+	
+	<!-- @@include ../mrkp_pages_include/g_inc_footer.html -->
+
+</div>
+<!-- //wrap -->
+
+<!-- popup -->
+<section class="modal" id="pops01">
+	<div class="modal_wrap">
+		<!-- modal_header -->
+		<div class="modal_header">
+			<h2>알림</h2>
+		</div>
+		<!-- //modal_header -->
+		<!-- modal_body -->
+		<div class="modal_body pop_ty">
+			<article class="cont">
+				<!-- notice_area -->
+				<div class="notice_area">
+					<h3 class="w_tit">아이디 또는 비밀번호가<br>올바르지 않습니다.</h3>
+					<p class="s_txt">확인 후 로그인해주세요.</p>
+					<div class="txt_box">
+						비밀번호 5회 연속 오류 시 로그인이 제한됩니다.
+					</div>
+					<!-- btn_area -->
+					<ul class="btn_area">
+						<li>
+							<a href="#" class="btn_m btn_ty02 pop01_close">확인</a>
+						</li>
+					</ul>
+					<!-- //btn_area -->
+				</div>
+				<!-- //notice_area -->
+			</article>
+		</div>
+		<!-- //modal_body -->
+		<button class="pops01_close btn_pop_close">팝업 닫기</button>
+	</div>
+</section>
+<!-- //popup -->
+
+<!-- popup -->
+<section class="modal" id="pop01">
+	<div class="modal_wrap">
+		<!-- modal_header -->
+		<div class="modal_header">
+			<h2>조회기간</h2>
+		</div>
+		<!-- //modal_header -->
+
+		<!-- modal_body -->
+		<div class="modal_body pop_ty">
+			<article class="cont">
+				<div class="layout_guide">
+					<p><span>360px<br><br><em>컨텐츠 영역</em></span></p>
+				</div>
+			</article>
+		</div>
+		<!-- //modal_body -->
+		<button class="pop01_close btn_pop_close">팝업 닫기</button>
+	</div>
+</section>
+<!-- //popup -->
+
+<!-- popup -->
+<section class="modal" id="pop02">
+	<div class="modal_wrap">
+		<!-- modal_header -->
+		<div class="modal_header">
+			<h2>조회기간</h2>
+		</div>
+		<!-- //modal_header -->
+
+		<!-- modal_body -->
+		<div class="modal_body pop_ty02">
+			<article class="cont">
+				<div class="layout_guide">
+					<p><span>580px<br><br><em>컨텐츠 영역</em></span></p>
+				</div>
+			</article>
+		</div>
+		<!-- //modal_body -->
+		<button class="pop02_close btn_pop_close">팝업 닫기</button>
+	</div>
+</section>
+<!-- //popup -->
+
+<!-- popup -->
+<section class="modal" id="pop03">
+	<div class="modal_wrap">
+		<!-- modal_header -->
+		<div class="modal_header">
+			<h2>조회기간</h2>
+		</div>
+		<!-- //modal_header -->
+
+		<!-- modal_body -->
+		<div class="modal_body pop_ty03">
+			<article class="cont">
+				<div class="layout_guide">
+					<p><span>780px<br><br><em>컨텐츠 영역</em></span></p>
+				</div>
+			</article>
+		</div>
+		<!-- //modal_body -->
+		<button class="pop03_close btn_pop_close">팝업 닫기</button>
+	</div>
+</section>
+<!-- //popup -->
+
+<!-- popup -->
+<section class="modal" id="pop04">
+	<div class="modal_wrap">
+		<!-- modal_header -->
+		<div class="modal_header">
+			<h2>조회기간</h2>
+		</div>
+		<!-- //modal_header -->
+
+		<!-- modal_body -->
+		<div class="modal_body pop_ty02">
+			<article class="cont mtm10">
+				<!-- pop_search_area -->
+				<div class="pop_search_area">
+					<form>
+						<fieldset>
+						<legend>조회조건</legend>
+							<input type="text" class="input_ty w220 select_date" title="시작일 입력 (예:0000-00-00)">
+							<span class="b_br">~</span>
+							<input type="text" class="input_ty w220 select_date" title="종료일 입력 (예:0000-00-00)">
+							<a href="#" class="btn_m btn_ty w100 ml10">조회</a>
+						</fieldset>
+					</form>
+				</div>
+				<!-- //pop_search_area-->
+			</article>
+		</div>
+		<!-- //modal_body -->
+		<button class="pop04_close btn_pop_close">팝업 닫기</button>
+	</div>
+</section>
+<!-- //popup -->
+
+<!-- popup -->
+<section class="modal" id="pop05">
+	<div class="modal_wrap">
+		<!-- modal_header -->
+		<div class="modal_header md_h02">
+			<h2>조회기간</h2>
+		</div>
+		<!-- //modal_header -->
+
+		<!-- modal_body -->
+		<div class="modal_body pop_ty02">
+			<article class="cont mtm10">
+				<!-- pop_search_area -->
+				<div class="pop_search_area">
+					<form>
+						<fieldset>
+						<legend>조회조건</legend>
+							<input type="text" class="input_ty w220 select_date" title="시작일 입력 (예:0000-00-00)">
+							<span class="b_br">~</span>
+							<input type="text" class="input_ty w220 select_date" title="종료일 입력 (예:0000-00-00)">
+							<a href="#" class="btn_m btn_ty w100 ml10">조회</a>
+						</fieldset>
+					</form>
+				</div>
+				<!-- //pop_search_area-->
+			</article>
+		</div>
+		<!-- //modal_body -->
+		<button class="pop05_close btn_pop_close bclose">팝업 닫기</button>
+	</div>
+</section>
+<!-- //popup -->
+
+<script type="text/javascript">
+	jQuery(function ($) {
+		//탭 활성화
+		activeTabTy('.g_cnt_tabs', 4);
+
+		//$('#pop01').popup('show');
+		$('#pops01').popup({
+			/*onopen:function(){
+			alert('open 함수');
+			}*/
+			onclose: function () {
+				alert('close 함수');
+			}
+		});
+		$('.test').click(function () {
+			$('#pops01').popup('hide');
+		});
+	});
+</script>
+
+<!-- @@close-->

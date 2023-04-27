@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="EUC-KR">
+	<meta name="viewport" content="width=1450">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>하나카드</title>
+	<link rel="shortcut icon" href="../../assets/images/layout/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="../../assets/images/layout/apple-touch-icon.png">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/display_pcard.css">
+	<link rel="stylesheet" type="text/css" href="../mrkp_assets/css/display_guide_contents.css">
+	<script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/ui.js"></script>
+	<script type="text/javascript" src="../../assets/js/template.js"></script>
+	<script type="text/javascript" src="../../assets/js/assist.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="../../js/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<a href="#container" accesskey="1" class="skip_area">메뉴건너뛰고 본문 바로가기</a>
+
+
+<!-- wrap -->
+<div id="wrap" class="biz">
+	
+    <!-- header -->
+	<header class>
+		<h1 class="blind">하나카드</h1>
+		<p class="guide">Header</p>
+	</header>
+	<!-- //header -->
+
+    <!-- breadcrumb -->
+	<nav class="breadcrumb">
+		<div class="cont">
+			<span><a href="#none">HOME</a></span>
+			<span><a href="#none">마이페이지</a></span>
+			<span><a href="#none">결제내역</a></span>
+			<span>승인내역</span>
+		</div>
+	</nav>
+	<!-- //breadcrumb -->
+	
+	<!-- container -->
+	<section id="container">
+		<h2 class="blind">하나카드 가이드</h2><!-- Gnb 1depth Menu -->
+		<!-- cont_area -->
+		<div class="cont_area">
+			
+			<h3 class="title"><em>이용내역</em>해외이용내역</h3><!-- em : 상위 메뉴 -->
+			
+			<!-- cont_box -->
+			<div class="cont_box">
+				<!-- cont_box_area -->
+				<div class="cont_box_area">
+					
+    				<!-- tab_ty04 -->
+					<nav class="tab_ty g_cnt_tabs">
+						<ul>
+							<li><a href="g_cnt_search.html">컨텐츠조회</a></li><!-- 활성화 class="on" -->
+							<li><a href="g_cnt_certi.html">인증</a></li>
+							<li><a href="g_cnt_policy.html">약관</a></li>
+							<li><a href="g_cnt_member.html">회원</a></li>
+							<li><a href="g_cnt_popup.html">팝업</a></li>
+							<li><a href="g_cnt_complete.html">완료</a></li>
+							<li><a href="g_cnt_etc.html">Etc.</a></li>
+						</ul>
+					</nav>
+					<!-- //tab_ty04 -->
+
+					
+
+				</div>
+				<!-- //cont_box_area -->
+			</div>
+			<!-- //cont_box -->
+
+		</div>
+		<!-- //cont_area -->
+		
+    <a href="#container" class="btn_top">상단으로 이동</a>
+
+	</section>
+	<!-- //container -->
+	
+    <!-- footer -->
+	<footer>
+		<p class="guide">Footer</p>
+	</footer>
+	<!-- //footer -->
+
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript">
+	jQuery(function ($) {
+		//탭 활성화
+		activeTabTy('.g_cnt_tabs', 0);
+	});
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: button                                       	  */
+// date		: 20220303
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* button s ================================================= */
+
+/* Etc. */
+.btn_top {
+  display:none;
+  position:fixed;
+  right:calc(50% - 620px);
+  bottom:60px;
+  width:50px;
+  height:50px;
+  background:#fff url(../images/layout/btn_top.png) center no-repeat;
+  text-indent:-9999px;
+  z-index:3;
+  margin-right:-4px;
+  &.act{
+    position:absolute;
+  }
+}
+
+/* btn_area */
+.btn_area {margin-top:40px;padding:0 1px;font-size:0;}
+.btn_area a {margin:0 10px;}
+.btn_area li {text-align:center;}
+.btn_area .left {float:left;}
+.btn_area .left a {display:block;float:left;margin:0 10px 0 0;}
+.btn_area .right {float:right;}
+.btn_area .right a {display:block;float:left;margin:0 0 0 10px;}
+.btn_area:after {display:block;clear:both;height:0;content:"";overflow:hidden;}
+.btn_area.ty_m a {margin:0 5px;min-width:110px;}/* btn_m Type */
+.btn_area.ty_s a {margin:0 6px;}
+
+.btn_more + .btn_area{border-top:1px solid #e1e1e1;margin-top:25px;padding-top:40px;}/* 테이블 + 더보기 버튼  + 일반 버튼인경우 */
+.state_ty + .btn_area.ty02,.state_ty02 + .btn_area.ty02{border-top:1px solid #e1e1e1;padding-top:40px;margin-top:25px;}
+.btn_more.off + .btn_area{border-top:0;margin-top:40px;padding-top:0;}
+.state_area .btn_more.off {border-top:0;margin-top:0;padding-top:0;}
+
+
+/*
+.off02 + .table_info02 {border-top:0;margin-top:0;padding-top:0;}
+.off + .table_info02 {border-top:0;margin-top:0;padding-top:0;}
+*/
+
+/* Button Size */
+.btn_b {display:inline-block;min-width:180px;height:48px;padding:0 20px;border-radius:3px;box-sizing:border-box;font-size:17px;line-height:47px;text-align:center;}
+.btn_m {display:inline-block;min-width:100px;height:40px;padding:0 12px;border-radius:3px;box-sizing:border-box;font-size:15px;line-height:38px;text-align:center;}
+.btn_s {display:inline-block;min-width:74px;height:32px;padding:0 12px;border-radius:3px;box-sizing:border-box;font-size:13px;line-height:31px;text-align:center;}
+.btn_xs {display:inline-block;height:24px;padding:4px 10px;border-radius:3px;box-sizing:border-box;font-size:13px;line-height:14px;text-align:center;}
+.btn_l {display:inline-block;min-width:320px;height:68px;padding:0 20px;border-radius:3px;box-sizing:border-box;font-size:21px;line-height:67px;text-align:center;}
+/* 카드이용내역:영수증 추가 19-12-04 */
+.btn_lxs{position:absolute; top:20px; left:240px; z-index:1;}
+.btn_lxs a:after{display: none;}
+
+
+
+/* popup 17.10.24 */
+.modal_wrap .txt_benefit li {margin:0px 0px 40px 60px;}
+.modal_wrap .txt_benefit li:last-child {margin-bottom:0px;}
+.modal_wrap .txt_benefit .t_tit {position:relative; line-height:28px; margin-bottom:10px; font-size:21px;}
+.modal_wrap .txt_benefit .t_tit span {position:absolute; top:0px; left:0px; display:inline-block; width:50px; margin:-1px 10px 0px -60px;border-radius:3px;box-sizing:border-box;font-weight:600; font-size:13px;text-align:center; color:#000; background:#d1dee3;}
+
+
+/* Button Color */
+.btn_ty {background:#666;border:1px solid #666;color:#fff !important;transition:all 0.4s;}
+.btn_ty:hover, .btn_ty:focus {background:#555;border-color:#555;}
+.btn_ty02 {background:#00907f;border:1px solid #00907f;color:#fff !important;transition:all 0.4s;}
+.btn_ty02:hover, .btn_ty02:focus {background:#007d6e;border-color:#007d6e;}
+.btn_ty03 {background:#d14369;border:1px solid #d14369;color:#fff !important;transition:all 0.4s;}
+.btn_ty03:hover, .btn_ty03:focus {background:#c4204c;border-color:#c4204c;}
+.btn_ty04 {background:#fff;border:1px solid #aaa;color:#000 !important;transition:all 0.4s;}
+.btn_ty04:hover, .btn_ty04:focus {border-color:#666;color:#000 !important;text-decoration:none !important;}
+.btn_ty05 {background:#fff;border:1px solid #00907f;color:#00907f !important;transition:all 0.4s;}
+.btn_ty05:hover, .btn_ty05:focus {border-color:#007d6e;color:#007d6e !important;}
+.btn_ty06 {background:#404b57;border:1px solid #404b57;color:#fff !important;transition:all 0.4s;}
+.btn_ty06:hover, .btn_ty06:focus {background:#2b333b;border-color:#2b333b;color:#fff !important;}
+.btn_ty07 {background:#f0f0f0;border:1px solid #ccc;color:#000 !important;transition:all 0.4s;}
+.btn_ty07:hover, .btn_ty07:focus {background:#eaeaea;border-color:#eaeaea;color:#000 !important;}
+
+
+
+/* btn_step */
+.btn_prev.btn_b {position:relative;padding-left:17px;margin-left:17px;min-width:163px;border-radius:2px 3px 3px 2px;}
+.btn_prev:before {display:block;position:absolute;left:-17px;top:0;width:0;height:0;border-top:23px solid transparent;border-bottom:23px solid transparent;border-right:16px solid;border-radius:1px;content:"";z-index:1;transition:all 0.3s;}
+.btn_prev.btn_ty:before {border-right-color:#666;}
+.btn_prev.btn_ty:hover:before, .btn_prev.btn_ty:focus:before {border-right-color:#555;}
+.btn_prev.btn_ty02:before {border-right-color:#00907f;}
+.btn_prev.btn_ty02:hover:before, .btn_prev.btn_ty02:focus:before {border-right-color:#007d6e;}
+.btn_prev.btn_ty03:before {border-right-color:#d14369;}
+.btn_prev.btn_ty03:hover:before, .btn_prev.btn_ty03:focus:before {border-right-color:#c4204c;}
+.btn_prev.btn_ty04:before {border-right-color:#aaa;}
+.btn_prev.btn_ty04:after {display:block;position:absolute;left:-16px;top:0;width:0;height:0;border-top:23px solid transparent;border-bottom:23px solid transparent;border-right:16px solid #fff;border-radius:1px;content:"";z-index:1;transition:all 0.3s;}
+.btn_prev.btn_ty04:hover:before, .btn_prev.btn_ty04:focus:before {border-right-color:#666;}
+
+.btn_next.btn_b {position:relative;padding-right:17px;margin-right:17px;min-width:163px;border-radius:3px 2px 2px 3px;}
+.btn_next:before {display:block;position:absolute;right:-17px;top:0;width:0;height:0;border-top:23px solid transparent;border-bottom:23px solid transparent;border-left:16px solid;border-radius:1px;content:"";z-index:1;transition:all 0.3s;}
+.btn_next.btn_ty:before {border-left-color:#666;}
+.btn_next.btn_ty:hover:before, .btn_next.btn_ty:focus:before {border-left-color:#555;}
+.btn_next.btn_ty02:before {border-left-color:#00907f;}
+.btn_next.btn_ty02:hover:before, .btn_next.btn_ty02:focus:before {border-left-color:#007d6e;}
+.btn_next.btn_ty03:before {border-left-color:#d14369;}
+.btn_next.btn_ty03:hover:before, .btn_next.btn_ty03:focus:before {border-left-color:#c4204c;}
+.btn_next.btn_ty04:before {border-left-color:#aaa;}
+.btn_next.btn_ty04:after {display:block;position:absolute;right:-16px;top:0;width:0;height:0;border-top:23px solid transparent;border-bottom:23px solid transparent;border-left:16px solid #fff;border-radius:1px;content:"";z-index:1;transition:all 0.3s;}
+.btn_next.btn_ty04:hover:before, .btn_next.btn_ty04:focus:before {border-left-color:#666;}
+
+
+/** Button : etc **/
+/* btn_key_box */
+.btn_key_box {position:relative;float:left;}
+.btn_key {position:absolute;right:13px;top:0;display:block;width:38px;height:40px;background:url(../images/template/ico_btn_key.png) center no-repeat;text-indent:-9999px;overflow:hidden;transition:background 0.4s;}
+/*.btn_key:hover, .btn_key:focus {background:url(../images/template/ico_btn_key_on.png) center no-repeat;}*/
+.btn_key_box .input_ty{padding-right:40px;}
+
+/* btn_masking_box */
+.btn_masking_box {position:relative;float:left;}
+.btn_masking {position:absolute;right:13px;top:1px;display:block;width:38px;height:38px;background:url(../images/template/ico_btn_masking.png) center no-repeat;text-indent:-9999px;overflow:hidden;transition:background 0.4s;}
+.btn_masking:hover, .btn_masking:focus {background:url(../images/template/ico_btn_masking_on.png) center no-repeat;}
+.btn_masking_box .input_ty{padding-right:40px;}
+
+/* btn_security_box */
+.btn_security_box {position:relative;float:left;}
+.btn_security_box .btn_masking{right:50px;width:24px;}
+.btn_security_box .input_ty{padding-right:40px;}
+
+/* btn_more */
+.btn_more {display:block;padding:5px 0;width:120px;margin:25px auto 0 auto;border:1px solid #e8e8e8;border-radius:20px;box-sizing:border-box;color:#000;font-size:15px;text-align:center;overflow:hidden;}
+.btn_more strong {display:inline-block;padding-right:17px;background:url(../images/template/ico_more02.png) right center no-repeat;}
+.btn_more span {display:inline-block;padding-left:8px;}
+.btn_more:hover strong {animation:more_arrow 0.6s both linear infinite;}
+.btn_more.mb {margin-bottom:25px;}
+
+/* btn_more02 */
+.btn_more02 {display:block;padding:5px 0;width:110px;margin:25px auto;border:1px solid #e8e8e8;border-radius:20px;box-sizing:border-box;color:#000;font-size:15px;text-align:center;overflow:hidden;}
+.btn_more02 strong {display:inline-block;padding-right:17px;background:url(../images/template/ico_more02.png) right center no-repeat;}
+.btn_more02 span {display:inline-block;padding-left:8px;}
+.btn_more02:hover strong, .btn_more02:focus strong {animation:more_arrow 0.6s both linear infinite;}
+.btn_more02.dn strong {display:inline-block;padding-right:17px;background:url(../images/template/ico_more03.png) right center no-repeat;}
+
+/* btn_block */
+.btn_block {display:block;width:95%;margin:0 auto;}
+.btn_block:nth-child(2){margin-top:10px;}
+.btn_block180 {display:inline-block;width:180px;}
+.block_mt {margin-top:10px;text-align:center;}
+
+/* btn_pdf */
+.btn_pdf {display:inline-block;padding:5px 5px 5px 28px;background:url(../images/template/ico_pdf.png) left center no-repeat;color:#666 !important;font-size:12px !important;line-height:20px !important;overflow:hidden;}
+.btn_pdf em {position:absolute;left:-9999px;top:-9999px;}
+.btn_xls {display:inline-block;padding:5px 5px 5px 28px;background:url(../images/template/ico_xls.png) left center no-repeat;color:#666 !important;font-size:12px !important;line-height:20px !important;overflow:hidden;}
+.btn_xls em {position:absolute;left:-9999px;top:-9999px;}
+.btn_doc {display:inline-block;padding:5px 5px 5px 28px;background:url(../images/template/ico_doc.png) left center no-repeat;color:#666 !important;font-size:12px !important;line-height:20px !important;overflow:hidden;}
+.btn_doc em {position:absolute;left:-9999px;top:-9999px;}
+.btn_ppt {display:inline-block;padding:5px 5px 5px 28px;background:url(../images/template/ico_ppt.png) left center no-repeat;color:#666 !important;font-size:12px !important;line-height:20px !important;overflow:hidden;}
+.btn_ppt em {position:absolute;left:-9999px;top:-9999px;}
+.btn_hwp {display:inline-block;padding:5px 5px 5px 28px;background:url(../images/template/ico_hwp.png) left center no-repeat;color:#666 !important;font-size:12px !important;line-height:20px !important;overflow:hidden;}
+.btn_hwp em {position:absolute;left:-9999px;top:-9999px;}
+
+/* btn_cont */
+.btn_cont {margin:-10px 0 50px 0;}
+
+/* btn_next_step */
+.btn_next_step {position:relative;display:inline-block;width:180px;height:48px;padding-top:15px;margin-bottom:5px;background:#00907f;border-radius:3px 3px 0 0;color:#fff;font-size:17px;line-height:17px;transition:all 0.4s;}
+.btn_next_step:before {position:absolute;left:0;bottom:-4px;width:100%;height:5px;background:#018071;border-radius:0 0 3px 3px;content:"";transition:all 0.4s;}
+.btn_next_step:after {position:absolute;left:50%;top:37px;width:13px;height:24px;margin-left:-7px;background:url(../images/template/ico_btn_next_step.png) center 3px no-repeat;content:"";z-index:1;}
+.btn_next_step:hover, .btn_next_step:focus {background:#007d6e;}
+.btn_next_step:hover:before, .btn_next_step:focus:before {background:#006559;}
+.btn_next_step:hover:after, .btn_next_step:focus:after {animation:next_step_arrow 0.65s both linear infinite;}
+
+.btn_plus {
+  display: inline-block;
+  padding-right: 30px;
+  position: relative;
+  font-size:0 !important;
+  &::after {
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: url(../images/contents/ico_customer_more.gif) no-repeat;
+    content: "";
+    transition: transform 0.4s;
+  }
+  &:hover,
+  &:focus {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+/* button e ================================================= */
+/* ---------------------------------------------------------- */

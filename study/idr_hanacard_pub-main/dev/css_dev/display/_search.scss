@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: search                                       	  */
+// date		: 20220303
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* search s ================================================= */
+
+/* search_area */
+.search_area {position:relative;width:1010px;margin:0 auto 40px auto;}
+.search_area_box  {width:100%;height:226px;}
+.search_area_box .list {position:absolute;top:0;}
+.search_area_box .list dl {margin-left:20px;background:#fff;}
+.search_area_box .list:first-child dl {margin-left:0;}
+.search_area_box .list dt {height:40px;position:relative;padding:0 20px;background:#e1e2e6;box-sizing:border-box;color:#000;font-size:15px;font-weight:600;line-height:40px;}
+.search_area_box .list dt > .btn_xs{position:absolute;top:10px;right:13px;}
+.search_area_box .list dd {position: relative;height:170px;padding:8px 0;}
+.search_area_box .list.s1 {left:0;width:407px;}
+.search_area_box .list.s2 {right:476px;width:127px;}
+.search_area_box .list.s3 {right:248px;width:228px;}
+.search_area_box .list.s4 {right:0;width:248px;}
+
+.search_area_box .list02 {position:absolute;top:0;}
+.search_area_box .list02 dl {margin-left:15px; background:#fff;}
+.search_area_box .list02 dt {height:40px;position:relative;padding:0 20px;background:#e1e2e6;box-sizing:border-box;color:#000;font-size:15px;font-weight:600;line-height:40px;}
+.search_area_box .list02 dt > .btn_xs{position:absolute;top:10px;right:13px;}
+.search_area_box .list02 dd {position: relative;height:170px;padding:8px 0;}
+.search_area_box .list02.s1 {left:0px; width:407px;}
+.search_area_box .list02.s2 {right:476px; width:127px;}
+.search_area_box .list02.s3 {right:248px; width:228px;}
+.search_area_box .list02.s4 {right:15px; width:233px;}
+
+.search_area_box .content .box {position: relative;width:100%;}
+.search_area_box .content .box > div {position: relative;height:170px !important;overflow:auto;}
+.search_area_box .scroll-x {display:none !important;}
+.search_area_box.ty02 .list.s3 {right:inherit;left:0;}
+.search_area_box.ty02 .list.s1 {left:228px;width:534px;}
+.search_area_box.ty03 .list.s1 {width:534px;}
+.search_area_box.ty03 .list dt > select {width:100px;height:32px;margin:4px 0 0 -20px;padding-left:20px;line-height:31px;font-size:15px;font-weight:600;border:none;background:#e1e2e6 url(../images/template/ico_select_arrow02.png) right center no-repeat;} /* 종합소득세이용내역 2019-08-06 */
+.search_area_box.ty03 .list dt > select option {background:#fff;}
+.search_area_box.ty03 .list dt > .btn_s{position:absolute;top:4px;right:13px;}
+.search_area.w1200 {width:1200px;}
+.search_area.w1200 .search_area_box .list.s0 {left:0; width:298px;}
+.search_area.w1200 .search_area_box .list.s1 {left:298px; width:298px;}
+
+/* 2019-12-09 간편결제서비스 */
+.search_area.ty02 {}
+.search_area.ty02 .search_area_box .content .box {background:#f5f6f8;}
+.search_area.ty02 .search_area_box .search_chk li a {display:block;height:40px;padding:0 20px;background:#f5f6f8;box-sizing:border-box;color:#000;font-size:15px;text-align:left;line-height:40px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;transition:all 0.4s;}
+.search_area.ty02 .search_area_box .search_chk li a:hover, .search_chk li a:focus {background:#dbe6ec;outline:none;}
+.search_area.ty02 .search_area_box .search_chk li.on a {background:#404b57;color:#fff;}
+
+/* search_chk */
+.search_chk {padding:2px 0;}
+.search_chk li {position:relative;}
+.search_chk li a {display:block;height:40px;padding:0 20px;background:#fff;box-sizing:border-box;color:#000;font-size:15px;text-align:left;line-height:40px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;transition:all 0.4s;}
+.search_chk li a:hover, .search_chk li a:focus {background:#dbe6ec;outline:none;}
+.search_chk li.on a {background:#404b57;color:#fff;}
+
+/* search : btn */
+.search_area .btn_area a {min-width:120px;margin:0 5px;}
+.search_area .btn_ty04 {border-color:#e8e8e8;}
+.search_area .btn_ty04:hover, .search_area .btn_ty04:focus {border-color:#999;}
+.ico_search {display:inline-block;padding-left:20px;background:url(../images/template/ico_search.png) left center no-repeat;}
+.ico_calendar {display:inline-block;padding-left:20px;background:url(../images/template/ico_calendar.png) left center no-repeat;}
+
+/* search_area02 */
+.search_tit{margin-bottom:9px;}
+.search_area02 {position:relative;margin-bottom:50px;padding:20px 60px;background:#fafafa;border-top:2px solid #333;border-bottom:1px solid #e1e1e1;box-sizing:border-box;}
+.search_area02 .list {position:relative; min-height:40px; margin-top:15px; padding-left:73px;}
+.search_area02 .list02 {}
+.search_area02 .list.chk, .search_area02 .list02.chk {margin-top:10px;}
+.search_area02 .chk + .list {margin-top:10px;}
+.search_area02 .chk + .chk {margin-top:0;}
+.search_area02 .chk_box + .chk_box {margin-top:-10px;}
+.search_area02 .chk_box:last-child {height:30px;}
+.search_area02 .list:first-child {margin-top:0;}
+.search_area02 .list .select_ty, .search_area02 .list .input_ty, .search_area02 .list .btn_m, .search_area02 .list .btn_s {display:block; float:left; margin-left:12px; vertical-align:top;}
+.search_area02 .list:after {display:block; clear:both; height:0; content:""; overflow:hidden;}
+.search_area02 .list .btn_key_box .btn_key{right:0;}
+.search_area02 .list .tit {position:absolute;left:0;top:0;color:#000;font-size:15px;line-height:40px;letter-spacing:-1px;}
+.search_area02 .list .tit.ty02 {font-size:17px;} /* 21.01.25 */
+.search_area02 .list .txt {height:40px;margin-left:12px;line-height:40px;color:#000;}
+.search_area02 .list .b_br {display:block;float:left;width:30px;margin-right:-12px;line-height:44px;text-align:center;height:40px;}
+.search_area02 .center .list .b_br{display:inline-block;float:inherit;margin-right:0;width:18px;font-size:15px;}
+.search_area02 .list .btn {float:left;margin-left:12px;}
+.search_area02 .list .chk_box {float:left;margin-left:12px;line-height:40px;}
+.search_area02 .list .radio_box {float:left;margin-left:12px;line-height:40px;}
+.search_area02 .btn_area {margin-top:20px;}
+.search_area02 .btn_area a {margin:0 5px; font-size:15px; min-width:120px;}
+.search_area02 .only .list {margin-left:-24px;padding-left:0;width:935px;}
+.search_area02 .center {font-size:0;text-align:center;}
+.search_area02 .center .chk_box{font-size:15px;text-align:center;}
+.search_area02 .center .list .select_ty, .search_area02 .center .list .input_ty, .search_area02 .center .list .chk_box, .search_area02 .center .list .btn_m, .search_area02 .center .list .btn_s, .search_area02 .center .list .btn_key_box {display:inline-block;float:inherit;margin:0 6px;}
+.modal_wrap .search_area02 .center .list .btn_key_box .input_ty {margin:0;}
+.search_area02 .btn_m {width:100px;min-width: inherit;}
+
+.search_area02 .only.center .list .ui-datepicker-trigger{float:none !important;margin-left:-39px !important;vertical-align:top;}
+
+.search_area02 .s_txt {margin-left:85px;margin-top:9px;}
+.search_area02 .chk_box li {margin-left:30px;}
+.search_area02 .chk_box li:first-child {margin-left:0;}
+.search_area02 .b_txt02 {float:left;padding-right:20px;margin-left:12px;line-height:40px;}
+.search_area02 .b_list.txt {float:left;margin-left:-2px;font-size:14px;color:#666;}
+.search_area02 .btn_tip {margin-left:12px;line-height:40px;}
+.search_area02 .list .btn_card {display:inline-block;float:left;position:relative;padding-right:26px;margin:10px 0 0 20px;height:20px;line-height:20px;font-size:14px;color:#000;}
+.search_area02 .list .btn_card:after {display:inline-block;position:absolute;right:0;top:0;width:20px;height:20px;background:url(../images/template/ico_sch_arrow.png) no-repeat;content:"";transition:all 0.4s;}
+.search_area02 .list .btn_card.on:after {background:url(../images/template/ico_sch_arrow_on.png) no-repeat;}
+.search_area02 .list .box_scroll {float:left;margin:14px 0 0 12px;width:790px;border:none;}
+.search_area02 .list .box_scroll > .content {padding:0;}
+.search_area02 .list .box_scroll > .content > .box > div {height:20px;overflow:hidden;}
+.search_area02 .list .box_scroll .scroll-wrapper > .scroll-content {overflow:hidden !important;}
+.search_area02 .list .box_scroll.on .scroll-wrapper > .scroll-content {overflow:scroll !important;}
+.search_area02 .list .box_scroll .scrollbar-outer > .scroll-element.scroll-y {display:none;}
+.search_area02 .list .box_scroll.on .scrollbar-outer > .scroll-element.scroll-y {display:block;}
+.search_area02 .list .scrollbar-outer > .scroll-element.scroll-x {display:none;}
+.search_area02 .list .box_scroll.on > .content > .box > div {height:78px;overflow-y:auto;}
+.search_area02 .list .box_scroll li {margin-top:4px;}
+.search_area02 .list .box_scroll li:first-child {margin-top:0;}
+.search_area02.ty02 .list {padding-left:83px;}
+.search_area02 + .table_info {margin-top:-40px !important;}
+.search_area02 .only.center > .list .btn {display:inline-block;float:none;margin-right:6px;;vertical-align:top;}
+.search_area02 .only.center .tit {position:static;display:inline-block;padding:12px 26px 0 0;vertical-align:top;line-height:16px;}
+.search_area02 + p.sch_info, ul.sch_info > li{position:relative;padding:0 0 44px 10px;margin-top:-40px;}
+.search_area02 + p.sch_info:before, ul.sch_info > li:before {position:absolute;left:0;top:12px;width:4px;height:1px;background:#666;content:"";}
+.search_area02.ty02 .list{padding-left:128px;}
+.search_area02.ty04{padding:20px 44px;}
+.search_area02.ty05 {padding:20px 0;}
+.search_area02.ty03 .list{padding-left:156px;}
+.search_area02.ty04 .list{padding-left:108px;}
+.search_area02.sck ul {padding-left:28px;}
+.search_area02.ty05 {padding:20px 0;}
+.search_area02.ty05 .only .list{width:auto;margin-left:0;}
+
+.search_area02 .ez-radio{margin-right:0;}
+.search_area02 .radio_box02 li{padding:0;}
+
+/* 금융 검색 조회 */
+.search_area02.sec_chg {text-align:center;}
+.search_area02.sec_chg ul {display:inline-block;font-size:0;vertical-align:top;}
+.search_area02.sec_chg .sec_tag {margin-left:-24px;margin-top:0;padding-left:0;text-align:center;}
+.search_area02.sec_chg .sec_tag .tit {position:static;display:inline-block;padding:10px 26px 0 0;vertical-align:top;line-height:15px;}
+.search_area02.sec_chg .sec_tag .select_ty,
+.search_area02.sec_chg .sec_tag .input_ty,
+.search_area02.sec_chg .sec_tag .btn_m,
+.search_area02.sec_chg .sec_tag .btn_s,
+.search_area02.sec_chg .sec_tag .btn_key_box {display:inline-block;float:inherit;margin:0 6px;}
+.search_area02.sec_chg .sec_tag .select_ty {width:420px !important;}
+.search_area02.sec_chg .sec_tag .select_ty .selectBox-label {width:375px !important;}
+.search_area02.sec_chg .btn_area {display:inline-block;margin-top:0;font-size:0;vertical-align:top;}
+.search_area02.sec_chg .btn_area a {margin:0;}
+.search_area02 .sec_tag .select_ty {width:630px !important;}
+.search_area02 .sec_tag .select_ty .selectBox-label {width:585px !important;}
+.search_area02 .hide {display:block;}
+.search_area02.sec_chg .hide {display:none;}
+
+/* search e ================================================= */
+/* ---------------------------------------------------------- */

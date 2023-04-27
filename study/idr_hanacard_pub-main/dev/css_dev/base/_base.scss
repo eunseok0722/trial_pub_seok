@@ -1,0 +1,159 @@
+@charset "EUC-KR";
+/* ========================================================== */
+/*                                                            */
+/* file		: base                                       	  */
+// date		: 20220303
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* base s =================================================== */
+* {
+  max-height: 1000000px;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+fieldset,
+button {
+  border: none;
+}
+
+button {
+  img {
+    display: none;
+  }
+}
+
+hr {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  text-shadow: none;
+  vertical-align: top;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+textarea {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+
+  img {
+    vertical-align: top;
+  }
+}
+
+th,
+td {
+  vertical-align: middle;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+legend {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+}
+
+caption {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: normal;
+}
+
+.blind {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+label {
+  color: #000;
+}
+
+/* html5 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* form */
+textarea {
+  resize: none;
+}
+
+::-ms-clear {
+  display: none;
+}
+
+/* source preview */
+pre {
+  font-size: 12px;
+}
+
+xmp {
+  font-size: 12px;
+  padding: 25px;
+  background-color: #eee;
+  margin-top: 20px;
+}
+
+/* base e =================================================== */
+/* ---------------------------------------------------------- */

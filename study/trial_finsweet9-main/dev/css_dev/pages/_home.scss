@@ -1,0 +1,776 @@
+// content 감싸는 background color 효과 적용용 wrap
+.content-bg-wrap {
+  width: 100%;
+  height: fit-content;
+}
+
+// main-banner 컴포넌트 css 시작
+.main-banner {
+  display: flex;
+  gap: 5%;
+
+  .banner-txt {
+    flex-basis: 45%;
+    @include flex-col(3.5rem);
+    box-sizing: border-box;
+
+    .tit-h1,
+    .txt-md,
+    .lb-txt-2 {
+      color: $white;
+    }
+
+    .btn-ty01 {
+      padding: 1.8rem 4.8rem;
+      box-sizing: border-box;
+    }
+
+    .btn-wrap {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+
+      a {
+        width: fit-content;
+        display: block;
+      }
+    }
+  }
+
+  .banner-img {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &.ty01 {
+      background-image: url("../images/ico/img_banner_001.png");
+    }
+
+    &.ty02 {
+      background-image: url("../images/ico/img_banner_002.png");
+    }
+  }
+}
+
+// mobile 환경 br 태그 활성화용 class
+.m-only {
+  display: none;
+}
+
+
+@include t-l {
+  .main-banner {
+    gap: 3.5rem;
+    flex-direction: column;
+    align-items: center;
+
+    .banner-txt {
+      align-items: center;
+
+      .tit-h1,
+      .txt-md {
+        text-align: center;
+      }
+    }
+
+    .banner-img {
+      width: 66.66%;
+      padding-top: 44.44%;
+    }
+  }
+
+  .m-only {
+    display: block;
+  }
+}
+
+@include m-l {
+  .main-banner {
+    .banner-txt {
+      .btn-wrap {
+        flex-direction: column;
+        gap: 3rem;
+      }
+    }
+  }
+}
+
+
+/* benefit List CSS */
+// benefit list ty별 정의
+.bnf-comp {
+  background-color: $grey;
+
+  .content {
+    @include flex-col(4rem);
+  }
+
+  .content-header {
+    @include flex-col(1.2rem);
+    align-items: center;
+    text-align: center;
+
+    .tit-h2 {
+      width: 60%;
+    }
+  }
+
+  &.ty02 {
+    background-color: unset;
+  }
+}
+
+.user-list-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5%;
+
+  .txt-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-logo-box {
+    .user-list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 5rem;
+      row-gap: 2rem;
+      justify-content: space-evenly;
+
+      img {
+        width: fit-content;
+        height: auto;
+      }
+    }
+  }
+}
+
+@include t-l {
+  .bnf-comp {
+    .content-header {
+      .tit-h2 {
+        width: 70%;
+      }
+    }
+  }
+
+  .user-list-wrap {
+    flex-direction: column;
+    gap: 3.5rem;
+
+    .txt-box {
+      align-items: center;
+    }
+  }
+}
+
+@include m-l {
+  .bnf-comp {
+    .content-header {
+      .tit-h2 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* //benefit List CSS */
+
+/* how we work CSS */
+.hww-content {
+  display: flex;
+  justify-content: space-between;
+
+  .content-header {
+    flex-basis: 26%;
+    @include flex-col(1.5rem);
+
+    .icon-link {
+      a {
+        color: $royal-blue;
+      }
+    }
+  }
+
+  section {
+    flex-basis: 60%;
+
+    .hww-list {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 4.8rem 4%;
+      .list-item {
+        flex-basis: 48%;
+      }
+
+    }
+  }
+}
+
+.hww-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  .ico-box {
+    display: block;
+    color: $white;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    line-height: 5rem;
+    background-image: url("../images/ico/ico_bg_hww.png");
+    background-size: 5rem 5rem;
+  }
+
+  .txt-r {
+    width: 80%;
+  }
+}
+
+@include t-l {
+  .hww-content {
+    //display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    justify-content: flex-start;
+
+    .content-header {
+      flex-basis: unset;
+      align-items: center;
+      text-align: center;
+
+      .txt-r {
+        width: 70%;
+      }
+    }
+
+    section {
+      flex-basis: unset;
+
+      .hww-list {
+        gap: 3.5rem 4%;
+
+        .hww-item {
+          .txt-r {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include m-l {
+  .hww-content {
+    display: flex;
+    justify-content: space-between;
+
+    .content-header {
+      .txt-r {
+        width: 90%;
+      }
+    }
+
+    section {
+      flex-basis: unset;
+
+      .hww-list {
+        gap: 3.5rem 2%;
+        justify-content: space-between;
+
+        .hww-item {
+          flex-basis: 45%;
+
+          .txt-r {
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* //how we work CSS */
+
+/* Main View Our Project CSS */
+
+.mpc-content {
+  @include flex-col(6rem);
+
+  .content-header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  section {
+    .mpc-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+
+      .list-item {
+        &:first-child {
+          grid-column: 1 / 3;
+          grid-row: 1 / 3;
+
+          .mpc-item {
+            .txt-box {
+              width: 40%;
+
+              .mpc-desc {
+                display: block;
+              }
+            }
+            .img-box {
+              padding-bottom: 71%;
+            }
+          }
+        }
+      }
+    }
+
+    .mpc-item {
+      position: relative;
+      overflow: hidden;
+
+      .txt-box {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        @include flex-col(1rem);
+        justify-content: flex-end;
+        left: -100%;
+        width: 100%;
+        padding: 4.5rem 3.5rem;
+        box-sizing: border-box;
+        background: linear-gradient(330deg, $tint-blue -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+        transition: left 0.5s;
+
+        .tit-h6,
+        .mpc-desc {
+          color: $white;
+        }
+
+        .mpc-desc {
+          display: none;
+        }
+
+        .icon-link {
+          a {
+            color: $yellow;
+          }
+        }
+      }
+
+      .img-box {
+        width: 100%;
+        height: 0;
+        padding-bottom: 70%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &:hover {
+        .txt-box {
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@include t-l {
+
+  .mpc-content {
+    .content-header {
+      text-align: center;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    section {
+      .mpc-list {
+        //display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .list-item {
+          &:first-child {
+            grid-column: 1 / span 2;
+            grid-row: unset;
+
+            .mpc-item {
+              .txt-box {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .mpc-item {
+        .txt-box {
+          left: 0;
+          padding: 3rem;
+
+          .mpc-desc {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include m-l {
+
+  .mpc-content {
+    section {
+      .mpc-list {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+
+        .list-item {
+          &:first-child {
+            grid-column: unset;
+            grid-row: unset;
+
+            .mpc-item {
+              .txt-box {
+                .mpc-desc {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* //Main View Our Project CSS */
+
+/* What our clients say about us CSS */
+
+.cli-content {
+  display: flex;
+  justify-content: space-between;
+
+  .content-header {
+    flex-basis: 26%;
+    @include flex-col(1.6rem);
+  }
+
+  section {
+    flex-basis: 60%;
+    width: 320px;
+
+    .cli-swiper {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+}
+
+.cli-opi-item {
+  @include flex-col(4.8rem);
+
+  .prf-box {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    .prf-img {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 5rem;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@include t-l {
+  .cli-content {
+    flex-direction: column;
+    gap: 3.5rem;
+
+    .content-header {
+      flex-basis: 100%;
+      @include flex-col(1.6rem);
+      align-items: center;
+      text-align: center;
+
+      .tit-h3,
+      .txt-r {
+        max-width: 70%;
+      }
+    }
+
+    section {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@include m-l {
+  .cli-content {
+    .content-header {
+      .tit-h3,
+      .txt-r {
+        max-width: 90%;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+
+  .cli-opi-item {
+    gap: 2rem;
+  }
+}
+
+
+/* swiper button Custom CSS */
+
+:root {
+  --swiper-navigation-size: 48px
+}
+
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: unset;
+  bottom: 0;
+  width: var(--swiper-navigation-size);
+  height: var(--swiper-navigation-size);
+  margin-top: unset;
+  cursor: pointer;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color))
+
+
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  &::after {
+    background-color: $royal-blue;
+    background-image: url("../images/ico/ico_btn_swiper_w.png");
+  }
+}
+
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: .35;
+  cursor: auto;
+  pointer-events: none
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 0;
+  width: var(--swiper-navigation-size);
+  height: var(--swiper-navigation-size);
+  border-radius: var(--swiper-navigation-size);
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px 22px;
+  transition: all 0.3s;
+}
+
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  left: auto;
+  right: calc(var(--swiper-navigation-size) + 20px);
+}
+
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+  background-image: url("../images/ico/ico_btn_swiper_b.png");
+  transform: rotate(180deg);
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  right: 10px;
+  left: auto
+}
+
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+  background-image: url("../images/ico/ico_btn_swiper_b.png");
+}
+
+/* //swiper button CSS */
+
+/* //What our clients say about us CSS */
+
+
+/* Send Inquiry CSS */
+
+.inq-content-wrap {
+  .inq-content {
+    padding: 0;
+    display: flex;
+
+    .content-header {
+      @include flex-col(2.4rem);
+      flex-basis: 50%;
+      background-image: url("../images/temp/img_bg_inq_001.png");
+      background-size: 200% 100%;
+      background-position: center center ;
+      background-repeat: no-repeat;
+      padding: 9.6rem;
+      box-sizing: border-box;
+
+      .tit-h2,
+      .txt-r {
+        color: $white;
+      }
+      .tit-h2 {
+        width: 90%;
+      }
+    }
+
+    .inq-section {
+      flex-basis: 50%;
+      @include flex-col(4rem);
+      background-color: $tint-blue;
+      padding: 9.6rem;
+      box-sizing: border-box;
+      .txt-box {
+        @include flex-col(1.6rem);
+        .tit-h4,
+        .txt-md {
+          color: white;
+        }
+      }
+
+      .input-box {
+        @include flex-col(2.8rem);
+        form {
+          @include flex-col(4rem);
+          fieldset {
+            @include flex-col(1.6rem);
+            input {
+              padding: 18px 32px;
+              box-sizing: border-box;
+              background: none;
+              border: 1px solid #FFFFFF11;
+              border-radius: 8px;
+              width: 100%;
+              color: $grey;
+            }
+          }
+          .btn-wrap {
+            .btn-ty01 {
+              display: block;
+              width: 100%;
+              padding: 16px 0;
+              text-align: center;
+            }
+          }
+        }
+        .icon-link {
+          align-self: center;
+          .lb-txt-2 {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include t-l {
+  .inq-content-wrap {
+    .inq-content {
+      flex-direction: column;
+      width: 100%;
+      .content-header {
+        background-size: cover;
+        background-position: center top;
+        align-items: center;
+        text-align: center;
+        .tit-h2,
+        .txt-r {
+          color: $white;
+        }
+        .tit-h2 {
+          width: 90%;
+        }
+      }
+      .inq-section {
+        padding: 9.6rem 0;
+        .txt-box {
+          width: 90%;
+          margin: 0 auto;
+          align-items: center;
+          text-align: center;
+        }
+        .input-box {
+          width: 90%;
+          margin: 0 auto;
+          form {
+            .btn-wrap {
+              margin: 0 auto;
+              .btn-ty01 {
+                width: fit-content;
+                padding: 1.8rem 4.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@include m-l {
+  .inq-content-wrap {
+    .inq-content {
+      .content-header {
+        background-position: 40% top;
+        padding: 9.6rem 0;
+        width: 100%;
+        .tit-h2,
+        .txt-r {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+/* //Send Inquiry CSS */
+
+/* main blog CSS */
+.blog-content {
+  @include flex-col(6.4rem);
+}
+
+/* //main blog CSS */
+
+/* dark mode css */
+.dark-mode{
+
+  .bnf-comp {
+    background-color: $tint-blue;
+  }
+}
+/* //dark mode css */
