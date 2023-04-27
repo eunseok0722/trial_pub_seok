@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file	 :  markup_list                            	          */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* markup_list  s =========================================== */
+/*html {scroll-behavior: smooth;}*/
+* { box-sizing: border-box; }
+
+p.gnbcheck { padding-right: 50px; padding-left: 50px; font-weight: 700; font-size: 32px; }
+
+.markup-list-wrap { display: flex; }
+.markup-list-wrap h4 { margin-top: 20px; margin-bottom: 10px; text-transform: capitalize; }
+.markup-list-wrap ul { display: inline-block; margin-top: 0; list-style-type: square; padding: 0; }
+.markup-list-wrap ul li { margin-bottom: 10px; list-style: none; }
+.markup-list-wrap ul li span { display: inline-block; vertical-align: top; }
+.markup-list-wrap .markup-list-r, .markup-list-wrap .markup-list-l { padding: 0 0 50px 50px; }
+
+.depth1 li a { padding-left: 10px; color: #333; text-decoration: none; }
+.depth1 li a:hover { color: #000; }
+.depth1 li a::before { content: "◾ "; vertical-align: top; }
+
+/* markup_list  e =========================================== */
+
+/*# sourceMappingURL=markup_list.css.map */

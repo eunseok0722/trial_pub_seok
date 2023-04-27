@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/* ========================================================== */
+
+/* file		: tab                                      	      */
+// writer	: IDR
+// date		: 20210110
+
+/* ========================================================== */
+
+/* ---------------------------------------------------------- */
+
+/* tab s ==================================================== */
+
+/* gray_bg_tab */
+.hs-gray-bg-tab{
+  background: #f1f1f1;
+  font-size: 0;
+  @for $tab_size from 1 through 6{
+    &.size0#{$tab_size} li{width: 100% / $tab_size;}
+  }
+
+  li{
+    display: inline-block;
+    position: relative;
+
+    &::before{
+      background: #cecece;
+      clear: both;
+      content: "";
+      display: inline-block; 
+      height: 12px;
+      margin-top: -6px;
+      width: 1px;
+      @include posa_tl(50%, 0);
+    }
+
+    &:first-child::before{
+      display: none;
+    }
+
+    a{
+      color: #888;
+      display: block;
+      font-size: 14px;
+      padding: 14px 0 13px;
+      text-align: center;
+    }
+
+    &.on a{
+      color: #222;
+      font-weight: bold;
+    }
+  }
+}
+
+/* red_border_tab */
+.hs-red-border-tab{
+  background: #fff; 
+  font-size: 0;
+  position: relative;
+  @for $tab_size from 1 through 6{
+    &.size0#{$tab_size} li,
+    .fcs {width: 100% / $tab_size;}
+  }
+
+  li{
+    display: inline-block;
+  }
+
+  li a{ 
+    border-bottom: 2px solid #f3f3f3; 
+    color: #aaa;
+    display: block; 
+    font-size: 14px; 
+    font-weight: bold;
+    line-height: 1; 
+    padding: 14px 0 15px; 
+    text-align: center;
+
+    .s-txt{
+      display: inline-block;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+  }
+
+  li.on a{ 
+    border-color: #e46764;
+    color: #222;
+  }
+
+  &.ui-tab {
+    li.on {
+      a {
+        border-color: transparent;  
+      }
+
+      &:first-child {
+        a {
+          border-color: #e46764;   
+        }
+      }
+    }
+
+    &.active {
+      li.on {
+        &:first-child {
+          a {
+            border-color: transparent;
+          }
+        }
+      }
+    }
+
+    .fcs {
+      background-color: $camel;
+      height: 2px;
+
+      // width: calc(100% / 3);
+      @include posa_bl;
+      @include transform(translateX(0));
+      @include transition(all 0.4s ease-in-out);
+    }
+  }
+}
+
+/* tab e ==================================================== */
+
+/* ---------------------------------------------------------- */

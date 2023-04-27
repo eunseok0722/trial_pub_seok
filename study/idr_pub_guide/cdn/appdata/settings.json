@@ -1,0 +1,44 @@
+{
+    "git.autofetch": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false,
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "~/../css"
+      }
+    ],
+    //git에 올리지않아도 되는 파일
+    "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**"
+    ],
+    // tab사용시 여백수
+    "editor.tabSize": 2,
+    //파일별 들여쓰기 감지 기능
+    "editor.detectIndentation": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "prettier.proseWrap": "preserve",
+    "git.confirmSync": false,
+    "vetur.format.defaultFormatter.js": "prettier-eslint",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true
+    },
+    "editor.defaultFormatter": "stylelint.vscode-stylelint",
+    "stylelint.snippet": ["css", "less", "postcss", "scss", "sass"],
+    "stylelint.validate": ["css", "less", "postcss", "sass", "scss"],
+
+    // 코드에 마우스 호버했을때 MDN Reference가 팝업 창 해제
+    "html.hover.references": false,
+    "less.hover.references": false,
+    "scss.hover.references": false,
+    "css.hover.references": false,
+    "editor.codeLens": false,
+    "html.hover.documentation": false,
+    "editor.inlayHints.enabled": false,
+    "editor.parameterHints.enabled": false
+
+  }

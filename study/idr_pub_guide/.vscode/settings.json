@@ -1,0 +1,25 @@
+{
+  // each workspace
+  // ./[workspace name]/.vscode/settings.json
+  // desc : https://glenn2223.github.io/vscode-live-sass-compiler/docs/settings.html
+  // "liveSassCompile.settings.autoprefix": null,
+  // "liveSassCompile.settings.rootIsWorkspace": null,
+  // "liveSassCompile.settings.forceBaseDirectory": "",
+  // "liveSassCompile.settings.generateMap": true,
+  // "liveSassCompile.settings.formats": [
+  //   {
+  //     "format": "expanded",
+  //     "extensionName": ".css",
+  //     "savePath": "~/../css/"
+  //   }
+  // ],
+  // "vetur.format.defaultFormatter.js": "prettier-eslint",
+  // "editor.formatOnSave": true,
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": true,
+  //   "source.fixAll.stylelint": true
+  // },
+  // "editor.defaultFormatter": "stylelint.vscode-stylelint",
+  // "stylelint.snippet": ["css", "less", "postcss", "scss", "sass"],
+  // "stylelint.validate": ["css", "less", "postcss", "sass", "scss"]
+}

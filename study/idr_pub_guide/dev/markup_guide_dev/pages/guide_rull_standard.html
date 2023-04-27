@@ -1,0 +1,661 @@
+<!-- @@master ../../layout_mrkp_template.html -->
+
+<!-- @@block root_content -->
+
+<!-- guide-wrap -->
+<div class="guide-wrap">
+    <!-- gw-grid -->
+    <div class="gw-grid">
+
+        <h1>기본정책</h1>
+
+        <!-- 퍼블리싱 작업환경 -->
+        <h3>퍼블리싱 작업환경</h3>
+        <div class="gw-view-table">
+            <table>
+                <caption>프로젝트 환경</caption>
+                <colgroup>
+                    <col style="width:20%">
+                    <col>
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th scope="row" class="align-l">문서 및 버전</th>
+                    <td>HTML5, CSS3</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="align-l">인코딩</th>
+                    <td>UTF-8</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="align-l">웹 유형</th>
+                    <td>PC Web, Mobile Web, Responcive Web</td>
+                    <!-- PC Web | Mobile Web | Responsive Web | Mobile Hybrid Web -->
+                </tr>
+                <tr>
+                    <th scope="row" class="align-l">PC 웹 호환성</th>
+                    <td>
+                        <div class="g-browser-icons">
+                            <img src="../assets/img/ico_ie9.png" alt="인터넷익스플로러11 브라우저">
+                            <img src="../assets/img/ico_edge.jpg" alt="엣지 브라우저">
+                            <img src="../assets/img/ico_crom.png" alt="크롬 브라우저">
+                            <img src="../assets/img/ico_firefox.png" alt="파이어폭스 브라우저">
+                            <img src="../assets/img/ico_sapari.jpg" alt="사파리 브라우저">
+                            <img src="../assets/img/ico_opera.png" alt="오페라 브라우저">
+                        </div>
+                        <style type="text/css">
+                            .g-browser-icons img {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        </style>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="align-l">Mobile 웹 호환성</th>
+                    <td>
+                        <div class="g-browser-icons">
+                            Chrome 97.x 이상, Safari 15.x 이상, Samsung 16.x 이상
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="align-l">웹 접근성</th>
+                    <td>
+                        웹 접근성 품질 인증마크 획득
+                        <img src="../assets/img/ico_web_accessibility.jpg" alt="웹접근성 품질 인정마크" class="g-web-access-icon">
+                        <style type="text/css">
+                            .g-web-access-icon {
+                                height: 40px;;
+                            }
+                        </style>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="align-l">PC 해상도 기준</th>
+                    <td>최소 1000 / 최대 1280</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="align-l">Mobile 해상도 기준</th>
+                    <td>최소 320 / 최대 999</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //퍼블리싱 작업환경 -->
+
+        <!-- 파일/폴더 규칙 -->
+        <h3>파일/폴더 규칙</h3>
+        <div class="gw-view-table">
+            <table>
+                <caption>파일구조</caption>
+                <colgroup>
+                    <col style="width:10%">
+                    <col style="width:15%">
+                    <col style="width:15%">
+                    <col style="width:30%">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>분류 폴더</th>
+                    <th>서브 폴더</th>
+                    <th>서브 폴더</th>
+                    <th>파일 이름</th>
+                    <th>파일 설명</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td rowspan="16">dev</td>
+                    <td rowspan="6">css_dev</td>
+                    <td>base</td>
+                    <td>
+                        _base.scss<br>
+                        _font.scss<br>
+                        _normalize_kor_v3.0.3.scss<br>
+                        _normalize_v8.0.1.scss<br>
+                        _simple.scss
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>display</td>
+                    <td>
+                        _button.scss<br>
+                        _content.scss<br>
+                        _filter.scss<br>
+                        _form.scss<br>
+                        _layer_popup.scss<br>
+                        _list.scss<br>
+                        _scrollbar.scss<br>
+                        _tab.scss<br>
+                        _table.scss<br>
+                        _thumbnail.scss
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>layout</td>
+                    <td>
+                        _container.scss<br>
+                        _footer.scss<br>
+                        _header.scss<br>
+                        _nav.scss<br>
+                        _popup.scss<br>
+                        _quick.scss
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>pages</td>
+                    <td>
+                        _etc.scss<br>
+                        _main.scss<br>
+                        _mypage.scss
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>utils</td>
+                    <td>
+                        _css3-mixins.scss<br>
+                        _mixin.scss<br>
+                        _variables.scss
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>display.scss</td>
+                    <td>html 파일에 link 될 scss</td>
+                </tr>
+                <tr>
+                    <td>js_dev</td>
+                    <td></td>
+                    <td>
+                        display.js
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="4">markup_guide_dev</td>
+                    <td></td>
+                    <td>
+                        index.html
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>assets/css</td>
+                    <td>
+                        mrkp_display.scss<br>
+                        mrkp_inside.scss
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>assets/js</td>
+                    <td>
+                        mrkp_common.js<br>
+                        mrkp_inside.js<br>
+                        mrkp_list_info.js
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>page</td>
+                    <td>
+                        cmpt_font.html<br>
+                        cmpt_table.html<br>
+                        guide_rull_code.html<br>
+                        guide_rull_codeset.html<br>
+                        guide_rull_name.html<br>
+                        guide_rull_standard.html<br>
+                        guide_rull_tag.html<br>
+                        guide_sitemap_list.html
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">page_dev</td>
+                    <td>email</td>
+                    <td>
+                        email_template.html
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>login</td>
+                    <td>
+                       login.html
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>main</td>
+                    <td>
+                        main.html
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>page_include</td>
+                    <td></td>
+                    <td>
+                        bottom.html<br>
+                        footer.html<br>
+                        header.html<br>
+                        lp_wrap.html<br>
+                        quick_menu.html<br>
+                        script_include.html
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        gulpfile.js<br>
+                        layout_lp_template.html<br>
+                        layout_mrkp_template.html<br>
+                        layout_mrkp_template_empty.html<br>
+                        layout_template.html<br>
+                        package.json
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="3">page</td>
+                    <td>email</td>
+                    <td></td>
+                    <td>
+                        email_template.html
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>login</td>
+                    <td></td>
+                    <td>
+                        login.html
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>main</td>
+                    <td></td>
+                    <td>
+                        main.html
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="5">static</td>
+                    <td>css</td>
+                    <td></td>
+                    <td>
+                        display.css
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>fonts</td>
+                    <td></td>
+                    <td>
+                        *.eot<br>
+                        *.ttf<br>
+                        *.woff<br>
+                        *.woff2
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>images</td>
+                    <td>*</td>
+                    <td>
+                        *.jpg<br>
+                        *.png
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>js</td>
+                    <td></td>
+                    <td>
+                        display.js
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>plugin</td>
+                    <td>*</td>
+                    <td>
+                        *.*
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //파일/폴더 규칙 -->
+
+        <hr>
+
+        <!-- 시멘틱 마크업 -->
+        <h3>시멘틱 마크업</h3>
+        <div class="gw-view-table">
+            <table>
+                <caption>Semantics Markup</caption>
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:auto">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">종류</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">태그</th>
+                    <th scope="col">설명</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td rowspan="2">그룹</td>
+                    <td>블록타입</td>
+                    <td>div</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>인라인타입</td>
+                    <td>span</td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td rowspan="5">랜드마크</td>
+                    <td>머리글</td>
+                    <td>header</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>바닥글</td>
+                    <td>footer</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>연속적인 컨텐츠그룹</td>
+                    <td>section</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>독립적인 컨텐츠그룹</td>
+                    <td>article</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>보조적인 컨텐츠그룹</td>
+                    <td>aside</td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td rowspan="6">목차</td>
+                    <td>목차 1레벨</td>
+                    <td>h1</td>
+                    <td>페이지 제목 최상위 레벨(문서 필수 요소)</td>
+                </tr>
+                <tr>
+                    <td>목차 2레벨</td>
+                    <td>h2</td>
+                    <td>페이지 제목 수준</td>
+                </tr>
+                <tr>
+                    <td>목차 3레벨</td>
+                    <td>h3</td>
+                    <td>컨텐츠 핵심 제목 수준</td>
+                </tr>
+                <tr>
+                    <td>목차 4레벨</td>
+                    <td>h4</td>
+                    <td>컨텐츠 부 제목 수준</td>
+                </tr>
+                <tr>
+                    <td>목차 5레벨</td>
+                    <td>h5</td>
+                    <td>컨텐츠 상세 제목 수준</td>
+                </tr>
+                <tr>
+                    <td>목차 6레벨</td>
+                    <td>h6</td>
+                    <td>컨텐츠 상세 제목 수준</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td rowspan="8">컨텐츠<br>(Block Type)</td>
+                    <td>순서 없는 리스트</td>
+                    <td>ul, li</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>순서 있는 리스트</td>
+                    <td>ol, li</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>정의 리스트</td>
+                    <td>dl, dt, dd</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>단락</td>
+                    <td>p</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>주소</td>
+                    <td>address</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>사진의 내용 표시</td>
+                    <td>figure</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>사진의 제목 표시</td>
+                    <td>figcaption</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>대화상자</td>
+                    <td>dialog</td>
+                    <td>호환성 IE Not Supported (role="dialog" 대체사용)</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td rowspan="8">컨텐츠<br>(Inline Type)</td>
+                    <td>링크</td>
+                    <td>a</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>중요한</td>
+                    <td>strong</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>일반강조</td>
+                    <td>em</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>의미없는 마크업</td>
+                    <td>i</td>
+                    <td>실제 용도에 의미를 두지는 않으며 아이콘 등에 사용한다.</td>
+                </tr>
+                <tr>
+                    <td>정의</td>
+                    <td>dfn</td>
+                    <td>title속성을 사용하여 용어를 정의한다.</td>
+                </tr>
+                <tr>
+                    <td>작은 텍스트</td>
+                    <td>small</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>취소</td>
+                    <td>s</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>삭제</td>
+                    <td>del</td>
+                    <td></td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td rowspan="5">서식<br></td>
+                    <td>서식 그룹</td>
+                    <td>fieldset</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>서식 제목</td>
+                    <td>legend</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>라벨</td>
+                    <td>label</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>입력, 선택 컨트롤</td>
+                    <td>input, textarea, select</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>버튼</td>
+                    <td>button</td>
+                    <td>일반 버튼타입과 전송타입의 버튼을 구분한다.</td>
+                </tr>
+                </tbody>
+                <tbody>
+                <tr>
+                    <td rowspan="10">표<br></td>
+                    <td>표</td>
+                    <td>table</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>표 제목</td>
+                    <td>caption</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>표 열 그룹</td>
+                    <td>colgroup</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>표 열</td>
+                    <td>col</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>표 헤더</td>
+                    <td>thead</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>표 본문</td>
+                    <td>tbody</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>표 푸터</td>
+                    <td>tfoot</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>표 행</td>
+                    <td>tr</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>표 제목셀</td>
+                    <td>th</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>표 내용셀</td>
+                    <td>td</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //시멘틱 마크업 -->
+
+        <hr>
+
+        <!-- 특수기호 Entity name -->
+        <h3>특수기호 Entity name</h3>
+        <p class="txt-desc">특수기호는 Entity name을 사용하여 entity 코드로 변환한다. Entity 코드는 ISO-8859-1을 기준으로 한다.</p>
+        <div class="gw-view-table">
+            <table>
+                <caption>주의 해야할 특수기호</caption>
+                <tbody>
+                <tr>
+                    <th>Character</th>
+                    <td>₩</td>
+                    <td>"</td>
+                    <td>&amp;</td>
+                    <td>&lt;</td>
+                    <td>&gt;</td>
+                    <td>&nbsp;</td>
+                    <td>·</td>
+                </tr>
+                <tr>
+                    <th>Entity Name</th>
+                    <td>&amp;#8361;</td>
+                    <td>&amp;quot;</td>
+                    <td>&amp;amp;</td>
+                    <td>&amp;lt;</td>
+                    <td>&amp;gt;</td>
+                    <td>&amp;nbsp;</td>
+                    <td>&amp;middot;</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //특수기호 Entity name -->
+
+    </div>
+    <!-- //gw-grid -->
+</div>
+<!--// guide-wrap -->
+
+<script>
+    (function(){
+
+    }())
+</script>
+<!-- @@close -->

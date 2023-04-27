@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>Markup List</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/publish.png">
+  <link rel="stylesheet" href="assets/css/mrkp_display.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- wrap -->
+<div id="bodyWrap" class="body-wrap">
+
+  <!-- header -->
+  <div id="header" class="header">
+    <h1>PUBLISHING <span>GUIDE</span></h1>
+    <div class="author-info">
+      <a href="#none" target="_blank" class="author-logo" title="IDRsystem">
+        <img src="assets/img/logo_idr_top.png" alt="logo">
+      </a>
+    </div>
+  </div>
+  <!-- //header -->
+
+  <!-- side -->
+  <div id="side" class="side-nav">
+    <h2>
+      <i class="fa fa-mobile"></i>
+      <i class="fa fa-desktop"></i>
+      <span id="pageTitle2">Page title</span> : <span id="pageLeng" class="page-leng"></span>
+    </h2>
+    <div id="urls" class="links"></div>
+    <p class="guide-version"><span>v1.00.01</span></p>
+  </div>
+  <!-- //side -->
+
+  <!-- frame -->
+  <div id="frame" class="frame">
+    <div class="ctrl">
+      <button type="button" id="btnReload" class="btn-ctrl" title="새로고침"><i class="fa fa-refresh"></i></button>
+      <span class="pageurl-box">
+					<input type="text" name="" id="pageUrl" value="" class="pageurl" readonly>
+					<span id="pageSize" class="page-size"></span>
+					<span id="pageTitle" class="page-title"></span>
+				</span>
+      <button type="button" id="btnExternal" class="btn-ctrl" title="새창열기"><i class="fa fa-external-link"></i></button>
+      <button type="button" id="btnMobile" class="btn-ctrl" title="모바일보기"><i class="fa fa-mobile"></i></button>
+      <button type="button" id="btnDesktop" class="btn-ctrl" title="PC보기"><i class="fa fa-desktop"></i></button>
+    </div>
+    <div class="iframe-wrap">
+      <iframe src="" frameborder="0" id="pageShow" class="page-show"></iframe>
+      <button type="button" class="rotate">회전</button>
+    </div>
+  </div>
+  <!-- //frame -->
+
+</div>
+<!-- //wrap -->
+
+<script type="text/javascript" src="assets/plugin/jquery-1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/mrkp_list_info.js"></script>
+<script type="text/javascript" src="assets/js/mrkp_common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE HTML>
+<html lang='ko'>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,target-densitydpi=medium-dpi, minimal-ui">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- og-tag -->
+	<meta property="og:title" content="타이틀">
+	<meta property="og:url" content="https://www.url.com">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="컨텐츠내용">
+	<meta property="og:image" content="https://www.url.com/img/img.png">
+	<!-- //og-tag -->
+	<title></title>
+	<link rel="shortcut icon" href="../../assets/images/common/">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/display.css">
+	<link rel="stylesheet" type="text/css" href="../assets/plugin/syntaxhighlighter_3.0.83/styles/shCore.css" />
+	<!--	<link rel="stylesheet" type="text/css" href="../assets/plugin/syntaxhighlighter_3.0.83/styles/shThemeRDark.css" />-->
+	<link rel="stylesheet" type="text/css" href="../assets/plugin/syntaxhighlighter_3.0.83/styles/shThemeMidnight.css" />
+	<link rel="stylesheet" type="text/css" href="../assets/css/mrkp_inside.css" />
+	<script type="text/javascript" src="../assets/plugin/jquery-1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="../assets/plugin/syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+	<script type="text/javascript" src="../assets/plugin/syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
+	<script type="text/javascript" src="../assets/plugin/syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="../assets/plugin/syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+	<script type="text/javascript" src="../assets/plugin/syntaxhighlighter_3.0.83/scripts/shBrushPhp.js"></script>
+	<script type="text/javascript" src="../assets/plugin/syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="../assets/plugin/syntaxhighlighter_3.0.83/scripts/shBrushSass.js"></script>
+	<script type="text/javascript" src="../assets/js/mrkp_inside.js"></script>
+</head>
+<body>
+
+
+<!-- guide-wrap -->
+<div class="guide-wrap">
+    <!-- gw-grid -->
+    <div class="gw-grid">
+
+        <h1>코드규칙</h1>
+
+        <!-- 들여쓰기 -->
+        <h3>들여쓰기</h3>
+        <ul class="ul-dot-gray">
+            <li>1탭 들여쓰기 하며, 1탭의 크기는 공백 4칸으로 설정한다.</li>
+        </ul>
+        <!-- //들여쓰기 -->
+
+        <!-- 빈줄 -->
+        <h3>빈줄</h3>
+        <ul class="ul-dot-gray">
+            <li>가독성을 고려하여 빈 줄을 추가한다. 단, 1줄을 초과하지 않는다.</li>
+        </ul>
+        <!-- //빈줄 -->
+
+        <!-- 주석 -->
+        <h3>주석</h3>
+        <ul class="ul-dot-gray">
+            <!--<li>시작과 끝의 표시는 s: e: 로 구분한다.</li>-->
+            <li>목적이 있는 주석은 구분을 앞에 표시한다. (예: toDev, toPub, 수정, 고도화)</li>
+        </ul>
+        <div class="gw-code-wrap">
+            <!-- sh-wrap -->
+            <script type="syntaxhighlighter" class="brush:php;html-script:true;">
+            <![CDATA[
+            <!-- 이름 -->
+            <div>
+                <p>영역주석1 : 시작과 끝이 있고, 마크업의 영역을 표시한다..</p>
+            </div>
+            <!-- //이름 -->
+
+            <!-- toDev 설명 -->
+            <!-- toPub 설명 -->
+            <!-- All 설명 -->
+            <p>설명주석 : 시작과 끝이 없고, 개발팀(Dev)에게 전달내용을 설명한다. </p>
+            <p>설명주석 : 시작과 끝이 없고, 퍼블팀(Pub)에게 전달내용을 설명한다. </p>
+            <p>설명주석 : 시작과 끝이 없고, 모든팀(All)에게 전달내용을 설명한다. </p>
+
+            <!-- mrkp-edit : 20181130 이름 설명 -->
+            <p>기록주석 : 단건인 경우 유형별로 구분하고 설명한다.</p>
+            <!-- //mrkp-edit : 20181130 이름 설명 -->
+
+            <!-- mrkp-add : 20181130 이름 설명 -->
+            <p>기록주석 : 다건인 경우 단위별로 구분하고 설명한다.</p>
+            <!-- //mrkp-add : 20181130 이름 설명 -->
+
+            <!-- mrkp-del :20181130 이름 설명 -->
+            <p>기록주석 : 단순구조인 경우 닫기주석을 생략할 수 있다.</p>
+            <!-- //mrkp-del :20181130 이름 설명 -->
+
+            <!-- [구분] 주제
+                - 제목: 설명
+                - 제목: 설명
+            -->
+            <p>전달할 내용이 많은 경우 여러줄로 설명한다. </p>
+            ]]>
+            </script>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //주석 -->
+
+        <!-- 기록주석 -->
+        <h3>기록주석</h3>
+        <ul class="ul-dot-gray">
+            <li>수정할 내용이 많은 다중구조는 닫기주석을 적용한다</li>
+        </ul>
+
+        <!-- gw-code-wrap : 인라인 -->
+        <div class="gw-code-wrap">
+            <h5>인라인</h5>
+            <!-- sh-wrap -->
+            <script type="syntaxhighlighter" class="brush:php;html-script:true;">
+            <![CDATA[
+            <div>
+                (내용생략) <!-- 수정: 20181130 이름 설명 -->
+            </div>
+            ]]>
+            </script>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap : 인라인 -->
+
+        <!-- gw-code-wrap : 단순구조 -->
+        <div class="gw-code-wrap">
+            <h5>단순구조</h5>
+            <!-- sh-wrap -->
+            <script type="syntaxhighlighter" class="brush:php;html-script:true;">
+            <![CDATA[
+            <!-- 수정: 20181130 이름 설명 -->
+            <div>
+                (내용생략)
+            </div>
+            ]]>
+			</script>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap : 단순구조 -->
+
+        <!-- gw-code-wrap : 다중구조 -->
+        <div class="gw-code-wrap">
+            <h5>다중구조</h5>
+            <!-- sh-wrap -->
+            <script type="syntaxhighlighter" class="brush:php;html-script:true;">
+            <![CDATA[
+            <!-- 수정: 20181130 이름 설명 -->
+            <div>
+                (내용생략)
+            </div>
+            <div>
+                (내용생략)
+            </div>
+            <!-- //수정: 20181130 이름 설명 -->
+            ]]>
+			</script>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap : 다중구조 -->
+        <!-- //기록주석 -->
+
+        <!-- 속성 선언순서 -->
+        <h3>속성 선언순서</h3>
+        <div class="gw-view-table">
+            <table>
+                <caption>HTML 속성선언순서</caption>
+                <colgroup>
+                    <col style="width:20%;">
+                    <col>
+                    <col style="width:20%;">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>속성</th>
+                    <th>속성 값</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1. 기능</td>
+                    <td>
+                        <p>href, src, type</p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2. 이름</td>
+                    <td>
+                        <p>name, id</p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3. 정보</td>
+                    <td>
+                        <p>value, title, alt</p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4. 옵션</td>
+                    <td>
+                        <p>target, tabindex</p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5. 꾸미기</td>
+                    <td>
+                        <p>class</p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6. 역할</td>
+                    <td>
+                        <p>role</p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7. 속성</td>
+                    <td>
+                        <p>aria-controls, aria-describedby, aria-labelledby, aria-popup, aria-modal 등</p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8. 상태</td>
+                    <td>
+                        <p>checked, disabled, selected, required, aria-selected, aria-current, aria-hidden 등</p>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- gw-code-wrap : 엘리먼트 예시 -->
+        <div class="gw-code-wrap">
+            <h5>엘리먼트 예시</h5>
+            <!-- sh-wrap -->
+            <script type="syntaxhighlighter" class="brush:php;html-script:true;">
+            <![CDATA[
+            <a href="#none" title="새창열기" target="" class="">인쇄하기</a>
+            <iframe src="about:blank" title="빈프레임"></iframe>
+            <img src="img.gif" alt="대체텍스트" />
+            <input type="text" name="" id="" value="" title="" class="" style="" disabled />
+            ]]>
+			</script>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap : 엘리먼트 예시 -->
+        <!-- 속성 선언순서 -->
+
+        <!-- CSS 기본 규칙 -->
+        <h3>CSS 기본 규칙</h3>
+        <!-- gw-code-wrap -->
+        <div class="gw-code-wrap">
+            <h5>작업정보</h5>
+            <!-- sh-wrap -->
+            <pre class="brush:css">
+			@charset "utf-8";
+			/*-------------------------------------------------------------------
+			    파일정의 : 파일명 또는 파일설명
+			    작성날짜 : 2019-01-01 홍길동
+			    주의사항 : 주석표기는 페이지 접근방법을 알수 있도록 표시
+			    분류순서 : 분류1 > 분류2 > 분류3
+			    속성순서 : 표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+			-------------------------------------------------------------------*/
+			</pre>
+            <!-- //sh-wrap -->
+            <p class="txt-desc">※ 파일에 따라서 불필요한 항목은 삭제 할 수 있다. (예 : animate.css)</p>
+        </div>
+        <!-- //gw-code-wrap -->
+        <!-- gw-code-wrap -->
+        <div class="gw-code-wrap">
+            <h5>작은 따옴표('') 사용 범위</h5>
+            <ul class="ul-dot-gray">
+                <li>폰트의 선언, filter, content에 작은 따옴표('')를 사용한다.</li>
+            </ul>
+            <!-- sh-wrap -->
+            <pre class="brush:css">
+			.class-name {font-family:'dotum';}
+			.filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img.png', sizingMethod='scale';}
+			.class-name:after{content:'.'}
+			.class-name {background:url(img.gif) no-repeat}
+			</pre>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap -->
+        <!-- gw-code-wrap -->
+        <div class="gw-code-wrap">
+            <h5>세미콜론(;)</h5>
+            <ul class="ul-dot-gray">
+                <li>마지막 선언된 속성에도 세미콜론(;)을 사용한다.</li>
+            </ul>
+            <!-- sh-wrap -->
+            <pre class="brush:css">
+			.class-name {margin-left:0; padding-left:10px;}
+			</pre>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap -->
+        <!-- gw-code-wrap -->
+        <div class="gw-code-wrap">
+            <h5>공백의 사용</h5>
+            <ul class="ul-dot-gray">
+                <li>선택자 간, 중괄호간 한칸의 공백을 사용한다, 중괄호 안쪽 좌우에는 공백은 사용하지 않는다.</li>
+            </ul>
+            <!-- sh-wrap -->
+            <pre class="brush:css">
+			.class-name,
+			.class-name .child-class {background:url(../img/img.gif) no-repeat;}
+			.class-name {padding:0; margin:0;}
+			.class-name {padding:0; margin:0;}
+			</pre>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap -->
+        <!-- CSS 기본 규칙 -->
+
+        <!-- 들여쓰기 / 줄 바꿈 -->
+        <h3>들여쓰기 / 줄 바꿈</h3>
+        <ul class="ul-dot-gray">
+            <li>CSS 코드 작성시 들여쓰기는 허용하지 않는다.</li>
+            <li>공통으로 사용되는 속성의 선택자간의 줄 바꿈은 허용하며 이 외의 줄바꿈은 허용하지 않는다.</li>
+        </ul>
+        <!-- gw-code-wrap -->
+        <div class="gw-code-wrap">
+            <h5>작업정보</h5>
+            <!-- sh-wrap -->
+            <pre class="brush:css;">
+			h4.class-name {font-size:1.25em;letter-spacing:-1px;margin:0.5em 0 0 0;}
+
+			.class-name,
+			.class-name .child-class {background:url(../img/img.gif) no-repeat;}
+			</pre>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap -->
+        <!-- //들여쓰기 / 줄 바꿈 -->
+
+        <!-- 주석 / 빈줄 -->
+        <h3>주석 / 빈줄</h3>
+        <ul class="ul-dot-gray">
+            <li>종료 주석은 작성하지 않는다.</li>
+            <li>코드 그룹 간 1줄의 빈 줄을 허용한다. 단, 1줄을 초과하지 않는다.</li>
+        </ul>
+        <!-- gw-code-wrap -->
+        <div class="gw-code-wrap">
+            <h5>작업정보</h5>
+            <!-- sh-wrap -->
+            <pre class="brush:css;">
+			/* title */
+			.title-type1 {margin:30px 0 10px 0;}
+
+			/* description */
+			.desc1 {padding:2px 0 0 15px;font-size:0.917em;}
+			</pre>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap -->
+        <!-- //주석 / 빈줄 -->
+
+        <!-- 선택자 -->
+        <h3>선택자</h3>
+        <!-- gw-code-wrap -->
+        <div class="gw-code-wrap">
+            <h5>공통 선택자</h5>
+            <ul class="ul-dot-gray">
+                <li>'*' 공통 선택자는 웹 페이지의 성능을 저하를 가져오기 때문에 가급적 사용하지 않는다.</li>
+            </ul>
+            <!-- sh-wrap -->
+            <pre class="brush:css;">
+			/* 잘못된 예 */
+			* {margin:0;padding:0}
+			</pre>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap -->
+        <!-- //선택자 -->
+
+        <!-- 속성 선언순서 -->
+        <h3>속성 선언순서</h3>
+        <div class="gw-view-table">
+            <table>
+                <caption>CSS 속성선언순서</caption>
+                <colgroup>
+                    <col style="width:20%;">
+                    <col style="width:20%;">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>속성</th>
+                    <th>속성 값</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td rowspan="2">1. 표시</td>
+                    <td>display</td>
+                    <td>none, block, inline, inline-block, inline-table, list-item, table, table-caption, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row, table-row-group</td>
+                </tr>
+                <tr>
+                    <td>visibility</td>
+                    <td>visible, hidden, collapse</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">2. 위치</td>
+                    <td>position</td>
+                    <td>absolute, fixed, relative, static</td>
+                </tr>
+                <tr>
+                    <td>top, right, bottom, left</td>
+                    <td>length(px), %</td>
+                </tr>
+                <tr>
+                    <td>z-index</td>
+                    <td>number</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">3. 넘침/흐름</td>
+                    <td>overflow</td>
+                    <td>visible, hidden, scroll, auto</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>left, right, none</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">4. 크기/간격</td>
+                    <td>width, max-width, min-width</td>
+                    <td>auto, length(px), %</td>
+                </tr>
+                <tr>
+                    <td>height, max-height, min-height</td>
+                    <td>auto, length(px), %</td>
+                </tr>
+                <tr>
+                    <td>margin</td>
+                    <td>auto, length(px, em), %</td>
+                </tr>
+                <tr>
+                    <td>padding</td>
+                    <td>auto, length(px, em), %</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">5. 박스모양</td>
+                    <td>border</td>
+                    <td>border-width, border-style, border-color</td>
+                </tr>
+                <tr>
+                    <td>background</td>
+                    <td>background-color, background-image, background-repeat, background-attachment, background-position</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">6. 폰트/정렬</td>
+                    <td>font</td>
+                    <td>font-style, font-variant, font-weigth, font-size/line-height, font-family</td>
+                </tr>
+                <tr>
+                    <td>color</td>
+                    <td>hex_number, hex_number</td>
+                </tr>
+                <tr>
+                    <td>text-align</td>
+                    <td>left, right, center, justify</td>
+                </tr>
+                <tr>
+                    <td>vertical-align</td>
+                    <td>top, middle, bottom, baseline</td>
+                </tr>
+                <tr>
+                    <td>7. 기타</td>
+                    <td></td>
+                    <td>언급되지 않은 속성들은 후순위로 적용한다.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //속성 선언순서 -->
+
+        <!-- Html Layout -->
+        <h3>Html Layout</h3>
+        <div class="gw-code-wrap">
+
+            <!-- sh-wrap -->
+            <script type="syntaxhighlighter" class="brush:php;html-script:true;">
+            <![CDATA[
+            <!DOCTYPE HTML>
+            <html class="no-js" lang='ko'>
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="Content-Script-Type" content="text/javascript">
+                <meta http-equiv="Content-Style-Type" content="text/css">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,target-densitydpi=medium-dpi, minimal-ui">
+                <meta name="format-detection" content="telephone=no">
+                <!-- og-tag -->
+                <meta property="og:title" content="타이틀">
+                <meta property="og:url" content="https://www.url.com">
+                <meta property="og:type" content="website">
+                <meta property="og:description" content="컨텐츠내용">
+                <meta property="og:image" content="https://www.url.com/img/img.png">
+                <!-- //og-tag -->
+                <title>Page Name</title>
+                <link rel="shortcut icon" href="../../static/images/common/">
+                <link rel="stylesheet" type="text/css" href="../../static/css/display.css">
+                <script src="../../static/plugin/jquery-1.12.4/jquery.min.js">&lt;/script>
+            </head>
+            <body>
+
+            </body>
+            </html>
+            ]]>
+			</script>
+            <!-- //sh-wrap -->
+
+        </div>
+        <!-- //Html Layout -->
+
+        <!-- Body Layout -->
+        <h3>Body Layout</h3>
+        <div class="gw-code-wrap">
+
+            <!-- sh-wrap -->
+            <script type="syntaxhighlighter" class="brush:php;html-script:true;">
+            <![CDATA[
+            <!-- wrapper -->
+            <div class="wrapper">
+
+                <!-- header -->
+                <div class="header-wrap">
+                    <!-- 헤더공통 -->
+                    <header-common :sub-title="subTitle"
+                                   :is-main-icon="isMainIcon"
+                                   :is-back-btn="isBackBtn"
+                                   :is-share-btn="isShareBtn"
+                                   :is-alarm-btn="isAlarmBtn"
+                                   :is-cart-btn="isCartBtn"
+                                   :is-close-btn="isCloseBtn">
+                    </header-common>
+
+                    <!-- 카테고리 : 활성 상태는 a태그에 클래스 on 추가 -->
+                    <header-category v-if="showHeaderCat"></header-category>
+
+                    <!-- 상품목록보기 / 셀렉트 박스 -->
+                    <header-sort v-if="showHeaderSort"></header-sort>
+
+                    <!-- 장바구니 배송주소, 추천상품 -->
+                    <header-delivery v-if="showHeaderDlvr"></header-delivery>
+                </div>
+                <!-- //header -->
+
+                <!-- container -->
+                <section class="container">
+                    <!-- contents -->
+                    <article class="contents">
+
+                    </article>
+                    <!-- //contents -->
+                </section>
+                <!-- //container -->
+
+            </div>
+            <!-- //wrapper -->
+            ]]>
+			</script>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- Body Layout -->
+
+        <!-- CSS -->
+        <h3>CSS</h3>
+        <!-- gw-code-wrap -->
+        <div class="gw-code-wrap">
+            <!-- sh-wrap -->
+            <pre class="brush:css">
+				@charset "utf-8";
+				@import "font.css";
+
+				/* reset */
+				*{-webkit-text-size-adjust:none;letter-spacing:-0.8px;word-break:break-all;box-sizing:border-box;outline:none;}
+				html{padding:0px;margin:0;height:100%;}
+				html,body{height:100%;-webkit-text-size-adjust:none;-webkit-appearance:none;}
+				body{font-family:"Roboto","NotoSans",sans-serif;font-size:12px;color:#666;font-weight:400;}
+				html,body,div,span,object,iframe,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video,h1,h2,h3,h4,h5,h6,header,footer,section,article,aside,nav,hgroup,details,figure,figcaption{margin:0;padding:0;list-style:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+				address,em,dfn{font-style:normal;}
+				button,a{touch-action:manipulation;}
+				button,a{-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;}
+				button,input[type=button],input[type=submit],input[type=reset]{cursor:pointer;width:auto;overflow:visible;vertical-align:middle;background:none;margin:0;padding:0;font-family:"Roboto","NotoSans",sans-serif;font-weight:400;}
+				input,button,select{vertical-align:middle;border:0;font-family:"Roboto","NotoSans",sans-serif;font-weight:400;}
+				a{text-decoration:none;color:#666;}
+				img{border:0;vertical-align:middle;}
+				strong{font-weight:700;}
+				h1,h2,h3,h4,h5,h6{font-weight:700;}
+				:root{--swiper-theme-color:#007aff;}
+				:root{--swiper-navigation-size:44px;}
+			</pre>
+            <!-- //sh-wrap -->
+        </div>
+        <!-- //gw-code-wrap -->
+        <!-- CSS -->
+
+    </div>
+    <!-- //gw-grid -->
+</div>
+<!--// guide-wrap -->
+
+<script>
+    (function(){
+
+    }())
+</script>
+
+
+</body>
+</html>

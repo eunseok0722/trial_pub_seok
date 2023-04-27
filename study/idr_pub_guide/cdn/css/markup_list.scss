@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* ========================================================== */
+
+/* file	 :  markup_list                            	          */
+
+/* ========================================================== */
+
+/* ---------------------------------------------------------- */
+
+/* markup_list  s =========================================== */
+
+/* html {scroll-behavior: smooth;} */
+* {
+  box-sizing: border-box;
+}
+
+p.gnbcheck {
+  font-size: 32px;
+  font-weight: 700;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.markup-list-wrap {
+  display: flex;
+
+  h4 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+
+  ul {
+    display: inline-block;
+    list-style-type: square;
+    margin-top: 0;
+    padding: 0;                                                                   
+
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+
+      span {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+
+  .markup-list-r,
+  .markup-list-l {
+    padding: 0 0 50px 50px;
+  }
+}
+
+.depth1 {
+  li {
+    a {
+      color: #333;
+      padding-left: 10px;
+      text-decoration: none;
+
+      &:hover {
+        color: #000;
+      }
+
+      &::before {
+        content: "◾ ";
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+/* markup_list  e =========================================== */
