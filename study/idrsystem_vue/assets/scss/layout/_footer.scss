@@ -1,0 +1,349 @@
+@charset "UTF-8";
+
+/* ========================================================== */
+
+/*                                                            */
+
+/* file		: footer                                	      */
+// writer	: Ryu
+// date		: 20201215
+
+/*                                                            */
+
+/* ========================================================== */
+
+/* ---------------------------------------------------------- */
+
+/* footer s ================================================= */
+.main_footer {
+  //margin-top:80px;
+  .ft_num_wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .ft_num {
+    width: 32%;
+
+    .num_tit {
+      border-bottom: 1px solid #000;
+      padding-left: 20px;
+      width: 100%;
+    }
+
+    img {
+      height: 85px;
+      width: auto;
+      @include narrow_custom {
+        height: 60px;
+      }
+    }
+
+    .dot_ul {
+      font-size: 1.9em;
+      letter-spacing: -1.43px;
+      line-height: 25px;
+      padding: 21px 0 28px 40px;
+
+      &.sm {
+        font-size: 1.5em;
+        line-height: 25px;
+      }
+    }
+
+    .sep_ul {
+      padding-top: 20px;
+    }
+
+    .txt_ul {
+      padding-top: 20px;
+    }
+  }
+
+  .copyright {
+    border-top: 3px solid #000;
+    padding-bottom: 30px;
+    padding-top: 32px;
+    text-align: center;
+
+    p {
+      font: {
+        size: 1.5em;
+        weight: #{$l};
+      }
+      letter-spacing: 0.45px;
+    }
+  }
+}
+
+.sub_footer {
+  margin-top: 80px;
+
+  .ft_info_wrap {
+    border-top: 2px solid #000;
+    padding-bottom: 15px;
+    padding-top: 20px;
+
+    .service_ul {
+      background: url(#{$img_url}common/logo_idr_btm.png) no-repeat;
+      background-size: 68px;
+      border-bottom: 1px solid #dcdcdc;
+      padding-bottom: 15px;
+      padding-left: 95px;
+      padding-top: 5px;
+      @include fnt_set($l, 1.7em, 23px, -1.28px);
+
+      // @include mdq_m {
+      //  font-size: 1.3em;
+      //  padding-left: $con_pd2;
+      // }
+      li {
+        display: inline-block;
+
+        &.sf {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .sep_ul {
+      display: inline-block;
+      max-width: 680px;
+      padding-bottom: 25px;
+      padding-left: 75px;
+      padding-top: 15px;
+      @include mdq_m {
+        padding-left: 5px;
+      }
+
+      li {
+        margin-left: 10px;
+        margin-top: 5px;
+        padding-left: 10px;
+        @include fnt_set($l, 1.3em, 19px, -0.98px);
+      }
+    }
+
+    .copyright {
+      color: #707070;
+      float: right;
+      margin-left: 90px;
+      padding-top: 25px;
+      @include fnt_set($l, 1.3em, 33px, 0.39px);
+      @include narrow_custom {
+        float: inherit;
+      }
+    }
+  }
+
+  .btn_top {
+    display: none;
+  }
+
+  @include mdq_m {
+
+    .ft_info_wrap {
+      background-color: #f2f2f2;
+      border-top: unset;
+
+      // padding-bottom: 15px;
+      // padding-top: 20px;
+      padding: 20px 20px 15px;
+
+      .service_ul {
+        background: unset;
+        background-size: unset;
+        border-bottom: 1px solid #d4d4d4;
+        text-align: center;
+        color: #ababab;
+        padding-bottom: 14px;
+        padding-left: 0;
+        padding-top: 0;
+        @include fnt_set($r, 1.2em, 1.7, 0);
+
+        li {
+          &.sf {
+            padding-left: 13px;
+            padding-right: 13px;
+          }
+        }
+      }
+
+      .sep_ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        //max-width: 680px;
+        padding: 2rem 0 0;
+
+        li {
+          background: unset;
+          color: #717171;
+          margin: 0;
+          padding: 0;
+          @include fnt_set($r, 1.2em, 1, 0);
+
+          .logo-wrap {
+            height: 22px;
+            width: 60px;
+
+            img {
+              height: auto;
+              width: 100%;
+            }
+          }
+
+          &.com-name {
+            font-weight: $eb;
+            padding: 8px 0;
+          }
+
+          &.no_sep {
+            a {
+              color: #717171;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        margin-left: 0;
+        padding-bottom: 0;
+        padding-top: 15px;
+
+        // color: #707070;
+        // float: right;
+        // margin-left: 90px;
+        // padding-top: 25px;
+        // @include fnt_set($l,1.3em,33px,0.39px);
+        // @include narrow_custom {
+        //  float: inherit;
+        // }
+        @include fnt_set($r, 1.2em, 1.25, 0);
+      }
+    }
+
+    .btn_top {
+      background-color: $white;
+      bottom: 12%;
+      display: block;
+      height: 33px;
+      opacity: 0;
+      position: fixed;
+      right: 20px;
+      transform: translateY(30px);
+      transition: all 0.3s;
+      width: 33px;
+
+      button {
+        background-image: url('../images/common/ico_top_001.png');
+        background-position: center center;
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+
+      }
+
+      &.on {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@include mdq_m {
+  .con_works,
+  .con_main {
+    .sub_footer {
+      margin-top: 0;
+      .btn_top {
+        position: absolute;
+        bottom: 150px;
+      }
+    }
+  }
+}
+
+
+
+.sub_footer_work {
+  padding-bottom: 45px;
+  @include posa_bl(0, 10px);
+  @include narrow_custom {
+    bottom: unset;
+    left: unset;
+    padding: 30px;
+    position: relative;
+
+    .ft_info_wrap {
+      background-position: 100% 100%;
+      border-top: 1px solid $border_clr;
+      padding-left: 0;
+
+      .service_ul {
+        display: none;
+      }
+    }
+  }
+  @include mdq_m {
+    padding: 15px 15px 25px;
+  }
+
+  .ft_info_wrap {
+    background: url(#{$img_url}common/logo_idr_btm.png) no-repeat;
+    padding-left: 85px;
+    padding-top: 10px;
+
+    .service_ul {
+      li {
+        @include fnt_set($l, 1.7em, 23px, -1.28px);
+      }
+    }
+
+    .sep_ul {
+      margin-top: 26px;
+
+      li {
+        margin-left: 10px;
+        margin-top: 0;
+        padding-left: 10px;
+        @include fnt_set($l, 1.3em, 19px, -0.98px);
+
+        &:first-child,
+        &.no_sep {
+          margin-left: 0;
+          padding-left: 0;
+        }
+
+        &.no_sep {
+          display: block;
+        }
+      }
+    }
+
+    .copyright {
+      margin-top: 10px;
+      @include fnt_set($l, 1.3em, unset, 0.39px);
+    }
+  }
+}
+
+.only_pc {
+  @include mdq_m {
+    display: none;
+  }
+}
+
+.only_m {
+  display: none;
+  @include mdq_m {
+    display: unset;
+  }
+}
+
+/* footer e ================================================= */
+
+/* ---------------------------------------------------------- */

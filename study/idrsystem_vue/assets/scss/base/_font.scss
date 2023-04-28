@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+/* ========================================================== */
+
+/*                                                            */
+
+/* file     : font                                            */
+// writer   : Ryu
+// date     : 20201215
+
+// modify   : Oh
+// date     : 20221206
+
+/*                                                            */
+
+/* ========================================================== */
+
+/* ---------------------------------------------------------- */
+
+/* font : Roboto s ========================================== */
+
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap'); */
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: $l;
+  src: url('~assets/fonts/Roboto-Thin.eot');
+  src: url('~assets/fonts/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+    url('~assets/fonts/Roboto-Thin.svg#Roboto-Thin') format('svg'),
+    url('~assets/fonts/Roboto-Thin.ttf') format('truetype'),
+    url('~assets/fonts/Roboto-Thin.woff') format('woff'),
+    url('~assets/fonts/Roboto-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: $r;
+  src: url('~assets/fonts/Roboto-Regular.eot');
+  src: url('~assets/fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('~assets/fonts/Roboto-Regular.svg#Roboto-Regular') format('svg'),
+    url('~assets/fonts/Roboto-Regular.ttf') format('truetype'),
+    url('~assets/fonts/Roboto-Regular.woff') format('woff'),
+    url('~assets/fonts/Roboto-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: $b;
+  src: url('~assets/fonts/Roboto-Bold.eot');
+  src: url('~assets/fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('~assets/fonts/Roboto-Bold.svg#Roboto-Bold') format('svg'),
+    url('~assets/fonts/Roboto-Bold.ttf') format('truetype'),
+    url('~assets/fonts/Roboto-Bold.woff') format('woff'),
+    url('~assets/fonts/Roboto-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: $bk;
+  src: url('~assets/fonts/Roboto-Black.eot');
+  src: url('~assets/fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+    url('~assets/fonts/Roboto-Black.svg#Roboto-Black') format('svg'),
+    url('~assets/fonts/Roboto-Black.ttf') format('truetype'),
+    url('~assets/fonts/Roboto-Black.woff') format('woff'),
+    url('~assets/fonts/Roboto-Black.woff2') format('woff2');
+}
+
+/* font : Roboto e ========================================== */
+
+/* ---------------------------------------------------------- */
+
+/* ---------------------------------------------------------- */
+
+/* NanumSquareRound s ======================================= */
+@font-face {
+  font-family: NanumSquareRound;
+  font-style: normal;
+  font-weight: 300;
+  src: local('~assets/fonts/NanumSquareRoundL'); /* computer */
+  src: url('~assets/fonts/NanumSquareRoundL.eot'); /* IE9 Compat Modes */
+  src: /* url("fonts/NanumSquareRoundL.eot?#iefix") format("embedded-opentype"),*/
+    /* IE6-IE8 */
+          url('~assets/fonts/NanumSquareRoundL.woff2') format('woff2'),
+    url('~assets/fonts/NanumSquareRoundL.woff') format('woff'),
+    url('~assets/fonts/NanumSquareRoundL.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: NanumSquareRound;
+  font-style: normal;
+  font-weight: 400;
+  src: local('~assets/fonts/NanumSquareRoundR'); /* computer */
+  src: url('~assets/fonts/NanumSquareRoundR.eot'); /* IE9 Compat Modes */
+  src: /* url("fonts/NanumSquareRoundR.eot?#iefix") format("embedded-opentype"),*/
+    /* IE6-IE8 */
+          url('~assets/fonts/NanumSquareRoundR.woff2') format('woff2'),
+    url('~assets/fonts/NanumSquareRoundR.woff') format('woff'),
+    url('~assets/fonts/NanumSquareRoundR.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: NanumSquareRound;
+  font-style: normal;
+  font-weight: 700;
+  src: local('~assets/fonts/NanumSquareRoundB'); /* computer */
+  src: url('~assets/fonts/NanumSquareRoundB.eot'); /* IE9 Compat Modes */
+  src: /* url("fonts/NanumSquareRoundB.eot?#iefix") format("embedded-opentype"),*/
+    /* IE6-IE8 */
+          url('~assets/fonts/NanumSquareRoundB.woff2') format('woff2'),
+    url('~assets/fonts/NanumSquareRoundB.woff') format('woff'),
+    url('~assets/fonts/NanumSquareRoundB.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: NanumSquareRound;
+  font-style: normal;
+  font-weight: 800;
+  src: local('~assets/fonts/NanumSquareRoundEB'); /* computer */
+  src: url('~assets/fonts/NanumSquareRoundEB.eot'); /* IE9 Compat Modes */
+  src: /* url("fonts/NanumSquareRoundEB.eot?#iefix") format("embedded-opentype"),*/
+    /* IE6-IE8 */
+          url('~assets/fonts/NanumSquareRoundEB.woff2') format('woff2'),
+    url('~assets/fonts/NanumSquareRoundEB.woff') format('woff'),
+    url('~assets/fonts/NanumSquareRoundEB.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* NanumSquareRound e ======================================= */
+
+/* ---------------------------------------------------------- */
+
+/* font : LeagueSpartan s ====================================== */
+
+@font-face {
+  font-family: LeagueSpartan;
+  font-style: normal;
+  font-weight: 200;
+  src: local('~assets/fonts/LeagueSpartan-ExtraLight'); /* computer */
+  src: url('~assets/fonts/LeagueSpartan-ExtraLight.woff2') format('woff2'),
+  url('~assets/fonts/LeagueSpartan-ExtraLight.woff') format('woff'),
+  url('~assets/fonts/LeagueSpartan-ExtraLight.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: LeagueSpartan;
+  font-style: normal;
+  font-weight: 300;
+  src: local('~assets/fonts/LeagueSpartan-Light'); /* computer */
+  src: url('~assets/fonts/LeagueSpartan-Light.woff2') format('woff2'),
+    url('~assets/fonts/LeagueSpartan-Light.woff') format('woff'),
+    url('~assets/fonts/LeagueSpartan-Light.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: LeagueSpartan;
+  font-style: normal;
+  font-weight: 400;
+  src: local('~assets/fonts/LeagueSpartan-Regular'); /* computer */
+  src: url('~assets/fonts/LeagueSpartan-Regular.woff2') format('woff2'),
+    url('~assets/fonts/LeagueSpartan-Regular.woff') format('woff'),
+    url('~assets/fonts/LeagueSpartan-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: LeagueSpartan;
+  font-style: normal;
+  font-weight: 500;
+  src: local('~assets/fonts/LeagueSpartan-Medium'); /* computer */
+  src: url('~assets/fonts/LeagueSpartan-Medium.woff2') format('woff2'),
+    url('~assets/fonts/LeagueSpartan-Medium.woff') format('woff'),
+    url('~assets/fonts/LeagueSpartan-Medium.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: LeagueSpartan;
+  font-style: normal;
+  font-weight: 600;
+  src: local('~assets/fonts/LeagueSpartan-SemiBold'); /* computer */
+  src: url('~assets/fonts/LeagueSpartan-SemiBold.woff2') format('woff2'),
+    url('~assets/fonts/LeagueSpartan-SemiBold.woff') format('woff'),
+    url('~assets/fonts/LeagueSpartan-SemiBold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: LeagueSpartan;
+  font-style: normal;
+  font-weight: 700;
+  src: local('~assets/fonts/LeagueSpartan-Bold'); /* computer */
+  src: url('~assets/fonts/LeagueSpartan-Bold.woff2') format('woff2'),
+    url('~assets/fonts/LeagueSpartan-Bold.woff') format('woff'),
+    url('~assets/fonts/LeagueSpartan-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* font : LeagueSpartan e ====================================== */
+
+
+/* ---------------------------------------------------------- */
+
+/* ---------------------------------------------------------- */
+
+/* NotoSansKR s ======================================= */
+
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 400;
+  src: local('~assets/fonts/NotoSansKR-Regular'); /* computer */
+  src: url('~assets/fonts/NotoSansKR-Regular.eot'); /* IE9 Compat Modes */
+  src: /* url("fonts/NanumSquareRoundR.eot?#iefix") format("embedded-opentype"),*/
+          /* IE6-IE8 */
+          url('~assets/fonts/NotoSansKR-Regular.woff2') format('woff2'),
+          url('~assets/fonts/NotoSansKR-Regular.woff') format('woff'),
+          url('~assets/fonts/NotoSansKR-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: NotoSansKR;
+  font-style: normal;
+  font-weight: 700;
+  src: local('~assets/fonts/NotoSansKR-Bold'); /* computer */
+  src: url('~assets/fonts/NotoSansKR-Bold.eot'); /* IE9 Compat Modes */
+  src: /* url("fonts/NanumSquareRoundB.eot?#iefix") format("embedded-opentype"),*/
+          /* IE6-IE8 */
+          url('~assets/fonts/NotoSansKR-Bold.woff2') format('woff2'),
+          url('~assets/fonts/NotoSansKR-Bold.woff') format('woff'),
+          url('~assets/fonts/NotoSansKR-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* NotoSansKR e ======================================= */
+
+/* ---------------------------------------------------------- */

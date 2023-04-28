@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/* ========================================================== */
+
+/*                                                            */
+
+/* file		: service                                  	      */
+// writer	: Ryu
+// date		: 20201215
+
+/*                                                            */
+
+/* ========================================================== */
+
+/* ---------------------------------------------------------- */
+
+/* service s ================================================ */
+.con_service {
+  #contents {
+    padding-top: 200px;
+    @include mdq_m {
+      padding-top: 0;
+    }
+
+    .inner {
+      @include narrow_custom {
+        @include set_df_padding;
+      }
+      @include mdq_m {
+        padding-left: $con_pd2;
+        padding-right: $con_pd2;
+      }
+    }
+
+    .intro_box, .recruit_box {
+      padding-top: 0;
+    }
+  }
+}
+
+.sub_bg_wrap {
+  margin-bottom: 95px;
+  margin-left: auto;
+  margin-right: auto;
+  //max-width: $full;
+  @include mdq_m {
+    margin-bottom: 0;
+  }
+}
+
+// 모바일 페이지 service title, lnb 노출
+.commerce_box,
+.marketing_box,
+.design_box {
+  .cont_tit,
+  .custom-select {
+    display: none;
+    @include mdq_m {
+      display: block;
+    }
+  }
+}
+
+.cont_tit {
+  display: none;
+  @include mdq_m {
+    box-sizing: border-box;
+    display: block;
+    padding: 4.5rem 2rem 2rem;
+    font-family: $third_font;
+    @include fnt_set($sb, 50px, 1, -1.5px);
+  }
+}
+
+.commerce_box {
+
+
+  .inner {
+
+  }
+
+  .txt_wrap {
+    width: 100%;
+
+    .tw_2 {
+      line-height: 30px;
+      padding-bottom: 0;
+    }
+
+    @include mdq_m {
+      width: calc(100% + (20px * 2));
+      margin-left: -$con_pd2;
+      margin-right: -$con_pd2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 12rem 3rem;
+      gap: 3.8rem;
+      color: $white;
+      background-image: url("../images/service/srvc_sub_bg_04.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+
+      //&::after {
+      //  content: '';
+      //  display: block;
+      //  width: 15px;
+      //  height: 56px;
+      //  background-image: url("../images/common/ico_arrow_d_long_w.png");
+      //  background-size: cover;
+      //  background-position: center;
+      //  background-repeat: no-repeat;
+      //  position: absolute;
+      //  bottom: 3rem;
+      //}
+
+      .tw_1 {
+        @include fnt_set($b, 26px, 1.4, -2px);
+      }
+      .tw_2 {
+        @include fnt_set($md, 16px, 1.4, -1px);
+        word-break: keep-all;
+      }
+    }
+
+  }
+}
+
+.marketing_box {
+
+}
+
+.design_box {
+
+}
+
+
+/* service e ================================================ */
+
+/* ---------------------------------------------------------- */

@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+@import '@/plugins/swiper-master/css/swiper.min.css';
+@import '@/plugins/aos@2.3.1/aos.css';
+
+@import 'utils/variables',
+'utils/css3-mixins',
+'utils/mixin';
+
+@import 'display/button',
+'display/scrollbar',
+'display/layer_popup',
+'display/thumbnail',
+'display/filter',
+'display/form',
+'display/tab',
+'display/table',
+'display/content',
+'display/list';
+
+@import 'pages/main',
+'pages/service',
+'pages/works',
+'pages/contact',
+'pages/etc';
+

@@ -1,0 +1,50 @@
+{
+  "name": "idrsystem_vue",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{css,scss,sass,html,vue}\" --ignore-path .gitignore",
+    "lint": "yarn lint:js && yarn lint:style",
+    "lintfix": "yarn lint:js --fix && yarn lint:style --fix"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "aos": "^2.3.4",
+    "core-js": "^3.25.3",
+    "nuxt": "^2.15.8",
+    "swiper": "5.3.7",
+    "vue": "^2.7.10",
+    "vue-awesome-swiper": "4.1.0",
+    "vue-gtag": "1.16.1",
+    "vue-masonry-css": "^1.0.3",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.19.1",
+    "@nuxtjs/eslint-config": "^11.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "@nuxtjs/stylelint-module": "^4.1.0",
+    "eslint": "^8.24.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.5.1",
+    "postcss-html": "^1.5.0",
+    "push-dir": "^0.4.1",
+    "sass": "^1.59.3",
+    "sass-loader": "10",
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^28.0.0",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0"
+  }
+}

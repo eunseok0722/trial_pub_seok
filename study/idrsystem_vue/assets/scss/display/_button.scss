@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/* ========================================================== */
+
+/*                                                            */
+
+/* file		: button                                       	  */
+// writer	: Ryu
+// date		: 20201215
+
+/*                                                            */
+
+/* ========================================================== */
+
+/* ---------------------------------------------------------- */
+
+/* buttons s ================================================ */
+.btn {
+  display: inline-block;
+}
+
+.border_arrow_btn {
+  border: 1px solid #000;
+  color: #000;
+  font-size: 15px;
+  font-weight: $l;
+  letter-spacing: -1.13px;
+  padding: 14px 59px 14px 23px;
+  position: relative;
+
+  //transition:all 0.3s;
+  &::before {
+    background: #000;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 100%;
+    z-index: -1;
+    @include posa_tl;
+  }
+
+  //transition:background-color 1s;
+  &::after {
+    background: url(#{$img_url}common/icon_arrow_r_b.png) no-repeat;
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    height: 15px;
+    margin-top: -8px;
+    width: 9px;
+    @include posa_tr(50%, 15px);
+  }
+
+  &:hover {
+    color: #fff;
+
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      background: url(#{$img_url}common/icon_arrow_r_w.png) no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+/* buttons e ================================================ */
+
+/* ---------------------------------------------------------- */

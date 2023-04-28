@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* ========================================================== */
+
+/*                                                            */
+
+/* file		: list                                      	  */
+// writer	: Ryu
+// date		: 20201215
+
+/*                                                            */
+
+/* ========================================================== */
+
+/* ---------------------------------------------------------- */
+
+/* list s =================================================== */
+.dot_ul {
+  > li {
+    margin-top: 2px;
+    padding-left: 10px;
+    position: relative;
+
+    &::before {
+      background: #000;
+      content: "";
+      display: inline-block;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      top: 8px;
+      width: 3px;
+
+      @include mdq_m {
+        background-color: #717171;
+        @include bdrs(10px);
+      }
+    }
+
+    &.no_dot {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.sep_ul {
+  > li {
+    background: url(#{$img_url}common/bg_gubun.png) no-repeat 0 50%;
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: -1.13px;
+    line-height: 22px;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding-left: 20px;
+
+    &:first-child,
+    &.no_sep {
+      background: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.txt_ul {
+  > li {
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: -1.13px;
+    line-height: 22px;
+    margin-top: 10px;
+  }
+}
+
+/* list e =================================================== */
+
+/* ---------------------------------------------------------- */
